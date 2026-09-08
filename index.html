@@ -328,7 +328,7 @@ dialog::backdrop{background:rgba(34,32,28,.30)}
        title="Codex 공식 릴리스 전체">공식 릴리스 <i>↗</i></a></span>
   <span class="pdone"><span class="pcount">해봄 <b class="doneAll">0</b>/<span class="totAll">0</span></span>
     <button class="clrb btn">모두 해제</button></span>
-  <span class="pstamp"><!--SYNC--><span class="s-y">2026-</span><span class="s-md">09-06</span><span class="s-t"> 13:21</span><!--/SYNC--></span>
+  <span class="pstamp"><!--SYNC--><span class="s-y">2026-</span><span class="s-md">09-09</span><span class="s-t"> 06:45</span><!--/SYNC--></span>
 </div>
 
 <div class="tab on" id="new">
@@ -560,7 +560,122 @@ dialog::backdrop{background:rgba(34,32,28,.30)}
      지우면 update_changelog·update_codex 가 꽂을 자리를 잃는다. -->
 <div id="data">
 <!--CC-DATA-->
-    <p class="range"><strong>v2.0.0</strong> → <strong>v2.1.263</strong> &nbsp;·&nbsp; <span class="range-dates" data-en="2025.9.29 – 2026.9.6">2025.9.29 – 2026.9.6</span></p>
+    <p class="range"><strong>v2.0.0</strong> → <strong>v2.1.265</strong> &nbsp;·&nbsp; <span class="range-dates" data-en="2025.9.29 – 2026.9.8">2025.9.29 – 2026.9.8</span></p>
+  <!-- ── v2.1.265 ── -->
+  <div class="version-block" id="v2.1.265" data-types="feature improve security fix" data-date="2026-09-08">
+    <div class="version-head">
+      <span class="ver-badge">v2.1.265</span><span class="ver-date">9월 8일 화</span><span class="ver-ago"></span>
+      <div class="ver-summary"><span class="pill feature">기능 ×12</span><span class="pill improve">개선 ×7</span><span class="pill security">보안 ×6</span><span class="pill fix">Fix ×25</span></div>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Added <code>user.email</code> and <code>user.groups</code> to the telemetry Claude Desktop and Cowork send through a Claude apps gateway, matching terminal sessions</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Added support for pointing <code>--plugin-dir</code> at a folder of plugins: each child folder with a manifest loads, and children added or removed while running are picked up</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Added a 1 GB cap on tool results saved to disk; the in-conversation preview says when a saved file was truncated</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Windows: Fixed Read, Write and Edit refusing every file ("symlink resolution changed after permission was checked") when running inside an AppContainer or restricted-token sandbox</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Updated the <code>.claude</code> folder permission option to say what it actually allows: editing files in the project's <code>.claude</code> folder (or <code>~/.claude</code>) for the session</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Changed machines with <code>forceLoginGatewayUrl</code> in managed settings to be Claude apps gateway sessions from startup, like <code>forceLoginMethod: "gateway"</code>; a leftover claude.ai login or API key is not used</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Changed image processing to use the runtime's built-in image support; the CLI no longer extracts a native image module to the temp directory</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Changed plugin display metadata to prefer the marketplace entry over <code>plugin.json</code> on the Installed tab and <code>claude plugin details</code>, filling gaps from <code>plugin.json</code></span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Changed Claude apps gateway sessions to export OpenTelemetry directly to a collector the gateway's managed settings name in <code>OTEL_EXPORTER_OTLP_ENDPOINT</code>, instead of through the gateway's relay; sessions without a named collector still use the relay</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[VSCode] Added automatic archiving of sessions inactive for a set period (new "Archive inactive sessions" setting, default 14 days)</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[VSCode] Fixed the sidebar chat coming back blank after Reload Window or a restart when the conversation had been open for more than 10 minutes</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[VSCode] Fixed the timeline dot sitting below the text on the "Remote Control is active" message</span>
+    </div>
+    <div class="tabs-container">
+      <div class="tabs-bar">
+        <div class="tab" data-tab="improve" onclick="toggleTab(this)">⚡ 개선 <span class="tab-count">7</span></div>
+        <div class="tab" data-tab="security" onclick="toggleTab(this)">🔒 보안 <span class="tab-count">6</span></div>
+        <div class="tab" data-tab="fix" onclick="toggleTab(this)">🐛 수정 <span class="tab-count">25</span></div>
+      </div>
+      <div class="tab-panels">
+        <div class="tab-panel" data-tab="improve">
+          <div class="coll-rows">
+            <div class="coll-item"><span class="coll-item-desc">Improved <code>--worktree</code> startup on large repositories: the new worktree is now checked out in parallel (git 2.32+)</span></div>
+            <div class="coll-item"><span class="coll-item-desc">Improved <code>/workflows</code> agent detail: tool calls are marked running, failed or done, the subagent's task list is shown when it has one, and Enter unfolds the listed calls with their inputs and results</span></div>
+            <div class="coll-item"><span class="coll-item-desc">Improved slash commands typed mid-prompt: matches now show in a list (Tab opens it outside fullscreen) instead of a single suggestion, and a plugin skill is now found by its bare name</span></div>
+            <div class="coll-item"><span class="coll-item-desc">Improved remote MCP servers that need sign-in: Claude Code no longer registers an OAuth client with them until you actually authenticate</span></div>
+            <div class="coll-item"><span class="coll-item-desc">Improved the time to resume long sessions that read many files</span></div>
+            <div class="coll-item"><span class="coll-item-desc">Improved the error shown when an image over the size limits cannot be decoded: it now names the cause and how to fix it instead of only citing the limit</span></div>
+            <div class="coll-item"><span class="coll-item-desc">Improved the Artifact tool's read of an artifact someone else wrote: the summary now treats the page as untrusted content and flags embedded instructions rather than relaying them</span></div>
+          </div>
+        </div>
+        <div class="tab-panel" data-tab="security">
+          <div class="coll-rows">
+            <div class="coll-item"><span class="coll-item-desc">Fixed syntax-highlighted code in permission prompts and messages sometimes omitting a character after a Ruby <code>?</code>, Erlang <code>$</code>, or Perl <code>$</code> sigil</span></div>
+            <div class="coll-item"><span class="coll-item-desc">Fixed a plugin path containing a backslash bypassing the symlink containment check on macOS and Linux</span></div>
+            <div class="coll-item"><span class="coll-item-desc">Fixed <code>/add-dir &lt;subdirectory&gt;</code> refusing to load a subdirectory's agents when managed settings lock only skills to plugins, and promising agents when only agents are locked</span></div>
+            <div class="coll-item"><span class="coll-item-desc">Fixed <code>/login</code> showing "no gateway URL is configured" when re-run in a session that signed in to a Claude apps gateway set by managed settings</span></div>
+            <div class="coll-item"><span class="coll-item-desc">Fixed some claude.ai connectors in cloud sessions showing as needing authentication even though they are connected in claude.ai (servers that answer an unsupported request with HTTP 401)</span></div>
+            <div class="coll-item"><span class="coll-item-desc">Fixed remote sessions keeping their sandbox container alive while a connector approval or sign-in link waits for you</span></div>
+          </div>
+        </div>
+        <div class="tab-panel" data-tab="fix">
+          <div class="chip-grid">
+            <span class="chip">resuming a foreground-spawned subagent changing its tool list…</span>
+            <span class="chip">agent teammates and resumed subagents moving SubagentStart hook…</span>
+            <span class="chip">resume after the previous process died while a…</span>
+            <span class="chip">/model opusplan[1m] being rejected with &quot;Model not found&quot;</span>
+            <span class="chip">fullscreen transcript jumping by one row whenever the…</span>
+            <span class="chip">plugin directories whose names begin with two dots…</span>
+            <span class="chip">VS Code and SDK sessions occasionally requiring re-login…</span>
+            <span class="chip">Remote Control sessions sending the end-of-turn signal before…</span>
+            <span class="chip">background (--bg) sessions occasionally being retired mid-turn when…</span>
+            <span class="chip">Claude Code&#x27;s own git status and diff probes…</span>
+            <span class="chip">advisor tool and its instructions being re-decided per…</span>
+            <span class="chip">artifact publish accepting connector tool names the connector…</span>
+            <span class="chip">two-key keyboard shortcuts cancelling silently when the second…</span>
+            <span class="chip">forked skills (context: fork) not streaming their kickoff…</span>
+            <span class="chip">a plugin&#x27;s default component folder that the OS…</span>
+            <span class="chip">Claude apps gateway&#x27;s OTLP telemetry relay pausing all…</span>
+            <span class="chip">/plugin Discover/Browse and claude plugin list --json --available…</span>
+            <span class="chip">/model claiming a model was &quot;saved as your…</span>
+            <span class="chip">/clear from Remote Control waiting on SessionStart hooks…</span>
+            <span class="chip">/config dialog changing height when switching between its…</span>
+            <span class="chip">resuming a workflow run after its container restarted;…</span>
+            <span class="chip">claude-api skill&#x27;s error-code reference: model access failures return…</span>
+            <span class="chip">non-interactive sessions (-p with stream-json input, Agent SDK,…</span>
+            <span class="chip">MCP servers configured as http that only speak…</span>
+            <span class="chip">resumed sessions showing long model-facing recovery instructions in…</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- ── v2.1.263 ── -->
   <div class="version-block" id="v2.1.263" data-types="feature" data-date="2026-09-06">
     <div class="version-head">
