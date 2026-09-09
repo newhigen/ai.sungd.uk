@@ -328,7 +328,7 @@ dialog::backdrop{background:rgba(34,32,28,.30)}
        title="Codex 공식 릴리스 전체">공식 릴리스 <i>↗</i></a></span>
   <span class="pdone"><span class="pcount">해봄 <b class="doneAll">0</b>/<span class="totAll">0</span></span>
     <button class="clrb btn">모두 해제</button></span>
-  <span class="pstamp"><!--SYNC--><span class="s-y">2026-</span><span class="s-md">09-09</span><span class="s-t"> 09:01</span><!--/SYNC--></span>
+  <span class="pstamp"><!--SYNC--><span class="s-y">2026-</span><span class="s-md">09-10</span><span class="s-t"> 06:37</span><!--/SYNC--></span>
 </div>
 
 <div class="tab on" id="new">
@@ -560,7 +560,143 @@ dialog::backdrop{background:rgba(34,32,28,.30)}
      지우면 update_changelog·update_codex 가 꽂을 자리를 잃는다. -->
 <div id="data">
 <!--CC-DATA-->
-    <p class="range"><strong>v2.0.0</strong> → <strong>v2.1.266</strong> &nbsp;·&nbsp; <span class="range-dates" data-en="2025.9.29 – 2026.9.8">2025.9.29 – 2026.9.8</span></p>
+    <p class="range"><strong>v2.0.0</strong> → <strong>v2.1.267</strong> &nbsp;·&nbsp; <span class="range-dates" data-en="2025.9.29 – 2026.9.9">2025.9.29 – 2026.9.9</span></p>
+  <!-- ── v2.1.267 ── -->
+  <div class="version-block" id="v2.1.267" data-types="feature improve security fix" data-date="2026-09-09">
+    <div class="version-head">
+      <span class="ver-badge">v2.1.267</span><span class="ver-date">9월 9일 수</span><span class="ver-ago"></span>
+      <div class="ver-summary"><span class="pill feature">기능 ×18</span><span class="pill improve">개선 ×7</span><span class="pill security">보안 ×6</span><span class="pill fix">Fix ×22</span></div>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Added <code>maxEffortLevel</code> setting (top-level or per model under <code>modelSettings</code>): caps the effort level on every provider, including Bedrock, Vertex and Foundry; users can still pick a lower level</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Added <code>--system-prompt-snapshot off</code> to render the system prompt fresh on every request instead of reusing the conversation's recorded prompt (for iterating on prompt text)</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Self-hosted runner: Changed <code>--use-anthropic-git-proxy</code> to be reported to the server at registration and to print a warning for each session that still clones through the legacy git proxy</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Gateway: Changed <code>forward_user_identity</code> upstreams to return a 429 as-is to a developer whose email was forwarded, instead of failing over to the next upstream, so the proxy's per-user limits hold</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[VSCode] Fixed the extension host hanging at 100% CPU when forking, editing an earlier message, or rewinding in a conversation whose saved transcript contains a cyclic parent link</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[VSCode] Fixed pasting a screenshot on WSL2/WSLg inserting raw image bytes into the chat input; the image is now attached when the clipboard provides it, otherwise the paste is ignored</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[VSCode] Fixed chat diff blocks always rendering with a dark editor theme; they now follow the active VS Code color theme, including high contrast</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[VSCode] Fixed mixed right-to-left and English text rendering in the wrong order while typing in the message input</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[VSCode] Fixed accepting an edit in the diff view on a file with Windows (CRLF) line endings failing with "String not found in file"</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[VSCode] Fixed @-mentions dropping files whose paths contain spaces</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[VSCode] Fixed the sessions list view failing to load in windows connected over Remote-SSH when the workspace folder exists only on the remote host</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[VSCode] Fixed runaway ripgrep processes when viewing files in large or symlink-heavy workspaces</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[Claude Code on the web] Fixed GitHub Enterprise Server sessions showing your GitHub account as disconnected once its token expired; PR and issue operations now refresh it automatically</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[Claude Code on the web] Fixed <code>gh</code> and GitHub API calls failing in organizations without the Claude GitHub App; they now use your connected GitHub account and say so when none is connected</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[Claude Tag] Added a "Use a custom connector" link to the preset connection forms in Claude Tag admin settings, so you can switch to a custom connection without starting over</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[Claude Tag] Fixed Claude replying "The API rejected the request as invalid" when the organization has run out of usage credits; the reply now says so and explains how to add more</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[Claude Tag] Fixed thread requests to edit or delete a message Claude posted at the channel's top level being answered with a correction instead of reaching the session that posted it</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[Claude Tag] Fixed <strong>Connect</strong> on Tool access requests under Admin settings &gt; Review requests failing with "Authorization failed" or showing the requested access bundle as deleted</span>
+    </div>
+    <div class="tabs-container">
+      <div class="tabs-bar">
+        <div class="tab" data-tab="improve" onclick="toggleTab(this)">⚡ 개선 <span class="tab-count">7</span></div>
+        <div class="tab" data-tab="security" onclick="toggleTab(this)">🔒 보안 <span class="tab-count">6</span></div>
+        <div class="tab" data-tab="fix" onclick="toggleTab(this)">🐛 수정 <span class="tab-count">22</span></div>
+      </div>
+      <div class="tab-panels">
+        <div class="tab-panel" data-tab="improve">
+          <div class="coll-rows">
+            <div class="coll-item"><span class="coll-item-desc">Improved the <code>/diff</code> panel: it no longer flashes "0 files changed" and a spinner before settling, and its empty state is centered in the panel</span></div>
+            <div class="coll-item"><span class="coll-item-desc">Improved the Bash tool's description guidance so Claude describes what a command does in plain words instead of echoing the command</span></div>
+            <div class="coll-item"><span class="coll-item-desc">Improved sandbox guidance so Claude suggests <code>/copy</code> when clipboard commands such as <code>pbcopy</code> fail inside the sandbox</span></div>
+            <div class="coll-item"><span class="coll-item-desc">Improved <code>--resume</code> first-render time for sessions with many Bash tool calls</span></div>
+            <div class="coll-item"><span class="coll-item-desc">Improved prompt input responsiveness: keystrokes no longer occasionally wait a frame behind spinner or streaming repaints</span></div>
+            <div class="coll-item"><span class="coll-item-desc">Improved prompt-cache stability: subagents and sessions started with <code>--system-prompt</code> or <code>--append-system-prompt</code> now record the system prompt and tool definitions once instead of re-rendering them</span></div>
+            <div class="coll-item"><span class="coll-item-desc">Improved Artifact tool publish errors: when a publish is refused, the message now says why and what to do about it</span></div>
+          </div>
+        </div>
+        <div class="tab-panel" data-tab="security">
+          <div class="coll-rows">
+            <div class="coll-item"><span class="coll-item-desc">Fixed Cowork scheduled tasks in the cloud failing at startup for organizations whose managed settings require sandboxing</span></div>
+            <div class="coll-item"><span class="coll-item-desc">Fixed a case where a marketplace entry path containing a backslash could bypass the containment check for fetched marketplaces on macOS and Linux</span></div>
+            <div class="coll-item"><span class="coll-item-desc">Fixed expired AWS or Google Cloud credentials under a host app such as Claude Desktop retrying ten times with a generic "request failed" before the re-authenticate error appeared</span></div>
+            <div class="coll-item"><span class="coll-item-desc">Fixed <code>/login</code> on machines whose managed settings require Claude apps gateway sign-in: Esc now closes the dialog instead of doing nothing</span></div>
+            <div class="coll-item"><span class="coll-item-desc">Fixed Remote Control clients that join a Claude Desktop or VS Code session showing a stale permission mode until it was changed again</span></div>
+            <div class="coll-item"><span class="coll-item-desc">Fixed <code>claude remote-control</code> exiting and dropping every attached session when its server credential expires (about 30 days after start); the host now re-registers and keeps going</span></div>
+          </div>
+        </div>
+        <div class="tab-panel" data-tab="fix">
+          <div class="chip-grid">
+            <span class="chip">/context and other local command output rendering blank…</span>
+            <span class="chip">shift+enter and option+backspace not working after reconnecting to…</span>
+            <span class="chip">dim last-prompt header not appearing at the top…</span>
+            <span class="chip">Workflow agent() calls with large output schemas being…</span>
+            <span class="chip">resuming a session after /compact or another slash…</span>
+            <span class="chip">resuming a large session (transcript over 5 MB):…</span>
+            <span class="chip">managed allowedHttpHookUrls, httpHookAllowedEnvVars and allowedChannelPlugins to admit nothing,…</span>
+            <span class="chip">artifact publishes cut off by a dropped connection…</span>
+            <span class="chip">effort: frontmatter on custom commands, skills, and subagents…</span>
+            <span class="chip">artifact publish failing with an unhelpful error when…</span>
+            <span class="chip">claude agents @ directory menu not listing repositories…</span>
+            <span class="chip">usage-limit warning flickering on and off during a…</span>
+            <span class="chip">earlier reasoning being dropped when an MCP server…</span>
+            <span class="chip">a tool that disappears mid-conversation, from a disconnected…</span>
+            <span class="chip">a background worker forked from a conversation adding…</span>
+            <span class="chip">mid-session MCP and plugin tools being added to…</span>
+            <span class="chip">switching models with /model re-sending every tool definition…</span>
+            <span class="chip">resumed sessions rewriting the inline tool set when…</span>
+            <span class="chip">resumed sessions re-rendering tool descriptions instead of replaying…</span>
+            <span class="chip">prompt-cache misses and dropped extended thinking when a…</span>
+            <span class="chip">resumed sessions rewriting earlier MCP tool announcements (and…</span>
+            <span class="chip">a prompt-cache break when a print-mode (-p) conversation…</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- ── v2.1.266 ── -->
   <div class="version-block" id="v2.1.266" data-types="security" data-date="2026-09-08">
     <div class="version-head">
