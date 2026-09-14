@@ -571,155 +571,155 @@ dialog::backdrop{background:rgba(34,32,28,.30)}
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Added fast mode in Claude Code Remote sessions (cloud and self-hosted runners): the host's fast-mode setting or <code>/fast</code> typed in the session applies where your organization allows it</span>
+      <span class="e-desc" data-en="Added fast mode in Claude Code Remote sessions (cloud and self-hosted runners): the host's fast-mode setting or <code>/fast</code> typed in the session applies where your organization allows it">Cloud·자체 호스팅 러너 등 Remote 세션에 Fast mode 지원 추가: 호스트 fast-mode 설정 또는 세션에서 입력한 <code>/fast</code>가 조직 허용 범위 내에서 적용</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Added mouse support to the <code>/config</code> panel in fullscreen mode: the wheel scrolls the settings list, a click on a setting's value changes it, and the row under the pointer is highlighted</span>
+      <span class="e-desc" data-en="Added mouse support to the <code>/config</code> panel in fullscreen mode: the wheel scrolls the settings list, a click on a setting's value changes it, and the row under the pointer is highlighted">전체화면 <code>/config</code> 패널에 마우스 지원 추가: 휠로 목록 스크롤, 값 클릭 시 변경, 포인터 아래 행 강조</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Added <code>claude self-hosted-runner --drain-marker-file &lt;path&gt;</code>: when that file exists at a SIGTERM drain, the runner reports its exit to the server as a host drain (telemetry only)</span>
+      <span class="e-desc" data-en="Added <code>claude self-hosted-runner --drain-marker-file &lt;path&gt;</code>: when that file exists at a SIGTERM drain, the runner reports its exit to the server as a host drain (telemetry only)"><code>claude self-hosted-runner --drain-marker-file &lt;path&gt;</code> 추가: SIGTERM 드레인 시 해당 파일이 존재하면 러너가 서버에 종료를 호스트 드레인으로 보고(텔레메트리 전용)</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Added per-command <code>allowed_domains</code> to Bash, PowerShell and Monitor in auto mode with sandboxing: the hosts a command needs are reviewed with it and opened for it alone; other hosts are refused</span>
+      <span class="e-desc" data-en="Added per-command <code>allowed_domains</code> to Bash, PowerShell and Monitor in auto mode with sandboxing: the hosts a command needs are reviewed with it and opened for it alone; other hosts are refused">오토 모드 샌드박싱에서 Bash·PowerShell·Monitor에 명령별 <code>allowed_domains</code> 추가: 명령에 필요한 호스트만 해당 명령에 개방, 나머지 차단</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Added <code>omitClaudeMd</code> to agent frontmatter and <code>--agents</code> JSON, letting custom and plugin subagents run without user, project and local CLAUDE.md files; managed policy files still load</span>
+      <span class="e-desc" data-en="Added <code>omitClaudeMd</code> to agent frontmatter and <code>--agents</code> JSON, letting custom and plugin subagents run without user, project and local CLAUDE.md files; managed policy files still load">에이전트 frontmatter 및 <code>--agents</code> JSON에 <code>omitClaudeMd</code> 추가: 커스텀·플러그인 서브에이전트가 사용자·프로젝트·로컬 CLAUDE.md 없이 실행 가능, 관리형 정책 파일은 여전히 로드</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Added <code>--accept-command &lt;sha256&gt;</code> to <code>claude plugin install</code> and <code>claude plugin update</code> to accept exactly the command a previous <code>--json</code> run displayed, instead of <code>-y</code></span>
+      <span class="e-desc" data-en="Added <code>--accept-command &lt;sha256&gt;</code> to <code>claude plugin install</code> and <code>claude plugin update</code> to accept exactly the command a previous <code>--json</code> run displayed, instead of <code>-y</code>"><code>claude plugin install</code>·<code>claude plugin update</code>에 <code>--accept-command &lt;sha256&gt;</code> 추가: <code>-y</code> 대신 이전 <code>--json</code> 실행에서 표시된 명령을 정확히 수락</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Added support for a <code>multiplier</code> above 1, up to 10, in the <code>modelPricing</code> managed setting and the Claude apps gateway <code>pricing</code> block, for marked-up internal chargeback rates</span>
+      <span class="e-desc" data-en="Added support for a <code>multiplier</code> above 1, up to 10, in the <code>modelPricing</code> managed setting and the Claude apps gateway <code>pricing</code> block, for marked-up internal chargeback rates"><code>modelPricing</code> 관리 설정 및 Claude apps 게이트웨이 <code>pricing</code> 블록에서 내부 청구율 마크업용 <code>multiplier</code> 1 초과 최대 10 지원 추가</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Added a spinner tip pointing Bedrock, Vertex AI, Foundry and LLM gateway users to the Claude desktop app; the claude.ai desktop app tip now suggests <code>/desktop</code>, which offers to download the app</span>
+      <span class="e-desc" data-en="Added a spinner tip pointing Bedrock, Vertex AI, Foundry and LLM gateway users to the Claude desktop app; the claude.ai desktop app tip now suggests <code>/desktop</code>, which offers to download the app">Bedrock·Vertex AI·Foundry·LLM 게이트웨이 사용자에게 Claude 데스크탑 앱을 안내하는 스피너 팁 추가; claude.ai 데스크탑 앱 팁은 이제 앱 다운로드를 안내하는 <code>/desktop</code> 제안</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Changed auto mode so that a skill's or slash command's inline <code>!</code> shell commands follow default-mode permission rules instead of the classifier; a command no rule decides runs as a reviewed tool call</span>
+      <span class="e-desc" data-en="Changed auto mode so that a skill's or slash command's inline <code>!</code> shell commands follow default-mode permission rules instead of the classifier; a command no rule decides runs as a reviewed tool call">오토 모드에서 스킬·슬래시 명령의 인라인 <code>!</code> 셸 명령이 분류기 대신 기본 모드 권한 규칙을 따르도록 변경; 규칙이 결정하지 못하는 명령은 검토된 툴 호출로 실행</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Changed auto mode so a subagent reports back to its caller through a dedicated hand-back call that the safety classifier reviews, instead of its last message being reviewed after the fact</span>
+      <span class="e-desc" data-en="Changed auto mode so a subagent reports back to its caller through a dedicated hand-back call that the safety classifier reviews, instead of its last message being reviewed after the fact">오토 모드에서 서브에이전트가 사후 검토 대신 안전 분류기가 검토하는 전용 핸드백 호출을 통해 호출자에게 결과를 보고하도록 변경</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Changed Monitor watches to always have a deadline (at most 30 minutes; 10 in single-prompt <code>-p</code> runs) and notify Claude to re-arm, replacing the no-timeout <code>persistent</code> option</span>
+      <span class="e-desc" data-en="Changed Monitor watches to always have a deadline (at most 30 minutes; 10 in single-prompt <code>-p</code> runs) and notify Claude to re-arm, replacing the no-timeout <code>persistent</code> option">Monitor 감시에 항상 데드라인 적용(최대 30분; <code>-p</code> 단일 프롬프트 실행은 10분), 재설정 알림 전송 — 타임아웃 없는 <code>persistent</code> 옵션 대체</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Changed the IDE selection indicator in the prompt to a <code>[⧉ …]</code> pill that wraps with the text instead of squeezing multi-line prompts; delete it with Backspace to leave the selection out</span>
+      <span class="e-desc" data-en="Changed the IDE selection indicator in the prompt to a <code>[⧉ …]</code> pill that wraps with the text instead of squeezing multi-line prompts; delete it with Backspace to leave the selection out">프롬프트의 IDE 선택 표시를 여러 줄 프롬프트를 압축하지 않고 텍스트와 함께 줄 바꿈되는 <code>[⧉ …]</code> 필로 변경; Backspace로 삭제해 선택 제외 가능</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Changed the default dynamic workflow size to small on Pro plans and lowered the medium size guideline from 15 to 10 agents</span>
+      <span class="e-desc" data-en="Changed the default dynamic workflow size to small on Pro plans and lowered the medium size guideline from 15 to 10 agents">Pro 플랜 기본 동적 워크플로 크기를 small로 변경, medium 크기 기준을 에이전트 15개에서 10개로 축소</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Changed Claude apps gateway, Bedrock, Vertex AI, and Foundry sessions so that they no longer refresh a leftover claude.ai login that the session does not use</span>
+      <span class="e-desc" data-en="Changed Claude apps gateway, Bedrock, Vertex AI, and Foundry sessions so that they no longer refresh a leftover claude.ai login that the session does not use">Claude apps 게이트웨이·Bedrock·Vertex AI·Foundry 세션에서 사용하지 않는 잔여 claude.ai 로그인을 더 이상 갱신하지 않도록 변경</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Updated the bundled <code>claude-api</code> skill to enable <code>eager_input_streaming</code> on streaming custom tools, and to start deliverable-shaped Managed Agents work with <code>user.define_outcome</code></span>
+      <span class="e-desc" data-en="Updated the bundled <code>claude-api</code> skill to enable <code>eager_input_streaming</code> on streaming custom tools, and to start deliverable-shaped Managed Agents work with <code>user.define_outcome</code>">번들 <code>claude-api</code> 스킬 업데이트: 스트리밍 커스텀 툴에 <code>eager_input_streaming</code> 활성화, <code>user.define_outcome</code>으로 결과물 형태 Managed Agents 작업 시작 지원</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">[VSCode] Added an Attach Open File setting that, when turned off, stops the open file from being added to messages; selected text is still attached</span>
+      <span class="e-desc" data-en="[VSCode] Added an Attach Open File setting that, when turned off, stops the open file from being added to messages; selected text is still attached">[VSCode] 열린 파일 첨부 설정 추가: 꺼두면 열린 파일이 메시지에 추가되지 않음, 선택한 텍스트는 계속 첨부</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">[VSCode] Fixed the Hooks and Permission rules dialogs reporting a save that landed as failed, and the Hooks dialog going blank under a plugin-only policy lock or showing color codes in save errors</span>
+      <span class="e-desc" data-en="[VSCode] Fixed the Hooks and Permission rules dialogs reporting a save that landed as failed, and the Hooks dialog going blank under a plugin-only policy lock or showing color codes in save errors">[VSCode] Hooks·Permission rules 다이얼로그가 실패한 저장을 성공으로 보고하는 문제, 플러그인 전용 정책 잠금 시 Hooks 다이얼로그가 빈 화면을 표시하거나 저장 오류에 색상 코드가 나타나는 문제 수정</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">[VSCode] Fixed Hooks dialog saves: no duplicate hook on replace, a header name retyped in other capitals keeps its secret, and settings.local.json is gitignored before the save returns</span>
+      <span class="e-desc" data-en="[VSCode] Fixed Hooks dialog saves: no duplicate hook on replace, a header name retyped in other capitals keeps its secret, and settings.local.json is gitignored before the save returns">[VSCode] Hooks 다이얼로그 저장 수정: 교체 시 훅 중복 없음, 대소문자 다르게 재입력된 헤더 이름도 시크릿 유지, 저장 반환 전 settings.local.json이 gitignore에 추가</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">[VSCode] Fixed session history showing only the current session when the workspace is on a Windows mapped network drive or SUBST drive</span>
+      <span class="e-desc" data-en="[VSCode] Fixed session history showing only the current session when the workspace is on a Windows mapped network drive or SUBST drive">[VSCode] 워크스페이스가 Windows 매핑 네트워크 드라이브 또는 SUBST 드라이브에 있을 때 세션 기록이 현재 세션만 표시되는 문제 수정</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">[VSCode] Fixed the session list's Active filter hiding open idle sessions when Open is also checked in the filter menu</span>
+      <span class="e-desc" data-en="[VSCode] Fixed the session list's Active filter hiding open idle sessions when Open is also checked in the filter menu">[VSCode] 필터 메뉴에서 Open이 체크된 경우 세션 목록의 Active 필터가 열려 있지만 유휴 세션을 숨기는 문제 수정</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">[VSCode] Fixed a new chat switching back to the previous chat when the session list refreshed</span>
+      <span class="e-desc" data-en="[VSCode] Fixed a new chat switching back to the previous chat when the session list refreshed">[VSCode] 세션 목록 새로 고침 시 새 채팅이 이전 채팅으로 전환되는 문제 수정</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">[VSCode] Fixed open tabs and the side bar keeping the old config folder until a window reload after <code>CLAUDE_CONFIG_DIR</code> changed in the <code>environmentVariables</code> setting</span>
+      <span class="e-desc" data-en="[VSCode] Fixed open tabs and the side bar keeping the old config folder until a window reload after <code>CLAUDE_CONFIG_DIR</code> changed in the <code>environmentVariables</code> setting">[VSCode] <code>environmentVariables</code> 설정에서 <code>CLAUDE_CONFIG_DIR</code> 변경 후 창 새로 고침 전까지 열린 탭과 사이드바가 이전 설정 폴더를 유지하는 문제 수정</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">[VSCode] Fixed console windows flashing on Windows when the extension runs background commands such as git, ripgrep, and the sign-in status check</span>
+      <span class="e-desc" data-en="[VSCode] Fixed console windows flashing on Windows when the extension runs background commands such as git, ripgrep, and the sign-in status check">[VSCode] 확장 프로그램이 git·ripgrep·로그인 상태 확인 등 백그라운드 명령 실행 시 Windows에서 콘솔 창이 깜박이는 문제 수정</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">[VSCode] Fixed the prompt cache clock's hover text appearing only after a delay, and the auto-compact icon showing the browser's own tooltip beside its popup</span>
+      <span class="e-desc" data-en="[VSCode] Fixed the prompt cache clock's hover text appearing only after a delay, and the auto-compact icon showing the browser's own tooltip beside its popup">[VSCode] 프롬프트 캐시 시계의 호버 텍스트가 지연 후에만 표시되는 문제, auto-compact 아이콘 팝업 옆에 브라우저 자체 툴팁이 표시되는 문제 수정</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">[VSCode] Changed the on state of toggle switches from Claude orange to the editor theme's button color</span>
+      <span class="e-desc" data-en="[VSCode] Changed the on state of toggle switches from Claude orange to the editor theme's button color">[VSCode] 토글 스위치의 켜짐 상태 색상을 Claude 오렌지에서 에디터 테마 버튼 색상으로 변경</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">[Claude Code on the web] Fixed a cloud session sometimes taking about ten minutes to respond after its process exited while the session still looked live; sending a message now restarts it right away</span>
+      <span class="e-desc" data-en="[Claude Code on the web] Fixed a cloud session sometimes taking about ten minutes to respond after its process exited while the session still looked live; sending a message now restarts it right away">[Claude Code on the web] 프로세스가 종료됐지만 세션이 살아 있는 것처럼 보일 때 응답에 약 10분 걸리는 문제 수정; 이제 메시지 전송 시 즉시 재시작</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">[Claude Code on the web] Changed the Routines page on claude.ai/code to a new layout with Yours and Templates tabs and two-column routine cards that show run status, and removed its calendar view</span>
+      <span class="e-desc" data-en="[Claude Code on the web] Changed the Routines page on claude.ai/code to a new layout with Yours and Templates tabs and two-column routine cards that show run status, and removed its calendar view">[Claude Code on the web] claude.ai/code의 Routines 페이지를 Yours·Templates 탭과 실행 상태를 표시하는 2열 루틴 카드 형태의 새 레이아웃으로 변경, 달력 보기 제거</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">[Claude Code on the web] Added a Custom network access option to the Cloud environments editor in admin settings, with the same allowed-domains list the environment dialog on claude.ai/code offers</span>
+      <span class="e-desc" data-en="[Claude Code on the web] Added a Custom network access option to the Cloud environments editor in admin settings, with the same allowed-domains list the environment dialog on claude.ai/code offers">[Claude Code on the web] 관리자 설정의 Cloud environments 편집기에 Custom 네트워크 접근 옵션 추가 — claude.ai/code 환경 다이얼로그와 동일한 허용 도메인 목록 제공</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">[Claude Tag] Fixed Claude in a channel where it stays active losing its working context about once an hour when the conversation is mostly in threads; thread activity now keeps it from being reset</span>
+      <span class="e-desc" data-en="[Claude Tag] Fixed Claude in a channel where it stays active losing its working context about once an hour when the conversation is mostly in threads; thread activity now keeps it from being reset">[Claude Tag] 대화가 주로 스레드에서 이루어지는 채널에서 Claude가 약 1시간마다 작업 컨텍스트를 잃는 문제 수정; 이제 스레드 활동이 초기화를 방지</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">[Claude Tag] Fixed a thread that asked Claude to watch a pull request no longer hearing about CI failures, comments and reviews after Claude was restarted in that thread</span>
+      <span class="e-desc" data-en="[Claude Tag] Fixed a thread that asked Claude to watch a pull request no longer hearing about CI failures, comments and reviews after Claude was restarted in that thread">[Claude Tag] PR 감시를 요청한 스레드에서 Claude 재시작 후 CI 실패·댓글·리뷰 알림을 받지 못하는 문제 수정</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">[Claude Tag] Fixed deleting the first message of a thread Claude had already replied in not ending Claude's work there; it now stops, as it did when a message with no replies was deleted</span>
+      <span class="e-desc" data-en="[Claude Tag] Fixed deleting the first message of a thread Claude had already replied in not ending Claude's work there; it now stops, as it did when a message with no replies was deleted">[Claude Tag] Claude가 이미 답변한 스레드의 첫 번째 메시지를 삭제해도 Claude 작업이 종료되지 않는 문제 수정; 이제 답글 없는 메시지 삭제와 동일하게 중단</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">[Claude Tag] Fixed Claude holding back a post because of an earlier instruction addressed to a different bot or assistant; only instructions addressed to Claude bind it, and it asks when unsure</span>
+      <span class="e-desc" data-en="[Claude Tag] Fixed Claude holding back a post because of an earlier instruction addressed to a different bot or assistant; only instructions addressed to Claude bind it, and it asks when unsure">[Claude Tag] 다른 봇·어시스턴트에게 전달된 이전 지시 때문에 Claude가 게시물을 보류하는 문제 수정; 이제 Claude에게 전달된 지시만 적용, 불확실한 경우 확인 요청</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">[Claude Tag] Fixed the reply-mode card Claude posts on joining a busy channel saying it "sees a lot of automated posts" when the channel is only chatty or large; the card now names the real reason</span>
+      <span class="e-desc" data-en="[Claude Tag] Fixed the reply-mode card Claude posts on joining a busy channel saying it &quot;sees a lot of automated posts&quot; when the channel is only chatty or large; the card now names the real reason">[Claude Tag] Claude가 분주한 채널 참여 시 게시하는 회신 모드 카드가 채널이 단순히 활발하거나 클 때도 &quot;자동화 게시물이 많다&quot;고 표시하는 문제 수정; 이제 실제 이유를 명시</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">[Code Review] Fixed a pull request in a repository reviewed once per PR sometimes getting no review when a commit arrived while its review was waiting to start; it now reviews the requested commit</span>
+      <span class="e-desc" data-en="[Code Review] Fixed a pull request in a repository reviewed once per PR sometimes getting no review when a commit arrived while its review was waiting to start; it now reviews the requested commit">[Code Review] PR당 1회 리뷰 저장소에서 리뷰 대기 중 커밋이 도착했을 때 간혹 리뷰가 생략되는 문제 수정; 이제 요청된 커밋을 리뷰</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">[Code Review] Fixed Code Review occasionally posting the same findings two or three times when GitHub reported an error for a review it had in fact created</span>
+      <span class="e-desc" data-en="[Code Review] Fixed Code Review occasionally posting the same findings two or three times when GitHub reported an error for a review it had in fact created">[Code Review] GitHub가 실제로 생성된 리뷰에 오류를 보고할 때 동일한 결과를 2~3회 게시하는 문제 수정</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">[Code Review] Fixed follow-up reviews re-posting a security finding a person had already resolved when a later push moved the lines it was anchored to</span>
+      <span class="e-desc" data-en="[Code Review] Fixed follow-up reviews re-posting a security finding a person had already resolved when a later push moved the lines it was anchored to">[Code Review] 이후 푸시로 앵커 줄이 이동했을 때 후속 리뷰가 이미 해결된 보안 결과를 재게시하는 문제 수정</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">[Code Review] Fixed reopening a finished /ultrareview cloud session in the Claude app starting the whole review over again unprompted</span>
+      <span class="e-desc" data-en="[Code Review] Fixed reopening a finished /ultrareview cloud session in the Claude app starting the whole review over again unprompted">[Code Review] Claude 앱에서 완료된 /ultrareview 클라우드 세션을 다시 열면 자동으로 전체 리뷰가 다시 시작되는 문제 수정</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Windows: Fixed PowerShell commands failing with "Exit code 1" and no output when the session's temp output path reaches 260 characters</span>
+      <span class="e-desc" data-en="Windows: Fixed PowerShell commands failing with &quot;Exit code 1&quot; and no output when the session's temp output path reaches 260 characters">Windows: 세션 임시 출력 경로가 260자에 도달하면 PowerShell 명령이 출력 없이 &quot;Exit code 1&quot;로 실패하는 문제 수정</span>
     </div>
     <div class="tabs-container">
       <div class="tabs-bar">
