@@ -16475,7 +16475,25 @@ dialog::backdrop{background:rgba(34,32,28,.30)}
   </div>
 <!--/CC-DATA-->
 <!--CX-DATA-->
-    <p class="range"><strong>v0.69.0</strong> → <strong>v0.154.0</strong> &nbsp;·&nbsp; <span class="range-dates" data-en="2025.12.10 – 2026.9.9">2025.12.10 – 2026.9.9</span></p>
+    <p class="range"><strong>v0.69.0</strong> → <strong>v0.155.0</strong> &nbsp;·&nbsp; <span class="range-dates" data-en="2025.12.10 – 2026.9.17">2025.12.10 – 2026.9.17</span></p>
+    <div class="version-block" id="cx0.155.0" data-date="2026-09-17">
+      <div class="version-head">
+        <span class="ver-badge">v0.155.0</span><span class="ver-date" data-en="Sep 17 Thu">9월 17일 목</span><span class="ver-ago"></span>
+        <div class="ver-summary"><span class="pill feature">기능 ×6</span><span class="pill fix">Fix ×6</span></div>
+      </div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Added experimental <code>/voice</code> conversations with live transcripts and microphone controls on supported builds, enabled through <code>/experimental</code>.</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">The TUI now shows live reasoning summaries in the status row and completion timestamps after successful turns.</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Added task hiding, archiving, and deletion in the agents overview, plus worktree ownership details and confirmed deletion of clean managed worktrees.</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Added Touch ID verification for MCP requests in local TUI sessions on supported Macs.</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Added configurable daemon update schedules and <code>codex app-server daemon update</code>; saved threads and active goals can recover after daemon restarts.</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Amazon Bedrock can now obtain AWS credentials from configured commands, with caching, expiration-based refresh, and authentication recovery.</span></div>
+      <div class="entry row-divider" data-type="fix"><span class="pill fix">Fix</span><span class="e-desc">Accepted prompts are now saved even when compaction fails before a turn starts.</span></div>
+      <div class="entry row-divider" data-type="fix"><span class="pill fix">Fix</span><span class="e-desc">Fixed missed tmux resizes, transcript viewport restoration, and stale history appearing after switching threads.</span></div>
+      <div class="entry row-divider" data-type="fix"><span class="pill fix">Fix</span><span class="e-desc">MCP servers now report expired OAuth credentials accurately and provide reconnect guidance when token refresh fails.</span></div>
+      <div class="entry row-divider" data-type="fix"><span class="pill fix">Fix</span><span class="e-desc">Automatic approval reviews now preserve complete actions and authorization evidence more reliably, retry transient failures, and distinguish review failures from unsafe-action findings.</span></div>
+      <div class="entry row-divider" data-type="fix"><span class="pill fix">Fix</span><span class="e-desc">Switching accounts now invalidates remote-control sessions, cached WebSocket state, and model catalogs belonging to the previous identity.</span></div>
+      <div class="entry row-divider" data-type="fix"><span class="pill fix">Fix</span><span class="e-desc">Blocked Windows-process escapes from restricted WSL sandboxes and hardened brokered shell snapshots against credential exposure.</span></div>
+    </div>
     <div class="version-block" id="cx0.154.0" data-date="2026-09-09">
       <div class="version-head">
         <span class="ver-badge">v0.154.0</span><span class="ver-date" data-en="Sep 9 Wed">9월 9일 수</span><span class="ver-ago"></span>
