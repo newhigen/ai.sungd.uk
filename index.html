@@ -328,7 +328,7 @@ dialog::backdrop{background:rgba(34,32,28,.30)}
        title="Codex 공식 릴리스 전체">공식 릴리스 <i>↗</i></a></span>
   <span class="pdone"><span class="pcount">해봄 <b class="doneAll">0</b>/<span class="totAll">0</span></span>
     <button class="clrb btn">모두 해제</button></span>
-  <span class="pstamp"><!--SYNC--><span class="s-y">2026-</span><span class="s-md">09-19</span><span class="s-t"> 03:17</span><!--/SYNC--></span>
+  <span class="pstamp"><!--SYNC--><span class="s-y">2026-</span><span class="s-md">09-19</span><span class="s-t"> 14:41</span><!--/SYNC--></span>
 </div>
 
 <div class="tab on" id="new">
@@ -563,7 +563,23 @@ dialog::backdrop{background:rgba(34,32,28,.30)}
      지우면 update_changelog·update_codex 가 꽂을 자리를 잃는다. -->
 <div id="data">
 <!--CC-DATA-->
-    <p class="range"><strong>v2.0.0</strong> → <strong>v2.1.277</strong> &nbsp;·&nbsp; <span class="range-dates" data-en="2025.9.29 – 2026.9.18">2025.9.29 – 2026.9.18</span></p>
+    <p class="range"><strong>v2.0.0</strong> → <strong>v2.1.278</strong> &nbsp;·&nbsp; <span class="range-dates" data-en="2025.9.29 – 2026.9.19">2025.9.29 – 2026.9.19</span></p>
+  <!-- ── v2.1.278 ── -->
+  <div class="version-block" id="v2.1.278" data-types="feature" data-date="2026-09-19">
+    <div class="version-head">
+      <span class="ver-badge">v2.1.278</span><span class="ver-date">9월 19일 토</span><span class="ver-ago"></span>
+      <div class="ver-summary"><span class="pill feature">기능 ×2</span></div>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Changed auto mode for Claude API and Enterprise users, and on Bedrock, Vertex, Foundry and gateways, to default to the server-side classifier, which does not charge for classifier overhead (<code>CLAUDE_CODE_AUTO_MODE_SERVER=0</code> opts out on Bedrock, Vertex, Foundry and gateways); warns on billed fallback. See https://code.claude.com/docs/en/auto-mode-classifier-billing</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Added an <code>Auto mode server</code> row to <code>/status</code> showing whether this session's auto mode classifier runs on the server</span>
+    </div>
+  </div>
+
   <!-- ── v2.1.277 ── -->
   <div class="version-block" id="v2.1.277" data-types="feature improve security fix" data-date="2026-09-18">
     <div class="version-head">
