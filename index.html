@@ -571,163 +571,163 @@ dialog::backdrop{background:rgba(34,32,28,.30)}
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Added Claude Opus 5.5 (<code>claude-opus-5-5</code>), now the default Opus model — 1M context, $4/$20 per Mtok with $0.20/Mtok cache reads</span>
+      <span class="e-desc" data-en="Added Claude Opus 5.5 (<code>claude-opus-5-5</code>), now the default Opus model — 1M context, $4/$20 per Mtok with $0.20/Mtok cache reads">Claude Opus 5.5(<code>claude-opus-5-5</code>) 추가, 기본 Opus 모델로 설정 — 컨텍스트 1M, 입력 $4/출력 $20 per Mtok, 캐시 읽기 $0.20/Mtok</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Added mouse support to more lists in fullscreen mode: the wheel scrolls the <code>/skills</code> list, and a skill's state options in <code>/plugin</code> can be clicked</span>
+      <span class="e-desc" data-en="Added mouse support to more lists in fullscreen mode: the wheel scrolls the <code>/skills</code> list, and a skill's state options in <code>/plugin</code> can be clicked">전체화면 모드 더 많은 목록에 마우스 지원 추가: 휠로 <code>/skills</code> 목록 스크롤, <code>/plugin</code>의 스킬 상태 옵션 클릭 가능</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Added <code>CLAUDE_CODE_MAX_MCP_DESCRIPTION_LENGTH</code> to change the 2,048-character cap on MCP tool descriptions and server instructions for every MCP server in the session</span>
+      <span class="e-desc" data-en="Added <code>CLAUDE_CODE_MAX_MCP_DESCRIPTION_LENGTH</code> to change the 2,048-character cap on MCP tool descriptions and server instructions for every MCP server in the session">세션 내 모든 MCP 서버의 툴 설명·서버 지침 2,048자 상한을 변경하는 <code>CLAUDE_CODE_MAX_MCP_DESCRIPTION_LENGTH</code> 추가</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Added hook output sizes and the number of oversized outputs saved to a file to the <code>hook_execution_complete</code> OpenTelemetry event</span>
+      <span class="e-desc" data-en="Added hook output sizes and the number of oversized outputs saved to a file to the <code>hook_execution_complete</code> OpenTelemetry event"><code>hook_execution_complete</code> OpenTelemetry 이벤트에 훅 출력 크기 및 파일로 저장된 초과 출력 수 추가</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Self-hosted runner: Fixed lifecycle-hook commits failing to sign under <code>--configure-git</code></span>
+      <span class="e-desc" data-en="Self-hosted runner: Fixed lifecycle-hook commits failing to sign under <code>--configure-git</code>">셀프호스팅 러너: <code>--configure-git</code> 사용 시 라이프사이클 훅 커밋 서명 실패 수정</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Windows: Fixed background cleanup deleting a directory symlink or junction used to relocate <code>~/.claude/session-env</code>, <code>image-cache</code> or another cleaned-up folder</span>
+      <span class="e-desc" data-en="Windows: Fixed background cleanup deleting a directory symlink or junction used to relocate <code>~/.claude/session-env</code>, <code>image-cache</code> or another cleaned-up folder">Windows: 백그라운드 정리 시 <code>~/.claude/session-env</code>·<code>image-cache</code> 등 이동에 사용된 디렉터리 심볼릭 링크·분기가 삭제되는 문제 수정</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Self-hosted runner: Fixed a turn that ended right at a <code>--retire-at</code> release losing its finished signal; the runner now briefly waits for the turn to be reported before stopping the session</span>
+      <span class="e-desc" data-en="Self-hosted runner: Fixed a turn that ended right at a <code>--retire-at</code> release losing its finished signal; the runner now briefly waits for the turn to be reported before stopping the session">셀프호스팅 러너: <code>--retire-at</code> 릴리스 직전에 종료된 턴이 완료 신호를 잃는 문제 수정; 이제 러너가 세션 중지 전 턴 보고를 잠시 기다림</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Reverted <code>ctrl+l</code> / <code>cmd+k</code> in fullscreen mode clearing the transcript view (added in 2.1.260); they redraw the screen again</span>
+      <span class="e-desc" data-en="Reverted <code>ctrl+l</code> / <code>cmd+k</code> in fullscreen mode clearing the transcript view (added in 2.1.260); they redraw the screen again">전체화면 모드의 <code>ctrl+l</code>·<code>cmd+k</code>가 트랜스크립트를 지우던 동작 복원(2.1.260에서 추가); 이제 다시 화면 재그리기로 동작</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Changed the default model on Pro and Team Standard plans from Sonnet to Opus, matching Max, Team Premium, and Enterprise</span>
+      <span class="e-desc" data-en="Changed the default model on Pro and Team Standard plans from Sonnet to Opus, matching Max, Team Premium, and Enterprise">Pro·Team Standard 플랜 기본 모델을 Sonnet에서 Opus로 변경 — Max·Team Premium·Enterprise와 동일</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Changed an effort level saved before <code>/effort</code> became per-model to no longer apply to newly released models such as Opus 5.5; they start at their default until you pick a level</span>
+      <span class="e-desc" data-en="Changed an effort level saved before <code>/effort</code> became per-model to no longer apply to newly released models such as Opus 5.5; they start at their default until you pick a level"><code>/effort</code>가 모델별로 되기 전 저장된 노력 레벨이 Opus 5.5 등 신규 모델에는 적용되지 않도록 변경; 레벨 선택 전까지 기본값으로 시작</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Changed Opus 4.7, Opus 4.8 and Fable 5 to stop holding their launch-default effort over <code>/effort</code> in <code>-p</code> or the Agent SDK, a project, managed or <code>--settings</code> <code>effortLevel</code>, or a per-model level</span>
+      <span class="e-desc" data-en="Changed Opus 4.7, Opus 4.8 and Fable 5 to stop holding their launch-default effort over <code>/effort</code> in <code>-p</code> or the Agent SDK, a project, managed or <code>--settings</code> <code>effortLevel</code>, or a per-model level">Opus 4.7·Opus 4.8·Fable 5가 <code>-p</code>·Agent SDK·프로젝트·관리형·<code>--settings</code> <code>effortLevel</code>·모델별 레벨 등의 <code>/effort</code> 설정보다 출시 기본 노력을 우선하지 않도록 변경</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Changed <code>/autocompact</code>'s footer hint to name ←/→, the keys that adjust other ordered values</span>
+      <span class="e-desc" data-en="Changed <code>/autocompact</code>'s footer hint to name ←/→, the keys that adjust other ordered values"><code>/autocompact</code> 하단 힌트에 다른 순서값 조정 키인 ←/→ 명시</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Changed <code>/fast</code>'s footer to name Space as the toggle key</span>
+      <span class="e-desc" data-en="Changed <code>/fast</code>'s footer to name Space as the toggle key"><code>/fast</code> 하단에 Space를 토글 키로 명시</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Self-hosted runner: Changed git in lifecycle hooks to ignore hook folders and programs named in the runner's shared git files; local-path and <code>git://</code> remotes there now need <code>GIT_ALLOW_PROTOCOL</code></span>
+      <span class="e-desc" data-en="Self-hosted runner: Changed git in lifecycle hooks to ignore hook folders and programs named in the runner's shared git files; local-path and <code>git://</code> remotes there now need <code>GIT_ALLOW_PROTOCOL</code>">셀프호스팅 러너: 라이프사이클 훅의 git이 러너 공유 git 파일에 명시된 훅 폴더·프로그램을 무시하도록 변경; 로컬 경로·<code>git://</code> 리모트는 이제 <code>GIT_ALLOW_PROTOCOL</code> 필요</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Changed plugin marketplaces whose name imitates a reserved marketplace name to be refused when added, and to stop loading if one was already added</span>
+      <span class="e-desc" data-en="Changed plugin marketplaces whose name imitates a reserved marketplace name to be refused when added, and to stop loading if one was already added">예약된 마켓플레이스 이름을 모방한 플러그인 마켓플레이스를 추가 시 거부하고, 이미 추가된 경우 로드 중지</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Changed <code>PermissionRequest</code> hooks: an agent-type hook no longer runs there, since its answer could never allow or deny the request; it now shows an error pointing to command or http hooks</span>
+      <span class="e-desc" data-en="Changed <code>PermissionRequest</code> hooks: an agent-type hook no longer runs there, since its answer could never allow or deny the request; it now shows an error pointing to command or http hooks"><code>PermissionRequest</code> 훅 변경: agent형 훅은 요청을 허용·거부할 수 없으므로 더 이상 실행되지 않으며, command 또는 http 훅을 안내하는 오류 표시</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">[VSCode] Added a Status dialog, with a typed <code>/status</code>, showing the session's version, account, model and server details</span>
+      <span class="e-desc" data-en="[VSCode] Added a Status dialog, with a typed <code>/status</code>, showing the session's version, account, model and server details">[VSCode] <code>/status</code> 입력으로 열리는 Status 대화상자 추가 — 세션 버전·계정·모델·서버 정보 표시</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">[VSCode] Added a Sandbox dialog for the sandbox mode, the unsandboxed fallback and excluded commands, opened from the panel menu or by typing <code>/sandbox</code></span>
+      <span class="e-desc" data-en="[VSCode] Added a Sandbox dialog for the sandbox mode, the unsandboxed fallback and excluded commands, opened from the panel menu or by typing <code>/sandbox</code>">[VSCode] 패널 메뉴 또는 <code>/sandbox</code> 입력으로 열리는 Sandbox 대화상자 추가 — 샌드박스 모드·비샌드박스 폴백·제외 명령 설정</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">[VSCode] Added a Claude in Chrome dialog (extension status, the install, reconnect and permissions pages, the enabled-by-default setting), opened from the panel menu or by typing <code>/chrome</code></span>
+      <span class="e-desc" data-en="[VSCode] Added a Claude in Chrome dialog (extension status, the install, reconnect and permissions pages, the enabled-by-default setting), opened from the panel menu or by typing <code>/chrome</code>">[VSCode] 패널 메뉴 또는 <code>/chrome</code> 입력으로 열리는 Claude in Chrome 대화상자 추가 — 확장 상태·설치·재연결·권한 페이지·기본 활성화 설정</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">[VSCode] Added Export conversation, with a typed <code>/export</code>, to copy or save the conversation as plain text</span>
+      <span class="e-desc" data-en="[VSCode] Added Export conversation, with a typed <code>/export</code>, to copy or save the conversation as plain text">[VSCode] <code>/export</code> 입력으로 대화를 일반 텍스트로 복사·저장하는 Export conversation 추가</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">[VSCode] Added each skill's source, token estimate and on/off state to the Slash commands dialog, with a click to change the state, and a typed <code>/skills</code> that opens it</span>
+      <span class="e-desc" data-en="[VSCode] Added each skill's source, token estimate and on/off state to the Slash commands dialog, with a click to change the state, and a typed <code>/skills</code> that opens it">[VSCode] Slash commands 대화상자에 각 스킬의 출처·토큰 추정치·활성화 상태 추가 — 클릭으로 상태 변경, <code>/skills</code> 입력으로 열기</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">[VSCode] Added a typed <code>/plan</code> that switches to plan mode, sends a first planning prompt, or shows the session's plan</span>
+      <span class="e-desc" data-en="[VSCode] Added a typed <code>/plan</code> that switches to plan mode, sends a first planning prompt, or shows the session's plan">[VSCode] 플랜 모드로 전환하거나 첫 계획 프롬프트를 보내거나 세션 플랜을 표시하는 입력 <code>/plan</code> 추가</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">[VSCode] Changed "Open in New Tab" to open Claude beside the editor group you are working in rather than after the last group</span>
+      <span class="e-desc" data-en="[VSCode] Changed &quot;Open in New Tab&quot; to open Claude beside the editor group you are working in rather than after the last group">[VSCode] "새 탭에서 열기"가 마지막 그룹 뒤 대신 현재 작업 중인 에디터 그룹 옆에 Claude를 열도록 변경</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">[VSCode] Fixed the effort chip showing a stale saved effort level instead of the level the session runs at</span>
+      <span class="e-desc" data-en="[VSCode] Fixed the effort chip showing a stale saved effort level instead of the level the session runs at">[VSCode] 노력 칩이 실제 실행 레벨 대신 오래된 저장 레벨을 표시하는 문제 수정</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">[VSCode] Fixed Claude Code never starting when the Python extension hangs while activating; it now starts after 60 seconds without the Python environment</span>
+      <span class="e-desc" data-en="[VSCode] Fixed Claude Code never starting when the Python extension hangs while activating; it now starts after 60 seconds without the Python environment">[VSCode] Python 확장 활성화 중 응답 없을 때 Claude Code가 시작되지 않는 문제 수정; 이제 60초 후 Python 환경 없이 시작</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">[VSCode] Fixed the plan approval card never offering auto mode: when auto mode is available, its first option is now "Yes, and use auto mode", as in the terminal</span>
+      <span class="e-desc" data-en="[VSCode] Fixed the plan approval card never offering auto mode: when auto mode is available, its first option is now &quot;Yes, and use auto mode&quot;, as in the terminal">[VSCode] 플랜 승인 카드에서 auto 모드 옵션이 제공되지 않던 문제 수정: auto 모드 사용 가능 시 첫 번째 옵션이 터미널과 동일하게 "Yes, and use auto mode"로 표시</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">[VSCode] Fixed arrow-key navigation in the session list stopping after archiving or unarchiving a session from the keyboard</span>
+      <span class="e-desc" data-en="[VSCode] Fixed arrow-key navigation in the session list stopping after archiving or unarchiving a session from the keyboard">[VSCode] 키보드로 세션 보관·해제 후 세션 목록 화살표 키 탐색이 멈추는 문제 수정</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">[VSCode] Fixed paste marker lines showing in your own messages after reopening a session</span>
+      <span class="e-desc" data-en="[VSCode] Fixed paste marker lines showing in your own messages after reopening a session">[VSCode] 세션 재오픈 후 자신의 메시지에 붙여넣기 마커 줄이 표시되는 문제 수정</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">[Claude Code on the web] Changed the admin Routines on/off setting to live under Admin settings → Capabilities → Remote sessions; the Claude Code admin page now links to it</span>
+      <span class="e-desc" data-en="[Claude Code on the web] Changed the admin Routines on/off setting to live under Admin settings → Capabilities → Remote sessions; the Claude Code admin page now links to it">[Claude Code on the web] 관리자 Routines 켜기/끄기 설정이 Admin settings → Capabilities → Remote sessions 아래로 이동; Claude Code 관리자 페이지에서 링크 제공</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">[Claude Code on the web] Fixed <code>gh</code> and GitHub API calls inside a cloud session on a GitHub Enterprise Server repository failing after about eight hours; the token now renews automatically</span>
+      <span class="e-desc" data-en="[Claude Code on the web] Fixed <code>gh</code> and GitHub API calls inside a cloud session on a GitHub Enterprise Server repository failing after about eight hours; the token now renews automatically">[Claude Code on the web] GitHub Enterprise Server 저장소 클라우드 세션의 <code>gh</code>·GitHub API 호출이 약 8시간 후 실패하는 문제 수정; 토큰 자동 갱신</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">[Claude Code on the web] Fixed a routine that resumes an existing session running with its old prompt and name when it was edited moments before the scheduled run started</span>
+      <span class="e-desc" data-en="[Claude Code on the web] Fixed a routine that resumes an existing session running with its old prompt and name when it was edited moments before the scheduled run started">[Claude Code on the web] 예약 실행 직전에 편집된 기존 세션 재개 루틴이 이전 프롬프트·이름으로 실행되는 문제 수정</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">[Claude Code on the web] Fixed file links in a cloud session transcript that point outside the session's working directory opening a file card that never loads; they're now disabled and say why</span>
+      <span class="e-desc" data-en="[Claude Code on the web] Fixed file links in a cloud session transcript that point outside the session's working directory opening a file card that never loads; they're now disabled and say why">[Claude Code on the web] 세션 작업 디렉터리 외부를 가리키는 클라우드 세션 트랜스크립트 파일 링크가 로드되지 않는 파일 카드를 여는 문제 수정; 이제 비활성화되고 이유 표시</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">[Claude Code on the web] Fixed auto mode refusing to retry a tool call because an approval prompt that expired unanswered, or was superseded by a newer message, had been recorded as your rejection</span>
+      <span class="e-desc" data-en="[Claude Code on the web] Fixed auto mode refusing to retry a tool call because an approval prompt that expired unanswered, or was superseded by a newer message, had been recorded as your rejection">[Claude Code on the web] 만료되거나 새 메시지로 교체된 승인 프롬프트가 거절로 기록되어 auto 모드가 툴 호출 재시도를 거부하는 문제 수정</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">[Claude Code on the web] Removed the empty repository picker shown when starting a session on a self-hosted environment in an organization where an admin has turned GitHub off</span>
+      <span class="e-desc" data-en="[Claude Code on the web] Removed the empty repository picker shown when starting a session on a self-hosted environment in an organization where an admin has turned GitHub off">[Claude Code on the web] 관리자가 GitHub를 비활성화한 조직의 셀프호스팅 환경 세션 시작 시 표시되던 빈 저장소 선택기 제거</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">[Claude Tag] Added Slack's native Working indicator, Stop button and thread title to Claude's threads in channels; the indicator stays up until Claude finishes, and Stop interrupts the task</span>
+      <span class="e-desc" data-en="[Claude Tag] Added Slack's native Working indicator, Stop button and thread title to Claude's threads in channels; the indicator stays up until Claude finishes, and Stop interrupts the task">[Claude Tag] 채널 내 Claude 스레드에 Slack 기본 Working 표시기·중지 버튼·스레드 제목 추가; 표시기는 Claude 완료 시까지 유지, 중지는 작업 중단</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">[Claude Tag] Added a short notice in the Slack channel when a guest joining, or the last guest leaving, changes how Claude responds there under a Restrict or Channel only guest setting</span>
+      <span class="e-desc" data-en="[Claude Tag] Added a short notice in the Slack channel when a guest joining, or the last guest leaving, changes how Claude responds there under a Restrict or Channel only guest setting">[Claude Tag] Restrict 또는 Channel only 게스트 설정에서 게스트 참여·마지막 게스트 퇴장 시 Claude 응답 방식 변경을 알리는 간단한 공지 추가</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">[Claude Tag] Fixed scheduled routines silently failing to run in Slack workspaces that were connected to Claude before the workspace joined its Enterprise Grid</span>
+      <span class="e-desc" data-en="[Claude Tag] Fixed scheduled routines silently failing to run in Slack workspaces that were connected to Claude before the workspace joined its Enterprise Grid">[Claude Tag] Enterprise Grid 합류 전 Claude에 연결된 Slack 워크스페이스에서 예약 루틴이 자동으로 실패하던 문제 수정</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">[Claude Tag] Fixed Claude asking you to re-upload a Slack file when a brief file-scanning outage, not the file, was the problem; it now retries the scan and is told when the scanner is down</span>
+      <span class="e-desc" data-en="[Claude Tag] Fixed Claude asking you to re-upload a Slack file when a brief file-scanning outage, not the file, was the problem; it now retries the scan and is told when the scanner is down">[Claude Tag] 파일 스캔 일시 장애 시 Claude가 파일 재업로드를 요청하던 문제 수정; 이제 스캔 재시도 및 스캐너 다운 시 알림</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">[Claude Tag] Fixed a bullet in Claude's Slack reply whose text starts with +, - or * rendering as an empty bullet with a stray nested item; it now shows as one bullet with the character kept</span>
+      <span class="e-desc" data-en="[Claude Tag] Fixed a bullet in Claude's Slack reply whose text starts with +, - or * rendering as an empty bullet with a stray nested item; it now shows as one bullet with the character kept">[Claude Tag] +·-·*으로 시작하는 Slack 답글 항목이 빈 글머리와 떠도는 중첩 항목으로 렌더링되는 문제 수정; 이제 문자를 유지한 단일 항목으로 표시</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">[Claude Tag] Fixed the Slack notice for a failed cloud environment setup script sometimes being a generic "mention me to retry"; it now names the setup script and says to fix it first</span>
+      <span class="e-desc" data-en="[Claude Tag] Fixed the Slack notice for a failed cloud environment setup script sometimes being a generic &quot;mention me to retry&quot;; it now names the setup script and says to fix it first">[Claude Tag] 클라우드 환경 설정 스크립트 실패 시 Slack 공지가 일반적인 "나를 언급해 재시도"로 표시되던 문제 수정; 이제 스크립트 이름과 먼저 수정 필요 안내 표시</span>
     </div>
     <div class="tabs-container">
       <div class="tabs-bar">
