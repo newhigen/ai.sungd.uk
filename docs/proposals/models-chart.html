@@ -41,6 +41,18 @@ svg .ax{stroke:var(--line);stroke-width:1}
 .price-row{display:grid;grid-template-columns:62px minmax(0,1fr);gap:10px;align-items:center;margin:8px 0}
 .price-row .t{font-family:var(--mono);font-size:11px;color:var(--dim)}
 .note{font-size:11px;color:#a09a8c;margin-top:10px}
+.wide{grid-column:1 / -1}
+#F svg [data-m]{transition:opacity .12s}
+#F svg.focus [data-m]:not(.on){opacity:.08}
+#F .eff{font-size:9.5px;fill:#a09a8c}
+#F .hid{display:none}
+#F svg.focus .hid.on{display:inline}
+#F .lab{paint-order:stroke;stroke:#faf9f5;stroke-width:3px}
+#F .eff{paint-order:stroke;stroke:#faf9f5;stroke-width:3px}
+.fleg{font-family:var(--mono);font-size:11px;color:var(--ink);display:flex;flex-wrap:wrap;gap:4px 16px;margin-bottom:8px}
+.fleg span{cursor:pointer;display:inline-flex;align-items:center;gap:6px;padding:1px 5px;margin:-1px -5px;border-radius:3px}
+.fleg span.on{background:#eae4d6}
+.fleg i{display:inline-block;width:14px;height:2px}
 .nlist{font-family:var(--mono);font-size:11px;color:var(--ink);display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px 18px;margin-top:10px}
 .nlist b{display:inline-block;width:16px;color:var(--acc);font-weight:500}
 .nlist em{font-style:normal;color:var(--dim)}
@@ -48,7 +60,7 @@ svg .ax{stroke:var(--line);stroke-width:1}
 </head>
 <body>
 <div class="wrap">
-<h1>모델 탭 — 차트 시안 다섯</h1>
+<h1>모델 탭 — 차트 시안 여섯</h1>
 <p class="sub">데이터는 모두 같다: Terminal-Bench 4.0 (Artificial Analysis · mini-swe-agent), 모델·effort 43개 설정, 2026-09-23. 색은 도구 색(Claude Code 주황 · Codex 먹 · Antigravity 파랑).</p>
 <div class="grid">
 
@@ -71,6 +83,10 @@ svg .ax{stroke:var(--line);stroke-width:1}
 <section class="opt"><h2>E<span>같은 점수 가격표</span></h2>
 <p class="why">목표 점수를 넘기는 가장 싼 설정을 도구별로. "이 정도 성능이면 어디가 싼가"에 바로 답한다.</p>
 <div class="fig" id="E"></div></section>
+
+<section class="opt wide"><h2>F<span>성능 대비 비용 — ai-hub 비교 페이지 차트를 옮긴 것</span></h2>
+<p class="why">모델마다 effort 점을 가벼운 단계부터 잇는다. 선 끝에 모델 이름, 점마다 effort. 범례나 선에 올리면(폰은 누르면) 그 모델만 남는다.</p>
+<div class="fig" id="F"></div></section>
 
 </div>
 </div>
@@ -192,6 +208,63 @@ function axes(s, W, H, mg, xmax, ymax, xt, yt, xl, yl) {
   });
   document.getElementById("D").appendChild(s);
   document.getElementById("D").insertAdjacentHTML("beforeend", `<p class="note">진한 막대 = 그 모델의 최고점. Opus 5.5·Astra 는 xhigh 에서 멈추고, Fable 5.1 은 max 에서 도리어 내려간다.</p>`);
+})();
+
+// ── F 성능 대비 비용 (effort 선)
+(function () {
+  // 도구 색 계열 안에서 모델마다 다른 값 — Codex 는 먹의 농담
+  const MC = {"Opus 5.5":"#d97757","Opus 5":"#8a3510","Fable 5.1":"#c8205a","Sonnet 5":"#d4a900",
+              "GPT-6 Astra":"#22201c","GPT-6 Sol":"#6b665c","GPT-6 Luna":"#b3ad9f","Gemini 3.8 Flash":"#3b6fd6"};
+  const ORDER = ["none","low","medium","high","xhigh","max"];
+  const models = Object.keys(MC);
+  const W = 1300, H = 440, mg = {l:34, r:120, t:18, b:30};
+  const s = svg(W, H);
+  const [X, Y] = axes(s, W, H, mg, 20, 65, [0,2,4,6,8,10,12,14,16,18,20], [0,10,20,30,40,50,60], "과제당 비용 →", "점수");
+  const placed = [];
+  const hit = (b) => placed.some((q) => b.x0 < q.x1 && b.x1 > q.x0 && b.y0 < q.y1 && b.y1 > q.y0);
+  const lines = [], dots = [], labs = [];
+  for (const m of models) {
+    const ps = D.filter((p) => p.m === m).sort((a, b) => ORDER.indexOf(a.e) - ORDER.indexOf(b.e));
+    const c = MC[m];
+    const g = document.createElementNS(NS, "g"); g.dataset.m = m;
+    add(g, "path", {d: ps.map((p, i) => `${i ? "L" : "M"}${X(p.c)} ${Y(p.s)}`).join(""), fill:"none", stroke:c, "stroke-width":1.6, "stroke-opacity":.7});
+    for (const p of ps) { add(g, "circle", {cx:X(p.c), cy:Y(p.s), r:3.2, fill:c}); placed.push({x0:X(p.c)-5, x1:X(p.c)+5, y0:Y(p.s)-5, y1:Y(p.s)+5}); }
+    lines.push(g);
+    ps.forEach((p, i) => labs.push({p, m, last: i === ps.length - 1}));
+  }
+  lines.forEach((g) => s.appendChild(g));
+  // 모델 이름(끝점) 먼저, 그다음 effort — 자리가 없으면 숨겨 두고 그 모델에 올릴 때만
+  labs.sort((a, b) => b.last - a.last);
+  for (const L of labs) {
+    const x = X(L.p.c), y = Y(L.p.s);
+    const txt = L.last ? L.m : L.p.e, w = txt.length * (L.last ? 6.6 : 5.6);
+    const cands = [[7, 4, "start"], [-7, 4, "end"], [0, -8, "middle"], [0, 14, "middle"]];
+    let ok = null;
+    for (const [dx, dy, a] of cands) {
+      const x0 = a === "start" ? x + dx : a === "end" ? x + dx - w : x - w / 2;
+      const b = {x0, x1: x0 + w, y0: y + dy - 10, y1: y + dy + 2};
+      if (!hit(b)) { ok = {dx, dy, a, b}; break; }
+    }
+    const t = add(s, "text", {class: L.last ? "lab" : "eff", "text-anchor": (ok || {a:"start"}).a,
+      x: x + (ok ? ok.dx : 7), y: y + (ok ? ok.dy : 4)}, esc(txt));
+    t.dataset.m = L.m;
+    if (ok) placed.push(ok.b); else t.classList.add("hid");
+  }
+  const box = document.getElementById("F");
+  box.insertAdjacentHTML("beforeend", `<div class="fleg">${models.map((m) => `<span data-m="${m}"><i style="background:${MC[m]}"></i>${m}</span>`).join("")}</div>`);
+  box.appendChild(s);
+  box.insertAdjacentHTML("beforeend", `<p class="note">Opus 5.5 max·xhigh, GPT-6 Astra xhigh 가 59.6 으로 가장 높다. 폰 폭(390px)에선 선 8개가 한 뭉치가 된다 — 올리기·누르기가 없으면 못 읽는다.</p>`);
+  let pinned = null;
+  const focus = (m) => {
+    s.classList.toggle("focus", !!m);
+    s.querySelectorAll("[data-m]").forEach((el) => el.classList.toggle("on", el.dataset.m === m));
+    box.querySelectorAll(".fleg span").forEach((el) => el.classList.toggle("on", el.dataset.m === m));
+  };
+  box.querySelectorAll(".fleg span, svg g[data-m]").forEach((el) => {
+    el.addEventListener("mouseenter", () => focus(el.dataset.m));
+    el.addEventListener("mouseleave", () => focus(pinned));
+    el.addEventListener("click", () => { pinned = pinned === el.dataset.m ? null : el.dataset.m; focus(pinned); });
+  });
 })();
 
 // ── E 같은 점수 가격표
