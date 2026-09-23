@@ -60,6 +60,11 @@ svg .ax{stroke:var(--line);stroke-width:1}
 .ph svg text{font-size:10px}
 .ph .eff{font-size:9px;fill:#a09a8c}
 .ph .lab,.ph .eff{paint-order:stroke;stroke:#fff;stroke-width:3px}
+.scr{overflow-x:auto;display:flex;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
+.scr .yax{position:sticky;left:0;flex:none;width:26px;background:#fff;z-index:1}
+.scr .plot{flex:none;width:640px;margin-left:-26px}
+.scr .plot svg{width:640px}
+.hint{font-family:var(--mono);font-size:10px;color:#a09a8c;text-align:right;margin-top:2px}
 .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
 .chips button{font:11px var(--mono);border:1px solid var(--line2);background:#fff;color:var(--dim);border-radius:12px;padding:3px 9px;display:inline-flex;align-items:center;gap:5px;cursor:pointer}
 .chips button i{width:8px;height:8px;border-radius:50%;background:#d5cfc0}
@@ -103,7 +108,7 @@ svg .ax{stroke:var(--line);stroke-width:1}
 <p class="why">P1 은 F 를 그대로 줄인 것, P2·P3 은 폰용으로 고친 F, E 는 비교용. 칸 하나가 폰 화면 폭(360px 본문)이다.</p>
 <div class="phones">
 <div class="ph"><h3>P1 · F 그대로</h3><div id="P1"></div></div>
-<div class="ph"><h3>P2 · F 에서 두 선만 켜기</h3><div id="P2"></div></div>
+<div class="ph"><h3>P2 · 두 선만 켜기 + 가로 스크롤</h3><div id="P2"></div></div>
 <div class="ph"><h3>P3 · F 를 도구별로 셋</h3><div id="P3"></div></div>
 <div class="ph"><h3>E · 같은 점수 가격표</h3><div id="PE"></div></div>
 </div></section>
@@ -314,7 +319,7 @@ function drawLines(box, o) {
     const inside = ps.filter((p) => p.c <= xmax);
     const out = ps.filter((p) => p.c > xmax);
     if (o.clip && out.length) outs.push({m, p: out[0], txt: out.length === 1 ? `→ ${out[0].e} $${out[0].c.toFixed(0)}` : `→ ${out.length}개 $${out[0].c.toFixed(0)}–${out.at(-1).c.toFixed(0)}`});
-    inside.forEach((p, i) => labs.push({p, m, last: !o.clip && i === inside.length - 1}));
+    inside.forEach((p, i) => labs.push({p, m, last: !o.clip && !o.noNames && i === inside.length - 1}));
   }
   labs.sort((a, b) => b.last - a.last);
   for (const L of labs) {
@@ -355,11 +360,20 @@ const ALL = Object.keys(MC);
 (function () {
   const box = document.getElementById("P2");
   const on = new Set(["Opus 5.5", "GPT-6 Astra"]);
-  const fig = document.createElement("div"); box.appendChild(fig);
-  const draw = () => { fig.innerHTML = ""; drawLines(fig, {W:336, H:330, xmax:10, xt:[0,2,4,6,8,10], models:ALL, on, effLabels:true, r:4, clip:true}); };
+  // 점수 축은 왼쪽에 붙여 두고 그림만 민다. $0–10 이 첫 화면, 밀면 $20 까지
+  const W = 640, H = 330;
+  box.insertAdjacentHTML("beforeend", `<div class="scr"><div class="yax"></div><div class="plot"></div></div><p class="hint">밀면 $20 까지 →</p>`);
+  const yax = box.querySelector(".yax"), fig = box.querySelector(".plot");
+  const ys = svg(26, H); ys.style.width = "26px";
+  const Yf = (v) => 14 + (1 - v / 65) * (H - 14 - 26);
+  for (const v of [0,20,40,60]) add(ys, "text", {x:20, y:Yf(v)+3, "text-anchor":"end"}, v);
+  add(ys, "text", {x:0, y:8}, "점수");
+  yax.appendChild(ys);
+  const draw = () => { fig.innerHTML = ""; drawLines(fig, {W, H, xmax:20, xt:[0,2,4,6,8,10,12,14,16,18,20], models:ALL, on, effLabels:true, noNames:true, r:8});
+    fig.querySelectorAll("text").forEach((t) => { if (t.textContent === "점수") t.remove(); }); };
   draw();
   box.insertAdjacentHTML("beforeend", `<div class="chips">${ALL.map((m) => `<button data-m="${m}" class="${on.has(m) ? "on" : ""}"><i style="${on.has(m) ? `background:${MC[m]}` : ""}"></i>${m}</button>`).join("")}</div>
-<p class="note">칩이 범례라 선에 모델 이름은 안 붙인다. $10 넘는 점은 켠 모델만 오른쪽 끝에 "→ max $13" 처럼 적는다. 회색 선이 나머지 모델 자리를 알려 주고, 칩을 누르면 색과 effort 가 붙는다.</p>`);
+<p class="note">칩이 범례라 선에 모델 이름은 안 붙인다. 첫 화면은 $0–10, 가로로 밀면 $20 까지 — 점수 축은 왼쪽에 남는다. 회색 선이 나머지 모델 자리를 알려 주고, 칩을 누르면 색과 effort 가 붙는다.</p>`);
   box.querySelectorAll(".chips button").forEach((b) => b.addEventListener("click", () => {
     const m = b.dataset.m; on.has(m) ? on.delete(m) : on.add(m);
     b.classList.toggle("on", on.has(m)); b.querySelector("i").style.background = on.has(m) ? MC[m] : "";
