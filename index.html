@@ -668,7 +668,7 @@ dialog::backdrop{background:rgba(34,32,28,.30)}
 <div class="it t2" data-t="effort 는 xhigh 에서 멈추기" data-k="md:stop-at-xhigh"><div class="row"><span class="sev">추천</span><button class="box" data-off="[x]">[ ]</button><span class="cmd">/effort xhigh</span><span class="tt">effort 는 xhigh 에서 멈추기</span><span class="ds">max 는 점수가 같거나 낮은데 값만 오른다 — Opus 5.5 는 1.5배</span></div></div>
 </div>
 <p class="mfoot">과제당 비용은 API 정가로 낸 값이에요. 구독이면 한도를 얼마나 빨리 쓰는지의 상대 비교로 읽어요.<br>
-출처 <a href="https://artificialanalysis.ai/evaluations/terminalbench-4-0" target="_blank" rel="noopener noreferrer">Artificial Analysis · Terminal-Bench 4.0 (mini-swe-agent) ↗</a> · Opus 5.5 는 출시(9/22) 하루 뒤 수치예요. Sonnet 5 는 수치를 확인하는 중이라 뺐어요.</p>
+출처 <a href="https://artificialanalysis.ai/evaluations/terminalbench-4-0" target="_blank" rel="noopener noreferrer">Artificial Analysis · Terminal-Bench 4.0 (mini-swe-agent) ↗</a> · Opus 5.5 는 출시(9/22) 하루 뒤 수치예요. Sonnet 5 는 AA 에 모든 effort 가 2~14점으로 올라 있어요. 실행 이상일 수 있어 해볼 것에선 뺐어요.</p>
 </div>
 <!--/MODELS-->
 </div>
@@ -19913,8 +19913,8 @@ countTop();
     ["Opus 5.5","low",31.3,2.08],["Opus 5.5","medium",52.5,4.04],["Opus 5.5","high",56.6,5.12],["Opus 5.5","xhigh",59.6,8.78],["Opus 5.5","max",59.6,13.11],
     ["Opus 5","low",26.3,5.18],["Opus 5","medium",34.3,9.18],["Opus 5","high",46.0,13.14],["Opus 5","xhigh",46.5,17.35],["Opus 5","max",49.0,19.29],
     ["Fable 5.1","low",40.4,7.32],["Fable 5.1","medium",44.9,9.12],["Fable 5.1","high",52.0,11.64],["Fable 5.1","xhigh",55.1,15.78],["Fable 5.1","max",52.0,19.22],
-    // Sonnet 5 는 모든 effort 가 2~14점이라 벤치 실행이 깨진 값으로 보여 뺐다. AA 에서 확인되면 되살린다
-    // ["Sonnet 5","low",2.5,2.66],["Sonnet 5","medium",2.0,5.53],["Sonnet 5","high",5.1,9.40],["Sonnet 5","xhigh",7.1,12.80],["Sonnet 5","max",14.1,19.69],
+    // Sonnet 5 는 AA 에 모든 effort 가 2~14점으로 올라 있다. 실행 이상일 수 있어 처음엔 끄고 각주로 밝힌다
+    ["Sonnet 5","low",2.5,2.66],["Sonnet 5","medium",2.0,5.53],["Sonnet 5","high",5.1,9.40],["Sonnet 5","xhigh",7.1,12.80],["Sonnet 5","max",14.1,19.69],
     ["GPT-6 Astra","low",41.9,2.25],["GPT-6 Astra","medium",49.5,4.43],["GPT-6 Astra","high",54.0,4.05],["GPT-6 Astra","xhigh",59.6,5.86],["GPT-6 Astra","max",59.1,8.50],
     ["GPT-6 Sol","low",9.1,0.49],["GPT-6 Sol","medium",18.7,1.12],["GPT-6 Sol","high",26.3,1.60],["GPT-6 Sol","xhigh",30.3,1.91],["GPT-6 Sol","max",43.9,4.00],
     ["GPT-6 Luna","none",1.5,0.04],["GPT-6 Luna","low",0.0,0.01],["GPT-6 Luna","medium",2.5,0.07],["GPT-6 Luna","high",4.5,0.12],["GPT-6 Luna","xhigh",8.1,0.20],["GPT-6 Luna","max",12.6,0.24],
@@ -19923,7 +19923,7 @@ countTop();
   // 도구 색 계열 안에서 모델마다 다른 값 — Claude Code 주황·붉은 계열, Codex 먹의 농담, Antigravity 파랑
   // 칩 순서 = 이 순서. 앞 넷은 손으로 정했고, 나머지는 최고 점수 순
   const MC = {"GPT-6 Astra":"#22201c","Fable 5.1":"#c8205a","Opus 5.5":"#d97757","Opus 5":"#8a3510",
-              "GPT-6 Sol":"#6b665c","Gemini 3.8 Flash":"#3b6fd6","GPT-6 Luna":"#b3ad9f"};
+              "GPT-6 Sol":"#6b665c","Gemini 3.8 Flash":"#3b6fd6","Sonnet 5":"#d4a900","GPT-6 Luna":"#b3ad9f"};
   // 처음 켜 두는 모델 — 데스크톱·폰 같다. 나머지는 회색으로 깔리고 칩으로 켠다
   const DEFAULT_ON = ["GPT-6 Astra", "Fable 5.1", "Opus 5.5", "Gemini 3.8 Flash"];
   const EORD = ["none","low","medium","high","xhigh","max"];
