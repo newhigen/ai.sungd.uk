@@ -53,6 +53,17 @@ svg .ax{stroke:var(--line);stroke-width:1}
 .fleg span{cursor:pointer;display:inline-flex;align-items:center;gap:6px;padding:1px 5px;margin:-1px -5px;border-radius:3px}
 .fleg span.on{background:#eae4d6}
 .fleg i{display:inline-block;width:14px;height:2px}
+.phones{display:grid;grid-template-columns:repeat(4,360px);gap:28px;overflow-x:auto;padding-bottom:6px}
+.ph{background:#fff;border-radius:14px;padding:14px 12px 16px;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+.ph h3{font-size:12px;font-weight:600;margin-bottom:10px}
+.ph h4{font-family:var(--mono);font-size:11px;font-weight:500;color:var(--dim);margin:14px 0 2px}
+.ph svg text{font-size:10px}
+.ph .eff{font-size:9px;fill:#a09a8c}
+.ph .lab,.ph .eff{paint-order:stroke;stroke:#fff;stroke-width:3px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.chips button{font:11px var(--mono);border:1px solid var(--line2);background:#fff;color:var(--dim);border-radius:12px;padding:3px 9px;display:inline-flex;align-items:center;gap:5px;cursor:pointer}
+.chips button i{width:8px;height:8px;border-radius:50%;background:#d5cfc0}
+.chips button.on{color:var(--ink);border-color:var(--ink)}
 .nlist{font-family:var(--mono);font-size:11px;color:var(--ink);display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px 18px;margin-top:10px}
 .nlist b{display:inline-block;width:16px;color:var(--acc);font-weight:500}
 .nlist em{font-style:normal;color:var(--dim)}
@@ -87,6 +98,15 @@ svg .ax{stroke:var(--line);stroke-width:1}
 <section class="opt wide"><h2>F<span>성능 대비 비용 — ai-hub 비교 페이지 차트를 옮긴 것</span></h2>
 <p class="why">모델마다 effort 점을 가벼운 단계부터 잇는다. 선 끝에 모델 이름, 점마다 effort. 범례나 선에 올리면(폰은 누르면) 그 모델만 남는다.</p>
 <div class="fig" id="F"></div></section>
+
+<section class="opt wide"><h2>폰<span>390px 에서 F 를 어떻게 보이나 — 넷 나란히</span></h2>
+<p class="why">P1 은 F 를 그대로 줄인 것, P2·P3 은 폰용으로 고친 F, E 는 비교용. 칸 하나가 폰 화면 폭(360px 본문)이다.</p>
+<div class="phones">
+<div class="ph"><h3>P1 · F 그대로</h3><div id="P1"></div></div>
+<div class="ph"><h3>P2 · F 에서 두 선만 켜기</h3><div id="P2"></div></div>
+<div class="ph"><h3>P3 · F 를 도구별로 셋</h3><div id="P3"></div></div>
+<div class="ph"><h3>E · 같은 점수 가격표</h3><div id="PE"></div></div>
+</div></section>
 
 </div>
 </div>
@@ -267,6 +287,85 @@ function axes(s, W, H, mg, xmax, ymax, xt, yt, xl, yl) {
   });
 })();
 
+// ── 폰 시안 — F 를 좁은 폭에 그리는 공용 함수
+const MC = {"Opus 5.5":"#d97757","Opus 5":"#8a3510","Fable 5.1":"#c8205a","Sonnet 5":"#d4a900",
+            "GPT-6 Astra":"#22201c","GPT-6 Sol":"#6b665c","GPT-6 Luna":"#b3ad9f","Gemini 3.8 Flash":"#3b6fd6"};
+const EORD = ["none","low","medium","high","xhigh","max"];
+let clipN = 0;
+function drawLines(box, o) {
+  const {W, H, xmax, xt, models, on, effLabels} = o;
+  const mg = {l:26, r:o.r ?? 8, t:14, b:26};
+  const s = svg(W, H);
+  const [X, Y] = axes(s, W, H, mg, xmax, 65, xt, [0,20,40,60], "과제당 비용 →", "점수");
+  const id = "clp" + (clipN++);
+  const cp = add(s, "clipPath", {id}); add(cp, "rect", {x:mg.l, y:0, width:W-mg.l-mg.r+4, height:H-mg.b+4});
+  const placed = [];
+  const hit = (b) => placed.some((q) => b.x0 < q.x1 && b.x1 > q.x0 && b.y0 < q.y1 && b.y1 > q.y0);
+  const lit = models.filter((m) => on.has(m)), dim = models.filter((m) => !on.has(m));
+  const labs = [];
+  for (const m of [...dim, ...lit]) {
+    const ps = D.filter((p) => p.m === m).sort((a, b) => EORD.indexOf(a.e) - EORD.indexOf(b.e));
+    const c = on.has(m) ? MC[m] : "#d9d3c4";
+    const g = add(s, "g", {"clip-path":`url(#${id})`});
+    add(g, "path", {d: ps.map((p, i) => `${i ? "L" : "M"}${X(p.c)} ${Y(p.s)}`).join(""), fill:"none", stroke:c, "stroke-width": on.has(m) ? 1.8 : 1.2});
+    for (const p of ps) add(g, "circle", {cx:X(p.c), cy:Y(p.s), r: on.has(m) ? 3 : 2, fill:c});
+    if (!on.has(m)) continue;
+    ps.forEach((p) => placed.push({x0:X(p.c)-4, x1:X(p.c)+4, y0:Y(p.s)-4, y1:Y(p.s)+4}));
+    const inside = ps.filter((p) => p.c <= xmax);
+    inside.forEach((p, i) => labs.push({p, m, last: i === inside.length - 1}));
+  }
+  labs.sort((a, b) => b.last - a.last);
+  for (const L of labs) {
+    if (!L.last && !effLabels) continue;
+    const x = X(L.p.c), y = Y(L.p.s), txt = L.last ? L.m : L.p.e, w = txt.length * (L.last ? 6 : 5.4);
+    for (const [dx, dy, a] of [[6, 4, "start"], [-6, 4, "end"], [0, -7, "middle"], [0, 13, "middle"]]) {
+      const x0 = a === "start" ? x + dx : a === "end" ? x + dx - w : x - w / 2;
+      const b = {x0, x1: x0 + w, y0: y + dy - 9, y1: y + dy + 2};
+      if (hit(b) || b.x1 > W || b.x0 < mg.l) continue;
+      add(s, "text", {class: L.last ? "lab" : "eff", "text-anchor": a, x: x + dx, y: y + dy}, esc(txt));
+      placed.push(b); break;
+    }
+  }
+  box.appendChild(s);
+}
+const ALL = Object.keys(MC);
+
+// P1 — F 를 그대로 390px 에
+(function () {
+  const box = document.getElementById("P1");
+  box.insertAdjacentHTML("beforeend", `<div class="fleg" style="font-size:10px;gap:3px 10px">${ALL.map((m) => `<span><i style="background:${MC[m]}"></i>${m}</span>`).join("")}</div>`);
+  const W = 1300, H = 440, sc = 336 / W;
+  drawLines(box, {W:336, H:Math.round(H * sc) + 30, xmax:20, xt:[0,5,10,15,20], models:ALL, on:new Set(ALL), effLabels:true});
+  box.insertAdjacentHTML("beforeend", `<p class="note">가로 비율을 그대로 두면 높이가 140px 남짓. 선 8개가 왼쪽 아래 $0–6 에 몰린다.</p>`);
+})();
+
+// P2 — 세로로 세우고 $0–10 만, 기본은 두 선만 색. 칩으로 더 켠다
+(function () {
+  const box = document.getElementById("P2");
+  const on = new Set(["Opus 5.5", "GPT-6 Astra"]);
+  const fig = document.createElement("div"); box.appendChild(fig);
+  const draw = () => { fig.innerHTML = ""; drawLines(fig, {W:336, H:330, xmax:10, xt:[0,2,4,6,8,10], models:ALL, on, effLabels:true, r:4}); };
+  draw();
+  box.insertAdjacentHTML("beforeend", `<div class="chips">${ALL.map((m) => `<button data-m="${m}" class="${on.has(m) ? "on" : ""}"><i style="${on.has(m) ? `background:${MC[m]}` : ""}"></i>${m}</button>`).join("")}</div>
+<p class="note">$10 넘는 점(Opus 5.5 max, Fable·Opus 5 상단)은 오른쪽으로 잘린다. 회색 선이 나머지 모델 자리를 알려 주고, 칩을 누르면 색과 effort 가 붙는다.</p>`);
+  box.querySelectorAll(".chips button").forEach((b) => b.addEventListener("click", () => {
+    const m = b.dataset.m; on.has(m) ? on.delete(m) : on.add(m);
+    b.classList.toggle("on", on.has(m)); b.querySelector("i").style.background = on.has(m) ? MC[m] : "";
+    draw();
+  }));
+})();
+
+// P3 — 도구마다 작은 차트 하나. 같은 축이라 위아래로 견줄 수 있다
+(function () {
+  const box = document.getElementById("P3");
+  const groups = [["Claude Code", ["Opus 5.5","Opus 5","Fable 5.1","Sonnet 5"]], ["Codex", ["GPT-6 Astra","GPT-6 Sol","GPT-6 Luna"]], ["Antigravity", ["Gemini 3.8 Flash"]]];
+  for (const [t, ms] of groups) {
+    box.insertAdjacentHTML("beforeend", `<h4>${t}</h4>`);
+    drawLines(box, {W:336, H:170, xmax:20, xt:[0,5,10,15,20], models:ms, on:new Set(ms), effLabels:false, r:4});
+  }
+  box.insertAdjacentHTML("beforeend", `<p class="note">effort 는 빼고 선 끝 모델 이름만. 도구 안에서 어느 모델이 왼쪽 위인지는 바로 보이고, 도구끼리는 위아래로 견준다.</p>`);
+})();
+
 // ── E 같은 점수 가격표
 (function () {
   const targets = [59, 55, 50, 40, 30];
@@ -285,6 +384,8 @@ function axes(s, W, H, mg, xmax, ymax, xt, yt, xl, yl) {
     });
   });
   document.getElementById("E").appendChild(s);
+  document.getElementById("PE").appendChild(s.cloneNode(true));
+  document.getElementById("PE").insertAdjacentHTML("beforeend", `<p class="note">원래 620px 폭 도안을 그대로 줄였다 — 글자가 작아진다. 쓴다면 폰용으로 다시 그린다.</p>`);
   document.getElementById("E").insertAdjacentHTML("beforeend", `<div class="leg"><span><i style="background:var(--cc)"></i>Claude Code</span><span><i style="background:var(--cx)"></i>Codex</span><span><i style="background:var(--ag)"></i>Antigravity</span><span>— 그 점수에 닿는 설정 없음</span></div>`);
 })();
 </script>
