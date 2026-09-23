@@ -80,8 +80,9 @@ body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:13p
     ["Gemini 3.8 Flash","low",10.1,5.38],["Gemini 3.8 Flash","medium",19.7,4.61],["Gemini 3.8 Flash","high",19.7,5.84],
   ].map(([m, e, s, c]) => ({m, e, s, c}));
   // 도구 색 계열 안에서 모델마다 다른 값 — Claude Code 주황·붉은 계열, Codex 먹의 농담, Antigravity 파랑
-  const MC = {"Opus 5.5":"#d97757","Opus 5":"#8a3510","Fable 5.1":"#c8205a","Sonnet 5":"#d4a900",
-              "GPT-6 Astra":"#22201c","GPT-6 Sol":"#6b665c","GPT-6 Luna":"#b3ad9f","Gemini 3.8 Flash":"#3b6fd6"};
+  // 칩 순서 = 이 순서. 앞 넷은 손으로 정했고, 나머지는 최고 점수 순
+  const MC = {"GPT-6 Astra":"#22201c","Fable 5.1":"#c8205a","Opus 5.5":"#d97757","Opus 5":"#8a3510",
+              "GPT-6 Sol":"#6b665c","Gemini 3.8 Flash":"#3b6fd6","Sonnet 5":"#d4a900","GPT-6 Luna":"#b3ad9f"};
   const PHONE_ON = ["Opus 5.5", "GPT-6 Astra"];
   const EORD = ["none","low","medium","high","xhigh","max"];
   const XMAX = 20, YMAX = 65, NS = "http://www.w3.org/2000/svg";
