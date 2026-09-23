@@ -302,7 +302,7 @@ function drawLines(box, o) {
   const placed = [];
   const hit = (b) => placed.some((q) => b.x0 < q.x1 && b.x1 > q.x0 && b.y0 < q.y1 && b.y1 > q.y0);
   const lit = models.filter((m) => on.has(m)), dim = models.filter((m) => !on.has(m));
-  const labs = [];
+  const labs = [], outs = [];
   for (const m of [...dim, ...lit]) {
     const ps = D.filter((p) => p.m === m).sort((a, b) => EORD.indexOf(a.e) - EORD.indexOf(b.e));
     const c = on.has(m) ? MC[m] : "#d9d3c4";
@@ -312,7 +312,9 @@ function drawLines(box, o) {
     if (!on.has(m)) continue;
     ps.forEach((p) => placed.push({x0:X(p.c)-4, x1:X(p.c)+4, y0:Y(p.s)-4, y1:Y(p.s)+4}));
     const inside = ps.filter((p) => p.c <= xmax);
-    inside.forEach((p, i) => labs.push({p, m, last: i === inside.length - 1}));
+    const out = ps.filter((p) => p.c > xmax);
+    if (o.clip && out.length) outs.push({m, p: out[0], txt: out.length === 1 ? `→ ${out[0].e} $${out[0].c.toFixed(0)}` : `→ ${out.length}개 $${out[0].c.toFixed(0)}–${out.at(-1).c.toFixed(0)}`});
+    inside.forEach((p, i) => labs.push({p, m, last: !o.clip && i === inside.length - 1}));
   }
   labs.sort((a, b) => b.last - a.last);
   for (const L of labs) {
@@ -323,6 +325,16 @@ function drawLines(box, o) {
       const b = {x0, x1: x0 + w, y0: y + dy - 9, y1: y + dy + 2};
       if (hit(b) || b.x1 > W || b.x0 < mg.l) continue;
       add(s, "text", {class: L.last ? "lab" : "eff", "text-anchor": a, x: x + dx, y: y + dy}, esc(txt));
+      placed.push(b); break;
+    }
+  }
+  // 잘린 점 — 선이 나가는 높이 근처, 오른쪽 끝에 붙여 적는다
+  for (const O of outs) {
+    const w = O.txt.length * 5.4, yy = Y(O.p.s);
+    for (const dy of [13, -7, 24, -18]) {
+      const b = {x0: W - mg.r - w, x1: W - mg.r, y0: yy + dy - 9, y1: yy + dy + 2};
+      if (hit(b)) continue;
+      add(s, "text", {class:"eff", "text-anchor":"end", x: W - mg.r, y: yy + dy, style:`fill:${MC[O.m]}`}, esc(O.txt));
       placed.push(b); break;
     }
   }
@@ -344,10 +356,10 @@ const ALL = Object.keys(MC);
   const box = document.getElementById("P2");
   const on = new Set(["Opus 5.5", "GPT-6 Astra"]);
   const fig = document.createElement("div"); box.appendChild(fig);
-  const draw = () => { fig.innerHTML = ""; drawLines(fig, {W:336, H:330, xmax:10, xt:[0,2,4,6,8,10], models:ALL, on, effLabels:true, r:4}); };
+  const draw = () => { fig.innerHTML = ""; drawLines(fig, {W:336, H:330, xmax:10, xt:[0,2,4,6,8,10], models:ALL, on, effLabels:true, r:4, clip:true}); };
   draw();
   box.insertAdjacentHTML("beforeend", `<div class="chips">${ALL.map((m) => `<button data-m="${m}" class="${on.has(m) ? "on" : ""}"><i style="${on.has(m) ? `background:${MC[m]}` : ""}"></i>${m}</button>`).join("")}</div>
-<p class="note">$10 넘는 점(Opus 5.5 max, Fable·Opus 5 상단)은 오른쪽으로 잘린다. 회색 선이 나머지 모델 자리를 알려 주고, 칩을 누르면 색과 effort 가 붙는다.</p>`);
+<p class="note">칩이 범례라 선에 모델 이름은 안 붙인다. $10 넘는 점은 켠 모델만 오른쪽 끝에 "→ max $13" 처럼 적는다. 회색 선이 나머지 모델 자리를 알려 주고, 칩을 누르면 색과 effort 가 붙는다.</p>`);
   box.querySelectorAll(".chips button").forEach((b) => b.addEventListener("click", () => {
     const m = b.dataset.m; on.has(m) ? on.delete(m) : on.add(m);
     b.classList.toggle("on", on.has(m)); b.querySelector("i").style.background = on.has(m) ? MC[m] : "";
