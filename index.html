@@ -19660,6 +19660,26 @@ var load = function () {
 };
 var save = function (s) { localStorage.setItem(STORE, JSON.stringify([...s])); };
 var done = load();
+
+/* ── Now 와 잇기 — 이 맥에서 Now 가 돌면 해봄 기록(now-aipick)을 주고받는다.
+   내 기기(sd_owner 쿠키)에서만 묻고, 안 닿으면(폰·남의 브라우저) 조용히 넘어간다. 키는 두 쪽이 같다 ── */
+var NOW = 'http://127.0.0.1:8900/state', NOWK = 'now-aipick';
+function nowGet() {
+  return fetch(NOW).then(function (r) { return r.json(); })
+    .then(function (d) { return JSON.parse(d[NOWK] || '{}') || {}; });
+}
+function nowPush(ks, on) {
+  if (!window.__sdOwner || !ks.length) return;
+  var day = new Date().toLocaleDateString('sv-SE');
+  nowGet().then(function (m) {                   // 그사이 Now 에서 누른 것을 덮지 않게 다시 읽고 고친다
+    ks.forEach(function (k) {
+      if (on) m[k] = { s: 'tried', at: day };
+      else if (m[k] && m[k].s === 'tried') delete m[k];
+    });
+    var body = {}; body[NOWK] = JSON.stringify(m);
+    return fetch(NOW, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
+  }).catch(function () {});
+}
 var $ = function (s, r) { return (r || document).querySelector(s); };
 var $$ = function (s, r) { return [...(r || document).querySelectorAll(s)]; };
 
@@ -19697,6 +19717,7 @@ $$('.it, .ci').forEach(function (el) {
     var k = el.dataset.k, on = !el.classList.contains('done');
     on ? done.add(k) : done.delete(k);
     save(done);
+    nowPush([k], on);
     sync(k, on);
     applyAll();
     countTop();
@@ -19855,7 +19876,9 @@ $('.clrb').addEventListener('click', function () {
 });
 $('.no', dlg).addEventListener('click', function () { dlg.close(); });
 $('.yes', dlg).addEventListener('click', function () {
-  JSON.parse(dlg.dataset.keys || '[]').forEach(function (k) { done.delete(k); sync(k, false); });
+  var gone = JSON.parse(dlg.dataset.keys || '[]');
+  gone.forEach(function (k) { done.delete(k); sync(k, false); });
+  nowPush(gone, false);
   save(done);
   applyAll();
   countTop();
@@ -20031,6 +20054,17 @@ countTop();
   new ResizeObserver(() => { const w = root.clientWidth; if (w && w !== lastW) { lastW = w; draw(); } }).observe(root);
 
 })();
+
+/* ── Now 에서 해봄한 것을 칠한다 — 열 때 한 번 ── */
+if (window.__sdOwner) nowGet().then(function (m) {
+  var got = Object.keys(m).filter(function (k) { return m[k] && m[k].s === 'tried' && !done.has(k); });
+  var mine = [...done].filter(function (k) { return !m[k]; });
+  if (got.length) {
+    got.forEach(function (k) { done.add(k); sync(k, true); });
+    save(done); applyAll(); countTop();
+  }
+  nowPush(mine, true);
+}).catch(function () {});
 </script>
 </body>
 </html>
