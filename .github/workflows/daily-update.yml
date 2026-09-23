@@ -55,12 +55,26 @@ jobs:
           git commit -m "chore(codex): ${{ steps.codex.outputs.cx_added_versions }} 자동 추가"
           git push
 
+      # ── 1단계(c): Antigravity CLI 버전 목록 (토큰 0, google-antigravity/antigravity-cli GitHub releases) ──
+      - name: Update Antigravity version list
+        id: agy
+        run: python scripts/update_agy.py
+
+      - name: Commit Antigravity version list
+        if: steps.agy.outputs.ag_changed == 'true'
+        run: |
+          git config user.name "ai-pick-bot"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          git commit -m "chore(agy): ${{ steps.agy.outputs.ag_added_versions }} 자동 추가"
+          git push
+
       # ── blog/news 수집 — 화면엔 안 올리고 철회·중단 감지에만 쓴다 ──
       - name: Detect new blog/news posts
         id: blog
         run: python scripts/collect_blog.py || echo '[]' > new_blog.json
 
-      # ── 큐레이션 실행 조건: CC feature OR Codex feature OR 새 blog/news ──
+      # ── 큐레이션 실행 조건: CC·Codex·Antigravity 중 하나라도 새 feature ──
       # 새 feature 가 있을 때만 큐레이션한다.
       # 블로그는 화면에 안 올리므로 게이트에서 뺐다 — 블로그 화면을 없앤 뒤로
       # index.html 에 아는 주소가 없어 매일 "새 글 12개" 가 잡히고, 그대로 두면
@@ -68,7 +82,7 @@ jobs:
       # 철회·중단 감지는 feature 가 있는 날 new_blog.json 을 같이 읽어 처리한다.
       - name: Decide curation
         id: gate
-        run: echo "go=${{ steps.update.outputs.has_features == 'true' || steps.codex.outputs.cx_has_features == 'true' }}" >> "$GITHUB_OUTPUT"
+        run: echo "go=${{ steps.update.outputs.has_features == 'true' || steps.codex.outputs.cx_has_features == 'true' || steps.agy.outputs.ag_has_features == 'true' }}" >> "$GITHUB_OUTPUT"
 
       # ── stage-2: 헤드리스 claude -p 가 워킹트리 index.html을 직접 Edit (새로 나온 것·용도별) ──
       # (구 claude-code-action@v1 은 PR/브랜치 모드라 워킹트리를 안 고쳐 매번 noop → 헤드리스로 교체)
@@ -78,7 +92,7 @@ jobs:
 
       # ── 패치노트 기능(feature) 한국어화 — 전용 스텝(번들 curate가 버전 번역을 자주 누락해 분리) ──
       - name: Translate feature notes (headless)
-        if: steps.update.outputs.has_features == 'true' || steps.codex.outputs.cx_has_features == 'true'
+        if: steps.gate.outputs.go == 'true'
         env:
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
         run: |

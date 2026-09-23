@@ -1,6 +1,6 @@
 # ai.sungd.uk
 
-**오늘 뭐 써볼까** — Claude Code·Codex 릴리스에서 오늘 해볼 것을 골라 체크리스트로 준다.
+**오늘 뭐 써볼까** — Claude Code·Codex·Antigravity CLI 릴리스에서 오늘 해볼 것을 골라 체크리스트로 준다.
 단일 정적 HTML, 빌드 없음. GitHub Pages 가 `main` 루트를 그대로 서빙한다.
 
 🔗 케이스 스터디 → https://resume.sungd.uk/projects/claude-code-tracking
@@ -20,14 +20,14 @@
 ## 어디를 고치나
 
 ```
-index.html    전부 (화면·스타일·스크립트 + <div id="data"> 안의 버전블록 321개)
+index.html    전부 (화면·스타일·스크립트 + <div id="data"> 안의 버전블록)
 scripts/      갱신 자동화 (한 시간마다)
 CNAME · sitemap.xml · robots.txt
 ```
 
 ⚠ `<div id="data">` 는 화면에 안 나오지만 **지우면 안 된다.** 갱신 스크립트가
 거기에 새 버전을 꽂고 큐레이션이 거기서 원본을 읽는다. 구간 표식(`<!--CC-DATA-->`·
-`<!--CX-DATA-->`)도 스크립트가 경계로 쓰므로 그대로 둘 것.
+`<!--CX-DATA-->`·`<!--AG-DATA-->`)도 스크립트가 경계로 쓰므로 그대로 둘 것.
 
 ## 한 시간마다 도는 갱신
 
@@ -38,7 +38,7 @@ CNAME · sitemap.xml · robots.txt
 값이 드는 3단계는 **새 버전이 실제로 올라온 시각에만** 돈다. 그래서 하루치 비용은
 하루 한 번 돌 때와 같고, 화면만 한 시간 안에 따라붙는다.
 
-1. **버전 수집** (순수 스크립트) — `update_changelog.py`(Claude Code)·`update_codex.py`(Codex stable)
+1. **버전 수집** (순수 스크립트) — `update_changelog.py`(Claude Code)·`update_codex.py`(Codex stable)·`update_agy.py`(Antigravity CLI)
 2. **글 수집** — `collect_blog.py` 가 Anthropic·OpenAI 신규 글을 `new_blog.json` 으로
    (화면엔 안 올린다 — 기능이 철회됐는지 알아채는 데만 쓴다)
 3. **큐레이션** (새 feature 가 올라온 시각에만) — 헤드리스 `claude -p` 가 `curate_prompt.md` 를 따라

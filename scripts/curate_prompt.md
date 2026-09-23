@@ -6,8 +6,8 @@
 
 | 화면 | 축 | 어디 |
 |---|---|---|
-| 새로 나온 것 | 시간 — 언제 나왔나 | `<div class="tab on" id="new">` 안 `.t-cc` / `.t-cx` |
-| 용도별 | 일 — 무슨 일 할 때 | `<div class="tab" id="use">` 안 `.t-cc` / `.t-cx` |
+| 새로 나온 것 | 시간 — 언제 나왔나 | `<div class="tab on" id="new">` 안 `.t-cc` / `.t-cx` / `.t-ag` |
+| 용도별 | 일 — 무슨 일 할 때 | `<div class="tab" id="use">` 안 `.t-cc` / `.t-cx` / `.t-ag` |
 
 Manus·뉴스·블로그 화면은 **없앴다**. 그런 내용은 이제 아무 데도 넣지 마라.
 
@@ -16,6 +16,7 @@ Manus·뉴스·블로그 화면은 **없앴다**. 그런 내용은 이제 아무
 ## 입력 (repo 루트, Read로 읽어라 — 없거나 `[]`면 그 단계 건너뜀)
 - `new-features.json` — 새 Claude Code feature (version, date, text).
 - `new-codex-features.json` — 새 Codex feature (version=v0.x, date, text).
+- `new-agy-features.json` — 새 Antigravity CLI feature (version=1.x, date, text).
 - `new_blog.json` — 새 blog/news 글. **화면에 올리지 않는다.** 철회·중단 감지(§4)에만 쓴다.
 
 ## 공통 원칙
@@ -114,8 +115,17 @@ Manus·뉴스·블로그 화면은 **없앴다**. 그런 내용은 이제 아무
   `https://developers.openai.com/codex/` 같은 첫 페이지로 보내지 마라.
 - **Codex 픽도 자세히를 채운다.** 예전엔 한 줄짜리였는데 이제 Claude Code 와 같은 대접이다.
 
-## 3) 용도별 (두 도구 모두)
-`<div class="tab" id="use">` 안, 여덟 칸 중 맞는 `<div class="cat" id="u-cc-N">` 에 넣는다.
+## 2-1) 새로 나온 것 — Antigravity CLI (new-agy-features.json)
+`<div class="tw t-ag">` 안. 마크업·규칙은 §1과 같고 이것만 다르다.
+
+- 키는 `ag:1.2.8#e0` (`v` 없이).
+- 버전 링크는 `https://github.com/google-antigravity/antigravity-cli/releases/tag/1.2.8` (태그에 `v` 없음).
+- 릴리스가 거의 매일 나오고 대부분이 `Improved …` 다. **해볼 수 있는 새 명령·플래그·설정(`Added …`, 기본값을 바꾼 `Changed …`)만** 픽 후보다.
+  내부 개선·성능·렌더링 손질은 넣지 마라 — 하루 한두 줄이면 충분하고, 없으면 안 넣는다.
+
+## 3) 용도별 (세 도구 모두)
+`<div class="tab" id="use">` 안, 여덟 칸 중 맞는 `<div class="cat" id="u-cc-N">`(Codex 는 `u-cx-N`, Antigravity 는 `u-ag-N`) 에 넣는다.
+줄이 하나도 없던 칸이면 그 도구의 다른 칸을 복사해 칸과 `.catnav` 항목을 함께 만든다.
 
 칸: 긴 작업 맡기기 / Subagent · 멀티 세션 / PR · 코드 리뷰 / 비용 · 토큰 / 일상 UI · 네비 / Plugin · MCP · 확장 / Hook · 모니터링 / 모델 · Enterprise
 

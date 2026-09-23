@@ -4,7 +4,7 @@ index.html(「오늘 뭐 써볼까」, ai.sungd.uk)의 **패치노트 기능(fea
 
 ## 할 일 (이것만)
 `.entry[data-type="feature"]` 안의 `<span class="e-desc">` 중 **`data-en` 속성이 없는 것**(=미번역)을 한국어로 의역한다.
-- 대상: Claude Code(`id="v2.1.*"`)·Codex(`id="cx0.*"`) 버전블록(둘 다 `<div id="data">` 안에 있다) 중 **위에서부터 최신 ~20개**. 그 안의 미번역 feature `e-desc` 전부 (반쪽 금지 — 한 블록 시작했으면 그 블록 feature 전부).
+- 대상: Claude Code(`id="v2.1.*"`)·Codex(`id="cx0.*"`)·Antigravity(`id="ag1.*"`) 버전블록(셋 다 `<div id="data">` 안에 있다) 중 **위에서부터 최신 ~20개**. 그 안의 미번역 feature `e-desc` 전부 (반쪽 금지 — 한 블록 시작했으면 그 블록 feature 전부).
 - 방식: e-desc 텍스트를 간결한 한국어로 의역(핵심만). `<code>`·명령어·플래그·이슈번호는 그대로 verbatim. 영어 원문은 `data-en`에 보존(안의 큰따옴표는 `&quot;`).
   - 예: `<span class="e-desc">Added <code>--foo</code> flag for X</span>` → `<span class="e-desc" data-en="Added <code>--foo</code> flag for X">X용 <code>--foo</code> 플래그 추가</span>`
 - 이미 `data-en` 있는 e-desc는 건너뛴다.
