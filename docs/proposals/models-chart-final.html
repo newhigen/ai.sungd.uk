@@ -9,7 +9,7 @@
   「모델」 탭에 넣을 성능 대비 비용 차트. 시안 F(데스크톱) + P2(폰, 가로 스크롤) 를 한 부품으로 합쳤다.
   옮길 것 세 덩이: ① STYLE 의 .mchart 규칙 ② MARKUP 의 .mdl 블록 → index.html 의 MODELS 표식 구간 안(지금 표를 갈아 끼운다) ③ SCRIPT 전체.
   데이터는 SCRIPT 맨 위 MD·MC·ASOF. 새 모델이 나올 때만 손으로 고친다.
-  폭 640px 을 기준으로 두 모양이 갈린다 — 넓으면 선 전부 + 선 끝 모델 이름, 좁으면 두 선만 색 + 가로 스크롤.
+  폭 640px 을 기준으로 두 모양이 갈린다 — 넓으면 선 끝 모델 이름, 좁으면 칩이 아래로 + 가로 스크롤. 처음엔 네 모델만 색.
 -->
 <style>
 /* 사이트 토큰 — index.html 에 이미 있다. 이 파일을 혼자 열 때만 쓴다 */
@@ -83,7 +83,8 @@ body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:13p
   // 칩 순서 = 이 순서. 앞 넷은 손으로 정했고, 나머지는 최고 점수 순
   const MC = {"GPT-6 Astra":"#22201c","Fable 5.1":"#c8205a","Opus 5.5":"#d97757","Opus 5":"#8a3510",
               "GPT-6 Sol":"#6b665c","Gemini 3.8 Flash":"#3b6fd6","Sonnet 5":"#d4a900","GPT-6 Luna":"#b3ad9f"};
-  const PHONE_ON = ["Opus 5.5", "GPT-6 Astra"];
+  // 처음 켜 두는 모델 — 데스크톱·폰 같다. 나머지는 회색으로 깔리고 칩으로 켠다
+  const DEFAULT_ON = ["GPT-6 Astra", "Fable 5.1", "Opus 5.5", "Gemini 3.8 Flash"];
   const EORD = ["none","low","medium","high","xhigh","max"];
   const XMAX = 20, YMAX = 65, NS = "http://www.w3.org/2000/svg";
   const root = document.getElementById("mchart");
@@ -120,7 +121,7 @@ body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:13p
     const nowPhone = cw < 640;
     if (nowPhone !== phone) {
       phone = nowPhone;
-      on = new Set(phone ? PHONE_ON : models);
+      on = new Set(DEFAULT_ON);
       root.classList.toggle("phone", phone);
       chips();
     }
