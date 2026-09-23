@@ -99,24 +99,36 @@ code{font-family:var(--mono);font-size:.92em;opacity:.9}
 .lead b{color:var(--acc);font-weight:400}
 .hide{display:none}
 
-/* ── 모델 ── 도구를 가로지르는 표 한 장. 도구 전환·해봄 셈은 이 탭에서 안 쓴다 */
+/* ── 모델 ── 도구를 가로지르는 차트 한 장과 해볼 것 셋. 도구 전환·해봄 셈은 이 탭에서 안 쓴다 */
 html[data-tab="models"] .ptools,html[data-tab="models"] .ptop,html[data-tab="models"] .pdone{display:none}
-.mdl{max-width:720px}
-.mdesc{color:#6b665c;font-size:12.5px;margin:2px 0 14px}
+.mdl{max-width:1100px}
+.mdesc{color:#6b665c;font-size:12.5px;margin:2px 0 12px}
 .masof{font-family:var(--mono);font-size:11px;color:#a09a8c;margin-left:6px}
 .masof.old{color:var(--faint);text-decoration:line-through}
-.mtbl{font-family:var(--mono);font-size:12px;line-height:1.65}
-.mh,.mr{display:grid;grid-template-columns:minmax(0,1fr) 56px 150px 72px;gap:9px;padding:4px 11px;margin:0 -11px}
-.mh{font-size:10.5px;color:#a09a8c;opacity:.8;padding-bottom:0}
-.mr:hover{background:#f2efe6}
-.mm em{font-style:normal;color:var(--dim)}
-.mn{text-align:right;font-variant-numeric:tabular-nums}
-.mtbl .c-day{margin:14px 0 3px}
-.mtodo{font-size:12.5px;margin:16px 0 0}
-.mtodo b{color:var(--acc);font-weight:400;font-family:var(--mono)}
-.mfoot{font-size:11px;color:#a09a8c;margin-top:12px;line-height:1.7}
+.mchart{display:flex;flex-direction:column}
+.mc-chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}
+.mc-chips button{font:11px var(--mono);border:1px solid var(--line2);background:transparent;color:var(--dim);border-radius:12px;
+  padding:3px 9px;display:inline-flex;align-items:center;gap:5px;cursor:pointer}
+.mc-chips button i{width:8px;height:8px;border-radius:50%;background:#d5cfc0}
+.mc-chips button.on{color:var(--ink);border-color:var(--ink)}
+.mchart svg{display:block;overflow:visible}
+.mchart svg text{font-family:var(--mono);font-size:10.5px;fill:var(--dim)}
+.mchart .ax{stroke:var(--line);stroke-width:1}
+.mchart .nm{fill:var(--ink);font-size:11px}
+.mchart .ef{font-size:9.5px;fill:#a09a8c}
+.mchart .nm,.mchart .ef{paint-order:stroke;stroke:var(--bg);stroke-width:3px}
+.mc-hint{display:none;font-family:var(--mono);font-size:10px;color:#a09a8c;text-align:right;margin-top:2px}
+/* 폰 — 칩은 그림 아래(엄지 쪽), 그림은 가로로 밀고 점수 축은 왼쪽에 남긴다 */
+.mchart.phone .mc-chips{order:3;margin:12px 0 0}
+.mchart.phone .mc-hint{display:block;order:2}
+.mc-scr{overflow-x:auto;display:flex;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
+.mc-y{position:sticky;left:0;flex:none;width:30px;background:var(--bg);z-index:1}
+.mc-plot{flex:none;margin-left:-30px}
+.mfoot{font-size:11px;color:#a09a8c;margin-top:14px;line-height:1.7}
 .mfoot a{color:#6b665c;text-decoration:none;border-bottom:1px solid #d5cfc0}
 .mfoot a:hover{color:var(--acc);border-bottom-color:currentColor}
+.mtry{margin-top:18px}
+.mtryh{font-family:var(--sans);font-size:12px;color:var(--dim);margin-bottom:2px}
 .mfoot a i{font-style:normal;font-size:10px}
 
 /* ── 새로 나온 것 ── */
@@ -285,9 +297,9 @@ dialog::backdrop{background:rgba(34,32,28,.30)}
   .ptabs a,.ptools a{padding:3px 7px}
   .ptop a{padding-bottom:2px}
 
-  /* 모델 — 걸린 시간 열을 숨겨 세 열로 */
-  .mh,.mr{grid-template-columns:minmax(0,1fr) 44px 112px;gap:8px;padding:4px 9px;margin:0 -9px}
-  .mt,.mfull{display:none}
+  /* 모델 — 해볼 것은 근거 수치가 본체라 폰에서도 남긴다 */
+  .mtry .row{grid-template-areas:"box cmd sev" "box tt tt" "box ds ds"}
+  .mtry .ds{display:block;grid-area:ds;white-space:normal;overflow:visible}
 
   /* 새로 나온 것 — 제목을 아랫줄로 내려 폭을 통째로 준다 */
   .chead{display:none}
@@ -646,25 +658,17 @@ dialog::backdrop{background:rgba(34,32,28,.30)}
 <div class="tab" id="models">
 <!--MODELS--><!-- 손으로 갱신한다. 새 모델이 나올 때만. 기준일(data-asof)도 같이 바꿀 것. -->
 <div class="mdl">
-<p class="lead"><b>코딩 모델 · 비용 효율</b> <span class="masof" data-asof="2026-09-23">2026-09-23 기준</span></p>
-<p class="mdesc">Terminal-Bench 4.0 을 모델·effort 단계마다 따로 잰 43개 설정 가운데, 점수가 같거나 높은데 더 싼 설정이 없는 것만 남겼어요.
-Fable 5.1 · Opus 5 · Sonnet 5 · Gemini 3.8 Flash 는 어느 effort 든 같은 점수를 더 싸게 내는 설정이 이 표 안에 있어요.</p>
-<div class="mtbl">
-<div class="mh"><span>모델 · effort</span><span class="mn">점수</span><span class="mn">과제당 비용<span class="mfull"> (API 정가)</span></span><span class="mn mt">걸린 시간</span></div>
-<div class="c-day"><span>── 최고</span><i></i></div>
-<div class="mr"><span class="mm">GPT-6 Astra <em>· xhigh</em></span><span class="mn">59.6</span><span class="mn">$5.86</span><span class="mn mt">13.4분</span></div>
-<div class="mr"><span class="mm">Opus 5.5 <em>· high</em></span><span class="mn">56.6</span><span class="mn">$5.12</span><span class="mn mt">11.7분</span></div>
-<div class="c-day"><span>── 균형</span><i></i></div>
-<div class="mr"><span class="mm">GPT-6 Astra <em>· high</em></span><span class="mn">54.0</span><span class="mn">$4.05</span><span class="mn mt">10.4분</span></div>
-<div class="mr"><span class="mm">Opus 5.5 <em>· medium</em></span><span class="mn">52.5</span><span class="mn">$4.04</span><span class="mn mt">9.4분</span></div>
-<div class="c-day"><span>── 저가</span><i></i></div>
-<div class="mr"><span class="mm">GPT-6 Astra <em>· low</em></span><span class="mn">41.9</span><span class="mn">$2.25</span><span class="mn mt">5.0분</span></div>
-<div class="c-day"><span>── 초저가</span><i></i></div>
-<div class="mr"><span class="mm">GPT-6 Sol <em>· xhigh</em></span><span class="mn">30.3</span><span class="mn">$1.91</span><span class="mn mt">6.9분</span></div>
+<p class="lead"><b>코딩 모델 · 성능 대비 비용</b> <span class="masof" data-asof="2026-09-23">2026-09-23 기준</span></p>
+<p class="mdesc">Terminal-Bench 4.0 점수와 과제 하나에 드는 비용이에요. 모델마다 effort 단계를 가벼운 쪽부터 이었어요. 왼쪽 위일수록 싸게 잘 풀어요.</p>
+<div class="mchart" id="mchart"><div class="mc-chips"></div><div class="mc-fig"></div><p class="mc-hint">밀면 $20 까지 →</p></div>
+<div class="box0 mtry">
+<p class="mtryh">이 그림에서 해볼 것</p>
+<div class="it t3" data-t="Fable 5.1 high 대신 Opus 5.5 medium 으로 한 과제 돌려 보기" data-k="md:fable51-high-to-opus55-medium"><div class="row"><span class="sev">핵심</span><button class="box" data-off="[x]">[ ]</button><span class="cmd">/model</span><span class="tt">Fable 5.1 high 대신 Opus 5.5 medium 으로 한 과제 돌려 보기</span><span class="ds">같은 52점대를 1/3 값에 — $11.64 → $4.04</span></div></div>
+<div class="it t2" data-t="Opus 5.5 는 effort medium 부터 시작하기" data-k="md:opus55-medium-first"><div class="row"><span class="sev">추천</span><button class="box" data-off="[x]">[ ]</button><span class="cmd">/effort medium</span><span class="tt">Opus 5.5 는 effort medium 부터 시작하기</span><span class="ds">high 보다 4.1점 낮고 21% 싸다</span></div></div>
+<div class="it t2" data-t="effort 는 xhigh 에서 멈추기" data-k="md:stop-at-xhigh"><div class="row"><span class="sev">추천</span><button class="box" data-off="[x]">[ ]</button><span class="cmd">/effort xhigh</span><span class="tt">effort 는 xhigh 에서 멈추기</span><span class="ds">max 는 점수가 같거나 낮은데 값만 오른다 — Opus 5.5 는 1.5배</span></div></div>
 </div>
-<p class="mtodo"><b>→</b> 지금 쓰는 설정이 표에 없으면 같은 구간의 표 설정으로 한 과제를 돌려 봐요.</p>
 <p class="mfoot">과제당 비용은 API 정가로 낸 값이에요. 구독이면 한도를 얼마나 빨리 쓰는지의 상대 비교로 읽어요.<br>
-출처 <a href="https://artificialanalysis.ai/evaluations/terminalbench-4-0" target="_blank" rel="noopener noreferrer">Artificial Analysis · Terminal-Bench 4.0 (mini-swe-agent) <i>↗</i></a> · Opus 5.5 는 출시(9/22) 하루 뒤 수치예요.</p>
+출처 <a href="https://artificialanalysis.ai/evaluations/terminalbench-4-0" target="_blank" rel="noopener noreferrer">Artificial Analysis · Terminal-Bench 4.0 (mini-swe-agent) ↗</a> · Opus 5.5 는 출시(9/22) 하루 뒤 수치예요. Sonnet 5 는 수치를 확인하는 중이라 뺐어요.</p>
 </div>
 <!--/MODELS-->
 </div>
@@ -19901,6 +19905,132 @@ $$('#new .tw').forEach(function (w) {
 
 applyAll();
 countTop();
+
+/* ── 모델 차트 — 성능 대비 비용. 데이터는 MD·MC, 새 모델이 나올 때만 손으로 ── */
+(function () {
+  // [모델, effort, 점수, 과제당 비용 $] — Terminal-Bench 4.0 · Artificial Analysis · 2026-09-23
+  const MD = [
+    ["Opus 5.5","low",31.3,2.08],["Opus 5.5","medium",52.5,4.04],["Opus 5.5","high",56.6,5.12],["Opus 5.5","xhigh",59.6,8.78],["Opus 5.5","max",59.6,13.11],
+    ["Opus 5","low",26.3,5.18],["Opus 5","medium",34.3,9.18],["Opus 5","high",46.0,13.14],["Opus 5","xhigh",46.5,17.35],["Opus 5","max",49.0,19.29],
+    ["Fable 5.1","low",40.4,7.32],["Fable 5.1","medium",44.9,9.12],["Fable 5.1","high",52.0,11.64],["Fable 5.1","xhigh",55.1,15.78],["Fable 5.1","max",52.0,19.22],
+    // Sonnet 5 는 모든 effort 가 2~14점이라 벤치 실행이 깨진 값으로 보여 뺐다. AA 에서 확인되면 되살린다
+    // ["Sonnet 5","low",2.5,2.66],["Sonnet 5","medium",2.0,5.53],["Sonnet 5","high",5.1,9.40],["Sonnet 5","xhigh",7.1,12.80],["Sonnet 5","max",14.1,19.69],
+    ["GPT-6 Astra","low",41.9,2.25],["GPT-6 Astra","medium",49.5,4.43],["GPT-6 Astra","high",54.0,4.05],["GPT-6 Astra","xhigh",59.6,5.86],["GPT-6 Astra","max",59.1,8.50],
+    ["GPT-6 Sol","low",9.1,0.49],["GPT-6 Sol","medium",18.7,1.12],["GPT-6 Sol","high",26.3,1.60],["GPT-6 Sol","xhigh",30.3,1.91],["GPT-6 Sol","max",43.9,4.00],
+    ["GPT-6 Luna","none",1.5,0.04],["GPT-6 Luna","low",0.0,0.01],["GPT-6 Luna","medium",2.5,0.07],["GPT-6 Luna","high",4.5,0.12],["GPT-6 Luna","xhigh",8.1,0.20],["GPT-6 Luna","max",12.6,0.24],
+    ["Gemini 3.8 Flash","low",10.1,5.38],["Gemini 3.8 Flash","medium",19.7,4.61],["Gemini 3.8 Flash","high",19.7,5.84],
+  ].map(([m, e, s, c]) => ({m, e, s, c}));
+  // 도구 색 계열 안에서 모델마다 다른 값 — Claude Code 주황·붉은 계열, Codex 먹의 농담, Antigravity 파랑
+  // 칩 순서 = 이 순서. 앞 넷은 손으로 정했고, 나머지는 최고 점수 순
+  const MC = {"GPT-6 Astra":"#22201c","Fable 5.1":"#c8205a","Opus 5.5":"#d97757","Opus 5":"#8a3510",
+              "GPT-6 Sol":"#6b665c","Gemini 3.8 Flash":"#3b6fd6","GPT-6 Luna":"#b3ad9f"};
+  // 처음 켜 두는 모델 — 데스크톱·폰 같다. 나머지는 회색으로 깔리고 칩으로 켠다
+  const DEFAULT_ON = ["GPT-6 Astra", "Fable 5.1", "Opus 5.5", "Gemini 3.8 Flash"];
+  const EORD = ["none","low","medium","high","xhigh","max"];
+  const XMAX = 20, YMAX = 65, NS = "http://www.w3.org/2000/svg";
+  const root = document.getElementById("mchart");
+  if (!root) return;
+  const chipsEl = root.querySelector(".mc-chips"), fig = root.querySelector(".mc-fig");
+  const models = Object.keys(MC);
+  let phone = null, on = null, hover = null, lastW = 0;
+
+  const esc = (x) => String(x).replace(/[&<]/g, (c) => ({"&":"&amp;","<":"&lt;"})[c]);
+  function svg(w, h) { const s = document.createElementNS(NS, "svg"); s.setAttribute("viewBox", `0 0 ${w} ${h}`); s.setAttribute("width", w); s.setAttribute("height", h); return s; }
+  function add(p, tag, a, txt) { const e = document.createElementNS(NS, tag); for (const k in a) e.setAttribute(k, a[k]); if (txt != null) e.innerHTML = txt; p.appendChild(e); return e; }
+
+  function chips() {
+    chipsEl.innerHTML = models.map((m) => `<button type="button" data-m="${esc(m)}"><i></i>${esc(m)}</button>`).join("");
+    chipsEl.querySelectorAll("button").forEach((b) => {
+      const m = b.dataset.m;
+      b.addEventListener("click", () => { on.has(m) ? on.delete(m) : on.add(m); hover = null; paint(); draw(); });
+      // 데스크톱은 올리면 그 모델만 남긴다
+      b.addEventListener("mouseenter", () => { if (!phone && on.has(m)) { hover = m; draw(); } });
+      b.addEventListener("mouseleave", () => { if (hover) { hover = null; draw(); } });
+    });
+    paint();
+  }
+  function paint() {
+    chipsEl.querySelectorAll("button").forEach((b) => {
+      const m = b.dataset.m, lit = on.has(m);
+      b.classList.toggle("on", lit);
+      b.querySelector("i").style.background = lit ? MC[m] : "";
+    });
+  }
+
+  function draw() {
+    const cw = root.clientWidth;
+    const nowPhone = cw < 640;
+    if (nowPhone !== phone) {
+      phone = nowPhone;
+      on = new Set(DEFAULT_ON);
+      root.classList.toggle("phone", phone);
+      chips();
+    }
+    const W = phone ? 640 : Math.min(cw, 1100), H = phone ? 330 : Math.round(Math.max(360, W * 0.4));
+    const mg = {l:30, r: phone ? 10 : 118, t:18, b:30};
+    const X = (v) => mg.l + v / XMAX * (W - mg.l - mg.r), Y = (v) => mg.t + (1 - v / YMAX) * (H - mg.t - mg.b);
+    const yt = phone ? [0,20,40,60] : [0,10,20,30,40,50,60];
+    const s = svg(W, H);
+    for (const v of yt) { add(s, "line", {class:"ax", x1:mg.l, x2:W-mg.r, y1:Y(v), y2:Y(v)}); add(s, "text", {x:mg.l-6, y:Y(v)+3, "text-anchor":"end"}, v); }
+    for (let v = 0; v <= XMAX; v += 2) add(s, "text", {x:X(v), y:H-mg.b+15, "text-anchor":"middle"}, "$" + v);
+    add(s, "text", {x:W-mg.r, y:H-3, "text-anchor":"end"}, "과제당 비용 →");
+
+    const lit = hover ? new Set([hover]) : on;
+    const placed = [];
+    const onLine = [], over = (l, b) => l.some((q) => b.x0 < q.x1 && b.x1 > q.x0 && b.y0 < q.y1 && b.y1 > q.y0);
+    const hit = (b, loose) => over(placed, b) || (!loose && over(onLine, b));
+    const labs = [];
+    // 꺼진 모델을 먼저 깔고 켜진 모델을 위에
+    for (const m of [...models.filter((m) => !lit.has(m)), ...models.filter((m) => lit.has(m))]) {
+      const ps = MD.filter((p) => p.m === m).sort((a, b) => EORD.indexOf(a.e) - EORD.indexOf(b.e));
+      const L = lit.has(m), c = L ? MC[m] : "#d9d3c4";
+      add(s, "path", {d: ps.map((p, i) => `${i ? "L" : "M"}${X(p.c)} ${Y(p.s)}`).join(""), fill:"none", stroke:c, "stroke-width": L ? 1.8 : 1.2});
+      for (const p of ps) add(s, "circle", {cx:X(p.c), cy:Y(p.s), r: L ? 3.2 : 2, fill:c});
+      if (!L) continue;
+      ps.forEach((p) => placed.push({x0:X(p.c)-5, x1:X(p.c)+5, y0:Y(p.s)-5, y1:Y(p.s)+5}));
+      // 선 위도 자리로 친다 — 안 그러면 모델 이름이 남의 선 위에 겹쳐 찍힌다
+      for (let i = 1; i < ps.length; i++) {
+        const x0 = X(ps[i-1].c), y0 = Y(ps[i-1].s), x1 = X(ps[i].c), y1 = Y(ps[i].s), n = Math.ceil(Math.hypot(x1-x0, y1-y0) / 6);
+        for (let k = 1; k < n; k++) { const x = x0 + (x1-x0)*k/n, y = y0 + (y1-y0)*k/n; onLine.push({x0:x-2, x1:x+2, y0:y-2, y1:y+2}); }
+      }
+      ps.forEach((p, i) => labs.push({p, m, ps, name: !phone && i === ps.length - 1}));
+    }
+    // 모델 이름(선 끝) 먼저, 그다음 effort. 자리가 없으면 그 라벨은 안 쓴다
+    labs.sort((a, b) => b.name - a.name);
+    const spots = [[7, 4, "start"], [-7, 4, "end"], [0, -8, "middle"], [0, 14, "middle"]];
+    for (const L of labs) {
+      const txt = L.name ? L.m : L.p.e, w = txt.length * (L.name ? 6.6 : 5.6);
+      // 모델 이름은 선 끝이 막히면 같은 선의 다른 점 옆에서 찾고, 그래도 없을 때만 선을 겹쳐서라도 쓴다 — 이름이 빠지면 선이 누구 것인지 모른다
+      const at = L.name ? [...L.ps].reverse() : [L.p];
+      const tries = [...at.flatMap((q) => spots.map((s) => [q, ...s, false])), ...(L.name ? spots.map((s) => [L.p, ...s, true]) : [])];
+      for (const [q, dx, dy, a, loose] of tries) {
+        const x = X(q.c), y = Y(q.s);
+        const x0 = a === "start" ? x + dx : a === "end" ? x + dx - w : x - w / 2;
+        const b = {x0, x1: x0 + w, y0: y + dy - 10, y1: y + dy + 2};
+        if (hit(b, loose) || b.x1 > W || b.x0 < mg.l) continue;
+        add(s, "text", {class: L.name ? "nm" : "ef", "text-anchor": a, x: x + dx, y: y + dy}, esc(txt));
+        placed.push(b); break;
+      }
+    }
+    add(s, "text", {x:mg.l, y:mg.t-7, "text-anchor":"start"}, phone ? "" : "점수");
+
+    const keep = fig.querySelector(".mc-scr")?.scrollLeft || 0;
+    fig.innerHTML = "";
+    if (!phone) { fig.appendChild(s); return; }
+    // 폰: 점수 축을 왼쪽에 붙여 두고 그림만 민다
+    const ys = svg(30, H);
+    for (const v of yt) add(ys, "text", {x:24, y:Y(v)+3, "text-anchor":"end"}, v);
+    add(ys, "text", {x:0, y:mg.t-7}, "점수");
+    fig.innerHTML = `<div class="mc-scr"><div class="mc-y"></div><div class="mc-plot"></div></div>`;
+    fig.querySelector(".mc-y").appendChild(ys);
+    fig.querySelector(".mc-plot").appendChild(s);
+    fig.querySelector(".mc-scr").scrollLeft = keep;
+  }
+
+  // 탭이 숨어 있을 때는 폭이 0 — 보일 때 그린다
+  new ResizeObserver(() => { const w = root.clientWidth; if (w && w !== lastW) { lastW = w; draw(); } }).observe(root);
+
+})();
 </script>
 </body>
 </html>
