@@ -18624,7 +18624,28 @@ dialog::backdrop{background:rgba(34,32,28,.30)}
     </div>
 <!--/CX-DATA-->
 <!--AG-DATA-->
-    <p class="range"><strong>v1.0.4</strong> → <strong>v1.2.8</strong> &nbsp;·&nbsp; <span class="range-dates" data-en="2026.6.1 – 2026.9.22">2026.6.1 – 2026.9.22</span></p>
+    <p class="range"><strong>v1.0.4</strong> → <strong>v1.2.9</strong> &nbsp;·&nbsp; <span class="range-dates" data-en="2026.6.1 – 2026.9.23">2026.6.1 – 2026.9.23</span></p>
+    <div class="version-block" id="ag1.2.9" data-date="2026-09-23">
+      <div class="version-head">
+        <span class="ver-badge">v1.2.9</span><span class="ver-date" data-en="Sep 23 Wed">9월 23일 수</span><span class="ver-ago"></span>
+        <div class="ver-summary"><span class="pill feature">기능 ×6</span><span class="pill fix">Fix ×9</span></div>
+      </div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Added <code>@&lt;subagent&gt; &lt;message&gt;</code> prompt syntax to send a message directly to a subagent conversation, with autocomplete listing running and completed subagents</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Added Vim numeric count multipliers so counts apply to operators, motions, and actions in Normal and Visual modes, including <code>3dw</code>, <code>2d3w</code>, <code>3dd</code>, <code>3x</code>, <code>3rX</code>, <code>3p</code>, <code>3u</code>, <code>[count]G</code>/<code>gg</code>/<code>$</code>, and counted text objects such as <code>2di(</code></span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Improved <code>GEMINI_API_KEY</code> sessions to reduce behavior discrepancies with the non-API-key sign-in path</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Improved the artifact viewer to show a Left/Right pan hint in the footer when a wide diagram overflows the window</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Improved <code>/rewind</code> to show a relative timestamp for each step and to focus the most recent step when the panel opens</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Improved command allow-listing suggestions to recognize <code>jj config</code> and <code>jj op</code> subcommands when offering to always allow a command</span></div>
+      <div class="entry row-divider" data-type="fix"><span class="pill fix">Fix</span><span class="e-desc">Fixed headless (<code>-p</code> / <code>--prompt</code>) runs leaving daemon background processes running after exit, which could hang scripts reading the CLI's output until end-of-file; daemon processes now terminate when the run ends</span></div>
+      <div class="entry row-divider" data-type="fix"><span class="pill fix">Fix</span><span class="e-desc">Fixed headless (<code>-p</code> / <code>--prompt</code>) runs cancelling still-running background tasks about 5 seconds after the agent went idle; runs now wait for background tasks until the <code>--print-timeout</code> deadline, up to a 30-minute cap</span></div>
+      <div class="entry row-divider" data-type="fix"><span class="pill fix">Fix</span><span class="e-desc">Fixed a conversation-history database corruption risk where checking the database file for write access could silently drop file locks held by concurrent CLI processes on the same file</span></div>
+      <div class="entry row-divider" data-type="fix"><span class="pill fix">Fix</span><span class="e-desc">Fixed context compaction failing when the tool configuration used for compaction checkpoints was rejected in certain scenarios</span></div>
+      <div class="entry row-divider" data-type="fix"><span class="pill fix">Fix</span><span class="e-desc">Fixed a backend crash when a streamed model response chunk arrived without its response envelope, which terminated the session with connection errors</span></div>
+      <div class="entry row-divider" data-type="fix"><span class="pill fix">Fix</span><span class="e-desc">Fixed markdown table column alignment when a table cell contains file links that wrap across lines</span></div>
+      <div class="entry row-divider" data-type="fix"><span class="pill fix">Fix</span><span class="e-desc">Fixed markdown file links to code symbols dropping their display text and rendering the raw path instead</span></div>
+      <div class="entry row-divider" data-type="fix"><span class="pill fix">Fix</span><span class="e-desc">Fixed incomplete enterprise sign-ins (for example closing the browser window before finishing license or project selection) leaving behind a stuck partial credential; such credentials are now cleared automatically so sign-in can be retried cleanly</span></div>
+      <div class="entry row-divider" data-type="fix"><span class="pill fix">Fix</span><span class="e-desc">Fixed the browser companion page title to read <code>Antigravity CLI</code> instead of <code>Antigravity Cli</code></span></div>
+    </div>
     <div class="version-block" id="ag1.2.8" data-date="2026-09-22">
       <div class="version-head">
         <span class="ver-badge">v1.2.8</span><span class="ver-date" data-en="Sep 22 Tue">9월 22일 화</span><span class="ver-ago"></span>
