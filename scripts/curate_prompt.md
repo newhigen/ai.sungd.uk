@@ -150,6 +150,7 @@ Manus·뉴스·블로그 화면은 **없앴다**. 그런 내용은 이제 아무
 
 ## 절대 금지
 - `<div id="data">` 안(버전블록·문서표) 은 **일절 건드리지 마라.**
+- 「모델」 탭의 `<!--MODELS-->` … `<!--/MODELS-->` 구간은 **건드리지 마라.** 사람이 손으로 갱신한다.
 - 상단바·CSS·`<script>` 는 건드리지 마라.
 - **명백한 플레이스홀더만 건너뛴다** ("Bug fixes and reliability improvements", "Internal infrastructure improvements" 등). 새 모델·플래그십 출시는 임의로 빼지 말 것 — 최우선 `t3` 후보다.
 - 마크업 형식을 깨지 말 것. 확신 없으면 그 항목은 건너뛴다.
