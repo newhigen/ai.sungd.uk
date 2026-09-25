@@ -19284,7 +19284,18 @@ dialog::backdrop{background:rgba(34,32,28,.30)}
     </div>
 <!--/CX-DATA-->
 <!--AG-DATA-->
-    <p class="range"><strong>v1.0.4</strong> → <strong>v1.2.10</strong> &nbsp;·&nbsp; <span class="range-dates" data-en="2026.6.1 – 2026.9.24">2026.6.1 – 2026.9.24</span></p>
+    <p class="range"><strong>v1.0.4</strong> → <strong>v1.2.11</strong> &nbsp;·&nbsp; <span class="range-dates" data-en="2026.6.1 – 2026.9.25">2026.6.1 – 2026.9.25</span></p>
+    <div class="version-block" id="ag1.2.11" data-date="2026-09-25">
+      <div class="version-head">
+        <span class="ver-badge">v1.2.11</span><span class="ver-date" data-en="Sep 25 Fri">9월 25일 금</span><span class="ver-ago"></span>
+        <div class="ver-summary"><span class="pill feature">기능 ×2</span><span class="pill fix">Fix ×3</span></div>
+      </div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Improved reasoning effort level for models with different support, selectable with <code>--effort</code> or from the effort gauge in <code>/effort</code> and <code>/model</code>.</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Changed plugins placed directly in <code>~/.gemini/config/plugins</code> so that a plugin whose MCP server needs configuration variables now starts disabled until you enable it, matching plugins installed through <code>/plugin</code>.</span></div>
+      <div class="entry row-divider" data-type="fix"><span class="pill fix">Fix</span><span class="e-desc">Fixed Mermaid diagrams and LaTeX rendering as rows of garbled placeholder characters in WezTerm and the VS Code integrated terminal; these terminals are no longer assumed to support Kitty graphics and now show the ASCII fallback</span></div>
+      <div class="entry row-divider" data-type="fix"><span class="pill fix">Fix</span><span class="e-desc">Fixed copying text from the artifact viewer when <code>Copy on Select</code> is turned off in <code>/config</code>: the viewer no longer captures the mouse, so your terminal's own selection and copy shortcut work, and <code>Ctrl+C</code> goes back to interrupting or exiting</span></div>
+      <div class="entry row-divider" data-type="fix"><span class="pill fix">Fix</span><span class="e-desc">Fixed project custom agents in .agents/agents/ not being found or selectable in workspaces created in the Desktop App, in already-trusted workspaces, under execution with --agent, in headless (-p / --prompt) runs, and in the /agents panel.</span></div>
+    </div>
     <div class="version-block" id="ag1.2.10" data-date="2026-09-24">
       <div class="version-head">
         <span class="ver-badge">v1.2.10</span><span class="ver-date" data-en="Sep 24 Thu">9월 24일 목</span><span class="ver-ago"></span>
