@@ -1,11 +1,22 @@
+<div align="center">
+
 # ai.sungd.uk
+
+Claude Code, Codex 릴리스에서 오늘 써 볼 것을 골라 주는 큐레이션
+
+[**ai.sungd.uk**](https://ai.sungd.uk/)
+
+<img src="docs/screenshot.png" alt="ai.sungd.uk 첫 화면" width="100%">
+
+</div>
+
+<details>
+<summary><b>개발</b></summary>
 
 **오늘 뭐 써볼까** — Claude Code·Codex·Antigravity CLI 릴리스에서 오늘 해볼 것을 골라 체크리스트로 준다.
 단일 정적 HTML, 빌드 없음. GitHub Pages 가 `main` 루트를 그대로 서빙한다.
 
-🔗 케이스 스터디 → https://resume.sungd.uk/projects/claude-code-tracking
-
-## 왜 만들었나
+### 왜 만들었나
 
 [공식 changelog](https://code.claude.com/docs/en/changelog)는 시간순 raw 목록이다. 빠짐없지만
 매주 릴리스가 1~2개씩 쏟아져 뭐가 정말 써볼 만한지 가려내기 어렵다. 읽을거리가 아니라
@@ -17,7 +28,7 @@
 두 화면은 체크 상태를 같이 본다(`localStorage`, 이 브라우저 안에서만). 원본 전체는
 공식 패치노트로 링크만 걸고 싣지 않는다.
 
-## 어디를 고치나
+### 어디를 고치나
 
 ```
 index.html    전부 (화면·스타일·스크립트 + <div id="data"> 안의 버전블록)
@@ -29,7 +40,7 @@ CNAME · sitemap.xml · robots.txt
 거기에 새 버전을 꽂고 큐레이션이 거기서 원본을 읽는다. 구간 표식(`<!--CC-DATA-->`·
 `<!--CX-DATA-->`·`<!--AG-DATA-->`)도 스크립트가 경계로 쓰므로 그대로 둘 것.
 
-## 한 시간마다 도는 갱신
+### 한 시간마다 도는 갱신
 
 `.github/workflows/daily-update.yml` 이 **매시 5분**에 실행된다. 세 단계인데
 **대부분의 시각은 1단계에서 바로 끝나 비용이 0이다** — 새 버전이 없으면 스크립트가
@@ -46,7 +57,7 @@ CNAME · sitemap.xml · robots.txt
 
 ⚠ 3단계가 `index.html` 을 직접 편집한다. 편집 뒤 JS 무결성 검사에 실패하면 자동으로 되돌린다.
 
-### 셋업 (한 번만)
+#### 셋업 (한 번만)
 
 1. [Claude GitHub App](https://github.com/apps/claude) 을 이 repo 에 설치
 2. `claude setup-token` (Pro/Max 구독) → OAuth 토큰 발급
@@ -54,7 +65,19 @@ CNAME · sitemap.xml · robots.txt
 
 API 키 대신 구독 토큰을 써서 별도 과금이 없다.
 
-## 라이선스
+### 라이선스
 
 코드는 MIT. 큐레이션 문구는 대상이 아니다 — `LICENSE` 참고.
 다른 사이트는 [sungd.uk](https://sungd.uk) 에서.
+
+</details>
+
+<details>
+<summary><b>다른 사이트</b></summary>
+
+- [sungd.uk](https://sungd.uk/) — 소개, 이력서, 활동
+- [dev.sungd.uk](https://dev.sungd.uk/) — 만든 것과 개발 노트
+- [writing.sungd.uk](https://writing.sungd.uk/) — 책, 생각, 기술 글
+- [books.sungd.uk](https://books.sungd.uk/) — 흩어진 책을 한 장에
+
+</details>
