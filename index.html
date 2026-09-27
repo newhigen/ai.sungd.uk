@@ -19537,7 +19537,18 @@ dialog::backdrop{background:rgba(34,32,28,.30)}
     </div>
 <!--/CX-DATA-->
 <!--AG-DATA-->
-    <p class="range"><strong>v1.0.4</strong> → <strong>v1.2.11</strong> &nbsp;·&nbsp; <span class="range-dates" data-en="2026.6.1 – 2026.9.25">2026.6.1 – 2026.9.25</span></p>
+    <p class="range"><strong>v1.0.4</strong> → <strong>v1.2.12</strong> &nbsp;·&nbsp; <span class="range-dates" data-en="2026.6.1 – 2026.9.27">2026.6.1 – 2026.9.27</span></p>
+    <div class="version-block" id="ag1.2.12" data-date="2026-09-27">
+      <div class="version-head">
+        <span class="ver-badge">v1.2.12</span><span class="ver-date" data-en="Sep 27 Sun">9월 27일 일</span><span class="ver-ago"></span>
+        <div class="ver-summary"><span class="pill feature">기능 ×2</span><span class="pill fix">Fix ×3</span></div>
+      </div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Improved scrolling in the full-screen view: bursts of mouse-wheel or trackpad events are now coalesced before redrawing, which cuts CPU use and reduces scroll lag in long conversations and the artifact viewer</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Improved <code>GEMINI_API_KEY</code> sessions to stop immediately when the Gemini API reports an exhausted daily quota, a project or billing-account spend cap, or depleted prepaid credits, instead of spending several minutes on retries that cannot succeed; short-lived per-minute rate limits are still retried</span></div>
+      <div class="entry row-divider" data-type="fix"><span class="pill fix">Fix</span><span class="e-desc">Fixed resuming a long conversation in <code>medium</code> or <code>low</code> verbosity taking many seconds and lagging while history replayed: earlier tool groups now appear already finished instead of each re-animating, and keys pressed during the replay no longer refresh a half-loaded transcript</span></div>
+      <div class="entry row-divider" data-type="fix"><span class="pill fix">Fix</span><span class="e-desc">Fixed the terminal or tab title changing to a string like <code>Ga=q,f=32,...</code> every time the CLI starts inside GNU <code>screen</code>, <code>tmux</code> (including iTerm2 <code>tmux -CC</code> tabs), or Zellij; the CLI no longer sends its image-support probe through a multiplexer, and <code>CLI_GRAPHICS=kitty</code> still forces image mode</span></div>
+      <div class="entry row-divider" data-type="fix"><span class="pill fix">Fix</span><span class="e-desc">Fixed Vim mode ignoring non-ASCII characters such as <code>é</code> or <code>中</code> after <code>r</code>, <code>f</code>, <code>F</code>, <code>t</code> and <code>T</code>, <code>fv</code> and <code>fV</code> in Visual mode leaving Visual mode instead of extending the selection, and <code>D</code>, <code>C</code>, or Visual <code>~</code>/<code>u</code>/<code>U</code> recording an empty undo step and clearing redo history when they changed nothing</span></div>
+    </div>
     <div class="version-block" id="ag1.2.11" data-date="2026-09-25">
       <div class="version-head">
         <span class="ver-badge">v1.2.11</span><span class="ver-date" data-en="Sep 25 Fri">9월 25일 금</span><span class="ver-ago"></span>
