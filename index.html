@@ -17931,7 +17931,24 @@ dialog::backdrop{background:rgba(34,32,28,.30)}
   </div>
 <!--/CC-DATA-->
 <!--CX-DATA-->
-    <p class="range"><strong>v0.69.0</strong> → <strong>v0.157.1</strong> &nbsp;·&nbsp; <span class="range-dates" data-en="2025.12.10 – 2026.9.26">2025.12.10 – 2026.9.26</span></p>
+    <p class="range"><strong>v0.69.0</strong> → <strong>v0.158.0</strong> &nbsp;·&nbsp; <span class="range-dates" data-en="2025.12.10 – 2026.9.28">2025.12.10 – 2026.9.28</span></p>
+    <div class="version-block" id="cx0.158.0" data-date="2026-09-28">
+      <div class="version-head">
+        <span class="ver-badge">v0.158.0</span><span class="ver-date" data-en="Sep 28 Mon">9월 28일 월</span><span class="ver-ago"></span>
+        <div class="ver-summary"><span class="pill feature">기능 ×5</span><span class="pill fix">Fix ×6</span></div>
+      </div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Configure copy-on-select and right-click paste in the fullscreen TUI. Copied transcript selections now preserve Markdown formatting.</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Connect to MCP servers that require pre-registered OAuth client secrets, including through <code>codex mcp add --oauth-client-secret</code>.</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Secure direct exec-server WebSocket connections with bearer tokens, including connections configured through app-server.</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Image generation and editing can explicitly request transparent backgrounds, and edits now accept file-backed conversation images.</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Terminal input approval is enabled by default for commands running with elevated permissions; runtime-only grants no longer cause unnecessary reviews.</span></div>
+      <div class="entry row-divider" data-type="fix"><span class="pill fix">Fix</span><span class="e-desc">Fixed Windows sandbox failures involving ordinary Windows 10 paths, rejected stored credentials, and large permission policies.</span></div>
+      <div class="entry row-divider" data-type="fix"><span class="pill fix">Fix</span><span class="e-desc">Fixed Linux sandbox startup with nested writable roots and preserved Git metadata protections across writable roots on Linux and macOS.</span></div>
+      <div class="entry row-divider" data-type="fix"><span class="pill fix">Fix</span><span class="e-desc">macOS patch operations now recognize system path aliases covered by existing permissions, avoiding unnecessary approval prompts.</span></div>
+      <div class="entry row-divider" data-type="fix"><span class="pill fix">Fix</span><span class="e-desc">Approval reviews now retry when new user input arrives, so a status question does not automatically abort a pending action.</span></div>
+      <div class="entry row-divider" data-type="fix"><span class="pill fix">Fix</span><span class="e-desc">Mermaid flowcharts now render quoted labels and ampersands; unsupported diagrams explain why they fall back to source.</span></div>
+      <div class="entry row-divider" data-type="fix"><span class="pill fix">Fix</span><span class="e-desc">Command completion events now include early output and report process-launch failures to clients.</span></div>
+    </div>
     <div class="version-block" id="cx0.157.1" data-date="2026-09-26">
       <div class="version-head">
         <span class="ver-badge">v0.157.1</span><span class="ver-date" data-en="Sep 26 Sat">9월 26일 토</span><span class="ver-ago"></span>
