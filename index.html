@@ -19827,7 +19827,17 @@ dialog::backdrop{background:rgba(34,32,28,.30)}
     </div>
 <!--/CX-DATA-->
 <!--AG-DATA-->
-    <p class="range"><strong>v1.0.4</strong> → <strong>v1.2.12</strong> &nbsp;·&nbsp; <span class="range-dates" data-en="2026.6.1 – 2026.9.27">2026.6.1 – 2026.9.27</span></p>
+    <p class="range"><strong>v1.0.4</strong> → <strong>v1.2.13</strong> &nbsp;·&nbsp; <span class="range-dates" data-en="2026.6.1 – 2026.9.29">2026.6.1 – 2026.9.29</span></p>
+    <div class="version-block" id="ag1.2.13" data-date="2026-09-29">
+      <div class="version-head">
+        <span class="ver-badge">v1.2.13</span><span class="ver-date" data-en="Sep 29 Tue">9월 29일 화</span><span class="ver-ago"></span>
+        <div class="ver-summary"><span class="pill feature">기능 ×3</span><span class="pill fix">Fix ×1</span></div>
+      </div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Improved rate-limit handling when the model API returns a retry delay: the CLI now waits the delay the server asks for instead of a fixed 5 seconds, and stops right away instead of retrying when the delay is longer than 30 seconds or the quota is a daily or billing cap</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Improved rendering efficiency, cutting CPU use and memory churn while the conversation view redraws, such as during fast scrolling or while the agent is working</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Improved the artifact viewer's <code>m</code> hint to name the content and the mode it switches to, such as <code>diagram ASCII</code>, <code>diagram source</code>, or <code>math image</code>, instead of <code>toggle ASCII</code> or <code>toggle raw</code></span></div>
+      <div class="entry row-divider" data-type="fix"><span class="pill fix">Fix</span><span class="e-desc">Fixed the workspace trust dialog, the <code>/help</code> panel, and the sign-in and MCP authentication screens clipping text on narrow terminals of around 40 columns; long lines and navigation hints now wrap, and the <code>/help</code> tab bar compacts to fit</span></div>
+    </div>
     <div class="version-block" id="ag1.2.12" data-date="2026-09-27">
       <div class="version-head">
         <span class="ver-badge">v1.2.12</span><span class="ver-date" data-en="Sep 27 Sun">9월 27일 일</span><span class="ver-ago"></span>
