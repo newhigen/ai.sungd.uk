@@ -20183,7 +20183,22 @@ dialog::backdrop{background:rgba(34,32,28,.30)}
     </div>
 <!--/CX-DATA-->
 <!--AG-DATA-->
-    <p class="range"><strong>v1.0.4</strong> → <strong>v1.2.13</strong> &nbsp;·&nbsp; <span class="range-dates" data-en="2026.6.1 – 2026.9.29">2026.6.1 – 2026.9.29</span></p>
+    <p class="range"><strong>v1.0.4</strong> → <strong>v1.2.14</strong> &nbsp;·&nbsp; <span class="range-dates" data-en="2026.6.1 – 2026.9.30">2026.6.1 – 2026.9.30</span></p>
+    <div class="version-block" id="ag1.2.14" data-date="2026-09-30">
+      <div class="version-head">
+        <span class="ver-badge">v1.2.14</span><span class="ver-date" data-en="Sep 30 Wed">9월 30일 수</span><span class="ver-ago"></span>
+        <div class="ver-summary"><span class="pill feature">기능 ×6</span><span class="pill fix">Fix ×3</span></div>
+      </div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Added the <code>Queued Messages</code> option to <code>/config</code>: keep the default <code>Queue</code> to hold follow-up messages until the current turn ends, or choose <code>Send Immediately</code> to interrupt the agent with them; it can also be set with <code>"queuedMessages": "send-immediately"</code> in <code>settings.json</code>, which was previously ignored</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Improved <code>remote-control start</code> on Linux machines without a systemd user service manager, such as most containers: instead of failing, it now starts the daemon as a background process and warns that it will not restart after a crash or start at boot; <code>remote-control status</code> shows its PID and <code>remote-control stop</code> shuts it down</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Improved loading long conversations: resuming a conversation with thousands of steps is noticeably faster because the CLI no longer scans every step up front</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Improved automatically generated conversation titles to take images and files attached to your first message into account, so screenshot- or file-driven requests get specific titles and messages with only attachments get a title too</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Improved the sign-in error shown to accounts blocked for a Terms of Service violation, which now includes a link to submit an appeal</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Changed <code>--json-schema</code> to reject plain text, bare type names such as <code>string</code>, and missing schema files instead of silently treating them as a string schema; these inputs, and any schema whose root is not <code>"type": "object"</code>, now fail at startup with an error and exit code <code>1</code></span></div>
+      <div class="entry row-divider" data-type="fix"><span class="pill fix">Fix</span><span class="e-desc">Fixed the prompt cursor drifting away from the end of the text after emoji such as ⚠️ or 👩‍💻, or scripts with combining marks such as Devanagari and Thai, especially inside <code>tmux</code>, and fixed prompt wrapping splitting such characters across two lines</span></div>
+      <div class="entry row-divider" data-type="fix"><span class="pill fix">Fix</span><span class="e-desc">Fixed the agent hanging when it tried to view a pipe, socket, or device file, and a conversation getting stuck with <code>INVALID_ARGUMENT</code> errors after the agent viewed a truncated MP4, MOV, or M4A recording; both are now rejected up front with a clear message</span></div>
+      <div class="entry row-divider" data-type="fix"><span class="pill fix">Fix</span><span class="e-desc">Fixed resuming a conversation whose history had a missing step, for example after a crash or an interrupted write, hiding the most recent steps and letting new messages overwrite them</span></div>
+    </div>
     <div class="version-block" id="ag1.2.13" data-date="2026-09-29">
       <div class="version-head">
         <span class="ver-badge">v1.2.13</span><span class="ver-date" data-en="Sep 29 Tue">9월 29일 화</span><span class="ver-ago"></span>
