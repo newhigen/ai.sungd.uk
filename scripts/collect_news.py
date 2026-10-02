@@ -5,6 +5,7 @@
 문턱
   - Hacker News 300점 이상 (세 회사 이름이 제목이나 주소에 든 글)
   - 공식 도메인 글은 HN 100점 이상, 또는 공식 피드의 제품 글
+  - 세 회사 밖 AI 글(Jev, DeepSeek, Mistral, Meta …)은 HN 500점 이상
   - 긱뉴스에만 있는 AI 글은 20점 이상
 묶음 글(행사 정리 등)은 본문을 r.jina.ai 로 받아 둔다 — openai.com 은 봇을 막는다."""
 import re, json, os, time, subprocess, datetime, urllib.parse, html
@@ -73,6 +74,22 @@ for q in ['openai', 'anthropic', 'claude', 'chatgpt', 'gemini', 'codex', 'deepmi
         off = dom(url) in OFFICIAL
         if h['points'] < (100 if off else 300): continue
         add(norm(url), url=url, title=h['title'], co=company(h['title'], url), official=off, pts=h['points'],
+            cmt=h.get('num_comments') or 0, hn=h['objectID'], date=kst(h['created_at_i']), src='hn')
+
+# ── 세 회사 밖 AI 글: HN 500점 이상만 ──
+OTHER = re.compile(r'\bAI\b|\bLLMs?\b|\bagents?\b|\bagentic\b|deepseek|qwen|mistral|llama|kimi|grok|\bxai\b|nvidia|cursor|copilot|'
+                   r'vibe.cod|prompt|transformer|inference|hugging ?face|perplexity|\bMCP\b|\bmodels?\b|neural|reasoning', re.I)
+for q in ['AI', 'LLM', 'agent', 'model', 'DeepSeek', 'Qwen', 'Mistral', 'Llama', 'Grok', 'Kimi', 'Cursor', 'Copilot',
+          'Nvidia', 'MCP', 'Hugging Face', 'Perplexity', 'vibe coding', 'inference']:
+    u = 'https://hn.algolia.com/api/v1/search?' + urllib.parse.urlencode({
+        'query': q, 'tags': 'story', 'hitsPerPage': 200, 'restrictSearchableAttributes': 'title,url',
+        'numericFilters': f'created_at_i>{T0},points>=500'})
+    try: hits = json.loads(fetch(u))['hits']
+    except Exception: hits = []
+    for h in hits:
+        url = h.get('url') or f"https://news.ycombinator.com/item?id={h['objectID']}"
+        if AI.search(h['title'] + ' ' + url) or not OTHER.search(h['title'] + ' ' + url): continue
+        add(norm(url), url=url, title=h['title'], co='기타', official=False, pts=h['points'],
             cmt=h.get('num_comments') or 0, hn=h['objectID'], date=kst(h['created_at_i']), src='hn')
 
 # ── 공식 피드 ──
