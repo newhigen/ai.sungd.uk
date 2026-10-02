@@ -2,7 +2,8 @@
 """소식 그리기 — news_judged.json(claude -p 가 가른 것)을 news.json 에 쌓고 index.html 의 <!--NEWS--> 구간을 다시 그린다.
 판단이 없으면 쌓지 않고 지금 news.json 으로 다시 그리기만 한다. 토큰 0.
 
-화면은 한 주에 7줄 안팎 — 써 볼 것 4, 알아 둘 것 3, 화제 2 까지 펴고 나머지는 접는다. 지난 주는 한 줄씩."""
+화면은 그룹마다 위 몇 줄(써 볼 것 4, 알아 둘 것 3, 화제 2)을 또렷하게, 나머지는 작고 옅게 이어 둔다 — 접지 않는다.
+버림은 그리지 않는다. 지난 주는 한 줄씩."""
 import json, os, re, sys, html, datetime
 
 KST = datetime.timezone(datetime.timedelta(hours=9))
@@ -54,10 +55,10 @@ def hn(i):  # 점수는 줄 끝에 작게 — 누르면 HN 댓글
     if not i.get('pts'): return ''
     t = f'HN {i["pts"]}'
     return f'<a class="hp" href="https://news.ycombinator.com/item?id={i["hn"]}" target="_blank" rel="noopener noreferrer">{t}</a>' if i.get('hn') else f'<span class="hp">{t}</span>'
-def ln(i, strong):
+def ln(i, strong, cls=''):
     note = f'<span class="to">→ {e(i["note"])}</span>' if i['note'] else ''
     ev = f'<span class="evn">{e(i["event"])}</span>' if i.get('event') else ''
-    return f'<p class="ln">{dot(i)}<span class="lc">{ev}{a(i, " class=b" if strong else "")}{hn(i)}{note}</span></p>'
+    return f'<p class="ln {cls}">{dot(i)}<span class="lc">{ev}{a(i, " class=b" if strong else "")}{hn(i)}{note}</span></p>'
 
 weeks = {}
 for i in state['items']:
@@ -73,17 +74,11 @@ if ws:
             out.append(f'<details class="evl"><summary>발표 {len(i["all"])}개 펼치기</summary>' + ''.join(
                 f'<p><a href="{e(x.get("url") or i["url"])}" target="_blank" rel="noopener noreferrer">{e(x["name"])}</a> <span>{e(x.get("line", ""))}</span></p>'
                 for x in i['all']) + '</details>')
-    rest = []
     for g, name in GROUP:
-        xs = sorted((i for i in top if i['group'] == g), key=rank)
+        xs = sorted((i for i in top if i['group'] == g), key=(lambda i: (-i['pts'], i['date'])) if g == 'buzz' else rank)  # 화제는 점수 순
         if not xs: continue
-        out.append(f'<p class="gh">{name}</p>' + ''.join(ln(i, g == 'try') for i in xs[:SHOW[g]]))
-        rest += xs[SHOW[g]:]
-    skipped = [i for i in state['items'] if i['group'] == 'skip' and monday(i['date']) == ws[0]]
-    if rest or skipped:
-        out.append(f'<details class="more"><summary>나머지 {len(rest) + len(skipped)}개</summary>'
-                   + ''.join(ln(i, False) for i in sorted(rest, key=rank))
-                   + ''.join(f'<p class="ln dim">{dot(i)}<span class="lc">{a(i)}{hn(i)}</span></p>' for i in sorted(skipped, key=rank)) + '</details>')
+        out.append(f'<p class="gh">{name}</p>' + ''.join(ln(i, g == 'try') for i in xs[:SHOW[g]])
+                   + ''.join(ln(i, False, 'sm') for i in xs[SHOW[g]:]))
     for m in ws[1:5]:
         xs = sorted((i for i in weeks[m] if i['group'] in ('event', 'try', 'know') and not i.get('of')), key=rank)[:3] \
              or sorted(weeks[m], key=rank)[:2]
