@@ -21,9 +21,9 @@
 |---|---|---|
 | `try` 써 볼 것 | 주인 구독으로 **지금** 쓸 수 있고, 주인 도구나 하는 일이 바뀐다 | 어디서 어떻게 써 볼지 |
 | `know` 알아 둘 것 | 세 회사의 큰 발표(새 모델, 새 제품, 요금제 변경)인데 주인 구독으로 아직 못 쓰거나 당장 할 일이 없다 | 왜 아직인지, 주인에게 뭐가 달라지는지 |
-| `buzz` 화제 | 회사 발표가 아닌 바깥 글. 개발자들이 많이 이야기한 것(HN 500점 이상, 긱뉴스 30점 이상) 가운데 주인 일에 생각할 거리를 주는 것 | 비운다 |
+| `buzz` 화제 | 회사 발표가 아닌 바깥 글. **HN 500점 이상이나 긱뉴스 30점 이상이면 기본이 `buzz` 다** — 사건, 논란, 해킹 폭로, 실험 글도 개발자들이 많이 이야기했으면 화제다. 그 아래 점수는 주인 일(코딩 에이전트, 하네스, 개인 도구)에 닿을 때만 | 비운다 |
 | `event` 행사 | `bundle: true` 인 묶음 글(행사 정리) 자체 | 비운다 |
-| `skip` | 고객 사례, 투자, 소송과 사건 중 주인 일과 먼 것, 이미 가른 것과 겹치는 글, 장애 공지 | 비운다 |
+| `skip` | 고객 사례, 투자와 인수, 정치 공방, 장애 공지, 이미 가른 것과 겹치는 글 | 비운다 |
 
 - 겹침: 같은 발표가 다른 주소로 또 오면(`news.json` 이나 이번 후보 안에서) 하나만 남기고 나머지는 `skip`. **같은 발표는 같은 제품의 같은 출시다.** 이름이 비슷해도 버전이나 제품이 다르면 다른 발표다(GPT-6 Sol 과 GPT-6.1 Sol 은 다르다).
 - 세 회사의 새 모델, 새 제품, 요금제 변경은 `skip` 하지 않는다. 주인이 못 쓰면 `know` 다.
@@ -32,13 +32,13 @@
 ## 묶음 글 (`bundle: true`)
 
 `body` 를 읽고 안의 발표를 센다.
-1. 묶음 글 자체는 `group: "event"`, `line` 은 `「행사 이름 — 발표 N개」`.
+1. 묶음 글 자체는 `group: "event"`, `line` 은 `「행사 이름 — 발표 N개」`. 그리고 `all` 에 **안의 발표를 빠짐없이** 본문 순서대로 담는다 — `[{"name": "Decisions API", "line": "문장 대신 판단과 확률을 돌려주는 API", "url": "…"}]`. `line` 은 20자 안팎, 본문에 있는 말로. 주인이 안 쓰는 API 발표도 넣는다(펼친 목록에서 훑어본다).
 2. 안의 발표 중 주인에게 `try` 나 `know` 인 것만 따로 항목을 낸다. 최대 4개. `key` 는 `<묶음 key>#1`, `#2` …, `of` 는 묶음 key, `url` 은 본문에 있는 그 발표의 링크(없으면 묶음 url).
 3. 안의 발표가 이번 후보에 따로 있으면(예: dots 가 HN 에 따로 뜸) 하위 항목을 내지 말고 그 후보를 가르면서 `event` 에 묶음 이름을 적는다.
 
 ## 쓰는 법
 
-- `line` — 한국어 한 줄, 40자 안팎. `skip` 도 쓴다(접힌 목록에 보인다). `이름 — 무엇` 꼴. 이름은 원문 그대로(GPT-6.1 Sol, Decisions API). 가운뎃점(·)은 쓰지 않는다.
+- `line` — 한국어 한 줄, 40자 안팎. HN 점수는 넣지 않는다(화면이 붙인다). `skip` 도 쓴다(접힌 목록에 보인다). `이름 — 무엇` 꼴. 이름은 원문 그대로(GPT-6.1 Sol, Decisions API). 가운뎃점(·)은 쓰지 않는다.
 - `short` — 15자 안팎 짧은 이름. 지난 주를 한 줄로 접을 때 쓴다.
 - `note` — `try`, `know` 만. 25자 안팎, 해요체. 화살표는 붙이지 않는다(화면이 붙인다).
 - **`line` 과 `note` 의 사실은 그 후보의 `title`, `desc`, `gn.desc`, `body` 에 글자로 적힌 것만 쓴다.** 숫자(배수, 퍼센트, 가격)도 마찬가지다.
@@ -53,7 +53,7 @@
 ```json
 [
   {"key": "openai.com/index/introducing-dots", "group": "know", "line": "dots — 늘 켜 두는 에이전트", "short": "dots", "note": "Pro, Business Premium 전용이라 Plus 는 아직이에요", "w": 3, "event": "OpenAI DevDay"},
-  {"key": "openai.com/index/devday-2026-recap", "group": "event", "line": "OpenAI DevDay — 발표 25개", "short": "DevDay", "note": "", "w": 3},
+  {"key": "openai.com/index/devday-2026-recap", "group": "event", "line": "OpenAI DevDay — 발표 25개", "short": "DevDay", "note": "", "w": 3, "all": [{"name": "GPT-6.1 Sol", "line": "Astra 에 가까운 성능을 5분의 1 가격에", "url": "https://openai.com/index/gpt-6-1-sol/"}, {"name": "Decisions API", "line": "문장 대신 판단과 확률을 돌려주는 API", "url": "https://openai.com/index/devday-2026-recap/"}]},
   {"key": "openai.com/index/devday-2026-recap#1", "of": "openai.com/index/devday-2026-recap", "group": "try", "line": "Codex 어디서나 — 폰과 클라우드에서 Codex 돌리기", "short": "Codex 어디서나", "note": "Plus 에도 열렸어요", "w": 2, "url": "https://learn.chatgpt.com/docs/cloud"}
 ]
 ```
