@@ -253,6 +253,60 @@
    "all": []
   },
   {
+   "key": "openai.com/index/devday-2026-recap#4",
+   "of": "openai.com/index/devday-2026-recap",
+   "title": "",
+   "group": "try",
+   "line": "Sign in with ChatGPT — 플랜 한도를 다른 도구에서",
+   "short": "Sign in with ChatGPT",
+   "note": "Plus 도 참여 도구에서 쓸 수 있어요",
+   "w": 1,
+   "event": "",
+   "url": "https://help.openai.com/en/articles/20001542",
+   "co": "OpenAI",
+   "date": "2026-09-29",
+   "pts": 0,
+   "hn": null,
+   "gn": null,
+   "all": []
+  },
+  {
+   "key": "openai.com/index/devday-2026-recap#3",
+   "of": "openai.com/index/devday-2026-recap",
+   "title": "",
+   "group": "try",
+   "line": "Code Review — 앱에서 변경 검토",
+   "short": "Code Review",
+   "note": "ChatGPT 앱에서 diff 물어보기",
+   "w": 1,
+   "event": "",
+   "url": "https://learn.chatgpt.com/docs/code-review?surface=app",
+   "co": "OpenAI",
+   "date": "2026-09-29",
+   "pts": 0,
+   "hn": null,
+   "gn": null,
+   "all": []
+  },
+  {
+   "key": "openai.com/index/devday-2026-recap#2",
+   "of": "openai.com/index/devday-2026-recap",
+   "title": "",
+   "group": "try",
+   "line": "Codex CLI 새 버전 — 음성과 /agents",
+   "short": "Codex CLI",
+   "note": "CLI 에서 /agents 열어 보기",
+   "w": 2,
+   "event": "",
+   "url": "https://learn.chatgpt.com/docs/codex/cli",
+   "co": "OpenAI",
+   "date": "2026-09-29",
+   "pts": 0,
+   "hn": null,
+   "gn": null,
+   "all": []
+  },
+  {
    "key": "openai.com/index/devday-2026-recap#1",
    "of": "openai.com/index/devday-2026-recap",
    "title": "",
@@ -288,129 +342,154 @@
    "gn": "34505",
    "all": [
     {
+     "cat": "모델",
      "name": "GPT-6.1 Sol",
-     "line": "DevDay 에서 공개한 새 모델",
-     "url": "https://openai.com/index/devday-2026-recap"
+     "line": "Astra 에 가까운 성능을 5분의 1 가격에",
+     "url": "https://openai.com/index/introducing-gpt-6-1-sol/"
     },
     {
-     "name": "Astra Ultrafast",
-     "line": "ChatGPT, Codex, API 에서 쓰는 초고속판",
-     "url": "https://openai.com/index/devday-2026-recap"
+     "cat": "모델",
+     "name": "Ultrafast",
+     "line": "Codex 에서 최대 8배 빠른 토큰 생성 속도 티어",
+     "url": "https://learn.chatgpt.com/docs/agent-configuration/speed"
     },
     {
-     "name": "Private intelligence",
-     "line": "데이터 보존 없는 비공개 안전 처리",
-     "url": "https://openai.com/index/devday-2026-recap"
+     "cat": "모델",
+     "name": "Private Intelligence",
+     "line": "기업 데이터를 보호하며 쓰는 프런티어 AI",
+     "url": "https://openai.com/index/devday-2026-recap/"
     },
     {
-     "name": "Dots",
-     "line": "늘 켜 두는 에이전트",
+     "cat": "에이전트",
+     "name": "dots",
+     "line": "늘 켜 두고 일을 맡기는 에이전트",
      "url": "https://openai.com/index/introducing-dots/"
     },
     {
-     "name": "Codex 클라우드 환경",
-     "line": "재사용 가능한 개발 환경",
+     "cat": "Codex",
+     "name": "Codex in the cloud",
+     "line": "컴퓨터, 폰, 클라우드 어디서나 Codex 실행",
      "url": "https://learn.chatgpt.com/docs/cloud"
     },
     {
-     "name": "Codex CLI",
-     "line": "터미널용 Codex",
-     "url": "https://learn.chatgpt.com/docs/cloud"
+     "cat": "Codex",
+     "name": "Codex CLI 새 버전",
+     "line": "음성 지시와 /agents 보기가 생긴 CLI",
+     "url": "https://learn.chatgpt.com/docs/codex/cli"
     },
     {
-     "name": "Codex 코드 리뷰",
-     "line": "변경 사항을 두고 논의하는 리뷰",
-     "url": "https://learn.chatgpt.com/docs/cloud"
+     "cat": "Codex",
+     "name": "Code Review",
+     "line": "데스크톱 앱에서 변경을 요약하고 diff 확인",
+     "url": "https://learn.chatgpt.com/docs/code-review?surface=app"
     },
     {
+     "cat": "Codex",
      "name": "Codex Security Cloud",
-     "line": "보안 발견 사항 대시보드",
-     "url": "https://learn.chatgpt.com/docs/cloud"
+     "line": "저장소를 정기 스캔하고 클라우드에서 수정 준비",
+     "url": "https://learn.chatgpt.com/docs/security/setup"
     },
     {
+     "cat": "API",
      "name": "Decisions API",
-     "line": "판단을 돌려주는 API",
-     "url": "https://openai.com/index/devday-2026-recap"
+     "line": "정해진 답 중에서 판단을 돌려주는 API",
+     "url": "https://openai.com/index/devday-2026-recap/"
     },
     {
+     "cat": "API",
      "name": "Agents API 컴퓨터 사용",
-     "line": "Agents API 의 computer use",
-     "url": "https://openai.com/index/devday-2026-recap"
+     "line": "Agents API 에 computer use 지원 추가",
+     "url": "https://developers.openai.com/api/docs/guides/agents-api/tools/computer-use"
     },
     {
+     "cat": "API",
      "name": "Bedrock Managed Agents",
-     "line": "AWS 에서 돌리는 관리형 에이전트",
-     "url": "https://openai.com/index/devday-2026-recap"
+     "line": "AWS 안에서 도는 OpenAI 에이전트",
+     "url": "https://aws.amazon.com/bedrock/managed-agents-openai/"
     },
     {
+     "cat": "플러그인",
      "name": "Plugin extensions",
-     "line": "사이드바에 플러그인 패널 달기",
+     "line": "사이드바와 패널로 ChatGPT 안에 플러그인 배치",
      "url": "https://developers.openai.com/plugins/build/extensions"
     },
     {
-     "name": "플러그인 제작과 발견",
-     "line": "제출과 탐색이 나아진 플러그인",
-     "url": "https://openai.com/index/devday-2026-recap"
+     "cat": "플러그인",
+     "name": "플러그인 제작과 검색 개선",
+     "line": "Plugin Creator 와 새 제출 흐름",
+     "url": "https://developers.openai.com/plugins"
     },
     {
-     "name": "Sites",
-     "line": "연결된 플러그인으로 만드는 사이트",
-     "url": "https://openai.com/index/devday-2026-recap"
+     "cat": "플러그인",
+     "name": "Sites 플러그인",
+     "line": "만든 Sites 에 ChatGPT 플러그인 추가",
+     "url": "http://chatgpt.com/features/sites/"
     },
     {
-     "name": "MCP Events",
-     "line": "플러그인 자동화를 깨우는 이벤트",
-     "url": "https://openai.com/index/devday-2026-recap"
+     "cat": "플러그인",
+     "name": "MCP events",
+     "line": "연결된 앱 이벤트로 자동화 시작",
+     "url": "https://developers.openai.com/plugins/build/mcp-events"
     },
     {
-     "name": "ChatGPT Spaces",
-     "line": "팀과 AI 가 함께 쓰는 공간",
+     "cat": "협업",
+     "name": "ChatGPT Space",
+     "line": "팀과 ChatGPT 가 함께 쓰는 공간",
      "url": "https://chatgpt.com/features/space/"
     },
     {
+     "cat": "협업",
      "name": "Pages",
-     "line": "함께 편집하는 ChatGPT 페이지",
+     "line": "사람과 에이전트가 함께 쓰는 새 문서",
      "url": "https://chatgpt.com/features/space/"
     },
     {
-     "name": "공동 프레젠테이션",
-     "line": "댓글로 같이 고치는 슬라이드",
+     "cat": "협업",
+     "name": "공동 슬라이드",
+     "line": "여럿이 동시에 고치는 슬라이드",
      "url": "https://chatgpt.com/features/space/"
     },
     {
+     "cat": "협업",
      "name": "팀 만들기와 작업 공유",
-     "line": "팀 작업을 예약하고 나누기",
-     "url": "https://openai.com/index/devday-2026-recap"
+     "line": "반복 업무를 팀 작업으로 위임",
+     "url": "https://learn.chatgpt.com/docs/enterprise/team-tasks"
     },
     {
-     "name": "Slack 과 Teams 의 ChatGPT",
-     "line": "@ChatGPT 로 부르기",
-     "url": "https://openai.com/index/devday-2026-recap"
+     "cat": "협업",
+     "name": "@ChatGPT in Slack, Teams",
+     "line": "Slack 과 Teams 에서 ChatGPT 호출",
+     "url": "https://chatgpt.com/features/chatgpt-in-slack-and-teams/"
     },
     {
-     "name": "Meetings 플러그인",
-     "line": "회의 요약에서 바로 요청",
-     "url": "https://openai.com/index/devday-2026-recap"
+     "cat": "협업",
+     "name": "Meetings plugin",
+     "line": "회의 노트와 액션 아이템을 Space 에 저장",
+     "url": "https://help.openai.com/articles/20001546"
     },
     {
+     "cat": "협업",
      "name": "공유 프로필",
-     "line": "활동과 만든 것을 보여 주는 프로필",
-     "url": "https://openai.com/index/devday-2026-recap"
+     "line": "만든 Sites 와 플러그인을 한곳에 공유",
+     "url": "https://help.openai.com/articles/20001539"
     },
     {
+     "cat": "요금제와 생태계",
      "name": "Sign in with ChatGPT",
-     "line": "ChatGPT 계정으로 도구에 로그인",
+     "line": "ChatGPT 사용량을 파트너 16곳에서 사용",
      "url": "https://help.openai.com/en/articles/20001542"
     },
     {
-     "name": "Pro 500 Ultrafast",
-     "line": "Ultrafast 를 담은 Pro 500",
-     "url": "https://openai.com/index/devday-2026-recap"
+     "cat": "요금제와 생태계",
+     "name": "Pro 500",
+     "line": "Plus 의 25배 사용량과 Ultrafast 포함",
+     "url": "https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers"
     },
     {
+     "cat": "요금제와 생태계",
      "name": "OpenAI Marketplace",
-     "line": "파트너 도구 장터",
-     "url": "https://openai.com/index/devday-2026-recap"
+     "line": "기업이 약정금으로 파트너 소프트웨어 구매",
+     "url": "https://openai.com/business/marketplace/"
     }
    ]
   },
@@ -2575,14 +2654,32 @@
    "all": []
   },
   {
+   "key": "blog.google/innovation-and-ai/technology/google-ai-updates-august-2026#2",
+   "of": "blog.google/innovation-and-ai/technology/google-ai-updates-august-2026",
+   "title": "",
+   "group": "know",
+   "line": "Gemini Live — Daily Brief, Spark",
+   "short": "Gemini Live",
+   "note": "내 요금제에 열렸는지 보기",
+   "w": 2,
+   "event": "",
+   "url": "https://blog.google/innovation-and-ai/products/gemini-app/productivity-features-gemini-live/",
+   "co": "Google",
+   "date": "2026-09-02",
+   "pts": 0,
+   "hn": null,
+   "gn": null,
+   "all": []
+  },
+  {
    "key": "blog.google/innovation-and-ai/technology/google-ai-updates-august-2026#1",
    "of": "blog.google/innovation-and-ai/technology/google-ai-updates-august-2026",
    "title": "",
    "group": "know",
-   "line": "Gemini 3.7 Flash",
+   "line": "Gemini 3.7 Flash — 코딩과 에이전트용",
    "short": "Gemini 3.7 Flash",
    "note": "Gemini 앱에 들어왔는지 보기",
-   "w": 2,
+   "w": 3,
    "event": "",
    "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/",
    "co": "Google",
@@ -2610,59 +2707,70 @@
    "gn": null,
    "all": [
     {
+     "cat": "모델",
      "name": "Gemini 3.7 Flash",
-     "line": "코딩과 에이전트용 Flash 모델",
+     "line": "코딩과 에이전트용 Flash, 3.6 Flash 3주 뒤 출시",
      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/"
     },
     {
-     "name": "Pixel 11 시리즈",
-     "line": "Tensor G6 로 Gemini Nano 구동",
-     "url": "https://blog.google/products-and-platforms/devices/pixel/google-pixel-11-pro-xl/"
-    },
-    {
-     "name": "학생 Gemini 1년 무료",
-     "line": "대학생에게 Google AI 요금제 1년",
-     "url": "https://blog.google/innovation-and-ai/products/gemini-app/student-offer-google-ai/"
-    },
-    {
-     "name": "Search 학습 기능",
-     "line": "퀴즈, 시각 자료, 노트북",
-     "url": "https://blog.google/products-and-platforms/products/search/back-to-school-study-tools/"
-    },
-    {
+     "cat": "모델",
      "name": "Gemini 3.5 Transcribe",
-     "line": "실시간 음성 받아쓰기 모델",
+     "line": "음성 에이전트용 실시간 받아쓰기 모델",
      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5-transcribe/"
     },
     {
-     "name": "Gemini Live 생산성 기능",
-     "line": "Daily Brief, Spark, 받은편지함 관리",
-     "url": "https://blog.google/innovation-and-ai/products/gemini-app/productivity-features-gemini-live/"
-    },
-    {
-     "name": "Gemini 앱 월 10억 명",
-     "line": "월간 사용자 10억 명 돌파",
-     "url": "https://blog.google/innovation-and-ai/products/gemini-app/one-billion-monthly-users/"
-    },
-    {
+     "cat": "모델",
      "name": "Gemini Omni 1.1 Flash",
-     "line": "장면 확장과 4K 업스케일 영상 생성",
+     "line": "장면 확장과 4K 업스케일을 넣은 영상 생성",
      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-omni-1-1-flash/"
     },
     {
-     "name": "Gemma 10억 다운로드",
-     "line": "우주에서 해저까지 쓰이는 Gemma",
+     "cat": "모델",
+     "name": "Gemma",
+     "line": "다운로드 10억 회, 커뮤니티 저장소 공개",
      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemma-one-billion-downloads/"
     },
     {
-     "name": "Operation Blue Skies",
-     "line": "비행운 줄이는 항공 AI 프로젝트",
-     "url": "https://blog.google/innovation-and-ai/models-and-research/google-research/blue-skies/"
+     "cat": "모델",
+     "name": "WeatherNext 2",
+     "line": "태풍 예측 모델을 연구용으로 오픈소스 공개",
+     "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/weathernext-2-cyclones/"
     },
     {
-     "name": "WeatherNext 2",
-     "line": "사이클론 예측과 오픈소스 공개",
-     "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/weathernext-2-cyclones/"
+     "cat": "Gemini 앱",
+     "name": "Gemini Live 생산성 기능",
+     "line": "Daily Brief, Spark, 핸즈프리 받은 편지함 관리",
+     "url": "https://blog.google/innovation-and-ai/products/gemini-app/productivity-features-gemini-live/"
+    },
+    {
+     "cat": "Gemini 앱",
+     "name": "월 사용자 10억",
+     "line": "Gemini 앱 월간 사용자 10억 명 돌파",
+     "url": "https://blog.google/innovation-and-ai/products/gemini-app/one-billion-monthly-users/"
+    },
+    {
+     "cat": "기기",
+     "name": "Pixel 11 시리즈",
+     "line": "Tensor G6와 Gemini Nano 탑재",
+     "url": "https://blog.google/products-and-platforms/devices/pixel/google-pixel-11-pro-xl/"
+    },
+    {
+     "cat": "교육",
+     "name": "학생 1년 무료",
+     "line": "대학생에게 Google AI 요금제 1년 무료",
+     "url": "https://blog.google/innovation-and-ai/products/gemini-app/student-offer-google-ai/"
+    },
+    {
+     "cat": "교육",
+     "name": "Search 학습 기능",
+     "line": "퀴즈 생성, 인터랙티브 시각 자료",
+     "url": "https://blog.google/products-and-platforms/products/search/back-to-school-study-tools/"
+    },
+    {
+     "cat": "연구",
+     "name": "Operation Blue Skies",
+     "line": "AI 예보로 항공기 비행운 줄이기",
+     "url": "https://blog.google/innovation-and-ai/models-and-research/google-research/blue-skies/"
     }
    ]
   },
@@ -2901,5 +3009,5 @@
    "all": []
   }
  ],
- "judged_at": 1790942769
+ "judged_at": 1790943879
 }

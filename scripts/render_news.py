@@ -2,16 +2,16 @@
 """소식 그리기 — news_judged.json(claude -p 가 가른 것)을 news.json 에 쌓고 index.html 의 <!--NEWS--> 구간을 다시 그린다.
 판단이 없으면 쌓지 않고 지금 news.json 으로 다시 그리기만 한다. 토큰 0.
 
-화면은 그룹마다 위 몇 줄(써 볼 것 4, 알아 둘 것 3, 화제 2)을 또렷하게, 나머지는 작고 옅게 이어 둔다 — 접지 않는다.
-버림은 그리지 않는다. 지난 주는 한 줄씩."""
-import json, os, re, sys, html, datetime
+화면은 시안 A — 이번 주를 HN 점수 순 한 줄 목록으로(날짜, 점수 막대, 회사, 갈래, 한 줄, → 메모).
+행사 정리 글은 안의 발표를 갈래별로 처음부터 펼친다. 버림은 그리지 않는다. 지난 주는 한 줄씩."""
+import json, os, re, sys, html, math, datetime
 
 KST = datetime.timezone(datetime.timedelta(hours=9))
 TODAY = datetime.datetime.now(KST).date()
 KEEP_DAYS = 42
-SHOW = {'try': 4, 'know': 3, 'buzz': 2}
-GROUP = [('try', '써 볼 것'), ('know', '알아 둘 것'), ('buzz', '화제')]
-CO = {'Anthropic': 'an', 'OpenAI': 'oa', 'Google': 'go'}
+GR = {'event': '행사', 'try': '써 볼 것', 'know': '알아 둘 것', 'buzz': '화제'}
+ORDER = {'event': 0, 'try': 1, 'know': 2, 'buzz': 3}
+CO = {'Anthropic': ('an', 'Anthropic'), 'OpenAI': ('oa', 'OpenAI'), 'Google': ('go', 'Google')}
 e = html.escape
 
 state = json.load(open('news.json', encoding='utf-8')) if os.path.exists('news.json') else {'items': []}
@@ -44,50 +44,69 @@ if added: state['judged_at'] = int(datetime.datetime.now(KST).timestamp())
 json.dump(state, open('news.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 
 # ── 그리기 ──
+WD = '월화수목금토일'
 def monday(d): x = datetime.date.fromisoformat(d); return x - datetime.timedelta(days=x.weekday())
 def span(m):
     end = m + datetime.timedelta(days=6)
     return f'{m.month}/{m.day} ~ {end.day}' if end.month == m.month else f'{m.month}/{m.day} ~ {end.month}/{end.day}'
-def rank(i): return (-i['w'], -i['pts'], i['date'])
-def dot(i): return f'<span class="cd {CO.get(i["co"], "")}"></span>'
-def a(i, cls=''): return f'<a href="{e(i["url"])}" target="_blank" rel="noopener noreferrer"{cls}>{e(i["line"])}</a>'
-def hn(i):  # 점수는 줄 끝에 작게 — 누르면 HN 댓글
+def md(d): x = datetime.date.fromisoformat(d); return f'{x.month}/{x.day:02d} {WD[x.weekday()]}'
+def rank(i): return (i['group'] != 'event', -i['pts'], ORDER[i['group']], -i['w'])
+def nk(t): return re.sub(r'[^0-9a-z가-힣]', '', t.lower())
+def link(u, t, cls=''): return f'<a href="{e(u)}" target="_blank" rel="noopener noreferrer"{cls}>{t}</a>'
+def hn(i):
     if not i.get('pts'): return ''
     t = f'HN {i["pts"]}'
-    return f'<a class="hp" href="https://news.ycombinator.com/item?id={i["hn"]}" target="_blank" rel="noopener noreferrer">{t}</a>' if i.get('hn') else f'<span class="hp">{t}</span>'
-def ln(i, strong, cls=''):
+    return link(f'https://news.ycombinator.com/item?id={i["hn"]}', t, ' class="hp"') if i.get('hn') else f'<span class="hp">{t}</span>'
+def bar(i):  # HN 점수 막대 — 100점에서 2300점까지 로그 눈금, 500점부터 진하게
+    p = i['pts']
+    if not p: return '<span class="np nop">—</span>'
+    w = round(min(1, math.log(max(p, 100) / 100, 2) / math.log(23, 2)) * 44) or 2
+    b = f'<span class="np{" big" if p >= 500 else ""}"><i style="width:{w}px"></i><b>{p}</b></span>'
+    return link(f'https://news.ycombinator.com/item?id={i["hn"]}', b, ' class="pl"') if i.get('hn') else b
+def row(i):
+    c, cn = CO.get(i['co'], ('et', '—'))
     note = f'<span class="to">→ {e(i["note"])}</span>' if i['note'] else ''
-    ev = f'<span class="evn">{e(i["event"])}</span>' if i.get('event') else ''
-    return f'<p class="ln {cls}">{dot(i)}<span class="lc">{ev}{a(i, " class=b" if strong else "")}{hn(i)}{note}</span></p>'
+    return (f'<div class="ar g-{i["group"]}"><span class="dt">{md(i["date"])}</span>{bar(i)}'
+            f'<span class="co {c}">{cn}</span><span class="gp">{GR[i["group"]]}</span>'
+            f'<span class="tt">{link(i["url"], e(i["line"]))}{note}</span></div>')
+def find(d, k):  # 이름으로 짝 찾기 — 「GPT-6.1 Sol」과 「GPT 6.1 Sol」, 「dots」와 「dots — 늘 켜 두는 에이전트」
+    if not k: return None
+    if k in d: return d[k]
+    return next((v for kk, v in d.items() if len(min(k, kk, key=len)) >= 3 and (kk.startswith(k) or k.startswith(kk))), None)
+def bundle(ev, pool):
+    subs = {nk(s['short']): s for s in pool if s.get('of') == ev['key']}
+    tops = {nk(s['short']): s for s in pool if not s.get('of') and s['group'] != 'skip' and s['pts']}
+    cats = {}
+    for x in ev['all']: cats.setdefault(x.get('cat') or '발표', []).append(x)
+    def item(x):
+        k = nk(x['name']); u = x.get('url') or ''
+        s = find(subs, k) or (next((v for v in subs.values() if u and u != ev['url'] and v['url'] == u), None))  # 이름이 달라도 링크가 같으면 짝
+        t = find(tops, k)
+        pick = f'<em class="pk g-{s["group"]}">{GR[s["group"]]}</em>' if s and s['group'] in ('try', 'know') else ''
+        note = f'<span class="to">→ {e(s["note"])}</span>' if s and s['note'] else ''
+        return f'<p>{link(x.get("url") or ev["url"], e(x["name"]))} <span>{e(x.get("line", ""))}</span>{pick}{hn(t) if t else ""}{note}</p>'
+    return ('<div class="bgs">' + ''.join(f'<div class="bg"><p class="bgh">{e(c)}</p>' + ''.join(item(x) for x in xs) + '</div>' for c, xs in cats.items())
+            + f'<p class="bgf">{link(ev["url"], "원문 ↗")} · 따로 HN 에 뜬 것만 점수를 붙였어요</p></div>')
 
+pool = [i for i in state['items'] if i['group'] != 'skip']
 weeks = {}
-for i in state['items']:
-    if i['group'] != 'skip': weeks.setdefault(monday(i['date']), []).append(i)
+for i in pool: weeks.setdefault(monday(i['date']), []).append(i)
 out = []
 ws = sorted(weeks, reverse=True)
 if ws:
-    top = weeks[ws[0]]
-    out.append(f'<p class="wk">{span(ws[0])} <em>Claude Max, ChatGPT Plus, Google AI Pro 기준</em></p>')
-    for i in sorted((i for i in top if i['group'] == 'event'), key=rank):
-        out.append(f'<p class="ln ev"><span class="evt">행사</span><span class="lc">{a(i, " class=b")}{hn(i)}</span></p>')
-        if i.get('all'):
-            out.append(f'<details class="evl"><summary>발표 {len(i["all"])}개 펼치기</summary>' + ''.join(
-                f'<p><a href="{e(x.get("url") or i["url"])}" target="_blank" rel="noopener noreferrer">{e(x["name"])}</a> <span>{e(x.get("line", ""))}</span></p>'
-                for x in i['all']) + '</details>')
-    for g, name in GROUP:
-        xs = sorted((i for i in top if i['group'] == g), key=(lambda i: (-i['pts'], i['date'])) if g == 'buzz' else rank)  # 화제는 점수 순
-        if not xs: continue
-        out.append(f'<p class="gh">{name}</p>' + ''.join(ln(i, g == 'try') for i in xs[:SHOW[g]])
-                   + ''.join(ln(i, False, 'sm') for i in xs[SHOW[g]:]))
+    top = [i for i in weeks[ws[0]] if not i.get('of')]
+    big = sum(1 for i in top if i['pts'] >= 500)
+    out.append(f'<div class="c-day"><span>── {span(ws[0])}</span><em>500점 넘은 것 {big}개 · 모두 {len(top)}개</em><i></i></div>')
+    for i in sorted(top, key=rank):
+        out.append(row(i))
+        if i['group'] == 'event' and i.get('all'): out.append(bundle(i, pool))
     for m in ws[1:5]:
-        xs = sorted((i for i in weeks[m] if i['group'] in ('event', 'try', 'know') and not i.get('of')), key=rank)[:3] \
-             or sorted(weeks[m], key=rank)[:2]
+        xs = sorted((i for i in weeks[m] if i['group'] in ('event', 'try', 'know') and not i.get('of')), key=lambda i: (-i['w'], -i['pts']))[:3]
         bz = sorted((i for i in weeks[m] if i['group'] == 'buzz'), key=lambda i: -i['pts'])[:1]
-        out.append(f'<p class="pw"><span class="wk2">{span(m)}</span>'
-                   + ', '.join(f'<a href="{e(i["url"])}" target="_blank" rel="noopener noreferrer">{e(i["short"])}</a>' for i in xs)
-                   + ''.join(f'<span class="pb">화제</span><a href="{e(i["url"])}" target="_blank" rel="noopener noreferrer">{e(i["short"])}</a>{hn(i)}' for i in bz) + '</p>')
+        out.append(f'<p class="pw"><span class="wk2">{span(m)}</span>' + ', '.join(link(i['url'], e(i['short'])) for i in xs)
+                   + ''.join(f'<span class="pb">화제</span>{link(i["url"], e(i["short"]))}{hn(i)}' for i in bz) + '</p>')
 else:
-    out.append('<p class="wk">아직 모은 소식이 없어요.</p>')
+    out.append('<p class="pw">아직 모은 소식이 없어요.</p>')
 
 src = open('index.html', encoding='utf-8').read()
 new = re.sub(r'(<!--NEWS-->).*?(<!--/NEWS-->)', lambda m: m.group(1) + '\n' + '\n'.join(out) + '\n' + m.group(2), src, count=1, flags=re.S)

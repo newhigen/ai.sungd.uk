@@ -33,8 +33,8 @@
 ## 묶음 글 (`bundle: true`)
 
 `body` 를 읽고 안의 발표를 센다.
-1. 묶음 글 자체는 `group: "event"`, `line` 은 `「행사 이름 — 발표 N개」`. 그리고 `all` 에 **안의 발표를 빠짐없이** 본문 순서대로 담는다. 행사 정리 글은 발표 카드가 이미지로만 있는 경우가 많다 — `![Image N: …]` 의 설명 하나하나가 발표 하나다. `line` 의 N 은 `all` 의 개수와 같아야 한다 — `[{"name": "Decisions API", "line": "문장 대신 판단과 확률을 돌려주는 API", "url": "…"}]`. `line` 은 20자 안팎, 본문에 있는 말로. 주인이 안 쓰는 API 발표도 넣는다(펼친 목록에서 훑어본다).
-2. 안의 발표 중 주인에게 `try` 나 `know` 인 것만 따로 항목을 낸다. 최대 4개. `key` 는 `<묶음 key>#1`, `#2` …, `of` 는 묶음 key, `url` 은 본문에 있는 그 발표의 링크(없으면 묶음 url).
+1. 묶음 글 자체는 `group: "event"`, `line` 은 `「행사 이름 — 발표 N개」`. 그리고 `all` 에 **안의 발표를 빠짐없이** 본문 순서대로 담는다. 행사 정리 글은 발표 카드가 이미지로만 있는 경우가 많다 — `![Image N: …]` 의 설명 하나하나가 발표 하나다. `line` 의 N 은 `all` 의 개수와 같아야 한다 — `[{"cat": "API", "name": "Decisions API", "line": "문장 대신 판단과 확률을 돌려주는 API", "url": "…"}]`. `line` 은 20~40자, 본문에 있는 말로. `cat` 은 갈래 — 본문에 구분이 있으면 그 이름을, 없으면 「모델, 에이전트, Codex, API, ChatGPT 플랫폼, 협업, 요금제와 생태계」처럼 5~8개로 묶는다. 주인이 안 쓰는 API 발표도 넣는다(펼친 목록에서 훑어본다).
+2. 안의 발표 중 주인에게 `try` 나 `know` 인 것만 따로 항목을 낸다. 최대 4개. `key` 는 `<묶음 key>#1`, `#2` …, `of` 는 묶음 key, `short` 는 `all` 의 그 발표 `name` 과 똑같이, `url` 은 본문에 있는 그 발표의 링크(없으면 묶음 url).
 3. 안의 발표가 이번 후보에 따로 있으면(예: dots 가 HN 에 따로 뜸) 하위 항목을 내지 말고 그 후보를 가르면서 `event` 에 묶음 이름을 적는다.
 
 ## 쓰는 법
@@ -54,7 +54,7 @@
 ```json
 [
   {"key": "openai.com/index/introducing-dots", "group": "know", "line": "dots — 늘 켜 두는 에이전트", "short": "dots", "note": "Pro, Business Premium 전용이라 Plus 는 아직이에요", "w": 3, "event": "OpenAI DevDay"},
-  {"key": "openai.com/index/devday-2026-recap", "group": "event", "line": "OpenAI DevDay — 발표 25개", "short": "DevDay", "note": "", "w": 3, "all": [{"name": "GPT-6.1 Sol", "line": "Astra 에 가까운 성능을 5분의 1 가격에", "url": "https://openai.com/index/gpt-6-1-sol/"}, {"name": "Decisions API", "line": "문장 대신 판단과 확률을 돌려주는 API", "url": "https://openai.com/index/devday-2026-recap/"}]},
+  {"key": "openai.com/index/devday-2026-recap", "group": "event", "line": "OpenAI DevDay — 발표 25개", "short": "DevDay", "note": "", "w": 3, "all": [{"cat": "모델", "name": "GPT-6.1 Sol", "line": "Astra 에 가까운 성능을 5분의 1 가격에", "url": "https://openai.com/index/gpt-6-1-sol/"}, {"cat": "API", "name": "Decisions API", "line": "문장 대신 판단과 확률을 돌려주는 API", "url": "https://openai.com/index/devday-2026-recap/"}]},
   {"key": "openai.com/index/devday-2026-recap#1", "of": "openai.com/index/devday-2026-recap", "group": "try", "line": "Codex 어디서나 — 폰과 클라우드에서 Codex 돌리기", "short": "Codex 어디서나", "note": "Plus 에도 열렸어요", "w": 2, "url": "https://learn.chatgpt.com/docs/cloud"}
 ]
 ```
