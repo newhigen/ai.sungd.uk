@@ -1,6 +1,181 @@
 {
  "items": [
   {
+   "key": "openai.com/index/practical-guide-building-gpt-6",
+   "of": null,
+   "title": "A model guide for the GPT-6 family",
+   "group": "try",
+   "line": "GPT-6 모델 가이드 — 모델 고르기와 추론 강도",
+   "short": "GPT-6 가이드",
+   "note": "Codex 에서 모델 고를 때 훑어보기",
+   "w": 1,
+   "event": "",
+   "url": "https://openai.com/index/practical-guide-building-gpt-6",
+   "co": "OpenAI",
+   "date": "2026-10-03",
+   "pts": 0,
+   "hn": null,
+   "gn": null,
+   "all": []
+  },
+  {
+   "key": "blog.google/innovation-and-ai/technology/ai/google-ai-updates-september-2026",
+   "of": null,
+   "title": "The latest AI news we announced in September 2026",
+   "group": "event",
+   "line": "Google AI 9월 소식 — 발표 17개",
+   "short": "Google 9월",
+   "note": "",
+   "w": 2,
+   "event": "",
+   "url": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-september-2026/",
+   "co": "Google",
+   "date": "2026-10-03",
+   "pts": 0,
+   "hn": null,
+   "gn": null,
+   "all": [
+    {
+     "cat": "모델",
+     "name": "Gemini 4 Argon",
+     "line": "1백만 토큰 출력의 새 최상위 모델",
+     "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/"
+    },
+    {
+     "cat": "모델",
+     "name": "Gemini 3.8 Flash",
+     "line": "3.7 Flash 와 같은 속도로 코딩과 에이전트 강화",
+     "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/"
+    },
+    {
+     "cat": "모델",
+     "name": "Gemini 3.8 Live",
+     "line": "자연스러운 대화용 음성 모델",
+     "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/"
+    },
+    {
+     "cat": "모델",
+     "name": "Gemini 3.8 TTS",
+     "line": "목소리를 직접 만드는 음성 합성 모델",
+     "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-text-to-speech/"
+    },
+    {
+     "cat": "제품",
+     "name": "Connected Apps",
+     "line": "Gemini 에 Linear, Airtable 같은 앱 연결",
+     "url": "https://blog.google/innovation-and-ai/products/gemini-app/new-connected-apps-gemini/"
+    },
+    {
+     "cat": "모델",
+     "name": "Lyria 3.5",
+     "line": "Gemini 앱의 더 풍부한 음악 생성 모델",
+     "url": "https://blog.google/innovation-and-ai/products/gemini-app/better-tracks-lyria-gemini/"
+    },
+    {
+     "cat": "제품",
+     "name": "Gemini Notebook 학습 도구",
+     "line": "플래시카드, 퀴즈, 짧은 영상 요약",
+     "url": "https://blog.google/innovation-and-ai/products/gemini-notebook/new-study-tools-september-2026/"
+    },
+    {
+     "cat": "제품",
+     "name": "CC 그룹판",
+     "line": "가족 일정을 챙기는 그룹 에이전트",
+     "url": "https://blog.google/innovation-and-ai/models-and-research/google-labs/cc-expanding-to-groups/"
+    },
+    {
+     "cat": "연구",
+     "name": "AI 와 과학",
+     "line": "AI 가 과학과 삶에 준 변화 정리",
+     "url": "https://blog.google/innovation-and-ai/technology/ai/ai-applications-science-people/"
+    },
+    {
+     "cat": "연구",
+     "name": "Project Suncatcher",
+     "line": "우주에서 TPU 를 시험하는 위성",
+     "url": "https://blog.google/innovation-and-ai/models-and-research/google-research/google-project-suncatcher-facts/"
+    },
+    {
+     "cat": "제품",
+     "name": "Googlebook",
+     "line": "Android 기반 노트북 사전 주문",
+     "url": "https://blog.google/products-and-platforms/devices/googlebook/pre-order-googlebook/"
+    },
+    {
+     "cat": "모델",
+     "name": "WeatherNext 3",
+     "line": "더 정확해진 전 세계 날씨 예측 모델",
+     "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/introducing-weathernext-3/"
+    },
+    {
+     "cat": "연구",
+     "name": "AlphaGenome Atlas",
+     "line": "사람 DNA 변이 효과를 예측한 지도",
+     "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/alphagenome-atlas/"
+    },
+    {
+     "cat": "연구",
+     "name": "MAPL-EMIT",
+     "line": "우주에서 메탄 누출을 찾는 모델",
+     "url": "https://blog.google/innovation-and-ai/models-and-research/google-research/mapping-global-methane-emissions-from-space/"
+    },
+    {
+     "cat": "연구",
+     "name": "초파리 뇌 지도",
+     "line": "수컷 초파리 뇌의 첫 완전한 지도",
+     "url": "https://blog.google/innovation-and-ai/technology/research/male-fruit-fly-brain-map/"
+    },
+    {
+     "cat": "연구",
+     "name": "DeepMind Institute",
+     "line": "AGI 시대를 논의하는 연구 플랫폼",
+     "url": "https://institute.deepmind.com/essays/introducing-the-deepmind-institute/"
+    },
+    {
+     "cat": "제품",
+     "name": "Gemini 앱 Windows 판",
+     "line": "Alt + Space 로 여는 Windows 용 Gemini",
+     "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-app-now-on-windows/"
+    }
+   ]
+  },
+  {
+   "key": "frogandtoad.ai",
+   "of": null,
+   "title": "Frog and Toad and the Increasingly Capable Machines",
+   "group": "buzz",
+   "line": "Frog and Toad and the Increasingly Capable Machines",
+   "short": "Frog and Toad",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://www.frogandtoad.ai/",
+   "co": "기타",
+   "date": "2026-10-02",
+   "pts": 531,
+   "hn": "49927760",
+   "gn": null,
+   "all": []
+  },
+  {
+   "key": "chatgpt.com/features/sites",
+   "of": null,
+   "title": "Sites in ChatGPT",
+   "group": "try",
+   "line": "Sites in ChatGPT",
+   "short": "ChatGPT Sites",
+   "note": "ChatGPT 앱에 Sites 가 보이는지 보기",
+   "w": 2,
+   "event": "",
+   "url": "https://chatgpt.com/features/sites/",
+   "co": "OpenAI",
+   "date": "2026-10-02",
+   "pts": 136,
+   "hn": "49927747",
+   "gn": null,
+   "all": []
+  },
+  {
    "key": "blog.cloudflare.com/clef-decision-models",
    "of": null,
    "title": "Clef: Open-weight decision models, and new RL fine-tuning platform",
@@ -16,6 +191,24 @@
    "pts": 533,
    "hn": "49923692",
    "gn": "34621",
+   "all": []
+  },
+  {
+   "key": "anthropic.com/news/claude-frontier-academy",
+   "of": null,
+   "title": "Claude Frontier Academy: $100M to train 10,000 engineers",
+   "group": "skip",
+   "line": "Claude Frontier Academy — 엔지니어 교육 지원",
+   "short": "Frontier Academy",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://www.anthropic.com/news/claude-frontier-academy",
+   "co": "Anthropic",
+   "date": "2026-10-02",
+   "pts": 0,
+   "hn": null,
+   "gn": null,
    "all": []
   },
   {
@@ -3009,5 +3202,5 @@
    "all": []
   }
  ],
- "judged_at": 1790943879
+ "judged_at": 1790973521
 }
