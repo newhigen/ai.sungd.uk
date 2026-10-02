@@ -1,6 +1,40 @@
 {
  "items": [
   {
+   "key": "deepmind.google/blog/introducing-synthid-bio",
+   "of": null,
+   "title": "Introducing SynthID Bio",
+   "group": "know",
+   "line": "SynthID Bio — 구글 딥마인드의 새 제품",
+   "short": "SynthID Bio",
+   "note": "내 작업과는 거리가 있어요",
+   "w": 1,
+   "event": "",
+   "url": "https://deepmind.google/blog/introducing-synthid-bio/",
+   "co": "Google",
+   "date": "2026-10-01",
+   "pts": 0,
+   "hn": null,
+   "gn": null
+  },
+  {
+   "key": "deepmind.google/blog/gemini-4-argon-our-next-era-of-frontier-intelligence",
+   "of": null,
+   "title": "Gemini 4 Argon: our next era of frontier intelligence",
+   "group": "skip",
+   "line": "Gemini 4 Argon — 이미 가른 발표와 같은 글",
+   "short": "Gemini 4 Argon",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://deepmind.google/blog/gemini-4-argon-our-next-era-of-frontier-intelligence/",
+   "co": "Google",
+   "date": "2026-10-01",
+   "pts": 0,
+   "hn": null,
+   "gn": null
+  },
+  {
    "key": "blog.google/products-and-platforms/products/gemini/automate-tasks-with-skills",
    "of": null,
    "title": "Let skills in Gemini tackle your most repetitive tasks",
@@ -1718,5 +1752,5 @@
    "gn": null
   }
  ],
- "judged_at": 1790940515
+ "judged_at": 1790940654
 }
