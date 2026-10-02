@@ -74,6 +74,13 @@ jobs:
         id: blog
         run: python scripts/collect_blog.py || echo '[]' > new_blog.json
 
+      # ── 소식: 나에게 맞춘 AI 회사 소식 (주인에게만 보이는 탭) ──
+      # 수집은 토큰 0. 새로 문턱을 넘은 글이 있을 때만 claude -p 가 JSON 으로 가르고,
+      # index.html 은 render_news.py 가 그린다 — 판단이 페이지를 직접 고치지 않는다.
+      - name: Collect news candidates
+        id: news
+        run: python scripts/collect_news.py || echo "news_has_new=false" >> "$GITHUB_OUTPUT"
+
       # ── 큐레이션 실행 조건: CC·Codex·Antigravity 중 하나라도 새 feature ──
       # 새 feature 가 있을 때만 큐레이션한다.
       # 블로그는 화면에 안 올리므로 게이트에서 뺐다 — 블로그 화면을 없앤 뒤로
@@ -87,8 +94,33 @@ jobs:
       # ── stage-2: 헤드리스 claude -p 가 워킹트리 index.html을 직접 Edit (새로 나온 것·용도별) ──
       # (구 claude-code-action@v1 은 PR/브랜치 모드라 워킹트리를 안 고쳐 매번 noop → 헤드리스로 교체)
       - name: Install Claude Code CLI
-        if: steps.gate.outputs.go == 'true'
+        if: steps.gate.outputs.go == 'true' || steps.news.outputs.news_has_new == 'true'
         run: npm install -g @anthropic-ai/claude-code
+
+      - name: Judge news (headless)
+        if: steps.news.outputs.news_has_new == 'true'
+        env:
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+        run: |
+          claude -p "$(cat scripts/news_prompt.md)" \
+            --model claude-sonnet-5-5 \
+            --max-turns 30 \
+            --permission-mode acceptEdits \
+            --allowedTools "Read,Write" \
+            --output-format json \
+          || echo "::warning::news judging returned non-zero — render keeps the previous news"
+
+      - name: Render and commit news
+        if: steps.news.outputs.news_has_new == 'true'
+        run: |
+          python scripts/render_news.py
+          git config user.name "ai-pick-bot"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if ! git diff --quiet index.html news.json; then
+            git add index.html news.json
+            git commit -m "chore(news): 소식 갱신 (Claude)"
+            git push
+          fi
 
       # ── 패치노트 기능(feature) 한국어화 — 전용 스텝(번들 curate가 버전 번역을 자주 누락해 분리) ──
       - name: Translate feature notes (headless)

@@ -13,6 +13,8 @@ python3 -m http.server   # 로컬 확인
 ```
 index.html    전부 (화면, 스타일, 스크립트 + <div id="data"> 안의 버전 블록)
 scripts/      갱신 자동화 — update_changelog.py, update_codex.py, update_agy.py, collect_blog.py, curate_prompt.md
+              소식 — collect_news.py(수집) → news_prompt.md(claude -p 가 가름) → render_news.py(news.json 에 쌓고 그림)
+news.json     소식 탭 원본. 6주치. render_news.py 만 고친다
 ```
 
 ## 배포
@@ -28,5 +30,6 @@ GitHub Pages 가 main 루트를 그대로 서빙한다. `.github/workflows/daily
 ## ⚠ 경고
 
 - `<div id="data">` 는 화면에 안 보이지만 지우면 안 된다. 갱신 스크립트가 여기에 새 버전을 꽂고 큐레이션이 여기서 원본을 읽는다.
-- 구간 표식(`<!--CC-DATA-->`, `<!--CX-DATA-->`, `<!--AG-DATA-->`)은 스크립트가 경계로 쓴다. 그대로 둔다.
+- 구간 표식(`<!--CC-DATA-->`, `<!--CX-DATA-->`, `<!--AG-DATA-->`, `<!--NEWS-->`)은 스크립트가 경계로 쓴다. 그대로 둔다.
+- 「소식」 탭은 주인(`sd_owner` 쿠키)에게만 보인다. 주인 구독이 바뀌면 `scripts/news_prompt.md` 의 표와 `render_news.py` 의 「기준」 줄을 같이 고친다.
 - 3단계가 `index.html` 을 직접 고친다. 뒤이은 JS 무결성 검사에 실패하면 자동으로 되돌린다.
