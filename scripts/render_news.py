@@ -14,7 +14,10 @@ CO = {'Anthropic': 'an', 'OpenAI': 'oa', 'Google': 'go'}
 e = html.escape
 
 state = json.load(open('news.json', encoding='utf-8')) if os.path.exists('news.json') else {'items': []}
-items = {i['key']: i for i in state['items']}
+def tidy(t):  # 줄 끝의 HN 점수와 앞의 도메인은 뗀다 — 화면이 점수를 따로 붙인다
+    return re.sub(r'^[a-z0-9-]+(\.[a-z0-9-]+)+ — ', '', re.sub(r'\s*[—(-]\s*HN \d+\s*점?\)?$', '', t.strip()))
+
+items = {i['key']: dict(i, line=tidy(i['line'])) for i in state['items']}
 
 # ── 쌓기 ──
 try:
@@ -28,7 +31,7 @@ for j in judged if isinstance(judged, list) else []:
     if not base or j.get('group') not in ('try', 'know', 'buzz', 'event', 'skip') or not j.get('line'): continue
     sub = bool(j.get('of'))
     items[j['key']] = dict(
-        key=j['key'], of=j.get('of'), title='' if sub else base['title'], group=j['group'], line=re.sub(r'\s*[—(-]\s*HN \d+\s*점?\)?$', '', j['line'].strip()), short=(j.get('short') or j['line'].split(' — ')[0]).strip(),
+        key=j['key'], of=j.get('of'), title='' if sub else base['title'], group=j['group'], line=tidy(j['line']), short=(j.get('short') or j['line'].split(' — ')[0]).strip(),
         note=(j.get('note') or '').strip(), w=int(j.get('w') or 1), event=j.get('event') or '',
         url=(j.get('url') or base['url']) if sub else base['url'], co=base['co'], date=base['date'],
         pts=0 if sub else base['pts'], hn=None if sub else base.get('hn'), gn=(base.get('gn') or {}).get('tid') if not sub else None,
