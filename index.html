@@ -487,7 +487,7 @@ body{font-variant-numeric:tabular-nums}
        title="Antigravity CLI 공식 릴리스 전체">공식 릴리스 <i>↗</i></a></span>
   <span class="pdone"><span class="pcount">해봄 <b class="doneAll">0</b>/<span class="totAll">0</span></span>
     <button class="clrb btn">모두 해제</button></span>
-  <span class="pstamp"><!--SYNC--><span class="s-y">2026-</span><span class="s-md">10-02</span><span class="s-t"> 06:44</span><!--/SYNC--></span>
+  <span class="pstamp"><!--SYNC--><span class="s-y">2026-</span><span class="s-md">10-03</span><span class="s-t"> 05:37</span><!--/SYNC--></span>
 </div>
 
 <div class="tab on" id="new">
@@ -833,7 +833,182 @@ body{font-variant-numeric:tabular-nums}
      지우면 update_changelog·update_codex 가 꽂을 자리를 잃는다. -->
 <div id="data">
 <!--CC-DATA-->
-    <p class="range"><strong>v2.0.0</strong> → <strong>v2.1.287</strong> &nbsp;·&nbsp; <span class="range-dates" data-en="2025.9.29 – 2026.10.1">2025.9.29 – 2026.10.1</span></p>
+    <p class="range"><strong>v2.0.0</strong> → <strong>v2.1.288</strong> &nbsp;·&nbsp; <span class="range-dates" data-en="2025.9.29 – 2026.10.2">2025.9.29 – 2026.10.2</span></p>
+  <!-- ── v2.1.288 ── -->
+  <div class="version-block" id="v2.1.288" data-types="feature improve security fix" data-date="2026-10-02">
+    <div class="version-head">
+      <span class="ver-badge">v2.1.288</span><span class="ver-date">10월 2일 금</span><span class="ver-ago"></span>
+      <div class="ver-summary"><span class="pill feature">기능 ×19</span><span class="pill improve">개선 ×12</span><span class="pill security">보안 ×15</span><span class="pill fix">Fix ×43</span></div>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Added <code>$.ui.selection()</code> for mods: returns the text you last selected in fullscreen mode and, when the selection lies within one transcript row, that row</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Added a built-in <code>gh api</code> to cloud sessions whose image has no GitHub CLI, and fixed the built-in sending control characters from file names, jq filters or GitHub errors to the terminal</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Added recovery for a prompt cleared with Ctrl+C: pressing Up on the empty prompt brings the draft back, including pasted text and images</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Added a re-authenticate prompt when an MCP server asks for more OAuth scope during a tool call</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Added <code>--max-findings &lt;n&gt;|all</code> to /code-review to report more or fewer findings than the usual limit; the choice is reused until you pass <code>--max-findings default</code></span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Added Ctrl+F to find a session by name and Alt+↑/↓ to jump between groups in the agents view; both, and rename, can be rebound in keybindings.json</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Added a screen reader mode announcement of the new permission mode when you approve a plan, including with Shift+Tab</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Changed the background command time limit to apply only in unattended sessions (<code>-p</code>, Agent SDK, CI, cloud); terminal, desktop app and VS Code sessions have no limit</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Changed the client-side auto mode classifier to ignore an <code>ANTHROPIC_DEFAULT_SONNET_MODEL</code> pin that names Claude Sonnet 5.5 or Opus 5.5 and use Claude Sonnet 5 instead</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Changed <code>claude project purge</code> to <code>claude purge</code>; the old name still works and prints a notice</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Changed the agents view <code>n:</code> filter (and Ctrl+F search) so Enter opens the session whose name matches best instead of the top row</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Changed <code>/autocompact</code> to save the auto-compact window per model, so each model keeps its own setting when you switch</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Changed MCP URL prompts from servers that can't report when you're done to wait for "I'm done, continue" before the tool call continues, so you can finish in the browser first</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[VSCode] Fixed a claude.ai connector staying on "Needs authentication" after you authorize it: the MCP servers dialog now offers Check connection</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[VSCode] Fixed the opt-in New Conversation shortcut (Cmd/Ctrl+N) starting a conversation in every visible Claude view instead of only the one you are in</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[VSCode] Fixed the chat view resuming the next saved session after you archive the one it shows; it now starts a new conversation instead</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[Cloud sessions] Fixed the Cloud sessions switch in Claude Code admin settings staying locked off while an unrelated security setting was loading or had failed to load</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[Cloud sessions] Fixed pressing Stop while a self-hosted runner was still starting not cancelling the queued message, which could then run once the runner was up</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[Claude Tag] Fixed Claude Tag admin settings offering a "Remove this scope" option, which always failed, on channels whose settings were created automatically</span>
+    </div>
+    <div class="tabs-container">
+      <div class="tabs-bar">
+        <div class="tab" data-tab="improve" onclick="toggleTab(this)">⚡ 개선 <span class="tab-count">12</span></div>
+        <div class="tab" data-tab="security" onclick="toggleTab(this)">🔒 보안 <span class="tab-count">15</span></div>
+        <div class="tab" data-tab="fix" onclick="toggleTab(this)">🐛 수정 <span class="tab-count">43</span></div>
+      </div>
+      <div class="tab-panels">
+        <div class="tab-panel" data-tab="improve">
+          <div class="coll-rows">
+            <div class="coll-item"><span class="coll-item-desc">Improved auto mode: when a conversation grows too long for the client-side safety classifier to review, it is now compacted instead of prompting for, or failing, every tool call</span></div>
+            <div class="coll-item"><span class="coll-item-desc">Improved screen reader mode: short announcements, such as a deleted word, now stay on screen until your next key press or until something above them on screen changes</span></div>
+            <div class="coll-item"><span class="coll-item-desc">Improved screen reader mode: answered questions in question dialogs now say "answered" beside their box</span></div>
+            <div class="coll-item"><span class="coll-item-desc">Improved the <code>/usage-credits</code> message shown to Team and Enterprise members whose organization has turned off usage credit requests</span></div>
+            <div class="coll-item"><span class="coll-item-desc">Improved cloud sessions: a new conversation's first turn no longer waits for a stdio MCP server whose config sets <code>alwaysLoad: false</code></span></div>
+            <div class="coll-item"><span class="coll-item-desc">Improved "You should know" notes to say "we", "the main agent" or "you" depending on who was responsible for a decision</span></div>
+            <div class="coll-item"><span class="coll-item-desc">Improved the error for an artifact database write refused at the database's size limit: it now states the limit and what frees space</span></div>
+            <div class="coll-item"><span class="coll-item-desc">Improved Bash permission prompts to give a shorter reason when part of a command can't be checked before it runs</span></div>
+            <div class="coll-item"><span class="coll-item-desc">Self-hosted runner: Improved the built-in <code>gh api</code>: a refused gh command now prints its <code>gh api</code> equivalent, <code>--paginate</code> follows every page of a repository's lists, and a nested <code>claude</code> no longer removes it</span></div>
+            <div class="coll-item"><span class="coll-item-desc">Improved Remote Control's recovery from an expired server credential: sessions stay connected during renewal and are kept if it gives up after a server outage</span></div>
+            <div class="coll-item"><span class="coll-item-desc">[Claude Tag] Improved Claude to also follow a related Slack thread in another channel that it only read, so updates there reach the conversation that depends on them</span></div>
+            <div class="coll-item"><span class="coll-item-desc">[Claude Tag] Improved save errors on a channel's Configure page: too-long channel instructions now say to shorten them, and a save refused for lost access no longer says to try again</span></div>
+          </div>
+        </div>
+        <div class="tab-panel" data-tab="security">
+          <div class="coll-rows">
+            <div class="coll-item"><span class="coll-item-desc">Fixed auto mode denials pointing Claude at a Bash permission rule when the blocked tool was not Bash</span></div>
+            <div class="coll-item"><span class="coll-item-desc">Fixed Cowork cloud sessions staying marked as waiting for input after a WebFetch permission prompt for an unapproved URL went unanswered for five minutes</span></div>
+            <div class="coll-item"><span class="coll-item-desc">Fixed sandboxed heredocs with an unquoted delimiter (<code>python3 &lt;&lt;EOF</code>) asking for approval on every run under sandbox auto-allow when the body holds only plain text and simple <code>$VAR</code> references</span></div>
+            <div class="coll-item"><span class="coll-item-desc">Fixed Bash tool permission check to prompt before a <code>BASHPID</code> assignment whose value the shell would evaluate as arithmetic, instead of allowing it silently</span></div>
+            <div class="coll-item"><span class="coll-item-desc">Fixed permission asks that ended unanswered, in <code>-p</code> or on an interrupted turn, emitting no <code>tool_decision</code> event</span></div>
+            <div class="coll-item"><span class="coll-item-desc">Fixed <code>/login</code> reporting "Login successful" when credentials could not be saved to secure storage; it now shows the failure, and offers a retry when the new login didn't take effect (anthropics/claude-code#73861)</span></div>
+            <div class="coll-item"><span class="coll-item-desc">Fixed a Stop during Bedrock credential lookup sometimes moving the session to a fallback model instead of ending the request</span></div>
+            <div class="coll-item"><span class="coll-item-desc">Fixed a second <code>gcpAuthRefresh</code>/<code>awsAuthRefresh</code> browser sign-in opening when a laptop wakes from sleep while another Claude Code process is signing in</span></div>
+            <div class="coll-item"><span class="coll-item-desc">Fixed restarted cloud sessions restoring a model that the organization's enforced model list refuses</span></div>
+            <div class="coll-item"><span class="coll-item-desc">Fixed <code>sandbox.credentials.files</code> entries on git config files not taking effect while <code>permissions.blockReadsOutsideWorkingDirectories</code> is on</span></div>
+            <div class="coll-item"><span class="coll-item-desc">Fixed Claude leaving out your organization's design systems when starting slides or a design with the Artifact tool on Team and Enterprise plans or machines with managed settings</span></div>
+            <div class="coll-item"><span class="coll-item-desc">Fixed a dangerous <code>rm</code> (such as one on <code>/</code> or the home directory) inside a <code>bash -c</code> or <code>sh -c</code> script running without a prompt in bypassPermissions mode or under a shell allow rule (anthropics/claude-code#96300)</span></div>
+            <div class="coll-item"><span class="coll-item-desc">Fixed PreToolUse and PermissionRequest hooks being skipped when matching them failed or the tool's input could not be serialized to JSON; the call is now blocked</span></div>
+            <div class="coll-item"><span class="coll-item-desc">Fixed <code>/login</code> in a <code>--bare</code> session running a sign-in the session never reads, which could replace your saved login; it now says which credentials work</span></div>
+            <div class="coll-item"><span class="coll-item-desc">Fixed <code>/permissions</code> in screen reader mode: typing a rule's number now picks it instead of opening the search box</span></div>
+          </div>
+        </div>
+        <div class="tab-panel" data-tab="fix">
+          <div class="chip-grid">
+            <span class="chip">mid-response API timeouts failing the turn: non-interactive sessions…</span>
+            <span class="chip">long conversations failing with &quot;Prompt is too long&quot;…</span>
+            <span class="chip">--resume sometimes dropping files and other context that…</span>
+            <span class="chip">a resumed session sometimes not saving the last…</span>
+            <span class="chip">resume occasionally loading a transcript cut short when…</span>
+            <span class="chip">resuming a conversation started on 2.1.286 or earlier…</span>
+            <span class="chip">session titles, memory recall and prompt hooks failing…</span>
+            <span class="chip">auto mode on Bedrock and Mantle switching to…</span>
+            <span class="chip">cloud sessions that restarted on a newly picked…</span>
+            <span class="chip">prompt suggestions not appearing on a phone that…</span>
+            <span class="chip">a mod&#x27;s button sometimes running a different button&#x27;s…</span>
+            <span class="chip">a plugin&#x27;s pane showing nothing when one Code…</span>
+            <span class="chip">plugin LSP servers receiving literal ${user_config.*} and ${CLAUDE_PLUGIN_ROOT}…</span>
+            <span class="chip">a plugin&#x27;s tool.call hook making Bash fail and…</span>
+            <span class="chip">git-subdir plugin installs failing, or caching an incomplete…</span>
+            <span class="chip">plugins loaded with --plugin-dir not showing &quot;Configure options&quot;…</span>
+            <span class="chip">background sessions ending when a plugin was reloaded…</span>
+            <span class="chip">fullscreen sessions exiting with &quot;unrecoverable interface error&quot; when…</span>
+            <span class="chip">Claude reporting a message to another session as…</span>
+            <span class="chip">OpenTelemetry claude_code.tool.blocked_on_user spans reporting unknown source or decision…</span>
+            <span class="chip">Edit and Retry in Cowork cloud sessions refusing…</span>
+            <span class="chip">unattended sessions (CLAUDE_CODE_RETRY_WATCHDOG) retrying for hours after a…</span>
+            <span class="chip">agent teams: a plugin-defined agent spawned by name…</span>
+            <span class="chip">headless (-p / SDK) sessions occasionally ignoring SIGTERM…</span>
+            <span class="chip">MCP tool calls sometimes running twice when a…</span>
+            <span class="chip">subagents in Claude Desktop&#x27;s Code tab getting none…</span>
+            <span class="chip">Claude in Chrome asking before every screenshot and…</span>
+            <span class="chip">claude plugin install failing for GitHub-source plugins on…</span>
+            <span class="chip">keyboard not working on Windows after Claude Code…</span>
+            <span class="chip">a stall when launching an agent whose tools:…</span>
+            <span class="chip">sessions on Claude 3 Opus and Claude 3…</span>
+            <span class="chip">npm auto-updater reporting success when the platform-native binary…</span>
+            <span class="chip">Remote Control cleanup archiving a session that is…</span>
+            <span class="chip">owner/repo plugin marketplaces showing only the second attempt&#x27;s…</span>
+            <span class="chip">path-scoped .claude/rules and nested CLAUDE.md files not loading…</span>
+            <span class="chip">LSP tool calls hanging indefinitely when a language…</span>
+            <span class="chip">idle_prompt notification hooks firing while background agents are…</span>
+            <span class="chip">first request in a fresh environment or after…</span>
+            <span class="chip">&quot;What should Claude do instead?&quot; hint showing on…</span>
+            <span class="chip">InstructionsLoaded hook omitting agent_id and agent_type when a…</span>
+            <span class="chip">Agent tool in claude mcp serve always reporting…</span>
+            <span class="chip">terminal cursor not following the typed text in…</span>
+            <span class="chip">claude plugin test reporting mods as turned off…</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- ── v2.1.287 ── -->
   <div class="version-block" id="v2.1.287" data-types="feature improve security fix" data-date="2026-10-01">
     <div class="version-head">
