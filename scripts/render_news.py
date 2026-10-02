@@ -28,10 +28,11 @@ for j in judged if isinstance(judged, list) else []:
     if not base or j.get('group') not in ('try', 'know', 'buzz', 'event', 'skip') or not j.get('line'): continue
     sub = bool(j.get('of'))
     items[j['key']] = dict(
-        key=j['key'], of=j.get('of'), title='' if sub else base['title'], group=j['group'], line=j['line'].strip(), short=(j.get('short') or j['line'].split(' — ')[0]).strip(),
+        key=j['key'], of=j.get('of'), title='' if sub else base['title'], group=j['group'], line=re.sub(r'\s*[—(-]\s*HN \d+\s*점?\)?$', '', j['line'].strip()), short=(j.get('short') or j['line'].split(' — ')[0]).strip(),
         note=(j.get('note') or '').strip(), w=int(j.get('w') or 1), event=j.get('event') or '',
         url=(j.get('url') or base['url']) if sub else base['url'], co=base['co'], date=base['date'],
-        pts=0 if sub else base['pts'], hn=None if sub else base.get('hn'), gn=(base.get('gn') or {}).get('tid') if not sub else None)
+        pts=0 if sub else base['pts'], hn=None if sub else base.get('hn'), gn=(base.get('gn') or {}).get('tid') if not sub else None,
+        all=[x for x in (j.get('all') or []) if isinstance(x, dict) and x.get('name')] if j['group'] == 'event' else [])
     added += 1
 cut = (TODAY - datetime.timedelta(days=KEEP_DAYS)).isoformat()
 state['items'] = sorted((i for i in items.values() if i['date'] >= cut), key=lambda i: (i['date'], i['key']), reverse=True)
@@ -46,10 +47,14 @@ def span(m):
 def rank(i): return (-i['w'], -i['pts'], i['date'])
 def dot(i): return f'<span class="cd {CO.get(i["co"], "")}"></span>'
 def a(i, cls=''): return f'<a href="{e(i["url"])}" target="_blank" rel="noopener noreferrer"{cls}>{e(i["line"])}</a>'
+def hn(i):  # 점수는 줄 끝에 작게 — 누르면 HN 댓글
+    if not i.get('pts'): return ''
+    t = f'HN {i["pts"]}'
+    return f'<a class="hp" href="https://news.ycombinator.com/item?id={i["hn"]}" target="_blank" rel="noopener noreferrer">{t}</a>' if i.get('hn') else f'<span class="hp">{t}</span>'
 def ln(i, strong):
     note = f'<span class="to">→ {e(i["note"])}</span>' if i['note'] else ''
     ev = f'<span class="evn">{e(i["event"])}</span>' if i.get('event') else ''
-    return f'<p class="ln">{dot(i)}<span class="lc">{ev}{a(i, " class=b" if strong else "")}{note}</span></p>'
+    return f'<p class="ln">{dot(i)}<span class="lc">{ev}{a(i, " class=b" if strong else "")}{hn(i)}{note}</span></p>'
 
 weeks = {}
 for i in state['items']:
@@ -60,7 +65,11 @@ if ws:
     top = weeks[ws[0]]
     out.append(f'<p class="wk">{span(ws[0])} <em>Claude Max, ChatGPT Plus, Google AI Pro 기준</em></p>')
     for i in sorted((i for i in top if i['group'] == 'event'), key=rank):
-        out.append(f'<p class="ln ev"><span class="evt">행사</span><span class="lc">{a(i, " class=b")}</span></p>')
+        out.append(f'<p class="ln ev"><span class="evt">행사</span><span class="lc">{a(i, " class=b")}{hn(i)}</span></p>')
+        if i.get('all'):
+            out.append(f'<details class="evl"><summary>발표 {len(i["all"])}개 펼치기</summary>' + ''.join(
+                f'<p><a href="{e(x.get("url") or i["url"])}" target="_blank" rel="noopener noreferrer">{e(x["name"])}</a> <span>{e(x.get("line", ""))}</span></p>'
+                for x in i['all']) + '</details>')
     rest = []
     for g, name in GROUP:
         xs = sorted((i for i in top if i['group'] == g), key=rank)
@@ -71,12 +80,14 @@ if ws:
     if rest or skipped:
         out.append(f'<details class="more"><summary>나머지 {len(rest) + len(skipped)}개</summary>'
                    + ''.join(ln(i, False) for i in sorted(rest, key=rank))
-                   + ''.join(f'<p class="ln dim">{dot(i)}<span class="lc">{a(i)}</span></p>' for i in sorted(skipped, key=rank)) + '</details>')
+                   + ''.join(f'<p class="ln dim">{dot(i)}<span class="lc">{a(i)}{hn(i)}</span></p>' for i in sorted(skipped, key=rank)) + '</details>')
     for m in ws[1:5]:
         xs = sorted((i for i in weeks[m] if i['group'] in ('event', 'try', 'know') and not i.get('of')), key=rank)[:3] \
              or sorted(weeks[m], key=rank)[:2]
+        bz = sorted((i for i in weeks[m] if i['group'] == 'buzz'), key=lambda i: -i['pts'])[:1]
         out.append(f'<p class="pw"><span class="wk2">{span(m)}</span>'
-                   + ', '.join(f'<a href="{e(i["url"])}" target="_blank" rel="noopener noreferrer">{e(i["short"])}</a>' for i in xs) + '</p>')
+                   + ', '.join(f'<a href="{e(i["url"])}" target="_blank" rel="noopener noreferrer">{e(i["short"])}</a>' for i in xs)
+                   + ''.join(f'<span class="pb">화제</span><a href="{e(i["url"])}" target="_blank" rel="noopener noreferrer">{e(i["short"])}</a>{hn(i)}' for i in bz) + '</p>')
 else:
     out.append('<p class="wk">아직 모은 소식이 없어요.</p>')
 

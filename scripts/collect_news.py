@@ -26,7 +26,7 @@ def norm(u):
 def kst(ts): return datetime.datetime.fromtimestamp(ts, KST).strftime('%Y-%m-%d')
 def dom(u): return re.sub(r'^www\.', '', u.split('/')[2]) if '://' in u else ''
 
-AI = re.compile(r'openai|anthropic|claude|chatgpt|gemini|codex|deepmind|\bgpt|sora|antigravity|mythos|fable', re.I)
+AI = re.compile(r'openai|anthropic|claude|chatgpt|gemini|codex|deepmind|\bgpt|sora|antigravity|mythos|fable|\bopus\b|\bsonnet\b', re.I)
 OFFICIAL = {'openai.com': 'OpenAI', 'developers.openai.com': 'OpenAI', 'help.openai.com': 'OpenAI', 'alignment.openai.com': 'OpenAI',
             'chatgpt.com': 'OpenAI', 'learn.chatgpt.com': 'OpenAI',
             'anthropic.com': 'Anthropic', 'claude.com': 'Anthropic', 'code.claude.com': 'Anthropic', 'support.claude.com': 'Anthropic',
@@ -61,7 +61,7 @@ def add(key, **kw):
     cand[key] = dict(dict(hn=None, pts=0, cmt=0, src='', desc='', gn=None), key=key, **kw)
 
 # ── Hacker News ──
-for q in ['openai', 'anthropic', 'claude', 'chatgpt', 'gemini', 'codex', 'deepmind', 'gpt']:
+for q in ['openai', 'anthropic', 'claude', 'chatgpt', 'gemini', 'codex', 'deepmind', 'gpt', 'opus', 'sonnet']:
     u = 'https://hn.algolia.com/api/v1/search?' + urllib.parse.urlencode({
         'query': q, 'tags': 'story', 'hitsPerPage': 200, 'restrictSearchableAttributes': 'title,url',
         'numericFilters': f'created_at_i>{T0},points>=100'})
