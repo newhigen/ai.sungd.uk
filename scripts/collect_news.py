@@ -148,7 +148,8 @@ for k, g in gn.items():
 for c in cand.values():
     c['bundle'] = bool(c['official'] and BUNDLE.search(c['title'] + ' ' + c.get('desc', '')))
     if c['bundle']:
-        c['body'] = fetch('https://r.jina.ai/' + c['url'], 60)[:16000]
+        # 이미지 주소는 걷어 낸다(설명만 남게). 받을 때마다 길이가 달라 넉넉히 6만 자
+        c['body'] = re.sub(r'\]\(https?://[^)]*\.(?:png|jpe?g|webp|gif)[^)]*\)', ']', fetch('https://r.jina.ai/' + c['url'], 60))[:60000]
 
 new = sorted(cand.values(), key=lambda c: (-c['pts'], c['date']))
 # 판단(claude -p)은 3시간에 한 번 — 공식 발표나 1000점 넘는 글이 오면 바로
