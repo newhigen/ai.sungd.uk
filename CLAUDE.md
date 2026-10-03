@@ -33,6 +33,8 @@ GitHub Pages 가 main 루트를 그대로 서빙한다. `.github/workflows/daily
 
 - `<div id="data">` 는 화면에 안 보이지만 지우면 안 된다. 갱신 스크립트가 여기에 새 버전을 꽂고 큐레이션이 여기서 원본을 읽는다.
 - 구간 표식(`<!--CC-DATA-->`, `<!--CX-DATA-->`, `<!--AG-DATA-->`, `<!--NEWS-->`, `<!--MODELS-STATUS-->`)은 스크립트가 경계로 쓴다. 그대로 둔다.
+- 탭은 홈, 새로 나온 것, 모델, 소식이다. 홈은 마지막 `<script>` 의 `home()` 이 페이지가 뜰 때 켜고 조립한다(이번 주 써 볼 것을 옮기고, `.mh` 와 소식에서 핵심을 읽는다). `<div class="tab on" id="new">` 은 그대로 둔다 — Now 의 `ai_picks.py` 와 `curate_prompt.md` 가 이 줄을 표식으로 쓴다. 용도별은 「새로 나온 것」 안의 「날짜순 / 용도별」 전환이다.
+- 체크 칸은 화면에서 뺐다(`data-check="off"` 기본, 해봄 수와 켜고 끄는 단추 숨김). 상태 저장과 Now 연동 코드는 남아 있다 — 해봄은 Now 에서 한다. 시안 생성기는 `~/dev/analyses/ai-sungd-uk-design/make_home.py`(`SITE=<index.html>` 이면 사이트 파일을 고친다).
 - 「모델」 탭 아래 차트(MD)는 손으로 갱신한다. 30일 안에 나온 세 회사 최신 모델이 차트에 없으면 `update_models.py` 가 차트 기준일에 `data-new` 를 달아 흐리게 한다. 값은 Artificial Analysis 막대 툴팁의 합계로 읽는다(데이터 내려받기는 유료).
 - 모델 현황의 라인은 `update_models.py` 의 `LINES` 정규식으로 묶는다. 규칙에 안 걸리는 세 회사의 새 이름은 「새 이름」 줄로 뜨니, 보이면 `LINES` 에 넣는다.
 - 「소식」 탭은 주인(`sd_owner` 쿠키)에게만 보인다. 주인 구독이 바뀌면 `scripts/news_prompt.md` 의 표와 `render_news.py` 의 「기준」 줄을 같이 고친다.
