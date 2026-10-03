@@ -36,6 +36,7 @@ for j in judged if isinstance(judged, list) else []:
         note=(j.get('note') or '').strip(), w=int(j.get('w') or 1), event=j.get('event') or '',
         url=(j.get('url') or base['url']) if sub else base['url'], co=base['co'], date=base['date'],
         pts=0 if sub else base['pts'], hn=None if sub else base.get('hn'), gn=(base.get('gn') or {}).get('tid') if not sub else None,
+        demo=j.get('demo') if str(j.get('demo') or '').startswith('http') else None, demo_as='보기' if j.get('demo_as') == '보기' else '듣기',
         all=[x for x in (j.get('all') or []) if isinstance(x, dict) and x.get('name')] if j['group'] == 'event' else [])
     added += 1
 cut = (TODAY - datetime.timedelta(days=KEEP_DAYS)).isoformat()
@@ -64,11 +65,12 @@ def bar(i):  # HN 점수 막대 — 100점에서 2300점까지 로그 눈금, 50
     b = f'<span class="np{" big" if p >= 500 else ""}"><i style="width:{w}px"></i><b>{p}</b></span>'
     return link(f'https://news.ycombinator.com/item?id={i["hn"]}', b, ' class="pl"') if i.get('hn') else b
 def row(i):
-    c, cn = CO.get(i['co'], ('et', '—'))
+    c, cn = CO.get(i['co'], ('et', '—' if i['co'] == '기타' else i['co']))
     note = f'<span class="to">→ {e(i["note"])}</span>' if i['note'] else ''
+    demo = link(i['demo'], f'▶ {i.get("demo_as") or "듣기"}', ' class="dm"') if i.get('demo') else ''
     return (f'<div class="ar g-{i["group"]}"><span class="dt">{md(i["date"])}</span>{bar(i)}'
             f'<span class="co {c}">{cn}</span><span class="gp">{GR[i["group"]]}</span>'
-            f'<span class="tt">{link(i["url"], e(i["line"]))}{note}</span></div>')
+            f'<span class="tt">{link(i["url"], e(i["line"]))}{demo}{note}</span></div>')
 def find(d, k):  # 이름으로 짝 찾기 — 「GPT-6.1 Sol」과 「GPT 6.1 Sol」, 「dots」와 「dots — 늘 켜 두는 에이전트」
     if not k: return None
     if k in d: return d[k]
