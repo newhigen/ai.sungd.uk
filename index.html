@@ -750,7 +750,7 @@ html[data-tab="home"] .ptools,html[data-tab="home"] .ptop,html[data-tab="home"] 
        title="Antigravity CLI 공식 릴리스 전체">공식 릴리스 <i>↗</i></a></span>
   <span class="pdone"><span class="pcount">해봄 <b class="doneAll">0</b>/<span class="totAll">0</span></span>
     <button class="clrb btn">모두 해제</button></span>
-  <span class="pstamp"><!--SYNC--><span class="s-y">2026-</span><span class="s-md">10-03</span><span class="s-t"> 05:37</span><!--/SYNC--></span>
+  <span class="pstamp"><!--SYNC--><span class="s-y">2026-</span><span class="s-md">10-04</span><span class="s-t"> 08:44</span><!--/SYNC--></span>
 </div>
 
 <div class="tab" id="home"></div>
@@ -1120,7 +1120,69 @@ html[data-tab="home"] .ptools,html[data-tab="home"] .ptop,html[data-tab="home"] 
      지우면 update_changelog·update_codex 가 꽂을 자리를 잃는다. -->
 <div id="data">
 <!--CC-DATA-->
-    <p class="range"><strong>v2.0.0</strong> → <strong>v2.1.288</strong> &nbsp;·&nbsp; <span class="range-dates" data-en="2025.9.29 – 2026.10.2">2025.9.29 – 2026.10.2</span></p>
+    <p class="range"><strong>v2.0.0</strong> → <strong>v2.1.289</strong> &nbsp;·&nbsp; <span class="range-dates" data-en="2025.9.29 – 2026.10.3">2025.9.29 – 2026.10.3</span></p>
+  <!-- ── v2.1.289 ── -->
+  <div class="version-block" id="v2.1.289" data-types="feature improve security fix" data-date="2026-10-03">
+    <div class="version-head">
+      <span class="ver-badge">v2.1.289</span><span class="ver-date">10월 3일 토</span><span class="ver-ago"></span>
+      <div class="ver-summary"><span class="pill feature">기능 ×2</span><span class="pill improve">개선 ×2</span><span class="pill security">보안 ×2</span><span class="pill fix">Fix ×21</span></div>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[VSCode] Reverted a 2.1.288 change to <code>claude auth status</code> that may have made sign-outs more frequent</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Added <code>agent.spawn</code> for teammates, one agent id across plugin hook events, and idle and waiting states in <code>$.agent.list()</code></span>
+    </div>
+    <div class="tabs-container">
+      <div class="tabs-bar">
+        <div class="tab" data-tab="improve" onclick="toggleTab(this)">⚡ 개선 <span class="tab-count">2</span></div>
+        <div class="tab" data-tab="security" onclick="toggleTab(this)">🔒 보안 <span class="tab-count">2</span></div>
+        <div class="tab" data-tab="fix" onclick="toggleTab(this)">🐛 수정 <span class="tab-count">21</span></div>
+      </div>
+      <div class="tab-panels">
+        <div class="tab-panel" data-tab="improve">
+          <div class="coll-rows">
+            <div class="coll-item"><span class="coll-item-desc">Improved how quickly large files open in a plugin code pane by laying the highlighted view out once at its final width</span></div>
+            <div class="coll-item"><span class="coll-item-desc">Improved the line a mod's author sees when its band or pane fails to draw: it names the mod and says nothing was drawn</span></div>
+          </div>
+        </div>
+        <div class="tab-panel" data-tab="security">
+          <div class="coll-rows">
+            <div class="coll-item"><span class="coll-item-desc">Fixed Bash deny and ask rules missing a command behind an environment variable prefix with an expanded value (e.g. <code>TZ="$HOME" rm -rf build</code>) when the sandbox auto-allows commands</span></div>
+            <div class="coll-item"><span class="coll-item-desc">Fixed a Bash deny or ask rule being skipped under sandbox auto-allow when a bare variable assignment came before the command</span></div>
+          </div>
+        </div>
+        <div class="tab-panel" data-tab="fix">
+          <div class="chip-grid">
+            <span class="chip">a deny or ask rule on a nested…</span>
+            <span class="chip">terminal freezing on short code blocks with many…</span>
+            <span class="chip">Read deny rules not applying to files @-mentioned,…</span>
+            <span class="chip">plugin list, plugin eval and plugin update showing…</span>
+            <span class="chip">installed mods not loading in the first session…</span>
+            <span class="chip">a plugin&#x27;s rows above the prompt showing a…</span>
+            <span class="chip">plugin panes drawing nothing when a link used…</span>
+            <span class="chip">a user-installed plugin being able to rewrite the…</span>
+            <span class="chip">a freeze or forced quit at launch when…</span>
+            <span class="chip">supervised and background sessions ending when a plugin&#x27;s…</span>
+            <span class="chip">sessions ending with an interface error when a…</span>
+            <span class="chip">claude plugin validate skipping the plugin when the…</span>
+            <span class="chip">sessions ending with &quot;unrecoverable interface error&quot; when a…</span>
+            <span class="chip">text with a tab, a stray escape and…</span>
+            <span class="chip">right-aligned content in a mod&#x27;s pane or band…</span>
+            <span class="chip">a mod&#x27;s Client that fails while drawn taking…</span>
+            <span class="chip">claude plugin validate failing an Anthropic marketplace&#x27;s own…</span>
+            <span class="chip">a mod&#x27;s band that fails to draw briefly…</span>
+            <span class="chip">a failed plugin component showing Error or nothing…</span>
+            <span class="chip">published artifact pages freezing or crashing the reader&#x27;s…</span>
+            <span class="chip">a mod&#x27;s Client region staying failed for the…</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- ── v2.1.288 ── -->
   <div class="version-block" id="v2.1.288" data-types="feature improve security fix" data-date="2026-10-02">
     <div class="version-head">
