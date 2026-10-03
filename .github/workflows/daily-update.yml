@@ -69,6 +69,22 @@ jobs:
           git commit -m "chore(agy): ${{ steps.agy.outputs.ag_added_versions }} 자동 추가"
           git push
 
+      # ── 1단계(d): 모델 현황 (토큰 0, Artificial Analysis 출시일 + 위 세 노트) ──
+      # 버전 목록 뒤에 돌아야 「내 도구에 들어왔나」가 방금 꽂힌 노트까지 본다.
+      # 날짜가 바뀌면(「3일 전」, 지난 2주 띠) 하루 한 번은 바뀐다.
+      - name: Update model status
+        id: models
+        run: python scripts/update_models.py
+
+      - name: Commit model status
+        if: steps.models.outputs.models_changed == 'true'
+        run: |
+          git config user.name "ai-pick-bot"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add index.html models.json
+          git commit -m "chore(models): 모델 현황 갱신"
+          git push
+
       # ── blog/news 수집 — 화면엔 안 올리고 철회·중단 감지에만 쓴다 ──
       - name: Detect new blog/news posts
         id: blog
