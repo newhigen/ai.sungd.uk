@@ -519,7 +519,7 @@ body{font-variant-numeric:tabular-nums}
 @media (min-width:761px){.sk #new .dg .row .tt{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}}
 @media (max-width:760px){.sk #new .dg{grid-template-columns:minmax(0,1fr)}.sk .dgd{padding-top:18px;font-weight:700;color:var(--ink)}.sk .dgc{padding-top:4px}.sk .dgc:empty,.sk .dgd:empty{display:none}.sk .dgh{display:none}.sk .dgt{display:inline-block;font-size:12px;font-weight:600;color:#3a3d44;margin-right:8px}}
 .sk #new .cols3 .tw{display:block;min-width:0}
-.sk #new .chead,.sk #new .lead,.sk #new .it.picked{display:none}
+.sk #new .chead,.sk #new .lead{display:none}
 .sk .colh{font-size:15px;font-weight:700;color:var(--ink);margin:0 0 4px}
 .sk .colh i,.sk .tl i,.sk .dgt i{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:7px;vertical-align:baseline}
 .sk .tl i,.sk .dgt i{width:7px;height:7px;margin-right:5px}
@@ -621,6 +621,76 @@ body{font-variant-numeric:tabular-nums}
   .mh-nm.new::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--c);margin:0 6px 0 -12px;vertical-align:middle;transform:translateY(var(--dy,-1px))}
   .mh-ln{padding-left:12px}
 }
+
+/* ── 체크 없음 — 상태 저장과 Now 연동은 그대로, 화면에서만 뺀다 ── */
+.pdone,.opt[data-o="check"],.opt[data-o="todo"]{display:none !important}
+:root[data-check="off"] .wkd .box{display:none}
+/* 날짜 맞춤 표는 체크 열을 없애 줄 제목이 버전 글자와 같은 자리에서 시작한다 */
+:root[data-check="off"].sk #new .row{grid-template-columns:minmax(0,1fr)}
+:root[data-check="off"].sk #new .row .box{display:none}
+:root[data-check="off"].sk .wki.done .wkt{color:var(--ink);text-decoration:none}
+/* ── 홈 ── */
+html[data-tab="home"] .ptools,html[data-tab="home"] .ptop,html[data-tab="home"] .pdone{display:none}
+#home{word-break:keep-all;overflow-wrap:break-word}
+#home .wk{margin:6px 0 34px}
+.hmore{margin-left:auto;font-size:12.5px;font-weight:400;color:var(--dim);text-decoration:none;white-space:nowrap}
+.hmore:hover{color:var(--acc)}
+.hg{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);column-gap:56px;align-items:start}
+.hb .wkh{margin-bottom:8px}
+.hb .wkh b{font-size:17px}
+.hsum{font-size:13.5px;line-height:1.55;color:var(--ink);margin:0 0 8px}
+.hm{display:grid;grid-template-columns:minmax(0,1fr) 96px 112px;column-gap:14px;align-items:baseline;padding:4px 0;font-size:13.5px}
+.hm-nm{font-weight:600;color:var(--ink);white-space:nowrap}
+.hm-nm i{display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:8px;vertical-align:middle;transform:translateY(-1px)}
+.hm-d{color:var(--dim);font-size:12.5px;white-space:nowrap}
+.hm .mh-tool{justify-self:start}
+.sk .rh{display:flex;align-items:baseline;flex-wrap:wrap}
+.vt{margin-left:auto;display:inline-flex;gap:2px;font-size:12px;font-weight:400}
+.vt a{color:var(--dim);text-decoration:none;padding:1px 9px;border-radius:5px;cursor:pointer}
+.vt a.on{background:#e6e7e7;color:var(--ink);font-weight:600}
+#use > .vt{display:flex;justify-content:flex-end;margin:0 0 6px}
+@media (max-width:760px){
+  /* 폰 — 이번 주 써 볼 것은 접힌 줄(체크, 제목, 도구와 날짜), 누르면 설명과 해보기가 펼쳐진다 */
+  #home .wk{margin:2px 0 26px}
+  #home .wkh b{font-size:19px}
+  #home .wk > .wkh em{flex-basis:100%;order:3;font-size:12px}
+  #home .hb .wkh em{font-size:12px}
+  #home .wki{display:grid;grid-template-columns:24px minmax(0,1fr) auto;grid-template-areas:"box tt tt" ". tl dt" ". x x";
+    column-gap:12px;row-gap:3px;padding:8px 0;margin:0;cursor:pointer;-webkit-tap-highlight-color:transparent}
+  #home .wkd{display:contents}
+  #home .wki .box{grid-area:box;align-self:start;margin:-0.5px 0 0}
+  #home .wkd .tl{grid-area:tl;font-size:12px}
+  #home .wkd .wdt{grid-area:dt;font-size:12px;color:var(--dim);white-space:nowrap}
+  /* 펼침 표시 — 날짜 옆 꺾쇠, 펼치면 위로 */
+  #home .wkd .wdt::after{content:"";display:inline-block;width:5px;height:5px;margin-left:9px;border:solid #a9adb4;border-width:0 1.5px 1.5px 0;
+    transform:translateY(var(--chev,-3px)) rotate(45deg)}
+  #home .wki.open .wkd .wdt::after{transform:translateY(var(--chev-o,0px)) rotate(-135deg)}
+  #home .wki > div{grid-area:tt;min-width:0}
+  #home .wkt{font-size:15px;line-height:1.45;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+  #home .wkt .chip{font-size:12px}
+  #home .wks,#home .wkx{display:none}
+  #home .wki.open .wkt{display:block}
+  #home .wki.open .wks{display:block;font-size:13px}
+  #home .wki.open .wkx{display:block;grid-area:x;font-size:13px;margin-top:6px}
+  :root[data-check="off"] #home .wki{grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"tt tt" "tl dt" "x x"}
+  #home .wki .box{font-size:0;width:22px;height:22px;padding:0;border:1.5px solid #c4c5c8;border-radius:50%;background:#fff;position:relative;box-sizing:border-box}
+  #home .wki.done .box{background:var(--green);border-color:var(--green)}
+  #home .wki.done .box::after{content:"";position:absolute;left:6.5px;top:3px;width:5px;height:10px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg)}
+  #home .hb .wkh b{font-size:17px}
+  .hsum{font-size:13px;margin-bottom:4px}
+  .hm{padding:3px 0}
+  /* 소식은 회사 점, 제목 한 줄, 갈래 */
+  #home .nwz .ar{display:grid;grid-template-columns:auto minmax(0,1fr) auto;grid-template-areas:"co tt gp";column-gap:8px;padding:6px 0;margin:0;align-items:baseline}
+  #home .nwz .ar .dt,#home .nwz .ar .pl,#home .nwz .ar .np{display:none}
+  #home .nwz .ar .co{grid-area:co;font-size:14px;-webkit-text-fill-color:transparent;width:7px;overflow:hidden;gap:0}
+  #home .nwz .ar .co::before{transform:translateY(-0.6px)}
+  #home .nwz .ar .tt{grid-area:tt;grid-column:auto;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:14px}
+  #home .nwz .ar .tt .to{display:none}
+  #home .nwz .ar .gp{grid-area:gp;justify-self:end;font-size:11.5px}
+  .hg{grid-template-columns:minmax(0,1fr);row-gap:26px}
+  .hm{grid-template-columns:minmax(0,1fr) 84px 108px;column-gap:10px}
+  .hm .mh-tool{justify-self:end}
+}
 </style>
 <script>document.documentElement.classList.add('sk-wait')</script>
 </head>
@@ -630,8 +700,8 @@ body{font-variant-numeric:tabular-nums}
 <div class="wrap">
 <div class="pbar">
   <span class="pbrand"><i>&gt;_</i> 오늘 뭐 써볼까</span>
-  <span class="ptabs"><a class="on" data-tab="new" href="#!new"><span class="lb" data-label="새로 나온 것">새로 나온 것</span></a>
-    <a data-tab="use" href="#!use"><span class="lb" data-label="용도별">용도별</span></a>
+  <span class="ptabs"><a data-tab="home" href="#!home"><span class="lb" data-label="홈">홈</span></a>
+    <a class="on" data-tab="new" href="#!new"><span class="lb" data-label="새로 나온 것">새로 나온 것</span></a>
     <a data-tab="models" href="#!models"><span class="lb" data-label="모델">모델</span></a>
     <a data-tab="news" href="#!news"><span class="lb" data-label="소식">소식</span></a></span>
   <span class="ptools">
@@ -650,6 +720,7 @@ body{font-variant-numeric:tabular-nums}
   <span class="pstamp"><!--SYNC--><span class="s-y">2026-</span><span class="s-md">10-03</span><span class="s-t"> 05:37</span><!--/SYNC--></span>
 </div>
 
+<div class="tab" id="home"></div>
 <div class="tab on" id="new">
 <div class="tw t-cc on"><p class="lead"><b>새로 들어온 것 4개</b><span class="todo"></span><span class="opts"><button class="opt on" data-o="check"><i>[x]</i> 체크 칸</button><button class="opt" data-o="todo"><i>[ ]</i> 안 해본 것만</button><button class="opt" data-o="core"><i>[ ]</i> 핵심만</button></span></p><div class="box0"><div class="chead"><span>등급</span><span></span><span>명령어</span><span>무엇이 바뀌나</span><span>좋은 점</span></div>
 <div class="c-day"><span>── 2026-10-01 목 · <a class="vl" href="https://code.claude.com/docs/en/changelog#2-1-287" target="_blank" rel="noopener noreferrer" title="공식 패치노트에서 보기">v2.1.287</a></span><i></i></div><div class="it t3 nw" data-t="Claude Mods — 플러그인으로 깊은 동작 수정" data-k="cc:2.1.287#e0"><div class="row"><span class="sev">핵심</span><button class="box" data-off="[x]">[ ]</button><span class="cmd dash">—</span><span class="tt">Claude Mods — 플러그인으로 깊은 동작 수정</span><span class="ds">Mod가 TypeScript로 Claude Code 내부 동작을 직접 바꿀 수 있음 — 단순 명령 추가를 넘어 핵심 동작 커스터마이징</span></div><div class="det"><p><span class="dk">해보기</span>TypeScript로 간단한 mod를 작성해 <code>/plugin enable</code> 로 불러온다. mod가 명시한 동작이 바뀌면 된 것.</p></div></div><div class="it t2 nw" data-t="You Should Know — 놓친 것 잡아주는 내장 mod" data-k="cc:2.1.287#e1"><div class="row"><span class="sev">추천</span><button class="box" data-off="[x]">[ ]</button><span class="cmd dash">—</span><span class="tt">You Should Know — 놓친 것 잡아주는 내장 mod</span><span class="ds">백그라운드 에이전트가 세션을 지켜보다 놓친 것·오류·개선점을 알림 — 혼자 작업할 때 두 번째 눈</span></div><div class="det"><p><span class="dk">해보기</span><code>/plugin enable cc-plugin-you-should-know@builtin</code> 을 실행하고 코드 작업을 이어간다. 세션 중 알림이 뜨면 된 것.</p><p><span class="dk">알아둘 것</span>텔레메트리가 켜진 1인 세션(퍼스트파티, 개인 구독)에서만 동작함.</p></div></div><div class="it t2 nw" data-t="에이전트 뷰 n: 필터 — 세션명·태스크 검색" data-k="cc:2.1.287#e2"><div class="row"><span class="sev">추천</span><button class="box" data-off="[x]">[ ]</button><span class="cmd dash">—</span><span class="tt">에이전트 뷰 n: 필터 — 세션명·태스크 검색</span><span class="ds">에이전트 뷰에서 n:텍스트로 세션명·태스크를 즉시 검색 — 접힌 섹션도 포함, Enter로 첫 결과 바로 열기</span></div><div class="det"><p><span class="dk">해보기</span>에이전트 뷰를 열고 <code>n:작업명</code> 을 입력한다. 접힌 섹션에서도 매칭 항목이 보이면 된 것.</p></div></div><div class="it t2 nw" data-t="Opus 4.7+·Fable — Bedrock/Vertex 기본 1M 컨텍스트" data-k="cc:2.1.287#e11"><div class="row"><span class="sev">추천</span><button class="box" data-off="[x]">[ ]</button><span class="cmd dash">—</span><span class="tt">Opus 4.7+·Fable — Bedrock/Vertex 기본 1M 컨텍스트</span><span class="ds">Bedrock·Vertex·Foundry·Claude 앱 게이트웨이에서 1M 컨텍스트가 자동 적용 — 수동 플래그 없이도 대용량 작업 가능</span></div><div class="det"><p><span class="dk">해보기</span>Bedrock/Vertex 환경에서 Opus 4.7 이상 모델로 세션을 열고 대용량 파일을 넣어본다. [1m] 수식어 없이도 1M 컨텍스트가 적용되면 된 것.</p><p><span class="dk">알아둘 것</span>되돌리려면 <code>CLAUDE_CODE_DISABLE_1M_CONTEXT=1</code> 환경변수 설정.</p></div></div><div class="c-day"><span>── 2026-09-30 수 · <a class="vl" href="https://code.claude.com/docs/en/changelog#2-1-286" target="_blank" rel="noopener noreferrer" title="공식 패치노트에서 보기">v2.1.286</a></span><i></i></div><div class="it t2" data-t="퍼미션 카운터 — 복수 요청 시 진행 순서 표시" data-k="cc:2.1.286#e0"><div class="row"><span class="sev">추천</span><button class="box" data-off="[x]">[ ]</button><span class="cmd dash">—</span><span class="tt">퍼미션 카운터 — 복수 요청 시 진행 순서 표시</span><span class="ds">요청이 여러 개 쌓이면 '2 of 5' 형식으로 남은 수 확인 — 얼마나 더 남았는지 바로 파악</span></div><div class="det"><p><span class="dk">해보기</span>여러 도구를 연속 실행해 퍼미션 요청이 두 개 이상 뜨도록 한다. 프롬프트에 'N of M' 카운터가 붙어 나오면 된 것.</p></div></div><div class="it t2" data-t="--bare — 지정 MCP만 연결·시스템 프롬프트 없음" data-k="cc:2.1.286#e4"><div class="row"><span class="sev">추천</span><button class="box" data-off="[x]">[ ]</button><span class="cmd">--bare</span><span class="tt">--bare — 지정 MCP만 연결·시스템 프롬프트 없음</span><span class="ds">명령줄에 지정한 MCP 서버만 붙이고 시스템 리마인더·백그라운드 태스크 없이 시작</span></div><div class="det"><p><span class="dk">해보기</span><code>claude --bare --mcp &lt;서버명&gt;</code> 으로 세션을 열고 <code>/mcp</code> 로 그 서버만 연결됐는지 확인한다. 다른 서버가 없으면 된 것.</p><p><span class="dk">알아둘 것</span>기존에 <code>--bare</code> 를 쓰던 스크립트는 동작이 달라질 수 있음.</p></div></div><div class="it t2" data-t="/hooks — 이벤트별 훅 한 목록으로 바로 보기" data-k="cc:2.1.286#e10"><div class="row"><span class="sev">추천</span><button class="box" data-off="[x]">[ ]</button><span class="cmd">/hooks</span><span class="tt">/hooks — 이벤트별 훅 한 목록으로 바로 보기</span><span class="ds">열자마자 이벤트 기준 전체 훅 목록 — 세 번 Enter 대신 한 번에 확인</span></div><div class="det"><p><span class="dk">해보기</span><code>/hooks</code> 를 입력한다. 훅이 이벤트별로 그룹된 목록이 바로 뜨면 된 것.</p></div></div><div class="c-day"><span>── 2026-09-29 화 · <a class="vl" href="https://code.claude.com/docs/en/changelog#2-1-285" target="_blank" rel="noopener noreferrer" title="공식 패치노트에서 보기">v2.1.285</a></span><i></i></div><div class="it t3" data-t="claude --desktop — 데스크탑 앱 현재 디렉터리로 열기" data-k="cc:2.1.285#e1"><div class="row"><span class="sev">핵심</span><button class="box" data-off="[x]">[ ]</button><span class="cmd">claude --desktop</span><span class="tt">claude --desktop — 데스크탑 앱 현재 디렉터리로 열기</span><span class="ds">CLI 에서 데스크탑 앱을 바로 띄움 — <code>--continue</code>·<code>--resume</code> 로 세션도 연결</span></div><div class="det"><p><span class="dk">해보기</span>프로젝트 폴더에서 <code>claude --desktop</code> 을 실행한다. 데스크탑 앱이 그 폴더로 열리면 된 것.</p><p><span class="dk">알아둘 것</span><code>claude --desktop --continue</code> 로 마지막 세션을 데스크탑에서 이어받을 수 있음.</p></div></div><div class="it t2" data-t="claude plugin configure — 플러그인 옵션 확인·설정" data-k="cc:2.1.285#e2"><div class="row"><span class="sev">추천</span><button class="box" data-off="[x]">[ ]</button><span class="cmd">claude plugin configure</span><span class="tt">claude plugin configure — 플러그인 옵션 확인·설정</span><span class="ds">미설정 옵션 목록 즉시 확인 — <code>/plugin</code> 화면 없이도 stdin 으로 값 입력</span></div><div class="det"><p><span class="dk">해보기</span><code>claude plugin configure &lt;플러그인명&gt;</code> 을 실행해 미설정 옵션 목록을 확인한다. 필요한 항목이 표시되면 된 것.</p></div></div><div class="it t2" data-t="백그라운드 Bash·PowerShell — 시간 초과 자동 종료" data-k="cc:2.1.285#e9"><div class="row"><span class="sev">추천</span><button class="box" data-off="[x]">[ ]</button><span class="cmd dash">—</span><span class="tt">백그라운드 Bash·PowerShell — 시간 초과 자동 종료</span><span class="ds">기본 30분, 최대 2시간 — 종료 시 Claude 에게 통보됨</span></div><div class="det"><p><span class="dk">해보기</span>Bash 도구를 <code>run_in_background</code> 로 실행하고 짧은 <code>timeout</code>(예: 60000ms)을 설정한다. 타임아웃 후 Claude 에게 알림이 오면 된 것.</p><p><span class="dk">알아둘 것</span>기본 30분(1,800,000ms), 최대 2시간.</p></div></div><div class="it t1" data-t="커스텀 API 게이트웨이 — Opus 4.7+·Sonnet 5+·Fable 1M 컨텍스트" data-k="cc:2.1.285#e11"><div class="row"><span class="sev">일반</span><button class="box" data-off="[x]">[ ]</button><span class="cmd dash">—</span><span class="tt">커스텀 API 게이트웨이 — Opus 4.7+·Sonnet 5+·Fable 1M 컨텍스트</span><span class="ds"><code>ANTHROPIC_BASE_URL</code> 세션도 해당 모델 1M 컨텍스트 창 활용</span></div><div class="det"><p><span class="dk">해보기</span><code>ANTHROPIC_BASE_URL</code> 을 설정한 세션에서 <code>/status</code> 를 확인한다. 컨텍스트 창이 1M 으로 표시되면 된 것.</p><p><span class="dk">알아둘 것</span>게이트웨이가 200K 로 제한하면 <code>/autocompact 200k</code> 로 조정.</p></div></div><div class="c-day"><span>── 2026-09-28 월 · <a class="vl" href="https://code.claude.com/docs/en/changelog#2-1-284" target="_blank" rel="noopener noreferrer" title="공식 패치노트에서 보기">v2.1.284</a></span><i></i></div><div class="it t3" data-t="Claude Sonnet 5.5 — Anthropic API 기본 Sonnet, 1M 컨텍스트" data-k="cc:2.1.284#e0"><div class="row"><span class="sev">핵심</span><button class="box" data-off="[x]">[ ]</button><span class="cmd">/model</span><span class="tt">Claude Sonnet 5.5 — Anthropic API 기본 Sonnet, 1M 컨텍스트</span><span class="ds">기존 Sonnet보다 컨텍스트 4배·캐시 읽기 대폭 절감</span></div><div class="det"><p><span class="dk">해보기</span><code>/model</code> 에서 <code>claude-sonnet-5-5</code> 를 고르고 대화를 나눈다. 응답이 오면 된 것.</p><p><span class="dk">알아둘 것</span>Anthropic API 기본 Sonnet 모델 — 구독·프로바이더 변경 없이 바로 사용 가능.</p></div></div><div class="it t3" data-t="터미널·VS Code — 설정 없이 Auto mode로 시작" data-k="cc:2.1.284#e9"><div class="row"><span class="sev">핵심</span><button class="box" data-off="[x]">[ ]</button><span class="cmd dash">—</span><span class="tt">터미널·VS Code — 설정 없이 Auto mode로 시작</span><span class="ds">모든 플랜·프로바이더에서 permissions.defaultMode 없으면 auto mode 기본</span></div><div class="det"><p><span class="dk">해보기</span>settings.json 에 <code>permissions.defaultMode</code> 없이 새 세션을 열고 <code>/status</code> 를 친다. Auto mode: on 이 표시되면 된 것.</p><p><span class="dk">알아둘 것</span><code>permissions.defaultMode</code> 설정이 있으면 그것을 따름.</p></div></div><div class="it t3" data-t="Ultracode — /effort 독립 토글, effort 수준과 무관" data-k="cc:2.1.284#e10"><div class="row"><span class="sev">핵심</span><button class="box" data-off="[x]">[ ]</button><span class="cmd">/effort</span><span class="tt">Ultracode — /effort 독립 토글, effort 수준과 무관</span><span class="ds">xhigh 없이도 Ultracode 켜짐 — Tab 또는 /effort ultracode on 으로 토글</span></div><div class="det"><p><span class="dk">해보기</span><code>/effort ultracode on</code> 을 실행하고 effort 슬라이더를 낮춰본다. Ultracode 가 켜진 채 유지되면 된 것.</p></div></div><div class="it t2" data-t="/mcp reconnect all — 실패한 MCP 서버 일괄 재연결" data-k="cc:2.1.284#e5"><div class="row"><span class="sev">추천</span><button class="box" data-off="[x]">[ ]</button><span class="cmd">/mcp reconnect all</span><span class="tt">/mcp reconnect all — 실패한 MCP 서버 일괄 재연결</span><span class="ds">인증 만료·연결 실패한 서버를 하나하나 찾지 않고 한 번에 재시도</span></div><div class="det"><p><span class="dk">해보기</span>MCP 서버가 끊긴 세션에서 <code>/mcp reconnect all</code> 을 입력한다. 실패한 서버가 일괄 재연결 시도하면 된 것.</p></div></div><div class="it t2" data-t="effortSlider 키바인딩 — effort·Ultracode 키 재바인딩" data-k="cc:2.1.284#e3"><div class="row"><span class="sev">추천</span><button class="box" data-off="[x]">[ ]</button><span class="cmd">keybindings.json</span><span class="tt">effortSlider 키바인딩 — effort·Ultracode 키 재바인딩</span><span class="ds">/effort 슬라이더 화살표·Tab·Ultracode 토글을 원하는 키로 교체 가능</span></div><div class="det"><p><span class="dk">해보기</span><code>keybindings.json</code> 에 <code>effortSlider:increaseEffort</code> 액션을 바인딩하고 해당 키를 누른다. 슬라이더가 올라가면 된 것.</p></div></div><div class="it t1" data-t="/rate-limit-options — /help·커맨드 메뉴에 추가" data-k="cc:2.1.284#e4"><div class="row"><span class="sev">일반</span><button class="box" data-off="[x]">[ ]</button><span class="cmd">/rate-limit-options</span><span class="tt">/rate-limit-options — /help·커맨드 메뉴에 추가</span><span class="ds">사용량 한도 알림이 /rate-limit-options 를 안내 — claude.ai 구독자만 표시</span></div><div class="det"><p><span class="dk">해보기</span><code>/help</code> 를 열고 <code>/rate-limit-options</code> 가 목록에 보이면 된 것.</p><p><span class="dk">알아둘 것</span>claude.ai 구독자 전용.</p></div></div><div class="c-day"><span>── 2026-09-25 금 · <a class="vl" href="https://code.claude.com/docs/en/changelog#2-1-283" target="_blank" rel="noopener noreferrer" title="공식 패치노트에서 보기">v2.1.283</a></span><i></i></div><div class="it t2" data-t="/doctor prompt-audit — CLAUDE.md·프롬프트 패턴 감사" data-k="cc:2.1.283#e4"><div class="row"><span class="sev">추천</span><button class="box" data-off="[x]">[ ]</button><span class="cmd">/doctor</span><span class="tt">/doctor prompt-audit — CLAUDE.md·프롬프트 패턴 감사</span><span class="ds">구형 모델용으로 작성한 CLAUDE.md·스킬·에이전트·명령어에서 낡은 패턴을 찾아 손볼 곳을 알려줌</span></div><div class="det"><p><span class="dk">해보기</span><code>/doctor prompt-audit</code> 을 실행한다. CLAUDE.md 에서 낡은 패턴이 보고되면 된 것.</p></div></div><div class="it t1" data-t="deniedModels — 특정 모델 명시 차단" data-k="cc:2.1.283#e2"><div class="row"><span class="sev">일반</span><button class="box" data-off="[x]">[ ]</button><span class="cmd">"deniedModels"</span><span class="tt">deniedModels — 특정 모델 명시 차단</span><span class="ds">availableModels 로 허용해도 이 목록에 있으면 차단 — 신규 모델의 자동 접근 차단에 유용</span></div><div class="det"><p><span class="dk">해보기</span>managed settings 의 <code>deniedModels</code> 에 모델 ID 를 넣고 <code>/model</code> 을 열어 해당 모델이 선택 불가면 된 것.</p><p><span class="dk">알아둘 것</span>조직 managed settings 전용. 일반 settings.json 에는 없음.</p></div></div><div class="c-day"><span>── 2026-09-24 목 · <a class="vl" href="https://code.claude.com/docs/en/changelog#2-1-282" target="_blank" rel="noopener noreferrer" title="공식 패치노트에서 보기">v2.1.282</a></span><i></i></div><div class="it t2" data-t="maxProseWidth — 터미널 산문 폭 제한" data-k="cc:2.1.282#e0"><div class="row"><span class="sev">추천</span><button class="box" data-off="[x]">[ ]</button><span class="cmd">"maxProseWidth"</span><span class="tt">maxProseWidth — 터미널 산문 폭 제한</span><span class="ds">넓은 터미널에서 일반 글만 지정 너비로 끊음 — 표·코드 블록은 전폭 그대로</span></div><div class="det"><p><span class="dk">해보기</span>settings.json 에 <code>"maxProseWidth": 100</code> 을 추가하고 긴 답변을 받는다. 일반 문장은 100자에서 줄 바꿈되고 코드 블록은 더 넓게 유지되면 된 것.</p></div></div><div class="c-day"><span>── 2026-09-23 수 · <a class="vl" href="https://code.claude.com/docs/en/changelog#2-1-281" target="_blank" rel="noopener noreferrer" title="공식 패치노트에서 보기">v2.1.281</a></span><i></i></div><div class="it t2" data-t="/insights — Auto mode 사용 권장 알림" data-k="cc:2.1.281#e7"><div class="row"><span class="sev">추천</span><button class="box" data-off="[x]">[ ]</button><span class="cmd">/insights</span><span class="tt">/insights — Auto mode 사용 권장 알림</span><span class="ds">최근 세션에서 처리 가능했을 권한 프롬프트 수를 추정해 Auto mode 전환을 제안</span></div><div class="det"><p><span class="dk">해보기</span>세션을 조금 써본 뒤 <code>/insights</code> 를 친다. Auto mode 권장 줄과 절약 가능 프롬프트 수가 뜨면 된 것.</p></div></div><div class="it t2" data-t="&quot;attribution&quot;: false — 커밋·PR 귀속 표시 숨기기" data-k="cc:2.1.281#e4"><div class="row"><span class="sev">추천</span><button class="box" data-off="[x]">[ ]</button><span class="cmd">"attribution": false</span><span class="tt">"attribution": false — 커밋·PR 귀속 표시 숨기기</span><span class="ds">settings.json 한 줄로 Co-Authored-By, 🤖 Generated 등 Claude 기여 표시 제거</span></div><div class="det"><p><span class="dk">해보기</span>settings.json 에 <code>"attribution": false</code> 를 추가하고 커밋을 하나 만든다. 커밋 메시지에 Co-Authored-By 줄이 없으면 된 것.</p><p><span class="dk">알아둘 것</span>구버전 CLI는 이 키가 있는 settings.json 전체를 건너뜀. 버전이 섞인 공유 파일이면 객체 형식으로 감쌀 것.</p></div></div><div class="it t2" data-t="claude plugin validate — MCP 서버 설정 검사 강화" data-k="cc:2.1.281#e6"><div class="row"><span class="sev">추천</span><button class="box" data-off="[x]">[ ]</button><span class="cmd">claude plugin validate</span><span class="tt">claude plugin validate — MCP 서버 설정 검사 강화</span><span class="ds">.mcp.json 누락 항목·미선언 변수·안전하지 않은 URL을 한 번에 잡아줌</span></div><div class="det"><p><span class="dk">해보기</span>MCP 서버가 설정된 상태에서 <code>claude plugin validate</code> 를 실행한다. 문제가 있으면 항목별 보고, 없으면 통과 메시지가 나오면 된 것.</p></div></div><div class="it t2" data-t="ctrl+enter — 실행 중 도구를 백그라운드로" data-k="cc:2.1.281#e11"><div class="row"><span class="sev">추천</span><button class="box" data-off="[x]">[ ]</button><span class="cmd">ctrl+enter</span><span class="tt">ctrl+enter — 실행 중 도구를 백그라운드로</span><span class="ds">도구가 돌고 있을 때 ctrl+enter 치면 취소 대신 백그라운드로 옮겨 작업 유지</span></div><div class="det"><p><span class="dk">해보기</span>파일 편집이나 셸 실행 중에 ctrl+enter 로 새 메시지를 보낸다. 도구가 취소되지 않고 백그라운드에서 계속 돌면 된 것.</p></div></div><div class="c-day"><span>── 2026-09-19 금 · <a class="vl" href="https://code.claude.com/docs/en/changelog#2-1-278" target="_blank" rel="noopener noreferrer" title="공식 패치노트에서 보기">v2.1.278</a></span><i></i></div><div class="it t2" data-t="Auto mode — 서버 분류기 기본 전환, 분류기 과금 없음" data-k="cc:2.1.278#e0"><div class="row"><span class="sev">추천</span><button class="box" data-off="[x]">[ ]</button><span class="cmd">CLAUDE_CODE_AUTO_MODE_SERVER</span><span class="tt">Auto mode — 서버 분류기 기본 전환, 분류기 과금 없음</span><span class="ds">API·Enterprise·Bedrock·Vertex·Foundry 모두 서버 분류기가 기본 — 분류기 호출 비용 추가 청구 없음</span></div><div class="det"><p><span class="dk">해보기</span>Auto mode가 켜진 세션에서 <code>/status</code> 를 친다. 'Auto mode server' 행이 표시되면 된 것. Bedrock·Vertex·Foundry·gateway에서 끄려면 <code>CLAUDE_CODE_AUTO_MODE_SERVER=0</code>.</p><p><span class="dk">알아둘 것</span>서버 분류기 대신 billed fallback이 쓰이면 경고가 뜸. API·Enterprise 환경은 opt-out 없음.</p></div></div><div class="it t1" data-t="/status — Auto mode server 행 추가" data-k="cc:2.1.278#e1"><div class="row"><span class="sev">일반</span><button class="box" data-off="[x]">[ ]</button><span class="cmd">/status</span><span class="tt">/status — Auto mode server 행 추가</span><span class="ds">이 세션의 Auto mode 분류기가 서버에서 도는지 한눈에 확인</span></div><div class="det"><p><span class="dk">해보기</span><code>/status</code> 를 친다. 'Auto mode server' 행이 on/off로 보이면 된 것.</p></div></div><div class="c-day"><span>── 2026-09-18 금 · <a class="vl" href="https://code.claude.com/docs/en/changelog#2-1-277" target="_blank" rel="noopener noreferrer" title="공식 패치노트에서 보기">v2.1.277</a></span><i></i></div><div class="it t2" data-t="AGENTS.md — CLAUDE.md 없을 때 자동 대체" data-k="cc:2.1.277#e0"><div class="row"><span class="sev">추천</span><button class="box" data-off="[x]">[ ]</button><span class="cmd">/config</span><span class="tt">AGENTS.md — CLAUDE.md 없을 때 자동 대체</span><span class="ds">CLAUDE.md 없는 프로젝트에서 AGENTS.md 를 읽음 — /config 의 Project instructions 에서 파일 변경 가능</span></div><div class="det"><p><span class="dk">해보기</span>CLAUDE.md 없는 프로젝트에 AGENTS.md 를 만들고 새 세션을 연다. /config 의 Project instructions 에 내용이 반영되면 된 것.</p><p><span class="dk">알아둘 것</span>Bedrock·Vertex·Foundry 에서는 아직 미지원.</p></div></div><div class="it t2" data-t="[VSCode] /tasks — 에이전트 맵에 백그라운드 셸·작업 추가" data-k="cc:2.1.277#e12"><div class="row"><span class="sev">추천</span><button class="box" data-off="[x]">[ ]</button><span class="cmd">/tasks</span><span class="tt">[VSCode] /tasks — 에이전트 맵에 백그라운드 셸·작업 추가</span><span class="ds">에이전트 맵에서 백그라운드 셸과 실행 중 작업을 개별 Stop 버튼과 함께 확인 가능</span></div><div class="det"><p><span class="dk">해보기</span>VSCode 에서 백그라운드 셸이 실행 중일 때 /tasks 를 입력한다. 에이전트 맵에 셸 카드와 Stop 이 보이면 된 것.</p><p><span class="dk">알아둘 것</span>VSCode 확장 전용.</p></div></div><div class="it t2" data-t="[VSCode] /copy — 응답에 Copy 버튼 추가" data-k="cc:2.1.277#e13"><div class="row"><span class="sev">추천</span><button class="box" data-off="[x]">[ ]</button><span class="cmd">/copy</span><span class="tt">[VSCode] /copy — 응답에 Copy 버튼 추가</span><span class="ds">응답마다 Copy 버튼이 생겨 /copy 명령어로도 클립보드에 바로 복사 가능</span></div><div class="det"><p><span class="dk">해보기</span>VSCode 에서 응답을 받고 Copy 버튼을 누른다. 텍스트가 클립보드에 복사되면 된 것.</p><p><span class="dk">알아둘 것</span>VSCode 확장 전용.</p></div></div><div class="it t2" data-t="TaskOutput 도구 제거 — 백그라운드 작업 출력은 Read 로 읽기" data-k="cc:2.1.277#e10"><div class="row"><span class="sev">추천</span><button class="box" data-off="[x]">[ ]</button><span class="cmd dash">—</span><span class="tt">TaskOutput 도구 제거 — 백그라운드 작업 출력은 Read 로 읽기</span><span class="ds">TaskOutput 이 삭제됨 — 기존 코드가 쓰면 에러. taskOutputMaxChars 설정도 이제 무효</span></div><div class="det"><p><span class="dk">해보기</span>백그라운드 작업의 출력 파일 경로를 Read 로 직접 읽어본다. 잘 읽히면 된 것.</p><p><span class="dk">알아둘 것</span>taskOutputMaxChars 와 TASK_MAX_OUTPUT_LENGTH 설정은 더 이상 효과 없음.</p></div></div><div class="it t2" data-t="Fable — /model 에 항상 표시, 비활성 시 회색" data-k="cc:2.1.277#e4"><div class="row"><span class="sev">추천</span><button class="box" data-off="[x]">[ ]</button><span class="cmd">/model</span><span class="tt">Fable — /model 에 항상 표시, 비활성 시 회색</span><span class="ds">조직 설정으로 비활성화해도 /model 에서 사라지지 않고 회색으로 구분됨</span></div><div class="det"><p><span class="dk">해보기</span>/model 을 열어 Fable 이 목록에 있는지 확인한다. 조직에서 비활성화했다면 회색으로 표시되면 된 것.</p></div></div><div class="c-day"><span>── 2026-09-17 목 · <a class="vl" href="https://code.claude.com/docs/en/changelog#2-1-274" target="_blank" rel="noopener noreferrer" title="공식 패치노트에서 보기">v2.1.274</a> · <a class="vl" href="https://code.claude.com/docs/en/changelog#2-1-275" target="_blank" rel="noopener noreferrer" title="공식 패치노트에서 보기">v2.1.275</a></span><i></i></div><div class="it t2" data-t="Ctrl+Enter — 응답 중 대기 메시지 즉시 전송" data-k="cc:2.1.275#e1"><div class="row"><span class="sev">추천</span><button class="box" data-off="[x]">[ ]</button><span class="cmd">Ctrl+Enter</span><span class="tt">Ctrl+Enter — 응답 중 대기 메시지 즉시 전송</span><span class="ds">응답을 기다리지 않고 큐 메시지를 바로 보낼 수 있어 연속 지시가 끊기지 않음</span></div><div class="det"><p><span class="dk">해보기</span>Claude 가 응답하는 중에 메시지를 입력하고 <code>Ctrl+Enter</code> 를 누른다. 전송된 메시지가 회색으로 표시되면 된 것.</p><p><span class="dk">알아둘 것</span><code>Ctrl+X Ctrl+S</code> 로도 같은 기능 사용 가능.</p></div></div><div class="it t2" data-t="claude.ai 스킬·플러그인 터미널 세션에 자동 동기화" data-k="cc:2.1.275#e3"><div class="row"><span class="sev">추천</span><button class="box" data-off="[x]">[ ]</button><span class="cmd dash">—</span><span class="tt">claude.ai 스킬·플러그인 터미널 세션에 자동 동기화</span><span class="ds">claude.ai 계정에서 활성화한 스킬·플러그인이 터미널 세션에 그대로 반영됨</span></div><div class="det"><p><span class="dk">해보기</span>claude.ai 계정으로 로그인한 터미널 세션을 열고 해당 계정에서 활성화한 스킬이나 플러그인이 동작하는지 확인한다.</p><p><span class="dk">알아둘 것</span>끄려면 settings.json 에 <code>syncClaudeAiSkills: false</code> 또는 <code>syncClaudeAiPlugins: false</code> 를 추가.</p></div></div><div class="it t2" data-t="/plugin install --marketplace — 마켓플레이스 지정 설치" data-k="cc:2.1.275#e4"><div class="row"><span class="sev">추천</span><button class="box" data-off="[x]">[ ]</button><span class="cmd">/plugin install</span><span class="tt">/plugin install --marketplace — 마켓플레이스 지정 설치</span><span class="ds">마켓플레이스를 별도 등록하지 않아도 설치 명령 한 번에 소스 추가와 설치가 함께 됨</span></div><div class="det"><p><span class="dk">해보기</span><code>/plugin install &lt;플러그인명&gt; --marketplace &lt;소스&gt;</code> 를 실행해 마켓플레이스 추가 여부를 묻고 플러그인이 설치되면 된 것.</p></div></div><div class="it t2" data-t="[VSCode] Memory 대화상자에서 저장된 메모리 보기·편집·삭제" data-k="cc:2.1.275#e12"><div class="row"><span class="sev">추천</span><button class="box" data-off="[x]">[ ]</button><span class="cmd dash">—</span><span class="tt">[VSCode] Memory 대화상자에서 저장된 메모리 보기·편집·삭제</span><span class="ds">메모리 내용을 UI 에서 직접 수정하거나 불필요한 항목을 삭제할 수 있음</span></div><div class="det"><p><span class="dk">해보기</span>VSCode 에서 Memory 대화상자를 열어 기존 메모리 항목 하나를 편집하거나 삭제한다. 반영되면 된 것.</p><p><span class="dk">알아둘 것</span>VSCode 확장 전용.</p></div></div><div class="it t2" data-t="/code-review 서브에이전트 없이 인라인 리뷰로 변경" data-k="cc:2.1.274#e9"><div class="row"><span class="sev">추천</span><button class="box" data-off="[x]">[ ]</button><span class="cmd">/code-review</span><span class="tt">/code-review 서브에이전트 없이 인라인 리뷰로 변경</span><span class="ds">리뷰 서브에이전트를 띄우지 않아 빠르고 가벼움</span></div><div class="det"><p><span class="dk">해보기</span><code>/code-review</code> 를 실행하고 서브에이전트 없이 인라인으로 리뷰가 완료되면 된 것.</p><p><span class="dk">알아둘 것</span>전용 튜닝 설정이 있는 모델은 기존 방식을 유지.</p></div></div><div class="it t2" data-t="[VSCode] Customize 메뉴에 Memory·Instructions 항목 추가" data-k="cc:2.1.274#e16"><div class="row"><span class="sev">추천</span><button class="box" data-off="[x]">[ ]</button><span class="cmd dash">—</span><span class="tt">[VSCode] Customize 메뉴에 Memory·Instructions 항목 추가</span><span class="ds">메모리 토글·저장된 메모리·CLAUDE.md를 Customize 메뉴 한 곳에서 관리</span></div><div class="det"><p><span class="dk">해보기</span>VSCode 에서 Customize 메뉴를 열어 Memory 와 Instructions 항목이 보이면 된 것.</p><p><span class="dk">알아둘 것</span>VSCode 확장 전용.</p></div></div><div class="it t1" data-t="CLAUDE_CODE_MCP_STARTUP_WAIT_MS — MCP 첫 연결 대기 시간 상한" data-k="cc:2.1.274#e1"><div class="row"><span class="sev">일반</span><button class="box" data-off="[x]">[ ]</button><span class="cmd">CLAUDE_CODE_MCP_STARTUP_WAIT_MS</span><span class="tt">CLAUDE_CODE_MCP_STARTUP_WAIT_MS — MCP 첫 연결 대기 시간 상한</span><span class="ds">느린 MCP 서버 때문에 첫 턴이 오래 걸리는 경우 밀리초 단위로 상한 제한</span></div><div class="det"><p><span class="dk">해보기</span><code>CLAUDE_CODE_MCP_STARTUP_WAIT_MS=1000</code> 설정 후 세션을 시작해 첫 턴이 1초 내에 응답하면 된 것.</p><p><span class="dk">알아둘 것</span><code>0</code> 으로 설정하면 연결을 기다리지 않음.</p></div></div><div class="it t1" data-t="전체화면에서 접힌 teammate·agent 메시지 클릭으로 펼치기" data-k="cc:2.1.274#e7"><div class="row"><span class="sev">일반</span><button class="box" data-off="[x]">[ ]</button><span class="cmd dash">—</span><span class="tt">전체화면에서 접힌 teammate·agent 메시지 클릭으로 펼치기</span><span class="ds">전체화면 모드에서 접힌 메시지를 클릭 한 번으로 내용 확인</span></div><div class="det"><p><span class="dk">해보기</span>전체화면 모드에서 teammate 또는 agent 메시지를 접고 클릭해 펼쳐지면 된 것.</p></div></div><div class="c-day"><span>── 2026-09-15 화 · <a class="vl" href="https://code.claude.com/docs/en/changelog#2-1-273" target="_blank" rel="noopener noreferrer" title="공식 패치노트에서 보기">v2.1.273</a></span><i></i></div><div class="it t2" data-t="MCP 서버 연결 끊김 알림 — 재연결 포기 시 /mcp 안내" data-k="cc:2.1.273#e1"><div class="row"><span class="sev">추천</span><button class="box" data-off="[x]">[ ]</button><span class="cmd">/mcp</span><span class="tt">MCP 서버 연결 끊김 알림 — 재연결 포기 시 /mcp 안내</span><span class="ds">세션 중 서버가 조용히 끊겨도 알림으로 즉시 파악 — /mcp 로 재설정 가능</span></div><div class="det"><p><span class="dk">해보기</span>세션 중에 MCP 서버를 강제 종료한다. 재연결을 포기하면 <code>/mcp</code> 로 연결하라는 알림이 뜨면 된 것.</p></div></div><div class="it t2" data-t="Remote Control 세션 포크 — Claude 앱에서 로컬 백그라운드 세션으로 분기" data-k="cc:2.1.273#e2"><div class="row"><span class="sev">추천</span><button class="box" data-off="[x]">[ ]</button><span class="cmd">/remote-control</span><span class="tt">Remote Control 세션 포크 — Claude 앱에서 로컬 백그라운드 세션으로 분기</span><span class="ds">원격 세션을 닫지 않고 포크해 내 컴퓨터의 백그라운드 세션으로 이어받음</span></div><div class="det"><p><span class="dk">해보기</span><code>claude --remote-control</code> 로 세션을 열고 Claude 앱에서 Fork 를 누른다. 로컬 백그라운드 세션으로 분기되면 된 것.</p><p><span class="dk">알아둘 것</span><code>claude --remote-control</code> 또는 <code>/remote-control</code> 로 시작한 세션에서만 가능.</p></div></div><div class="it t1" data-t="CLAUDE_CODE_GATEWAY_HINT_HEADERS=1 — LLM 게이트웨이에 요청 분류 헤더 추가" data-k="cc:2.1.273#e0"><div class="row"><span class="sev">일반</span><button class="box" data-off="[x]">[ ]</button><span class="cmd">CLAUDE_CODE_GATEWAY_HINT_HEADERS</span><span class="tt">CLAUDE_CODE_GATEWAY_HINT_HEADERS=1 — LLM 게이트웨이에 요청 분류 헤더 추가</span><span class="ds">게이트웨이가 요청 종류·에이전트 유형·컴팩션 상태를 알 수 있어 라우팅·모니터링 정밀화</span></div><div class="det"><p><span class="dk">해보기</span><code>CLAUDE_CODE_GATEWAY_HINT_HEADERS=1</code> 을 설정하고 게이트웨이 로그를 확인한다. <code>x-claude-code-request-class</code> 헤더가 찍히면 된 것.</p><p><span class="dk">알아둘 것</span>LLM 게이트웨이를 쓰는 환경에만 유효. 기본값 off.</p></div></div><div class="c-day"><span>── 2026-09-11 금 · <a class="vl" href="https://code.claude.com/docs/en/changelog#2-1-269" target="_blank" rel="noopener noreferrer" title="공식 패치노트에서 보기">v2.1.269</a></span><i></i></div><div class="it t3" data-t="[VSCode] 에이전트 맵 — 서브에이전트 현황 한눈에" data-k="cc:2.1.269#e11"><div class="row"><span class="sev">핵심</span><button class="box" data-off="[x]">[ ]</button><span class="cmd dash">—</span><span class="tt">[VSCode] 에이전트 맵 — 서브에이전트 현황 한눈에</span><span class="ds">N agents 필 클릭 → 에이전트별 카드·중지·트랜스크립트</span></div><div class="det"><p><span class="dk">해보기</span>서브에이전트를 쓰는 세션에서 VSCode 푸터의 "N agents" 필을 클릭한다. 에이전트 카드 목록이 뜨면 된 것.</p><p><span class="dk">알아둘 것</span>VSCode 확장 전용.</p></div></div><div class="it t2" data-t="/output-style — 출력 스타일 목록·전환" data-k="cc:2.1.269#e1"><div class="row"><span class="sev">추천</span><button class="box" data-off="[x]">[ ]</button><span class="cmd">/output-style</span><span class="tt">/output-style — 출력 스타일 목록·전환</span><span class="ds">Remote Control·클라우드·헤드리스 세션에서도 작동</span></div><div class="det"><p><span class="dk">해보기</span><code>/output-style</code> 을 실행해 목록을 확인하고 스타일 이름을 골라 전환해본다. 화면이 바뀌면 된 것.</p></div></div><div class="it t2" data-t="bashEditDiffEnabled — Bash 편집 결과에 diff 표시" data-k="cc:2.1.269#e2"><div class="row"><span class="sev">추천</span><button class="box" data-off="[x]">[ ]</button><span class="cmd">bashEditDiffEnabled</span><span class="tt">bashEditDiffEnabled — Bash 편집 결과에 diff 표시</span><span class="ds">Bash 도구가 파일을 수정하면 무엇이 달라졌는지 즉시 확인</span></div><div class="det"><p><span class="dk">해보기</span><code>settings.json</code> 에 <code>"bashEditDiffEnabled": true</code> 를 추가하고 Bash 도구로 파일을 수정하는 작업을 시킨다. 결과창에 diff가 나오면 된 것.</p></div></div><div class="it t2" data-t="[VSCode] Hooks 다이얼로그 — GUI로 훅 관리" data-k="cc:2.1.269#e12"><div class="row"><span class="sev">추천</span><button class="box" data-off="[x]">[ ]</button><span class="cmd dash">—</span><span class="tt">[VSCode] Hooks 다이얼로그 — GUI로 훅 관리</span><span class="ds">명령 메뉴에서 사용자·프로젝트·로컬 훅 추가·편집·삭제</span></div><div class="det"><p><span class="dk">해보기</span>VSCode 명령 팔레트에서 "Claude: Hooks" 를 열고 훅을 하나 추가한다. 설정 파일에 반영되면 된 것.</p><p><span class="dk">알아둘 것</span>managed·플러그인·세션 훅은 읽기 전용.</p></div></div>
@@ -22309,7 +22380,7 @@ $$('.it, .ci').forEach(function (el) {
 
 /* ── 탭 · 도구 ── */
 function goTab(id) {
-  $$('.ptabs a').forEach(function (a) { a.classList.toggle('on', a.dataset.tab === id); });
+  $$('.ptabs a').forEach(function (a) { a.classList.toggle('on', a.dataset.tab === (id === 'use' ? 'new' : id)); });
   $$('.tab').forEach(function (t) { t.classList.toggle('on', t.id === id); });
   document.documentElement.dataset.tab = id;
   location.hash = '!' + id;
@@ -22319,6 +22390,7 @@ function goTab(id) {
 $$('.ptabs a').forEach(function (a) {
   a.addEventListener('click', function (e) { e.preventDefault(); goTab(a.dataset.tab); });
 });
+if (location.hash === '#!new') goTab('new');
 if (location.hash === '#!use') goTab('use');
 if (location.hash === '#!models') goTab('models');
 if (location.hash === '#!news' && window.__sdOwner) goTab('news');
@@ -22346,7 +22418,7 @@ $$('.ptools a').forEach(function (b) {
 });
 
 /* ── 체크 칸 감추기 — 표시만 끄고 상태는 남는다 ── */
-document.documentElement.dataset.check = 'on';
+document.documentElement.dataset.check = 'off';
 $$('.opt[data-o="check"]').forEach(function (b) {
   b.addEventListener('click', function () {
     var on = document.documentElement.dataset.check === 'off';
@@ -22768,7 +22840,7 @@ function skin() {
 
   // 그 밖에: 도구별 단. 3주 안은 한 줄씩, 그보다 오래된 건 주마다 한 줄
   var nw = document.getElementById('new'), cols = document.createElement('div'); cols.className = 'cols3';
-  var rh = document.createElement('p'); rh.className = 'rh'; rh.innerHTML = '그 밖에 새로 나온 것<em>지난 3주 · 올리거나 누르면 해보기와 프롬프트 복사가 떠요</em>';
+  var rh = document.createElement('p'); rh.className = 'rh'; rh.innerHTML = '새로 나온 것<em>지난 3주 · 올리거나 누르면 해보기와 프롬프트 복사가 떠요</em><span class="vt"><a class="on">날짜순</a><a data-go="use" href="#!use">용도별</a></span>';
   nw.insertBefore(sec, tws[0]); nw.insertBefore(rh, tws[0]); nw.insertBefore(cols, tws[0]);
   tws.forEach(function (w) { cols.appendChild(w) });
   tws.forEach(function (w) {
@@ -22776,7 +22848,7 @@ function skin() {
     var weeks = {}, order = [];
     Q('.c-day', box).forEach(function (d) {
       var dd = day(d.textContent), rows = []; d._dd = dd; d._rows = rows;
-      for (var el = d.nextElementSibling; el && !el.matches('.c-day'); el = el.nextElementSibling) if (el.classList.contains('it') && !el.classList.contains('picked')) rows.push(el);
+      for (var el = d.nextElementSibling; el && !el.matches('.c-day'); el = el.nextElementSibling) if (el.classList.contains('it')) rows.push(el);
       if (!rows.length) { d.style.display = 'none'; return }
       d.innerHTML = d.innerHTML.replace(/──\s*/, '').replace(/(\d{4})-(\d\d)-(\d\d) (.)/, function (_, y, mo, da, wd) { return (+mo) + '/' + da + ' ' + wd });
       if (dd && dd < cut) {
@@ -22812,8 +22884,8 @@ function skin() {
     KEYS.forEach(function (k) {
       var w = byKey[k], box = w && w.querySelector('.box0'); if (!box) return;
       Q('.c-day', box).forEach(function (d) {
-        if (!d._dd || d._dd < cut || !d._rows.some(function (x) { return !x.classList.contains('picked') })) return;
-        var t = +d._dd; (dates[t] = dates[t] || {})[k] = { v: Q('a', d).map(function (a) { return a.outerHTML }).join(' · '), rows: d._rows.filter(function (x) { return !x.classList.contains('picked') }) };
+        if (!d._dd || d._dd < cut || !d._rows.length) return;
+        var t = +d._dd; (dates[t] = dates[t] || {})[k] = { v: Q('a', d).map(function (a) { return a.outerHTML }).join(' · '), rows: d._rows };
       });
       (w._old || []).forEach(function (p) { (wks[p._k] = wks[p._k] || {})[k] = p });
     });
@@ -22896,6 +22968,63 @@ finally { document.documentElement.classList.remove('sk-wait') }
   (document.fonts ? document.fonts.ready : Promise.resolve()).then(fit);
   addEventListener('resize', fit);
 })();
+
+/* ── 홈 — skin 이 만든 이번 주 써 볼 것을 옮기고, 모델 현황과 소식에서 핵심만 읽어 붙인다 ── */
+function home() {
+  var H = document.getElementById('home'); if (!H) return;
+  var Q = function (q, r) { return [].slice.call((r || document).querySelectorAll(q)) };
+  var wk = document.querySelector('#new section.wk');
+  if (wk) {
+    wk.querySelector('.wkh').insertAdjacentHTML('beforeend', '<a class="hmore" data-go="new" href="#!new">새로 나온 것 전체 →</a>'); H.appendChild(wk);
+    Q('.wki .wkd', wk).forEach(function (d) {
+      [].slice.call(d.childNodes).forEach(function (n) { if (n.nodeType === 3 && n.textContent.trim()) { var sp = document.createElement('span'); sp.className = 'wdt'; sp.textContent = n.textContent.trim(); d.replaceChild(sp, n) } });
+    });
+    var phone = matchMedia('(max-width:760px)');
+    Q('.wki', wk).forEach(function (r) {
+      r.addEventListener('click', function (e) {
+        if (!phone.matches || e.target.closest('button, a, .cp, code')) return;
+        var was = r.classList.contains('open');
+        Q('.wki.open', wk).forEach(function (x) { x.classList.remove('open') });
+        if (!was) r.classList.add('open');
+      });
+    });
+  }
+  var g = document.createElement('div'); g.className = 'hg'; H.appendChild(g);
+  var mh = document.querySelector('#models .mh');
+  if (mh) {
+    var rows = Q('.mh-ln', mh).filter(function (r) { return r.querySelector('.mh-nm.new') }).slice(0, 7);
+    var h = '<section class="hb"><h2 class="wkh"><b>모델</b><em>지난 2주에 나온 ' + rows.length + '개</em><a class="hmore" data-go="models" href="#!models">모델 현황 →</a></h2>' +
+      '<p class="hsum">' + mh.querySelector('.mh-sum').innerHTML + '</p>';
+    rows.forEach(function (r) {
+      var nm = r.querySelector('.mh-nm'), t = r.querySelector('.mh-tool');
+      h += '<div class="hm"><span class="hm-nm"><i style="background:' + nm.style.getPropertyValue('--c') + '"></i>' + nm.textContent + '</span>' +
+        '<span class="hm-d">' + r.querySelector('.mh-d').textContent + '</span>' + (t ? t.outerHTML : '<span></span>') + '</div>';
+    });
+    g.insertAdjacentHTML('beforeend', h + '</section>');
+  }
+  if (window.__sdOwner) {
+    var cd = document.querySelector('#news .c-day'), ars = [];
+    for (var el = cd && cd.nextElementSibling; el && !el.classList.contains('c-day'); el = el.nextElementSibling) if (el.classList.contains('ar')) ars.push(el);
+    var PR = ['g-try', 'g-event', 'g-know', 'g-buzz'];
+    var pr = function (a) { for (var i = 0; i < PR.length; i++) if (a.classList.contains(PR[i])) return i; return 9 };
+    var pts = function (a) { var b = a.querySelector('.np b'); return b ? +b.textContent : 0 };
+    var top = ars.slice().sort(function (a, b) { return pr(a) - pr(b) || pts(b) - pts(a) }).slice(0, 5);
+    var sec = document.createElement('section'); sec.className = 'hb nwz';
+    sec.innerHTML = '<h2 class="wkh"><b>소식</b><em>' + cd.querySelector('span').textContent.replace(/──\s*/, '') + ' · ' + ars.length + '개 중 ' + top.length + '개</em>' +
+      '<a class="hmore" data-go="news" href="#!news">소식 전체 →</a></h2>';
+    top.forEach(function (a) { sec.appendChild(a.cloneNode(true)) });
+    g.appendChild(sec);
+  }
+  // 용도별 탭 위에도 같은 전환
+  var use = document.getElementById('use');
+  if (use) use.insertAdjacentHTML('afterbegin', '<p class="vt"><a data-go="new" href="#!new">날짜순</a><a class="on">용도별</a></p>');
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[data-go]'); if (!a) return;
+    e.preventDefault(); goTab(a.dataset.go);
+  });
+  if (!location.hash || location.hash === '#!home') goTab('home');
+}
+try { home() } catch (e) { console.error(e) }
 </script>
 </body>
 </html>
