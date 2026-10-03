@@ -1,6 +1,32 @@
 {
  "items": [
   {
+   "key": "claude.dev/blog/getting-the-most-out-of-opus-5-5",
+   "of": null,
+   "title": "Getting the most out of Opus 5.5 in Claude and Claude Code",
+   "group": "try",
+   "line": "Opus 5.5 활용 가이드 — Claude Code 사용법",
+   "short": "Opus 5.5 가이드",
+   "note": "CLAUDE.md 에 멈출 때 규칙을 넣어 봐요",
+   "w": 2,
+   "event": "",
+   "url": "https://claude.dev/blog/getting-the-most-out-of-opus-5-5/",
+   "co": "Anthropic",
+   "date": "2026-10-04",
+   "pts": 142,
+   "hn": "49946567",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "Anthropic이 Claude와 Claude Code에서 Opus 5.5를 잘 쓰는 법을 정리했어요.",
+    "끝낼 기준을 말하고 맡기기, think carefully 문구 지우기, 서브에이전트로 나누기를 권해요.",
+    "멈출 때와 계속 갈 때의 규칙을 CLAUDE.md에 적고, 작업 목록은 TASKS.md 같은 파일에 두라고 해요."
+   ],
+   "thread": "",
+   "all": []
+  },
+  {
    "key": "openai.com/index/practical-guide-building-gpt-6",
    "of": null,
    "title": "A model guide for the GPT-6 family",
@@ -866,6 +892,32 @@
     "어떤 실험을 왜 하는지, 사고 뒤 안전 절차가 왜 안 멈췄는지 밝히라고 요구해요.",
     "OpenAI와 Anthropic의 종말론적 신념이 의사결정에 영향을 줬는지도 조사 대상으로 꼽아요."
    ]
+  },
+  {
+   "key": "brunch.co.kr/brunchbook/ai-at-work",
+   "of": null,
+   "title": "개발 못 하는 영업 직장인이 옵시디언에 클로드 코드를 붙여 일한 기록",
+   "group": "buzz",
+   "line": "옵시디언에 Claude Code 붙여 일한 기록",
+   "short": "옵시디언 Claude Code",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://brunch.co.kr/brunchbook/ai-at-work",
+   "co": "기타",
+   "date": "2026-09-29",
+   "pts": 0,
+   "hn": null,
+   "gn": "34711",
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "개발을 못 하는 영업 직장인이 AI를 일에 붙인 과정을 브런치북으로 연재해요.",
+    "지시문 한 장, 폴더 나누기, 틀 만들기, 말투 맞추기 같은 주제를 9편에 담았어요.",
+    "10화는 2026년 10월 4일에 발행될 예정이에요."
+   ],
+   "thread": "",
+   "all": []
   },
   {
    "key": "anthropic.com/claude-sonnet-5-5",
@@ -3668,5 +3720,5 @@
    "all": []
   }
  ],
- "judged_at": 1791047456
+ "judged_at": 1791071155
 }
