@@ -7,6 +7,8 @@
   - 공식 도메인 글은 HN 100점 이상, 또는 공식 피드의 제품 글
   - 세 회사 밖 AI 글(Jev, DeepSeek, Mistral, Meta …)은 HN 500점 이상
   - 긱뉴스에만 있는 AI 글은 20점 이상
+  - 음성, 음악, 영상 회사(ElevenLabs, Suno, Runway)는 HN 점수가 안 나와 공식 블로그 글을 다 받는다.
+    글 안 링크를 붙여 두면 판단이 그중 샘플 페이지를 demo 로 고른다
 묶음 글(행사 정리 등)은 본문을 r.jina.ai 로 받아 둔다 — openai.com 은 봇을 막는다."""
 import re, json, os, time, subprocess, datetime, urllib.parse, html
 from email.utils import parsedate_to_datetime
@@ -124,6 +126,39 @@ for m in re.finditer(r'href="(/news/[a-z0-9-]+)".{0,1500}?([A-Z][a-z]{2} \d{1,2}
     if norm(url) in cand or norm(url) in judged: continue
     t = re.search(r'og:title" content="([^"]*)"', fetch(url))
     add(norm(url), url=url, title=html.unescape(t.group(1)) if t else m.group(1).split('/')[-1], co='Anthropic', official=True, date=kst(ts), src='news')
+
+# ── 음성, 음악, 영상 회사: 목록에서 최근 글만 골라 글 페이지에서 제목, 날짜, 글 안 링크를 받는다 ──
+MEDIA = [('ElevenLabs', 'https://elevenlabs.io', '/blog', r'/blog/(?!category/|authors/)[a-z0-9-]+'),
+         ('Suno', 'https://suno.com', '/blog', r'/blog/[a-z0-9-]+'),
+         ('Runway', 'https://runwayml.com', '/news', r'/(?:news/)?research/[a-z0-9.-]+')]
+DATE = r'(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\.? \d{1,2},? 20\d\d'
+def day(s):
+    s = s.replace('.', '').replace(',', '')
+    for f in ('%b %d %Y', '%B %d %Y'):
+        try: return datetime.datetime.strptime(s, f).replace(tzinfo=KST).timestamp()
+        except ValueError: pass
+    return None
+for co, host, path, pat in MEDIA:
+    x = fetch(host + path)
+    for p in list(dict.fromkeys(re.findall(r'href="(' + pat + r')"', x)))[:12]:
+        url = host + p
+        if norm(url) in cand or norm(url) in judged: continue
+        d = re.search(DATE, x[x.index('"' + p + '"'):][:2500])  # 목록의 날짜는 거르기만 — 짝이 밀릴 수 있어 글 페이지 날짜를 쓴다
+        if d and (day(d.group(0)) or NOW) < T0 - 7 * 86400: continue
+        y = fetch(url)
+        t = re.search(r'og:title" content="([^"]*)"', y); pd = re.search(r'(?:article:published_time" content="|"datePublished":")(\d{4}-\d\d-\d\d)', y)
+        if not (t and pd) or pd.group(1) < kst(T0): continue
+        a = re.search(r'<article.*?</article>', y, re.S)
+        links = []
+        for m in re.finditer(r'<a [^>]*href="([^"#]+)"[^>]*>(.*?)</a>', a.group(0) if a else y, re.S):
+            lu, lt = m.group(1), html.unescape(re.sub(r'<[^>]+>', '', m.group(2))).strip()
+            if lu.startswith('/'): lu = host + lu
+            if lt and lu.startswith('http') and not re.search(r'sign-?up|login|/authors/|/category/|twitter|x\.com|linkedin', lu) and [lu, lt] not in links:
+                links.append([lu, lt[:60]])
+        dd = re.search(r'og:description" content="([^"]*)"', y)
+        add(norm(url), url=url, title=html.unescape(re.sub(r'^Runway (?:News|Research) \| ', '', t.group(1))), co=co, official=True, date=pd.group(1), src='blog',
+            desc=html.unescape(dd.group(1))[:300] if dd else '', links=links[:30],
+            media=len(set(re.findall(r'[\w./:%-]+\.(?:mp4|webm|mov|mp3|wav|m4a)\b', y))))  # 글에 박힌 영상과 소리 수
 
 # ── 긱뉴스: 한국어 제목과 요약을 붙이고, 긱뉴스에만 있는 글도 줍는다 ──
 R = (r"<a href='([^']+)' rel='nofollow' id='tr\d+' class='topic-title-link'><h2 class='topic-title-heading'>(.*?)</h2>"
