@@ -2,8 +2,8 @@
 
 ## 읽을 것
 
-- `news_new.json` — 이번에 새로 문턱을 넘은 후보. 항목마다 `key, title, url, co, official, pts(HN 점수), date, desc, gn(긱뉴스 한국어 제목과 요약), bundle, body, links(글 안 링크 `[주소, 글자]`), media(글에 박힌 영상과 소리 파일 수) — 이 둘은 ElevenLabs 글에만`.
-- `news.json` — 이미 가른 것(`items`). 겹치는 소식을 찾는 데만 쓴다. 고치지 않는다.
+- `news_new.json` — 이번에 새로 문턱을 넘은 후보. 항목마다 `key, title, url, co, official, pts(HN 점수), date, desc, gn(긱뉴스 한국어 제목과 요약), bundle, body(원문 본문, 묶음 글은 6만 자, 나머지는 1만 2천 자까지), links(글 안 링크 `[주소, 글자]`), media(글에 박힌 영상과 소리 파일 수) — 이 둘은 ElevenLabs 와 claude.dev 글에만`.
+- `news.json` — 이미 가른 것(`items`). 겹치는 소식을 찾고, 이미 있는 줄기 이름(`thread`, 묶음 글은 `all` 안에도)을 읽는 데만 쓴다. 고치지 않는다.
 
 ## 주인
 
@@ -14,6 +14,8 @@
 | Google AI Pro (월 20달러) | Gemini 앱, Antigravity CLI | 자잘한 질문, 한 파일 수정, 번역 |
 
 개인 사이트와 도구(정적 사이트, Python 스크립트, Android 앱)를 Claude Code 로 만든다. API 는 거의 안 쓰고 구독으로 쓴다. 기기는 맥(macOS)과 갤럭시(Android) 폰이다.
+
+주인은 **AI 업계 흐름 중 중요한 줄기**를 따라간다 — 의사결정 모델(Jev, Decisions API, Clef), 오픈 웨이트 경쟁(DeepSeek, Qwen, GLM, Kimi), 음성 모델 경쟁, 늘 켜 두는 에이전트, 에이전트 보안 사고처럼 여러 회사가 같은 방향으로 움직이는 것. 자기 도구에 당장 안 닿아도 이런 줄기의 새 발표는 알아 두려 한다. Claude Code 를 잘 쓰는 법(effort, 스킬, 하네스)을 다룬 Anthropic 엔지니어 글도 챙겨 읽는다.
 
 ## 가르는 기준
 
@@ -28,6 +30,8 @@
 - 겹침: 같은 발표가 다른 주소로 또 오면(`news.json` 이나 이번 후보 안에서) 하나만 남기고 나머지는 `skip`. **같은 발표는 같은 제품의 같은 출시다.** 이름이 비슷해도 버전이나 제품이 다르면 다른 발표다(GPT-6 Sol 과 GPT-6.1 Sol 은 다르다).
 - 세 회사의 새 모델, 새 제품, 요금제 변경은 `skip` 하지 않는다. 주인이 못 쓰면 `know` 다.
 - 세 회사 밖(`co: "기타"`) 글도 같은 잣대다. 다른 회사의 새 모델이나 제품이 세 회사 발표와 맞물리거나(예: Jev 와 OpenAI Decisions API) 주인 도구에 닿으면 `know`. 그 밖엔 **AI 모델, 에이전트, 개발 도구, AI 업계 흐름을 다룬 글만** `buzz` 이고, 주식이나 보상 분쟁, 개인 사건, 군사와 정치 기사는 점수가 높아도 `skip`. 개발 도구, GPU 와 하드웨어 프로그래밍(예: Nvidia 의 Rust GPU 프로그래밍), 새 모델 공개는 `buzz` 다 — 버림은 화면에 아예 안 보인다. note 에 무엇과 맞물리는지 쓴다.
+- **줄기에 드는 발표는 점수가 낮아도 `know`** 다. 세 회사 밖 새 모델이나 제품이 위의 줄기(또는 `news.json` 의 줄기)를 잇거나 새로 여는 것이면 `buzz` 대신 `know` 로 하고, note 에 무엇을 잇는지 쓴다(예: 「Jev 2주 뒤 같은 방식이에요」).
+- claude.dev 블로그 글(`url` 이 `claude.dev/blog/`)은 Anthropic 엔지니어가 쓴 Claude Code 사용 글이다. 주인이 Claude Code 에서 바로 따라 할 수 있으면 `try`, 그 밖은 `know`. 채용, 행사 공지는 `skip`.
 - ElevenLabs(`co: "ElevenLabs"`)는 공식 블로그 글이 다 온다. 새 모델이나 새 제품만 `know`(주인 구독 밖이라 `try` 는 없다), 임원 영입, 투자와 기업 가치, 제휴, 사용 팁, 이벤트는 `skip`.
 - 몇 줄을 보일지는 화면이 자른다(무게 순). 개수를 맞추려고 `skip` 하지 않는다.
 
@@ -48,6 +52,16 @@
   - 나쁜 예: 「Claude Code 기본 모델이에요」, 「속도 차이가 바로 느껴져요」, 「Google AI Pro 에서 바로 써 볼 수 있어요」 — 원문에 없으면 지어낸 말이다.
 - `demo` — 음성, 음악, 영상, 이미지 모델 발표에만. 샘플을 듣거나 볼 수 있는 페이지 주소를 `links` 나 `body` 에서 고른다(예: Eleven v4 글의 「Discover Eleven v4」 → `https://elevenlabs.io/v4`). 그런 링크가 없고 `media` 가 3 이상이면 글 주소 자체를 쓴다(글에 샘플이 박혀 있다). 둘 다 아니면 비운다 — 지어내지 않는다. `demo_as` 는 소리면 `듣기`, 영상이나 이미지면 `보기`.
 - `w` — 무게 1~3. 3 은 새 모델이나 새 제품, 2 는 기능, 1 은 그 밖.
+- `s` — 3줄 요약. `try`, `know`, `buzz` 만(`skip`, `event`, 묶음 하위 항목은 비운다). 소식 줄을 누르면 펼쳐져, 주인이 원문을 열기 전에 읽는다.
+  - 3줄, 해요체. 한 줄에 25~55자, 한 줄에 사실 하나.
+  - 1줄 무엇인지(누가 무엇을 냈나, 무슨 글인가), 2줄 핵심 내용이나 숫자, 3줄 조건, 한계, 가격, 언제부터 같은 실용 정보.
+  - **`body` 에 글자로 적힌 사실만 쓴다.** `body` 가 없으면 `desc`, `gn.desc` 로 쓰고, 그것도 없으면 `[]`. 평가와 수사(「놀랍게도」, 「~뿐만 아니라」)는 쓰지 않는다. 가운뎃점(·)도 쓰지 않는다.
+  - 고유명사, 모델과 제품 이름, 업계에서 영어로 쓰는 용어(effort, benchmark 이름, agent)는 원문 그대로.
+- `thread` — 줄기 이름. 위 「주인」의 AI 업계 흐름에 드는 글만 단다. 비어 있어도 된다(대부분 비어 있다).
+  - `news.json` 에 이미 있는 줄기면 **그 이름을 글자 그대로** 쓴다(「의사결정 모델」, 「오픈 웨이트 경쟁」, 「음성 모델 경쟁」, 「늘 켜 두는 에이전트」, 「에이전트 보안 사고」, 「AI 연구소 감시」, 「AI 와 개발자의 일」).
+  - 새 줄기는 같은 흐름의 글이 `news.json` 과 이번 후보를 합쳐 둘 이상일 때만 연다. 이름은 12자 안팎의 명사구, 그 분야에서 쓰는 말로. 은유로 지어내지 않는다.
+  - 한 제품의 버전업(GPT-6 Sol 다음 GPT-6.1 Sol)은 줄기가 아니다 — 모델 출시는 「모델」 탭이 따로 그린다.
+  - 묶음 글의 `all` 항목에도 단다(예: DevDay 의 Decisions API 는 「의사결정 모델」). 화면은 같은 줄기의 글을 날짜순으로 이어 보여 준다.
 
 ## 쓸 것
 
@@ -55,8 +69,9 @@
 
 ```json
 [
-  {"key": "openai.com/index/introducing-dots", "group": "know", "line": "dots — 늘 켜 두는 에이전트", "short": "dots", "note": "Pro, Business Premium 전용이라 Plus 는 아직이에요", "w": 3, "event": "OpenAI DevDay"},
-  {"key": "openai.com/index/devday-2026-recap", "group": "event", "line": "OpenAI DevDay — 발표 25개", "short": "DevDay", "note": "", "w": 3, "all": [{"cat": "모델", "name": "GPT-6.1 Sol", "line": "Astra 에 가까운 성능을 5분의 1 가격에", "url": "https://openai.com/index/gpt-6-1-sol/"}, {"cat": "API", "name": "Decisions API", "line": "문장 대신 판단과 확률을 돌려주는 API", "url": "https://openai.com/index/devday-2026-recap/"}]},
+  {"key": "openai.com/index/introducing-dots", "group": "know", "line": "dots — 늘 켜 두는 에이전트", "short": "dots", "note": "Pro, Business Premium 전용이라 Plus 는 아직이에요", "w": 3, "event": "OpenAI DevDay", "thread": "늘 켜 두는 에이전트",
+   "s": ["OpenAI가 항상 켜져 있는 에이전트 dots를 선보였어요.", "GPT-6 Astra가 구동하고, 자기 클라우드 컴퓨터와 4,000개 넘는 앱 연동을 가져요.", "Pro, Business Premium, 일부 지역 Enterprise에 오늘부터 순차 공개돼요."]},
+  {"key": "openai.com/index/devday-2026-recap", "group": "event", "line": "OpenAI DevDay — 발표 25개", "short": "DevDay", "note": "", "w": 3, "all": [{"cat": "모델", "name": "GPT-6.1 Sol", "line": "Astra 에 가까운 성능을 5분의 1 가격에", "url": "https://openai.com/index/gpt-6-1-sol/"}, {"cat": "API", "name": "Decisions API", "line": "문장 대신 판단과 확률을 돌려주는 API", "url": "https://openai.com/index/devday-2026-recap/", "thread": "의사결정 모델"}]},
   {"key": "openai.com/index/devday-2026-recap#1", "of": "openai.com/index/devday-2026-recap", "group": "try", "line": "Codex 어디서나 — 폰과 클라우드에서 Codex 돌리기", "short": "Codex 어디서나", "note": "Plus 에도 열렸어요", "w": 2, "url": "https://learn.chatgpt.com/docs/cloud"},
   {"key": "elevenlabs.io/blog/eleven-v4", "group": "know", "line": "Eleven v4 — 감정 표현이 풍부해진 음성 모델", "short": "Eleven v4", "note": "…", "w": 3, "demo": "https://elevenlabs.io/v4", "demo_as": "듣기"}
 ]

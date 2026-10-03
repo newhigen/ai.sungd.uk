@@ -37,6 +37,8 @@ for j in judged if isinstance(judged, list) else []:
         url=(j.get('url') or base['url']) if sub else base['url'], co=base['co'], date=base['date'],
         pts=0 if sub else base['pts'], hn=None if sub else base.get('hn'), gn=(base.get('gn') or {}).get('tid') if not sub else None,
         demo=j.get('demo') if str(j.get('demo') or '').startswith('http') else None, demo_as='보기' if j.get('demo_as') == '보기' else '듣기',
+        s=[str(t).strip() for t in (j.get('s') or []) if str(t).strip()][:3] if j['group'] in ('try', 'know', 'buzz') else [],
+        thread=str(j.get('thread') or '').strip()[:20],
         all=[x for x in (j.get('all') or []) if isinstance(x, dict) and x.get('name')] if j['group'] == 'event' else [])
     added += 1
 cut = (TODAY - datetime.timedelta(days=KEEP_DAYS)).isoformat()
@@ -64,13 +66,33 @@ def bar(i):  # HN 점수 막대 — 100점에서 2300점까지 로그 눈금, 50
     w = round(min(1, math.log(max(p, 100) / 100, 2) / math.log(23, 2)) * 44) or 2
     b = f'<span class="np{" big" if p >= 500 else ""}"><i style="width:{w}px"></i><b>{p}</b></span>'
     return link(f'https://news.ycombinator.com/item?id={i["hn"]}', b, ' class="pl"') if i.get('hn') else b
+CV = ('<span class="cv"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" '
+      'stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>')
+EXT = ('<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" '
+       'stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>')
+def chain(i):  # 같은 줄기의 글 — 행사 안 발표(all)도 그 행사 날짜로 든다. 이 글 앞뒤로 다섯까지
+    t = i.get('thread')
+    if not t: return ''
+    xs = [(x['date'], x['short'], x['url'], x['key'] == i['key']) for x in pool if x.get('thread') == t and not x.get('of')]
+    xs += [(x['date'], a['name'], a.get('url') or x['url'], False) for x in pool if x['group'] == 'event' for a in x.get('all', []) if a.get('thread') == t]
+    xs = sorted(set(xs))
+    if len(xs) < 2: return ''
+    me = next(n for n, x in enumerate(xs) if x[3]); xs = xs[max(0, me - 3):me + 2]
+    md2 = lambda d: f'{int(d[5:7])}/{int(d[8:])}'
+    return (f'<p class="th"><span class="thn">{e(t)} 줄기</span>' + '<i>→</i>'.join(
+        f'<b>{md2(d)} {e(n)}</b>' if me_ else link(u, f'{md2(d)} {e(n)}') for d, n, u, me_ in xs) + '</p>')
+def panel(i):
+    return (f'<div class="sm"><ul>' + ''.join(f'<li>{e(t)}</li>' for t in i['s']) + '</ul>' + chain(i)
+            + '<p class="sa">' + link(i['url'], EXT + '원문', ' class="og"')
+            + f'<span class="fxw" data-k="{e(i["key"])}" data-u="{e(i["url"])}" data-t="{e(i["line"])}"></span></p></div>')
 def row(i):
     c, cn = CO.get(i['co'], ('et', '—' if i['co'] == '기타' else i['co']))
     note = f'<span class="to">→ {e(i["note"])}</span>' if i['note'] else ''
     demo = link(i['demo'], f'▶ {i.get("demo_as") or "듣기"}', ' class="dm"') if i.get('demo') else ''
-    return (f'<div class="ar g-{i["group"]}"><span class="dt">{md(i["date"])}</span>{bar(i)}'
+    hs = bool(i.get('s')) and i['group'] in ('try', 'know', 'buzz')
+    return (f'<div class="ar g-{i["group"]}{" hs" if hs else ""}"><span class="dt">{md(i["date"])}</span>{bar(i)}'
             f'<span class="co {c}">{cn}</span><span class="gp">{GR[i["group"]]}</span>'
-            f'<span class="tt">{link(i["url"], e(i["line"]))}{demo}{note}</span></div>')
+            f'<span class="tt">{link(i["url"], e(i["line"]))}{CV if hs else ""}{demo}{note}</span></div>' + (panel(i) if hs else ''))
 def find(d, k):  # 이름으로 짝 찾기 — 「GPT-6.1 Sol」과 「GPT 6.1 Sol」, 「dots」와 「dots — 늘 켜 두는 에이전트」
     if not k: return None
     if k in d: return d[k]
