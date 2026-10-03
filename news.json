@@ -146,6 +146,28 @@
    ]
   },
   {
+   "key": "stillwet.art",
+   "of": null,
+   "title": "Show HN: Giving Opus 5.5 a simulated paint canvas",
+   "group": "skip",
+   "line": "stillwet — AI 모델이 유화 그리기",
+   "short": "stillwet",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://stillwet.art/",
+   "co": "기타",
+   "date": "2026-10-02",
+   "pts": 343,
+   "hn": "49928566",
+   "gn": "34679",
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [],
+   "thread": "",
+   "all": []
+  },
+  {
    "key": "frogandtoad.ai",
    "of": null,
    "title": "Frog and Toad and the Increasingly Capable Machines",
@@ -867,6 +889,28 @@
     "Terminal-Bench 4.0 점수가 Sonnet 5의 10.3%에서 70.6%로 올랐고, 출력은 30% 이상 빨라요.",
     "가격은 Sonnet 5와 같은 100만 토큰당 입력 2달러, 출력 10달러인데, 작업당 비용은 최대 30% 줄어요."
    ]
+  },
+  {
+   "key": "supabase.com/blog/supabase-is-acquiring-turso",
+   "of": null,
+   "title": "Supabase, Turso 인수 발표",
+   "group": "skip",
+   "line": "Supabase 의 Turso 인수",
+   "short": "Turso 인수",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://supabase.com/blog/supabase-is-acquiring-turso",
+   "co": "기타",
+   "date": "2026-09-28",
+   "pts": 0,
+   "hn": null,
+   "gn": "34676",
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [],
+   "thread": "",
+   "all": []
   },
   {
    "key": "platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-opus-5-5",
@@ -3624,5 +3668,5 @@
    "all": []
   }
  ],
- "judged_at": 1791004000
+ "judged_at": 1791047456
 }
