@@ -33,3 +33,4 @@ GitHub Pages 가 main 루트를 그대로 서빙한다. `.github/workflows/daily
 - 구간 표식(`<!--CC-DATA-->`, `<!--CX-DATA-->`, `<!--AG-DATA-->`, `<!--NEWS-->`)은 스크립트가 경계로 쓴다. 그대로 둔다.
 - 「소식」 탭은 주인(`sd_owner` 쿠키)에게만 보인다. 주인 구독이 바뀌면 `scripts/news_prompt.md` 의 표와 `render_news.py` 의 「기준」 줄을 같이 고친다.
 - 3단계가 `index.html` 을 직접 고친다. 뒤이은 JS 무결성 검사에 실패하면 자동으로 되돌린다.
+- 「새로 나온 것」, 「용도별」은 큐레이션이 그린 HTML 을 마지막 `<script>` 끝의 `skin()` 이 화면에서 다시 배치한다(이번 주 써 볼 것, 날짜 맞춤 3단, 용도별 최신순). 기대는 class 는 `.tw.t-cc/cx/ag`, `.box0`, `.c-day`(안에 `YYYY-MM-DD`), `.it.t1~t3`, `.row .sev .box .cmd .tt .ds`, `.det` 의 「해보기」, `#use .cat .ci .cv .more` 다. 큐레이션이 이 구조를 바꾸면 `skin()` 이 실패하고 원래 화면으로 돌아간다. 시안 생성기는 `~/dev/analyses/ai-sungd-uk-design/make_new.py`.
