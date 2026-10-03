@@ -6,6 +6,7 @@ Claude Code, Codex, Antigravity CLI 릴리스에서 오늘 써 볼 것을 체크
 
 ```sh
 python3 -m http.server   # 로컬 확인
+./check.sh                # PR 전 검사 — 인라인 스크립트 문법, 구간 표식, JSON, scripts/*.py
 ```
 
 ## 어디를 고치나
