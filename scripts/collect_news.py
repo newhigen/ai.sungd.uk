@@ -9,7 +9,8 @@
   - 긱뉴스에만 있는 AI 글은 20점 이상
   - ElevenLabs 는 HN 점수가 안 나와 공식 블로그 글을 다 받는다(주인이 직접 고른 관심 회사).
     글 안 링크를 붙여 두면 판단이 그중 샘플 페이지를 demo 로 고른다
-묶음 글(행사 정리 등)은 본문을 r.jina.ai 로 받아 둔다 — openai.com 은 봇을 막는다."""
+  - claude.dev 블로그(Anthropic 엔지니어의 Claude Code 사용 글)도 점수와 상관없이 다 받는다
+후보마다 본문을 r.jina.ai 로 받아 둔다 — 판단이 3줄 요약을 쓴다. openai.com 은 봇을 막고, github.com 은 jina 가 막혀 원 페이지를 푼다."""
 import re, json, os, time, subprocess, datetime, urllib.parse, html
 from email.utils import parsedate_to_datetime
 
@@ -127,8 +128,9 @@ for m in re.finditer(r'href="(/news/[a-z0-9-]+)".{0,1500}?([A-Z][a-z]{2} \d{1,2}
     t = re.search(r'og:title" content="([^"]*)"', fetch(url))
     add(norm(url), url=url, title=html.unescape(t.group(1)) if t else m.group(1).split('/')[-1], co='Anthropic', official=True, date=kst(ts), src='news')
 
-# ── 관심 회사(음성): 목록에서 최근 글만 골라 글 페이지에서 제목, 날짜, 글 안 링크를 받는다 ──
-MEDIA = [('ElevenLabs', 'https://elevenlabs.io', '/blog', r'/blog/(?!category/|authors/)[a-z0-9-]+')]
+# ── 관심 블로그(ElevenLabs, claude.dev): 목록에서 최근 글만 골라 글 페이지에서 제목, 날짜, 글 안 링크를 받는다 ──
+MEDIA = [('ElevenLabs', 'https://elevenlabs.io', '/blog', r'/blog/(?!category/|authors/)[a-z0-9-]+'),
+         ('Anthropic', 'https://claude.dev', '/blog/', r'/blog/[a-z0-9-]+/')]
 DATE = r'(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\.? \d{1,2},? 20\d\d'
 def day(s):
     s = s.replace('.', '').replace(',', '')
@@ -154,7 +156,7 @@ for co, host, path, pat in MEDIA:
             if lt and lu.startswith('http') and not re.search(r'sign-?up|login|/authors/|/category/|twitter|x\.com|linkedin', lu) and [lu, lt] not in links:
                 links.append([lu, lt[:60]])
         dd = re.search(r'og:description" content="([^"]*)"', y)
-        add(norm(url), url=url, title=html.unescape(t.group(1)), co=co, official=True, date=pd.group(1), src='blog',
+        add(norm(url), url=url, title=re.sub(r'\s*/\s*claude\.dev Blog$', '', html.unescape(t.group(1))), co=co, official=True, date=pd.group(1), src='blog',
             desc=html.unescape(dd.group(1))[:300] if dd else '', links=links[:30],
             media=len(set(re.findall(r'[\w./:%-]+\.(?:mp4|webm|mov|mp3|wav|m4a)\b', y))))  # 글에 박힌 영상과 소리 수
 
@@ -177,18 +179,23 @@ for k, g in gn.items():
         add(k, url=g['url'], title=g['title'], co='기타', official=False, date=g['date'], src='gn')
         cand[k]['gn'] = g
 
-# ── 묶음 글은 본문을 받아 둔다 ──
-for c in cand.values():
-    c['bundle'] = bool(c['official'] and BUNDLE.search(c['title'] + ' ' + c.get('desc', '')))
-    if c['bundle']:
-        # 이미지 주소는 걷어 낸다(설명만 남게). 받을 때마다 길이가 달라 넉넉히 6만 자
-        c['body'] = re.sub(r'\]\(https?://[^)]*\.(?:png|jpe?g|webp|gif)[^)]*\)', ']', fetch('https://r.jina.ai/' + c['url'], 60))[:60000]
-
+# ── 본문을 받아 둔다 — 묶음 글은 안의 발표를 세고, 나머지는 3줄 요약을 쓴다 ──
+def body(u):
+    b = fetch('https://r.jina.ai/' + u, 60)
+    if len(b) < 800 or 'AbuseAlleviationError' in b[:400]:  # jina 가 막힌 곳(github.com 등)은 원 페이지의 글만
+        x = fetch(u)
+        m = re.search(r'<article.*?</article>', x, re.S) or re.search(r'<main.*?</main>', x, re.S)
+        b = html.unescape(re.sub(r'<[^>]+>', ' ', re.sub(r'<(script|style)[^>]*>.*?</\1>', '', m.group(0) if m else '', flags=re.S)))
+    return re.sub(r'\]\(https?://[^)]*\.(?:png|jpe?g|webp|gif)[^)]*\)', ']', b)  # 이미지 주소는 걷어 낸다(설명만 남게)
 new = sorted(cand.values(), key=lambda c: (-c['pts'], c['date']))
 # 판단(claude -p)은 3시간에 한 번 — 공식 발표나 1000점 넘는 글이 오면 바로
 big = any(c['official'] or c['pts'] >= 1000 for c in new)
 if new and not big and NOW - state.get('judged_at', 0) < 3 * 3600:
     print(f'소식 후보 {len(new)}개 — 3시간 안에 판단했으니 다음에'); new = []
+for c in new:  # 본문은 이번에 판단할 후보만 받는다
+    c['bundle'] = bool(c['official'] and BUNDLE.search(c['title'] + ' ' + c.get('desc', '')))
+    if 'ycombinator.com' in c['url']: continue  # HN 글 자체(Ask HN 등)는 본문이 없다
+    c['body'] = body(c['url'])[:60000 if c['bundle'] else 12000]  # 묶음은 받을 때마다 길이가 달라 넉넉히
 json.dump(new, open('news_new.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 gh = os.environ.get('GITHUB_OUTPUT')
 if gh: open(gh, 'a').write(f'news_has_new={"true" if new else "false"}\n')

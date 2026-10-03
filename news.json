@@ -16,7 +16,12 @@
    "pts": 0,
    "hn": null,
    "gn": null,
-   "all": []
+   "all": [],
+   "s": [
+    "GPT-6 모델군을 실무에 쓰는 법을 정리한 OpenAI 가이드예요.",
+    "캐싱과 compaction으로 비용을 줄이고, 추론 강도(Low~Max)로 품질과 속도를 조절하라고 해요.",
+    "Astra는 최고난도 추론, Sol은 코딩, 연구, 컴퓨터 사용, Luna는 대량 반복 작업에 맞춰 고르라고 해요."
+   ]
   },
   {
    "key": "blog.google/innovation-and-ai/technology/ai/google-ai-updates-september-2026",
@@ -81,7 +86,8 @@
      "cat": "제품",
      "name": "CC 그룹판",
      "line": "가족 일정을 챙기는 그룹 에이전트",
-     "url": "https://blog.google/innovation-and-ai/models-and-research/google-labs/cc-expanding-to-groups/"
+     "url": "https://blog.google/innovation-and-ai/models-and-research/google-labs/cc-expanding-to-groups/",
+     "thread": "늘 켜 두는 에이전트"
     },
     {
      "cat": "연구",
@@ -173,7 +179,12 @@
    "pts": 136,
    "hn": "49927747",
    "gn": null,
-   "all": []
+   "all": [],
+   "s": [
+    "대화로 설명만 하면 웹사이트나 앱을 만들어 주는 ChatGPT Sites 기능이에요.",
+    "완성한 사이트는 특정 사람, 워크스페이스, 전체 공개 중 골라 공유할 수 있어요.",
+    "\"ChatGPT로 로그인\"을 붙이면 방문자 진행 상황을 저장하고, 주소도 직접 정할 수 있어요."
+   ]
   },
   {
    "key": "blog.cloudflare.com/clef-decision-models",
@@ -191,7 +202,13 @@
    "pts": 533,
    "hn": "49923692",
    "gn": "34621",
-   "all": []
+   "all": [],
+   "thread": "의사결정 모델",
+   "s": [
+    "Cloudflare가 결정 모델 Clef와 Clef-flash를 발표하고 Workers AI에 올렸어요.",
+    "Jev API와 호환되고, 비전 인코더와 64k 컨텍스트로 Jev(32k)보다 입력을 더 받아요.",
+    "Hugging Face에 Apache 2.0으로 공개했고, RL 파인튜닝 서비스도 새로 시작해요."
+   ]
   },
   {
    "key": "anthropic.com/news/claude-frontier-academy",
@@ -227,7 +244,12 @@
    "pts": 0,
    "hn": null,
    "gn": null,
-   "all": []
+   "all": [],
+   "s": [
+    "Google DeepMind가 AI로 설계한 단백질에 워터마크를 넣는 SynthID Bio를 공개했어요.",
+    "VEGF-A, SARS-CoV-2 spike RBD, PD-L1 세 단백질에서 결합력을 유지하며 워터마크를 검증했어요.",
+    "방법 논문과 코드, in vitro 데이터, 가중치를 공개해 DNA 합성 심사에 쓰이게 할 계획이에요."
+   ]
   },
   {
    "key": "deepmind.google/blog/gemini-4-argon-our-next-era-of-frontier-intelligence",
@@ -248,6 +270,32 @@
    "all": []
   },
   {
+   "key": "claude.dev/blog/getting-started-with-claude-code-mods",
+   "of": null,
+   "title": "Getting started with Claude Code mods",
+   "group": "try",
+   "line": "Claude Code mods — 세션 안에서 도는 확장",
+   "short": "Claude Code mods",
+   "note": "claude 에서 원하는 mod 를 설명해 만들기",
+   "w": 2,
+   "event": "",
+   "url": "https://claude.dev/blog/getting-started-with-claude-code-mods/",
+   "co": "Anthropic",
+   "date": "2026-10-01",
+   "pts": 0,
+   "hn": null,
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "Anthropic이 Claude Code 세션 안에서 도는 작은 JS, TS 파일 mod 를 소개했어요.",
+    "플러그인에 든 hook 으로 이벤트를 보고, 동작을 바꾸고, 자체 UI 를 그려요.",
+    "Claude Code 2.1.287 이상에서 기본으로 켜져 있고, 설명만 하면 Claude 가 만들어 줘요."
+   ],
+   "thread": "",
+   "all": []
+  },
+  {
    "key": "blog.google/products-and-platforms/products/gemini/automate-tasks-with-skills",
    "of": null,
    "title": "Let skills in Gemini tackle your most repetitive tasks",
@@ -263,7 +311,12 @@
    "pts": 0,
    "hn": null,
    "gn": null,
-   "all": []
+   "all": [],
+   "s": [
+    "Gemini 앱에 반복 지시를 저장해 쓰는 \"skills\" 기능이 전 세계에 풀렸어요.",
+    "\"/\" 뒤에 이름을 적으면 저장한 지시를 바로 불러오고, skill을 여러 개 겹쳐 쓸 수 있어요.",
+    "Gems를 대체하고, 개인 계정부터 11월에 Gems 지원을 먼저 끊어요."
+   ]
   },
   {
    "key": "blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon",
@@ -281,7 +334,12 @@
    "pts": 1656,
    "hn": "49913571",
    "gn": "34563",
-   "all": []
+   "all": [],
+   "s": [
+    "Google이 신뢰받는 사이버 방어자부터 공개하는 신규 모델 Gemini 4 Argon을 발표했어요.",
+    "출력 토큰 한도를 6만4천에서 100만으로 늘렸고, DeepSWE v1.1에서 77.9%로 최고 점수를 냈어요.",
+    "가격은 입력 100만 토큰당 2달러, 출력 10달러이고, 아직 일반 공개는 되지 않았어요."
+   ]
   },
   {
    "key": "anthropic.com/news/barclays-scales-claude",
@@ -317,7 +375,12 @@
    "pts": 1061,
    "hn": "49896586",
    "gn": null,
-   "all": []
+   "all": [],
+   "s": [
+    "OpenAI가 GPT-6 Sol을 개선한 GPT-6.1 Sol을 내놨어요.",
+    "DeepSWE v1.1에서 GPT-6 Astra와 같은 점수를 Astra의 5분의 1 비용으로 냈어요.",
+    "가격은 입력 100만 토큰당 2달러, 캐시 입력 0.10달러, 출력 10달러이고 Work, Codex에서 오늘부터 써요."
+   ]
   },
   {
    "key": "openai.com/index/introducing-dots",
@@ -335,7 +398,13 @@
    "pts": 763,
    "hn": "49896604",
    "gn": null,
-   "all": []
+   "all": [],
+   "thread": "늘 켜 두는 에이전트",
+   "s": [
+    "OpenAI가 항상 켜져 있는 에이전트 \"dots\"를 선보였어요.",
+    "GPT-6 Astra가 구동하고, 자기 클라우드 컴퓨터와 4,000개 넘는 앱 연동을 가져요.",
+    "Pro, Business Premium, 일부 지역 Enterprise에 오늘부터 순차 공개돼요."
+   ]
   },
   {
    "key": "help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers",
@@ -353,7 +422,12 @@
    "pts": 218,
    "hn": "49896975",
    "gn": "34510",
-   "all": []
+   "all": [],
+   "s": [
+    "ChatGPT Pro 요금제에 월 500달러짜리 Pro 500이 새로 생겼어요.",
+    "Pro 500만 Astra Ultrafast를 쓸 수 있고, 가격이 같은 Pro 200도 신규 가입을 다시 받아요.",
+    "9/22~9/29 사이 Pro 200 가입자는 10/29까지 기존 사용량을 그대로 유지해요."
+   ]
   },
   {
    "key": "github.com/ninjahawk/livenerf",
@@ -371,7 +445,12 @@
    "pts": 915,
    "hn": "49901736",
    "gn": null,
-   "all": []
+   "all": [],
+   "s": [
+    "livenerf는 출시 뒤 모델이 조용히 나빠지는지 추적하는 벤치마크예요.",
+    "Claude Opus 5.5가 나온 2026-09-22부터 기준선을 잡고 측정을 시작했어요.",
+    "지금 v0은 API 키 없이, Claude Max 구독의 headless Claude Code(claude -p)로 돌려요."
+   ]
   },
   {
    "key": "elevenlabs.io/blog/tender-22bn",
@@ -427,7 +506,12 @@
    "pts": 673,
    "hn": "49906637",
    "gn": "34545",
-   "all": []
+   "all": [],
+   "s": [
+    "Pi 개발사 Earendil이 \"MCP는 안 쓴다\"던 입장을 접고 MCP를 코어에 넣었다고 밝혔어요.",
+    "MCP 도구를 JavaScript 샌드박스인 Codemode에 올려 조합하기 쉽게 만들었어요.",
+    "MCP를 설정하면 Codemode가 자동으로 켜지고, Jev 같은 도구도 함께 쓸 수 있어요."
+   ]
   },
   {
    "key": "anthropic.com/research/glm-5-3-and-the-spread-of-advanced-cyber-capabilities",
@@ -463,7 +547,13 @@
    "pts": 0,
    "hn": null,
    "gn": "34439",
-   "all": []
+   "all": [],
+   "thread": "AI 와 개발자의 일",
+   "s": [
+    "개발 노트 ssp.sh가 \"문제는 AI 코드가 아니라 아무도 아는 게 없어지는 것\"이라는 글을 썼어요.",
+    "Claude Code가 스펙, 코드, 티켓, 보고서를 다 만들고 아무도 안 읽는다는 X 글을 인용했어요.",
+    "유지보수가 여전히 최종 관문이라며, 의도, 취향, 설계가 더 중요해진다고 말해요."
+   ]
   },
   {
    "key": "openai.com/index/devday-2026-recap#4",
@@ -606,7 +696,8 @@
      "cat": "API",
      "name": "Decisions API",
      "line": "정해진 답 중에서 판단을 돌려주는 API",
-     "url": "https://openai.com/index/devday-2026-recap/"
+     "url": "https://openai.com/index/devday-2026-recap/",
+     "thread": "의사결정 모델"
     },
     {
      "cat": "API",
@@ -722,7 +813,13 @@
    "pts": 574,
    "hn": "49883844",
    "gn": "34459",
-   "all": []
+   "all": [],
+   "thread": "의사결정 모델",
+   "s": [
+    "Jeff는 큰 모델 앞에 세워 빠른 판단을 맡기는 0.8B 공개 모델이에요.",
+    "8개 어댑터 평균으로 정확도 86.6%에서 95.3%로, 결정당 8.1초에서 0.25초로 38배 빨라졌어요.",
+    "v1.2와 어댑터 9개를 10월 1일 공개했고, 장기지원판 v1.3은 약 36시간 뒤 나와요."
+   ]
   },
   {
    "key": "calnewport.com/its-time-to-investigate-the-ai-labs",
@@ -740,7 +837,13 @@
    "pts": 626,
    "hn": "49883471",
    "gn": "34457",
-   "all": []
+   "all": [],
+   "thread": "AI 연구소 감시",
+   "s": [
+    "Cal Newport가 뉴욕타임스 칼럼에서 의회가 AI 랩을 조사해야 한다고 썼어요.",
+    "어떤 실험을 왜 하는지, 사고 뒤 안전 절차가 왜 안 멈췄는지 밝히라고 요구해요.",
+    "OpenAI와 Anthropic의 종말론적 신념이 의사결정에 영향을 줬는지도 조사 대상으로 꼽아요."
+   ]
   },
   {
    "key": "anthropic.com/claude-sonnet-5-5",
@@ -758,7 +861,12 @@
    "pts": 883,
    "hn": "49881850",
    "gn": "34444",
-   "all": []
+   "all": [],
+   "s": [
+    "Anthropic이 Claude 5.5 패밀리의 두 번째 모델 Sonnet 5.5를 공개했어요.",
+    "Terminal-Bench 4.0 점수가 Sonnet 5의 10.3%에서 70.6%로 올랐고, 출력은 30% 이상 빨라요.",
+    "가격은 Sonnet 5와 같은 100만 토큰당 입력 2달러, 출력 10달러인데, 작업당 비용은 최대 30% 줄어요."
+   ]
   },
   {
    "key": "platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-opus-5-5",
@@ -776,7 +884,12 @@
    "pts": 207,
    "hn": "49874728",
    "gn": "34424",
-   "all": []
+   "all": [],
+   "s": [
+    "Anthropic이 Claude Opus 5.5용 프롬프트 작성 가이드를 올렸어요.",
+    "기본 effort가 medium으로 낮아졌고, thinking이 항상 켜져 있어 max_tokens를 넉넉히 잡으라고 해요.",
+    "진행 알림, 멀티에이전트 시간 신호, 붙여넣은 텍스트 표시 같은 새 패턴을 다뤄요."
+   ]
   },
   {
    "key": "fireworks.ai/blog/ember-1",
@@ -794,7 +907,13 @@
    "pts": 588,
    "hn": "49868830",
    "gn": null,
-   "all": []
+   "all": [],
+   "thread": "오픈 웨이트 경쟁",
+   "s": [
+    "Fireworks Research가 Kimi K3보다 토큰을 40% 줄여 돌리는 Ember-1을 내놨어요.",
+    "SWE-bench Verified에서 K3 max 93.2% 대비 92.2%를 내면서 비용은 15.5%만 들어요.",
+    "고객 A/B 테스트에서 토큰 약 35% 줄고 품질은 유지됐고, Serverless에 오늘부터 올라가요."
+   ]
   },
   {
    "key": "elevenlabs.io/blog/eleven-v4",
@@ -814,7 +933,13 @@
    "gn": null,
    "demo": "https://elevenlabs.io/v4",
    "demo_as": "듣기",
-   "all": []
+   "all": [],
+   "thread": "음성 모델 경쟁",
+   "s": [
+    "ElevenLabs가 가장 감정 표현이 풍부한 TTS 모델 Eleven v4를 내놨어요.",
+    "Artificial Analysis 1위이고, 블라인드 테스트에서 청취자 약 75%가 더 선호했어요.",
+    "저지연판 Eleven v4 Turbo는 첫 음성까지 약 150ms이고, 90개 넘는 언어를 지원해요."
+   ]
   },
   {
    "key": "colo.to/nvidia-stock-narrative.html",
@@ -832,6 +957,58 @@
    "pts": 1089,
    "hn": "49872723",
    "gn": null,
+   "all": []
+  },
+  {
+   "key": "claude.dev/blog/building-with-claude-sonnet-5-5",
+   "of": null,
+   "title": "Building with Claude Sonnet 5.5",
+   "group": "know",
+   "line": "Building with Claude Sonnet 5.5",
+   "short": "Sonnet 5.5 가이드",
+   "note": "API 로 만들 때 참고하는 글이에요",
+   "w": 1,
+   "event": "",
+   "url": "https://claude.dev/blog/building-with-claude-sonnet-5-5/",
+   "co": "Anthropic",
+   "date": "2026-09-28",
+   "pts": 0,
+   "hn": null,
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "Anthropic이 Sonnet 5.5로 만들 때 쓰는 가이드를 올렸어요.",
+    "가격은 입력 100만 토큰당 2달러, 출력 10달러로 Opus 5.5의 절반이에요.",
+    "기본 effort 는 Claude API 에서 high, Claude Code 에서 medium 이에요."
+   ],
+   "thread": "",
+   "all": []
+  },
+  {
+   "key": "claude.dev/blog/automating-eval-design-and-hillclimbing",
+   "of": null,
+   "title": "Automating eval design and hillclimbing with Claude",
+   "group": "know",
+   "line": "claude-api 스킬 — eval 설계와 hillclimb",
+   "short": "eval 과 hillclimb",
+   "note": "API 앱을 만들 때 쓰는 명령이에요",
+   "w": 1,
+   "event": "",
+   "url": "https://claude.dev/blog/automating-eval-design-and-hillclimbing/",
+   "co": "Anthropic",
+   "date": "2026-09-28",
+   "pts": 0,
+   "hn": null,
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "Anthropic이 claude-api 스킬에 eval 설계와 개선 명령이 들어왔다고 알렸어요.",
+    "/claude-api build-eval 로 평가를 만들고 /claude-api hillclimb 로 한 번에 하나씩 고쳐요.",
+    "과적합을 잡으려고 케이스를 학습용과 검증용으로 나눠요."
+   ],
+   "thread": "",
    "all": []
   },
   {
@@ -886,7 +1063,8 @@
    "pts": 754,
    "hn": "49849985",
    "gn": null,
-   "all": []
+   "all": [],
+   "thread": "에이전트 보안 사고"
   },
   {
    "key": "rosettalens.com/s/ko/when-ai-writes-almost-all-code-what",
@@ -904,7 +1082,8 @@
    "pts": 0,
    "hn": null,
    "gn": "34310",
-   "all": []
+   "all": [],
+   "thread": "AI 와 개발자의 일"
   },
   {
    "key": "ollaya.dev",
@@ -922,7 +1101,8 @@
    "pts": 616,
    "hn": "49848269",
    "gn": "34288",
-   "all": []
+   "all": [],
+   "thread": "의사결정 모델"
   },
   {
    "key": "cnbc.com/2026/09/25/pentagon-anthropic-ai-risk-appeals-court.html",
@@ -1033,6 +1213,58 @@
    "all": []
   },
   {
+   "key": "claude.dev/blog/what-a-task-costs-on-opus-5-5",
+   "of": null,
+   "title": "What a task costs on Opus 5.5",
+   "group": "try",
+   "line": "Opus 5.5 작업당 비용",
+   "short": "Opus 5.5 비용",
+   "note": "/usage 로 내 세션 사용량 보기",
+   "w": 1,
+   "event": "",
+   "url": "https://claude.dev/blog/what-a-task-costs-on-opus-5-5/",
+   "co": "Anthropic",
+   "date": "2026-09-25",
+   "pts": 0,
+   "hn": null,
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "Anthropic이 Opus 5.5에서 작업 하나가 얼마나 드는지와 비용을 바꾸는 설정을 다룬 글이에요.",
+    "Opus 5.5 가격은 Opus 5보다 입출력이 20%, 캐시 읽기가 60% 싸요.",
+    "기본 effort 는 medium 이고, /usage 로 세션의 입력과 출력, 캐시 수치를 볼 수 있어요."
+   ],
+   "thread": "",
+   "all": []
+  },
+  {
+   "key": "claude.dev/blog/spending-your-effort",
+   "of": null,
+   "title": "Using Claude Code: Spending your effort",
+   "group": "try",
+   "line": "Claude Code effort — 단계별 쓰는 법",
+   "short": "effort 쓰는 법",
+   "note": "구현은 low, 검증은 high 로 돌려 보기",
+   "w": 2,
+   "event": "",
+   "url": "https://claude.dev/blog/spending-your-effort/",
+   "co": "Anthropic",
+   "date": "2026-09-25",
+   "pts": 0,
+   "hn": null,
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "Anthropic 엔지니어가 effort 단계별로 Claude Code 결과를 직접 비교한 글이에요.",
+    "Fable 5.1은 html-js-filter 과제에서 low 1/5가 xhigh 5/5로 올랐어요.",
+    "필자는 low 로 구현하고 high 로 검증해요. 경계 사례가 많은 보안과 하드웨어 작업에 높은 effort 가 맞아요."
+   ],
+   "thread": "",
+   "all": []
+  },
+  {
    "key": "blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-with-live-avatar",
    "of": null,
    "title": "Introducing Gemini 3.8 Live with Live Avatar",
@@ -1048,7 +1280,8 @@
    "pts": 0,
    "hn": null,
    "gn": null,
-   "all": []
+   "all": [],
+   "thread": "음성 모델 경쟁"
   },
   {
    "key": "reddit.com/r/facebook/comments/1wotwrk/meta_takes_down_a_critical_video_about_meta_ai",
@@ -1105,6 +1338,54 @@
    "all": []
   },
   {
+   "key": "deepmind.google/blog/say-hello-to-gemini-38-text-to-speech",
+   "of": null,
+   "title": "Gemini 3.8 text-to-speech says hello",
+   "group": "skip",
+   "line": "Gemini 3.8 TTS — 이미 가른 발표",
+   "short": "Gemini 3.8 TTS",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://deepmind.google/blog/say-hello-to-gemini-38-text-to-speech/",
+   "co": "Google",
+   "date": "2026-09-24",
+   "pts": 0,
+   "hn": null,
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [],
+   "thread": "",
+   "all": []
+  },
+  {
+   "key": "deepmind.google/blog/advancing-private-ai-compute-with-secure-server-side-memory",
+   "of": null,
+   "title": "Advancing Private AI Compute with secure, server-side memory",
+   "group": "know",
+   "line": "Private AI Compute — 서버 쪽 영속 메모리",
+   "short": "Private AI Compute",
+   "note": "아직 쓸 수 없고 적용 시점도 몰라요",
+   "w": 1,
+   "event": "",
+   "url": "https://deepmind.google/blog/advancing-private-ai-compute-with-secure-server-side-memory/",
+   "co": "Google",
+   "date": "2026-09-24",
+   "pts": 0,
+   "hn": null,
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "Google이 Private AI Compute에 서버 쪽 영속 메모리를 붙이는 기술을 밝혔어요.",
+    "데이터는 암호화 저장소에 두고 키는 사용자 기기에만 있어서 Google도 못 읽는다고 해요.",
+    "기기를 넘나드는 메모리를 위한 계획이고, 글에는 출시 시점이 없어요."
+   ],
+   "thread": "",
+   "all": []
+  },
+  {
    "key": "claude.dev/blog/how-we-made-claude-ai-faster",
    "of": null,
    "title": "Once Claude can measure something, it can make it faster",
@@ -1156,7 +1437,8 @@
    "pts": 331,
    "hn": "49817615",
    "gn": null,
-   "all": []
+   "all": [],
+   "thread": "음성 모델 경쟁"
   },
   {
    "key": "anthropic.com/news/claude-discovers-novel-enzyme-system",
@@ -1246,7 +1528,8 @@
    "pts": 691,
    "hn": "49812769",
    "gn": null,
-   "all": []
+   "all": [],
+   "thread": "의사결정 모델"
   },
   {
    "key": "bloomberg.com/graphics/2026-iran-school-attack",
@@ -1444,7 +1727,8 @@
    "pts": 739,
    "hn": "49775499",
    "gn": null,
-   "all": []
+   "all": [],
+   "thread": "오픈 웨이트 경쟁"
   },
   {
    "key": "prinzai.com/p/gpt-6-astra-solves-a-wwi-german-radio",
@@ -1480,7 +1764,8 @@
    "pts": 1363,
    "hn": "49765348",
    "gn": null,
-   "all": []
+   "all": [],
+   "thread": "의사결정 모델"
   },
   {
    "key": "john.hartnup.uk/2026/06/07/ai-event-posters.html",
@@ -1570,7 +1855,8 @@
    "pts": 769,
    "hn": "49747070",
    "gn": null,
-   "all": []
+   "all": [],
+   "thread": "AI 와 개발자의 일"
   },
   {
    "key": "openai.com/index/astra-for-law",
@@ -1750,7 +2036,8 @@
    "pts": 1989,
    "hn": "49717558",
    "gn": null,
-   "all": []
+   "all": [],
+   "thread": "의사결정 모델"
   },
   {
    "key": "openai.com/index/reimagining-advertising-with-ai",
@@ -1840,7 +2127,8 @@
    "pts": 493,
    "hn": "49715947",
    "gn": null,
-   "all": []
+   "all": [],
+   "thread": "음성 모델 경쟁"
   },
   {
    "key": "effort.news/irregular",
@@ -1858,7 +2146,8 @@
    "pts": 694,
    "hn": "49704132",
    "gn": null,
-   "all": []
+   "all": [],
+   "thread": "에이전트 보안 사고"
   },
   {
    "key": "twitter.com/DavidSacks/status/2098973625252708460",
@@ -1912,7 +2201,8 @@
    "pts": 660,
    "hn": "49678969",
    "gn": null,
-   "all": []
+   "all": [],
+   "thread": "AI 연구소 감시"
   },
   {
    "key": "xeiaso.net/notes/2026/everyone-slowdown-but-me",
@@ -1930,7 +2220,8 @@
    "pts": 813,
    "hn": "49678683",
    "gn": null,
-   "all": []
+   "all": [],
+   "thread": "AI 연구소 감시"
   },
   {
    "key": "economist.com/interactive/briefing/2026/09/03/nvidia-is-the-central-bank-of-ai",
@@ -1966,7 +2257,8 @@
    "pts": 975,
    "hn": "49666735",
    "gn": null,
-   "all": []
+   "all": [],
+   "thread": "에이전트 보안 사고"
   },
   {
    "key": "mathandai.org",
@@ -2146,7 +2438,8 @@
    "pts": 1016,
    "hn": "49639090",
    "gn": null,
-   "all": []
+   "all": [],
+   "thread": "오픈 웨이트 경쟁"
   },
   {
    "key": "prospect.org/2026/09/09/anthropic-artificial-intelligence-surveillance-system-monitor-activists",
@@ -2200,7 +2493,8 @@
    "pts": 0,
    "hn": null,
    "gn": null,
-   "all": []
+   "all": [],
+   "thread": "음성 모델 경쟁"
   },
   {
    "key": "openai.com/index/introducing-chatgpt-financial-services",
@@ -2292,7 +2586,8 @@
    "pts": 740,
    "hn": "49619227",
    "gn": null,
-   "all": []
+   "all": [],
+   "thread": "AI 연구소 감시"
   },
   {
    "key": "opusfived.dev",
@@ -2436,7 +2731,8 @@
    "pts": 666,
    "hn": "49615537",
    "gn": null,
-   "all": []
+   "all": [],
+   "thread": "늘 켜 두는 에이전트"
   },
   {
    "key": "mistral.ai/news/mistral-makes-sovereign-open-weight-ai-to-frontier",
@@ -2600,7 +2896,8 @@
    "pts": 729,
    "hn": "49585644",
    "gn": null,
-   "all": []
+   "all": [],
+   "thread": "AI 와 개발자의 일"
   },
   {
    "key": "openrouter.ai/openai/gpt-6-astra",
@@ -2708,7 +3005,8 @@
    "pts": 691,
    "hn": "49554520",
    "gn": null,
-   "all": []
+   "all": [],
+   "thread": "오픈 웨이트 경쟁"
   },
   {
    "key": "deepmind.google/science/weathernext",
@@ -3009,7 +3307,8 @@
      "cat": "모델",
      "name": "Gemini 3.5 Transcribe",
      "line": "음성 에이전트용 실시간 받아쓰기 모델",
-     "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5-transcribe/"
+     "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5-transcribe/",
+     "thread": "음성 모델 경쟁"
     },
     {
      "cat": "모델",
@@ -3021,7 +3320,8 @@
      "cat": "모델",
      "name": "Gemma",
      "line": "다운로드 10억 회, 커뮤니티 저장소 공개",
-     "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemma-one-billion-downloads/"
+     "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemma-one-billion-downloads/",
+     "thread": "오픈 웨이트 경쟁"
     },
     {
      "cat": "모델",
@@ -3227,7 +3527,8 @@
    "pts": 399,
    "hn": "49506819",
    "gn": null,
-   "all": []
+   "all": [],
+   "thread": "에이전트 보안 사고"
   },
   {
    "key": "anthropic.com/news/improving-alignment-security-efforts",
@@ -3299,7 +3600,8 @@
    "pts": 806,
    "hn": "49479878",
    "gn": null,
-   "all": []
+   "all": [],
+   "thread": "오픈 웨이트 경쟁"
   },
   {
    "key": "elevenlabs.io/blog/elevenlabs-cli-v1",
@@ -3322,5 +3624,5 @@
    "all": []
   }
  ],
- "judged_at": 1790992285
+ "judged_at": 1791004000
 }
