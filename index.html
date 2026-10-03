@@ -920,17 +920,19 @@ body{font-variant-numeric:tabular-nums}
 <div class="tab" id="models">
 <!--MODELS--><!-- 손으로 갱신한다. 새 모델이 나올 때만. 기준일(data-asof)도 같이 바꿀 것. -->
 <div class="mdl">
-<p class="lead"><b>코딩 모델 · 성능 대비 비용</b> <span class="masof" data-asof="2026-09-23">2026-09-23 기준</span></p>
+<p class="lead"><b>코딩 모델 · 성능 대비 비용</b> <span class="masof" data-asof="2026-10-03">2026-10-03 기준</span></p>
 <p class="mdesc">Terminal-Bench 4.0 점수와 과제 하나에 드는 비용이에요. 모델마다 effort 단계를 가벼운 쪽부터 이었어요. 왼쪽 위일수록 싸게 잘 풀어요.</p>
 <div class="mchart" id="mchart"><div class="mc-chips"></div><div class="mc-fig"></div><p class="mc-hint">밀면 $20 까지 →</p></div>
 <div class="box0 mtry">
 <p class="mtryh">이 그림에서 해볼 것</p>
+<div class="it t3" data-t="Codex 에서 GPT-6.1 Sol xhigh 로 한 과제 돌려 보기" data-k="md:gpt61sol-xhigh"><div class="row"><span class="sev">핵심</span><button class="box" data-off="[x]">[ ]</button><span class="cmd">/model</span><span class="tt">Codex 에서 GPT-6.1 Sol xhigh 로 한 과제 돌려 보기</span><span class="ds">Astra high 와 같은 54점을 1/4 값에 — $4.05 → $1.03</span></div></div>
 <div class="it t3" data-t="Fable 5.1 high 대신 Opus 5.5 medium 으로 한 과제 돌려 보기" data-k="md:fable51-high-to-opus55-medium"><div class="row"><span class="sev">핵심</span><button class="box" data-off="[x]">[ ]</button><span class="cmd">/model</span><span class="tt">Fable 5.1 high 대신 Opus 5.5 medium 으로 한 과제 돌려 보기</span><span class="ds">같은 52점대를 1/3 값에 — $11.64 → $4.04</span></div></div>
 <div class="it t2" data-t="Opus 5.5 는 effort medium 부터 시작하기" data-k="md:opus55-medium-first"><div class="row"><span class="sev">추천</span><button class="box" data-off="[x]">[ ]</button><span class="cmd">/effort medium</span><span class="tt">Opus 5.5 는 effort medium 부터 시작하기</span><span class="ds">high 보다 4.1점 낮고 21% 싸다</span></div></div>
-<div class="it t2" data-t="effort 는 xhigh 에서 멈추기" data-k="md:stop-at-xhigh"><div class="row"><span class="sev">추천</span><button class="box" data-off="[x]">[ ]</button><span class="cmd">/effort xhigh</span><span class="tt">effort 는 xhigh 에서 멈추기</span><span class="ds">max 는 점수가 같거나 낮은데 값만 오른다 — Opus 5.5 는 1.5배</span></div></div>
+<div class="it t2" data-t="Opus 5.5 effort 는 xhigh 에서 멈추기" data-k="md:stop-at-xhigh"><div class="row"><span class="sev">추천</span><button class="box" data-off="[x]">[ ]</button><span class="cmd">/effort xhigh</span><span class="tt">Opus 5.5 effort 는 xhigh 에서 멈추기</span><span class="ds">max 는 같은 59.6점에 값만 1.5배</span></div></div>
+<div class="it t2" data-t="가장 어려운 과제만 Sonnet 5.5 max 로" data-k="md:sonnet55-max-hard"><div class="row"><span class="sev">추천</span><button class="box" data-off="[x]">[ ]</button><span class="cmd">/effort max</span><span class="tt">가장 어려운 과제만 Sonnet 5.5 max 로</span><span class="ds">63.6점으로 1위, 값은 Opus 5.5 max 의 1.4배 — $13.11 → $18.76</span></div></div>
 </div>
 <p class="mfoot">과제당 비용은 API 정가로 낸 값이에요. 구독이면 한도를 얼마나 빨리 쓰는지의 상대 비교로 읽어요.<br>
-출처 <a href="https://artificialanalysis.ai/evaluations/terminalbench-4-0" target="_blank" rel="noopener noreferrer">Artificial Analysis · Terminal-Bench 4.0 (mini-swe-agent) ↗</a> · Opus 5.5 는 출시(9/22) 하루 뒤 수치예요. Sonnet 5 는 AA 에 모든 effort 가 2~14점으로 올라 있어요. 실행 이상일 수 있어 해볼 것에선 뺐어요.</p>
+출처 <a href="https://artificialanalysis.ai/evaluations/terminalbench-4-0" target="_blank" rel="noopener noreferrer">Artificial Analysis · Terminal-Bench 4.0 (mini-swe-agent) ↗</a> · Gemini 4 Argon 은 AA 에 high 하나만 올라 있어요. Sonnet 5 는 AA 에 모든 effort 가 2~14점으로 올라 있어요. 실행 이상일 수 있어 해볼 것에선 뺐어요.</p>
 </div>
 <!--/MODELS-->
 </div>
@@ -22448,8 +22450,12 @@ countTop();
 
 /* ── 모델 차트 — 성능 대비 비용. 데이터는 MD·MC, 새 모델이 나올 때만 손으로 ── */
 (function () {
-  // [모델, effort, 점수, 과제당 비용 $] — Terminal-Bench 4.0 · Artificial Analysis · 2026-09-23
+  // [모델, effort, 점수, 과제당 비용 $] — Terminal-Bench 4.0 · Artificial Analysis · 2026-10-03
   const MD = [
+    ["Sonnet 5.5","low",20.7,1.84],["Sonnet 5.5","medium",29.8,2.25],["Sonnet 5.5","high",43.9,3.06],["Sonnet 5.5","xhigh",57.1,8.87],["Sonnet 5.5","max",63.6,18.76],
+    ["GPT-6.1 Sol","low",30.8,0.38],["GPT-6.1 Sol","medium",48.0,0.61],["GPT-6.1 Sol","high",51.5,0.83],["GPT-6.1 Sol","xhigh",54.0,1.03],["GPT-6.1 Sol","max",56.1,1.82],
+    // Gemini 4 Argon 은 AA 에 high 하나만 있다
+    ["Gemini 4 Argon","high",57.1,6.78],
     ["Opus 5.5","low",31.3,2.08],["Opus 5.5","medium",52.5,4.04],["Opus 5.5","high",56.6,5.12],["Opus 5.5","xhigh",59.6,8.78],["Opus 5.5","max",59.6,13.11],
     ["Opus 5","low",26.3,5.18],["Opus 5","medium",34.3,9.18],["Opus 5","high",46.0,13.14],["Opus 5","xhigh",46.5,17.35],["Opus 5","max",49.0,19.29],
     ["Fable 5.1","low",40.4,7.32],["Fable 5.1","medium",44.9,9.12],["Fable 5.1","high",52.0,11.64],["Fable 5.1","xhigh",55.1,15.78],["Fable 5.1","max",52.0,19.22],
@@ -22461,11 +22467,11 @@ countTop();
     ["Gemini 3.8 Flash","low",10.1,5.38],["Gemini 3.8 Flash","medium",19.7,4.61],["Gemini 3.8 Flash","high",19.7,5.84],
   ].map(([m, e, s, c]) => ({m, e, s, c}));
   // 도구 색 계열 안에서 모델마다 다른 값 — Claude Code 주황·붉은 계열, Codex 먹의 농담, Antigravity 파랑
-  // 칩 순서 = 이 순서. 앞 넷은 손으로 정했고, 나머지는 최고 점수 순
-  const MC = {"GPT-6 Astra":"#1c1e23","Fable 5.1":"#c8205a","Opus 5.5":"#d97757","Opus 5":"#8a3510",
-              "GPT-6 Sol":"#646569","Gemini 3.8 Flash":"#3b6fd6","Sonnet 5":"#d4a900","GPT-6 Luna":"#adadaf"};
+  // 칩 순서 = 이 순서. 앞 다섯은 세 회사의 최신 모델, 나머지는 최고 점수 순
+  const MC = {"Opus 5.5":"#d97757","Sonnet 5.5":"#e8a02a","GPT-6 Astra":"#1c1e23","GPT-6.1 Sol":"#6e7076","Gemini 4 Argon":"#1f4fb8",
+              "Fable 5.1":"#c8205a","Opus 5":"#8a3510","GPT-6 Sol":"#9a9ca1","Gemini 3.8 Flash":"#8fb0ee","Sonnet 5":"#d4a900","GPT-6 Luna":"#c4c5c8"};
   // 처음 켜 두는 모델 — 데스크톱·폰 같다. 나머지는 회색으로 깔리고 칩으로 켠다
-  const DEFAULT_ON = ["GPT-6 Astra", "Fable 5.1", "Opus 5.5", "Gemini 3.8 Flash"];
+  const DEFAULT_ON = ["Opus 5.5", "Sonnet 5.5", "GPT-6 Astra", "GPT-6.1 Sol", "Gemini 4 Argon"];
   const EORD = ["none","low","medium","high","xhigh","max"];
   const XMAX = 20, YMAX = 65, NS = "http://www.w3.org/2000/svg";
   const root = document.getElementById("mchart");
@@ -22542,13 +22548,18 @@ countTop();
       const txt = L.name ? L.m : L.p.e, w = txt.length * (L.name ? 6.6 : 5.6);
       // 모델 이름은 선 끝이 막히면 같은 선의 다른 점 옆에서 찾고, 그래도 없을 때만 선을 겹쳐서라도 쓴다 — 이름이 빠지면 선이 누구 것인지 모른다
       const at = L.name ? [...L.ps].reverse() : [L.p];
-      const tries = [...at.flatMap((q) => spots.map((s) => [q, ...s, false])), ...(L.name ? spots.map((s) => [L.p, ...s, true]) : [])];
+      // 모델 이름은 대각선 자리도 본다 — 점이 하나뿐인 모델(Gemini 4 Argon)은 네 자리가 다 막히기 쉽다
+      const sp = L.name ? [...spots, [7, -8, "start"], [-7, -8, "end"], [7, 16, "start"], [-7, 16, "end"],
+                           [-10, 26, "end"], [10, 26, "start"], [-10, -18, "end"], [10, -18, "start"]] : spots;
+      const tries = [...at.flatMap((q) => sp.map((s) => [q, ...s, false])), ...(L.name ? sp.map((s) => [L.p, ...s, true]) : [])];
       for (const [q, dx, dy, a, loose] of tries) {
         const x = X(q.c), y = Y(q.s);
         const x0 = a === "start" ? x + dx : a === "end" ? x + dx - w : x - w / 2;
         const b = {x0, x1: x0 + w, y0: y + dy - 10, y1: y + dy + 2};
         if (hit(b, loose) || b.x1 > W || b.x0 < mg.l) continue;
         add(s, "text", {class: L.name ? "nm" : "ef", "text-anchor": a, x: x + dx, y: y + dy}, esc(txt));
+        // 한 칸 떨어진 자리면 점에서 이름표 모서리까지 짧은 선
+        if (Math.abs(dy) > 16) add(s, "line", {x1: x, y1: y, x2: x + dx * 0.8, y2: y + (dy > 0 ? dy - 12 : dy + 2), stroke: MC[L.m], "stroke-width": 1});
         placed.push(b); break;
       }
     }
