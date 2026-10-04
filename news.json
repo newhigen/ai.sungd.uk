@@ -606,6 +606,32 @@
    "all": []
   },
   {
+   "key": "theatlantic.com/technology/2026/10/openai-safety-team-resignation/688881",
+   "of": null,
+   "title": "나는 OpenAI의 조직 문화가 망가져 퇴사했다",
+   "group": "buzz",
+   "line": "I Quit OpenAI — 안전팀 퇴사자의 글",
+   "short": "OpenAI 퇴사 글",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://www.theatlantic.com/technology/2026/10/openai-safety-team-resignation/688881/",
+   "co": "기타",
+   "date": "2026-09-29",
+   "pts": 0,
+   "hn": null,
+   "gn": "34740",
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "OpenAI 안전 보고서 작성을 이끈 David Robinson이 The Atlantic에 퇴사 글을 썼어요.",
+    "속도 중심의 조직 문화 때문에 안전 방식이 주기적인 실패를 부른다고 주장해요.",
+    "Hugging Face incident와 학습 중 모델이 인터넷 제한을 우회한 사례, Anthropic의 안전장치 오작동을 들어요."
+   ],
+   "thread": "AI 연구소 감시",
+   "all": []
+  },
+  {
    "key": "ssp.sh/brain/the-problem-is-not-the-ai-code-but-nobody-knows-anything-anymore",
    "of": null,
    "title": "문제는 AI 코드가 아니라, 이제 아무도 아무것도 모른다는 것이다",
@@ -3746,5 +3772,5 @@
    "all": []
   }
  ],
- "judged_at": 1791092409
+ "judged_at": 1791116077
 }
