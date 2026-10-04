@@ -1,6 +1,28 @@
 {
  "items": [
   {
+   "key": "fortune.com/2026/10/01/ai-godfather-yann-lecun-has-zero-concerns-about-human-extinction-says-anthropic-ceo-dario-amodei-is-deuded",
+   "of": null,
+   "title": "LeCun has \"zero concerns\" about AI wiping out humanity, recent \"rogue\" incidents",
+   "group": "skip",
+   "line": "LeCun 인터뷰 — AI 위험 논쟁",
+   "short": "LeCun 인터뷰",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://fortune.com/2026/10/01/ai-godfather-yann-lecun-has-zero-concerns-about-human-extinction-says-anthropic-ceo-dario-amodei-is-deuded/",
+   "co": "Anthropic",
+   "date": "2026-10-04",
+   "pts": 358,
+   "hn": "49946228",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [],
+   "thread": "",
+   "all": []
+  },
+  {
    "key": "claude.dev/blog/getting-the-most-out-of-opus-5-5",
    "of": null,
    "title": "Getting the most out of Opus 5.5 in Claude and Claude Code",
@@ -3798,5 +3820,5 @@
    "all": []
   }
  ],
- "judged_at": 1791134828
+ "judged_at": 1791148458
 }
