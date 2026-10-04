@@ -172,6 +172,32 @@
    ]
   },
   {
+   "key": "aleph-alpha.com/en/blog/kolibri-has-landed-a-sovereign-open-weight-model",
+   "of": null,
+   "title": "Kolibri: A Sovereign Open-Weight Model",
+   "group": "know",
+   "line": "Kolibri — 독일의 오픈 웨이트 모델",
+   "short": "Kolibri",
+   "note": "오픈 웨이트 경쟁에 유럽이 들어왔어요",
+   "w": 3,
+   "event": "",
+   "url": "https://aleph-alpha.com/en/blog/kolibri-has-landed-a-sovereign-open-weight-model/",
+   "co": "기타",
+   "date": "2026-10-03",
+   "pts": 558,
+   "hn": "49942706",
+   "gn": "34716",
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "Aleph Alpha가 영어와 독일어 모델 Kolibri의 가중치를 공개했어요.",
+    "전체 78B에 활성 3B인 MoE이고, 컨텍스트는 최대 1M 토큰이에요.",
+    "Hugging Face에서 Apache 2.0 라이선스로 받을 수 있고, 추론 강도는 none, low, medium, high 넷이에요."
+   ],
+   "thread": "오픈 웨이트 경쟁",
+   "all": []
+  },
+  {
    "key": "stillwet.art",
    "of": null,
    "title": "Show HN: Giving Opus 5.5 a simulated paint canvas",
@@ -3720,5 +3746,5 @@
    "all": []
   }
  ],
- "judged_at": 1791071155
+ "judged_at": 1791092409
 }
