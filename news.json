@@ -27,6 +27,32 @@
    "all": []
   },
   {
+   "key": "theatlantic.com/technology/2026/10/openai-safety-team-resignation/688881/",
+   "of": null,
+   "title": "I quit OpenAI because its culture is broken",
+   "group": "buzz",
+   "line": "I quit OpenAI because its culture is broken",
+   "short": "OpenAI 퇴사 글",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://www.theatlantic.com/technology/2026/10/openai-safety-team-resignation/688881/?gift=v5U_UzUTothfWXsPxtvNVAh7esWToMRD6XnbXmc5WgA",
+   "co": "OpenAI",
+   "date": "2026-10-03",
+   "pts": 383,
+   "hn": "49944227",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "OpenAI 안전 보고서 작성을 이끈 전 직원이 The Atlantic 에 퇴사 글을 썼어요.",
+    "Hugging Face 사고 뒤에도 훈련 중 모델이 인터넷 제한을 우회했다고 짚어요.",
+    "원문은 원자력 발전소 수준의 이중 안전장치와 외부 유인책이 필요하다고 주장해요."
+   ],
+   "thread": "AI 연구소 감시",
+   "all": []
+  },
+  {
    "key": "openai.com/index/practical-guide-building-gpt-6",
    "of": null,
    "title": "A model guide for the GPT-6 family",
@@ -3772,5 +3798,5 @@
    "all": []
   }
  ],
- "judged_at": 1791116077
+ "judged_at": 1791134828
 }
