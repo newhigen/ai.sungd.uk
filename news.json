@@ -1,6 +1,28 @@
 {
  "items": [
   {
+   "key": "techspot.com/news/114091-florida-woman-used-claude-diary-anthropic-reported-shoot.html",
+   "of": null,
+   "title": "Anthropic reported diary entry to police, woman faces felony charge",
+   "group": "skip",
+   "line": "Claude 일기 — 위협 글을 경찰에 신고",
+   "short": "Claude 일기 신고",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://www.techspot.com/news/114091-florida-woman-used-claude-diary-anthropic-reported-shoot.html",
+   "co": "Anthropic",
+   "date": "2026-10-05",
+   "pts": 423,
+   "hn": "49961057",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [],
+   "thread": "",
+   "all": []
+  },
+  {
    "key": "openai.com/index/new-chatgpt-ads-format-and-measurement",
    "of": null,
    "title": "Building advertising for the way people use AI",
@@ -3874,5 +3896,5 @@
    "thread": "오픈 웨이트 경쟁"
   }
  ],
- "judged_at": 1791215530
+ "judged_at": 1791239490
 }
