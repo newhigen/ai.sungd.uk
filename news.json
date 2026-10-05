@@ -1,6 +1,28 @@
 {
  "items": [
   {
+   "key": "openai.com/index/new-chatgpt-ads-format-and-measurement",
+   "of": null,
+   "title": "Building advertising for the way people use AI",
+   "group": "skip",
+   "line": "ChatGPT 광고 — 이미지 생성 중 시각 광고",
+   "short": "ChatGPT 광고",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://openai.com/index/new-chatgpt-ads-format-and-measurement",
+   "co": "OpenAI",
+   "date": "2026-10-05",
+   "pts": 0,
+   "hn": null,
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [],
+   "thread": "",
+   "all": []
+  },
+  {
    "key": "github.com/Niko1221/Strata",
    "of": null,
    "title": "Run Qwen 3.8 Flash Next (125B) on consumer hardware (RTX 4090) at 100T/s",
@@ -994,6 +1016,32 @@
     "8개 어댑터 평균으로 정확도 86.6%에서 95.3%로, 결정당 8.1초에서 0.25초로 38배 빨라졌어요.",
     "v1.2와 어댑터 9개를 10월 1일 공개했고, 장기지원판 v1.3은 약 36시간 뒤 나와요."
    ]
+  },
+  {
+   "key": "github.com/CopilotKit/OpenMuse",
+   "of": null,
+   "title": "OpenMuse - 브라우저와 터미널로 일하는 오픈소스 개인 AI 에이전트",
+   "group": "buzz",
+   "line": "OpenMuse — 오픈소스 개인 에이전트",
+   "short": "OpenMuse",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://github.com/CopilotKit/OpenMuse",
+   "co": "기타",
+   "date": "2026-09-29",
+   "pts": 0,
+   "hn": null,
+   "gn": "34790",
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "CopilotKit이 브라우저, 터미널, 파일을 쓰는 개인 에이전트 앱 OpenMuse를 오픈소스로 냈어요.",
+    "iOS, Android, 웹을 지원하고 MIT 라이선스이며, Gmail과 Calendar 연동도 있어요.",
+    "아직 알파 단계라 직접 호스팅하고 CopilotKit Intelligence 프로젝트 키가 필요해요."
+   ],
+   "thread": "",
+   "all": []
   },
   {
    "key": "calnewport.com/its-time-to-investigate-the-ai-labs",
@@ -3824,27 +3872,7 @@
    "gn": null,
    "all": [],
    "thread": "오픈 웨이트 경쟁"
-  },
-  {
-   "key": "elevenlabs.io/blog/elevenlabs-cli-v1",
-   "of": null,
-   "title": "ElevenLabs CLI v1: agents as code, entire API in terminal",
-   "group": "know",
-   "line": "ElevenLabs CLI v1 — API 전체를 터미널로",
-   "short": "ElevenLabs CLI",
-   "note": "에이전트용 JSON 출력과 dry run 이 있어요",
-   "w": 2,
-   "event": "",
-   "url": "https://elevenlabs.io/blog/elevenlabs-cli-v1",
-   "co": "ElevenLabs",
-   "date": "2026-08-24",
-   "pts": 0,
-   "hn": null,
-   "gn": null,
-   "demo": null,
-   "demo_as": "듣기",
-   "all": []
   }
  ],
- "judged_at": 1791161023
+ "judged_at": 1791215530
 }
