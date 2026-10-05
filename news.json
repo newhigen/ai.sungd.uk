@@ -1,6 +1,32 @@
 {
  "items": [
   {
+   "key": "github.com/Niko1221/Strata",
+   "of": null,
+   "title": "Run Qwen 3.8 Flash Next (125B) on consumer hardware (RTX 4090) at 100T/s",
+   "group": "buzz",
+   "line": "Strata — Qwen3.8 Flash Next 를 게임 PC 에서",
+   "short": "Strata",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://github.com/Niko1221/Strata",
+   "co": "기타",
+   "date": "2026-10-04",
+   "pts": 589,
+   "hn": "49953495",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "Strata 는 Qwen3.8-Flash-Next 125B 를 일반 게임 PC 에서 돌리는 오픈소스 엔진이에요.",
+    "RTX 5070 (12GB)에서 Q2_0 은 초당 94 토큰으로 답을 써요.",
+    "VRAM 12GB 와 RAM 32GB 이상, 디스크 80GB 가 필요하고 Windows 와 Linux 를 지원해요."
+   ],
+   "thread": "오픈 웨이트 경쟁",
+   "all": []
+  },
+  {
    "key": "fortune.com/2026/10/01/ai-godfather-yann-lecun-has-zero-concerns-about-human-extinction-says-anthropic-ceo-dario-amodei-is-deuded",
    "of": null,
    "title": "LeCun has \"zero concerns\" about AI wiping out humanity, recent \"rogue\" incidents",
@@ -3820,5 +3846,5 @@
    "all": []
   }
  ],
- "judged_at": 1791148458
+ "judged_at": 1791161023
 }
