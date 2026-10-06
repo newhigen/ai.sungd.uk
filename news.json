@@ -23,6 +23,32 @@
    "all": []
   },
   {
+   "key": "reflection.ai/blog/introducing-beam",
+   "of": null,
+   "title": "Beam: Reflection's 501B open-weight model",
+   "group": "know",
+   "line": "Beam — Reflection 의 오픈 웨이트 모델",
+   "short": "Beam",
+   "note": "오픈 웨이트 경쟁에 서양 쪽 주자가 들어왔어요",
+   "w": 3,
+   "event": "",
+   "url": "https://reflection.ai/blog/introducing-beam",
+   "co": "기타",
+   "date": "2026-10-06",
+   "pts": 507,
+   "hn": "49969183",
+   "gn": "34839",
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "Reflection이 첫 오픈 웨이트 모델 Beam을 발표했어요.",
+    "전체 501B, 활성 23B의 MoE이고 코딩과 에이전트 작업에 맞췄어요.",
+    "지금은 early access 신청만 받고, 가중치는 이달 안에 공개한다고 해요."
+   ],
+   "thread": "오픈 웨이트 경쟁",
+   "all": []
+  },
+  {
    "key": "niemanlab.org/2026/10/chatgpt-is-adding-real-cartoonists-signatures-to-fake-new-yorker-cartoons",
    "of": null,
    "title": "ChatGPT is adding real cartoonists' signatures to fake New Yorker cartoons",
@@ -41,6 +67,58 @@
    "demo": null,
    "demo_as": "듣기",
    "s": [],
+   "thread": "",
+   "all": []
+  },
+  {
+   "key": "docs.mistral.ai/models/mistral-large-4-0",
+   "of": null,
+   "title": "Mistral Large 4",
+   "group": "know",
+   "line": "Mistral Large 4 — 오픈 웨이트 멀티모달 모델",
+   "short": "Mistral Large 4",
+   "note": "오픈 웨이트 경쟁을 잇는 새 모델이에요",
+   "w": 3,
+   "event": "",
+   "url": "https://docs.mistral.ai/models/mistral-large-4-0",
+   "co": "기타",
+   "date": "2026-10-06",
+   "pts": 845,
+   "hn": "49977979",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "Mistral이 오픈 웨이트 범용 멀티모달 모델 Mistral Large 4를 냈어요.",
+    "전체 1.05T, 활성 49B 파라미터의 MoE이고 컨텍스트는 1M이에요.",
+    "Public Preview 상태이고 문서에 Studio 플레이그라운드 링크가 있어요."
+   ],
+   "thread": "오픈 웨이트 경쟁",
+   "all": []
+  },
+  {
+   "key": "claude.dev/blog/claude-code-in-the-cloud",
+   "of": null,
+   "title": "Claude Code in the cloud: a field guide to cloud sessions",
+   "group": "try",
+   "line": "Claude Code 클라우드 세션 — 가이드",
+   "short": "클라우드 세션",
+   "note": "Max 로 병렬 작업을 클라우드에 맡겨 봐요",
+   "w": 2,
+   "event": "",
+   "url": "https://claude.dev/blog/claude-code-in-the-cloud/",
+   "co": "Anthropic",
+   "date": "2026-10-06",
+   "pts": 0,
+   "hn": null,
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "Anthropic 엔지니어가 Claude Code 클라우드 세션 활용 가이드를 썼어요.",
+    "작업마다 새 VM에서 돌고, 끝나면 브랜치로 남아 PR로 만들 수 있어요.",
+    "Pro, Max 플랜에 추가 비용 없이 포함되고 Max는 10월 7일까지 250달러 보너스 크레딧을 받아요."
+   ],
    "thread": "",
    "all": []
   },
@@ -3966,5 +4044,5 @@
    "thread": "오픈 웨이트 경쟁"
   }
  ],
- "judged_at": 1791281104
+ "judged_at": 1791305031
 }
