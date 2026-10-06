@@ -21751,7 +21751,17 @@ html[data-tab="home"] .ptools,html[data-tab="home"] .ptop,html[data-tab="home"] 
     </div>
 <!--/CX-DATA-->
 <!--AG-DATA-->
-    <p class="range"><strong>v1.0.4</strong> → <strong>v1.2.17</strong> &nbsp;·&nbsp; <span class="range-dates" data-en="2026.6.1 – 2026.10.5">2026.6.1 – 2026.10.5</span></p>
+    <p class="range"><strong>v1.0.4</strong> → <strong>v1.3.0</strong> &nbsp;·&nbsp; <span class="range-dates" data-en="2026.6.1 – 2026.10.6">2026.6.1 – 2026.10.6</span></p>
+    <div class="version-block" id="ag1.3.0" data-date="2026-10-06">
+      <div class="version-head">
+        <span class="ver-badge">v1.3.0</span><span class="ver-date" data-en="Oct 6 Tue">10월 6일 화</span><span class="ver-ago"></span>
+        <div class="ver-summary"><span class="pill feature">기능 ×2</span><span class="pill fix">Fix ×2</span></div>
+      </div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Changed the default <code>Verbosity</code> setting from <code>high</code> to <code>medium</code>, so the conversation view now groups related tool calls and thoughts into concise summaries while keeping commands and responses visible. This applies to everyone who never picked a verbosity, including anyone who selected <code>high</code> while it was still the default; set <code>Verbosity</code> back to <code>high</code> in <code>/config</code> to see every tool call, command, and thought in full again.</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Changed <code>j</code> and <code>k</code> in the <code>/diff</code> file view to move the line cursor like the up and down arrow keys, matching the file list and Vim, instead of jumping to the next or previous file; use the left and right arrow keys to switch files.</span></div>
+      <div class="entry row-divider" data-type="fix"><span class="pill fix">Fix</span><span class="e-desc">Fixed trackpad and mouse-wheel scrolling in the conversation view jumping back and forth, most noticeably over SSH or inside tmux, by ignoring the sideways part of diagonal swipes and limiting how far a single fast scroll step can move; <code>Page Up</code> and <code>Page Down</code> still move a full page.</span></div>
+      <div class="entry row-divider" data-type="fix"><span class="pill fix">Fix</span><span class="e-desc">Fixed files and folders whose paths contain spaces, <code>#</code>, <code>%</code>, or other special characters, or that sit on a Windows drive, being mishandled across the CLI: <code>@</code> file mentions, <code>/codesearch</code> results, and file links in agent responses now open the right file, and workspace trust and project-scoped custom agents now recognize projects created in the Antigravity desktop app in such folders.</span></div>
+    </div>
     <div class="version-block" id="ag1.2.17" data-date="2026-10-05">
       <div class="version-head">
         <span class="ver-badge">v1.2.17</span><span class="ver-date" data-en="Oct 5 Mon">10월 5일 월</span><span class="ver-ago"></span>
