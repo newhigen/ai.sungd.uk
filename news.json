@@ -1,6 +1,28 @@
 {
  "items": [
   {
+   "key": "vals.ai/blogs/room-temperature-magnetic-semiconductors",
+   "of": null,
+   "title": "Opus 5.5 agents discover two room-temperature magnetic semiconductor candidates",
+   "group": "skip",
+   "line": "Opus 5.5 에이전트 — 자성 반도체 후보 발견",
+   "short": "자성 반도체",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://www.vals.ai/blogs/room-temperature-magnetic-semiconductors",
+   "co": "기타",
+   "date": "2026-10-06",
+   "pts": 358,
+   "hn": "49970667",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [],
+   "thread": "",
+   "all": []
+  },
+  {
    "key": "niemanlab.org/2026/10/chatgpt-is-adding-real-cartoonists-signatures-to-fake-new-yorker-cartoons",
    "of": null,
    "title": "ChatGPT is adding real cartoonists' signatures to fake New Yorker cartoons",
@@ -3944,5 +3966,5 @@
    "thread": "오픈 웨이트 경쟁"
   }
  ],
- "judged_at": 1791255173
+ "judged_at": 1791281104
 }
