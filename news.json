@@ -1,6 +1,58 @@
 {
  "items": [
   {
+   "key": "openai.com/index/sharing-ai-progress-in-mathematics",
+   "of": null,
+   "title": "Sharing AI progress in mathematics",
+   "group": "know",
+   "line": "OpenAI 수학 결과 공개 — 내부 모델이 낸 증명",
+   "short": "OpenAI 수학",
+   "note": "모델은 아직 비공개라 지켜만 봐요",
+   "w": 2,
+   "event": "",
+   "url": "https://openai.com/index/sharing-ai-progress-in-mathematics/",
+   "co": "OpenAI",
+   "date": "2026-10-07",
+   "pts": 388,
+   "hn": "49984923",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "OpenAI가 내부 frontier model이 만든 수학 결과를 GitHub 저장소에 공개했어요.",
+    "증명 다수는 Lean으로 형식화했고, 결과 하나는 평균 ChatGPT Pro 사고 약 3시간어치 compute를 썼어요.",
+    "이 결과를 낸 모델은 책임 있게 공개하려고 준비 중이라고 해요."
+   ],
+   "thread": "",
+   "all": []
+  },
+  {
+   "key": "developers.openai.com/api/docs/guides/decisions",
+   "of": null,
+   "title": "Decisions API is in public beta",
+   "group": "know",
+   "line": "Decisions API — 확률과 선택을 돌려주는 API",
+   "short": "Decisions API",
+   "note": "API 과금이라 구독으로는 못 써요",
+   "w": 3,
+   "event": "",
+   "url": "https://developers.openai.com/api/docs/guides/decisions",
+   "co": "OpenAI",
+   "date": "2026-10-07",
+   "pts": 130,
+   "hn": "49984025",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "OpenAI가 Decisions API를 public beta로 열었어요.",
+    "텍스트와 이미지를 보고 조건이 참일 확률, 보기 중 선택, 기준 점수를 돌려주고 Responses API보다 약 10배 빨라요.",
+    "gpt-6-luna만 지원하고 입력 100만 토큰당 0.10달러이며, 몇 주 안에 GA를 예상해요."
+   ],
+   "thread": "의사결정 모델",
+   "all": []
+  },
+  {
    "key": "vals.ai/blogs/room-temperature-magnetic-semiconductors",
    "of": null,
    "title": "Opus 5.5 agents discover two room-temperature magnetic semiconductor candidates",
@@ -4092,5 +4144,5 @@
    "thread": "오픈 웨이트 경쟁"
   }
  ],
- "judged_at": 1791322478
+ "judged_at": 1791336260
 }
