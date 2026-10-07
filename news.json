@@ -1,6 +1,58 @@
 {
  "items": [
   {
+   "key": "openai.com/index/gpt-6-for-everyone",
+   "of": null,
+   "title": "GPT‑6 and Intelligent UI for everyone",
+   "group": "try",
+   "line": "GPT-6 Intelligent UI — ChatGPT 대화 속 인터페이스",
+   "short": "Intelligent UI",
+   "note": "ChatGPT 앱 Chat 탭에서 열어 보기",
+   "w": 3,
+   "event": "",
+   "url": "https://openai.com/index/gpt-6-for-everyone/",
+   "co": "OpenAI",
+   "date": "2026-10-08",
+   "pts": 372,
+   "hn": "49996425",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "OpenAI가 ChatGPT용 GPT-6와 Intelligent UI를 공개했어요.",
+    "답에 버튼, 폼, 차트 같은 상호작용 화면이 들어가고, 생각하며 먼저 답하기 시작해요.",
+    "Plus는 오늘부터 Chat 탭에 풀리고, Codex 모델은 이번에 안 바뀌어요."
+   ],
+   "thread": "",
+   "all": []
+  },
+  {
+   "key": "anthropic.com/claude-haiku-5-5",
+   "of": null,
+   "title": "Claude Haiku 5.5",
+   "group": "try",
+   "line": "Claude Haiku 5.5",
+   "short": "Haiku 5.5",
+   "note": "서브에이전트로 붙여 보세요",
+   "w": 3,
+   "event": "",
+   "url": "https://www.anthropic.com/claude-haiku-5-5",
+   "co": "Anthropic",
+   "date": "2026-10-08",
+   "pts": 511,
+   "hn": "49996437",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "Anthropic이 가장 싸고 빠른 소형 모델 Claude Haiku 5.5를 냈어요.",
+    "Haiku 4.5보다 평균 75% 싸고, 처음으로 effort 설정이 생겼어요.",
+    "Max 구독자에게 매달 API 크레딧(Max 5x는 100달러)도 이번 주 풀려요."
+   ],
+   "thread": "",
+   "all": []
+  },
+  {
    "key": "openai.com/index/teens-learn-and-plan",
    "of": null,
    "title": "Helping teens learn, plan, and shape the future of AI",
@@ -4240,5 +4292,5 @@
    "thread": "오픈 웨이트 경쟁"
   }
  ],
- "judged_at": 1791390000
+ "judged_at": 1791410132
 }
