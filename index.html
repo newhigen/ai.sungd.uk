@@ -20275,7 +20275,25 @@ html[data-tab="home"] .ptools,html[data-tab="home"] .ptop,html[data-tab="home"] 
   </div>
 <!--/CC-DATA-->
 <!--CX-DATA-->
-    <p class="range"><strong>v0.69.0</strong> → <strong>v0.160.1</strong> &nbsp;·&nbsp; <span class="range-dates" data-en="2025.12.10 – 2026.10.5">2025.12.10 – 2026.10.5</span></p>
+    <p class="range"><strong>v0.69.0</strong> → <strong>v0.161.0</strong> &nbsp;·&nbsp; <span class="range-dates" data-en="2025.12.10 – 2026.10.7">2025.12.10 – 2026.10.7</span></p>
+    <div class="version-block" id="cx0.161.0" data-date="2026-10-07">
+      <div class="version-head">
+        <span class="ver-badge">v0.161.0</span><span class="ver-date" data-en="Oct 7 Wed">10월 7일 수</span><span class="ver-ago"></span>
+        <div class="ver-summary"><span class="pill feature">기능 ×6</span><span class="pill fix">Fix ×6</span></div>
+      </div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">GPT-6.1 Sol is now the default model in the bundled and Amazon Bedrock catalogs.</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Amazon Bedrock supports multi-agent V2 and Ultra reasoning on compatible models; Bedrock Mantle also accepts AWS GovCloud regions.</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Sign in to MCP servers from an active terminal session with <code>/mcp login &lt;name&gt;</code>.</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Choose your microphone, speaker, and microphone input channels for voice conversations, with preferences saved locally.</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Daybreak is opt-in through <code>--enable cli_daybreak</code> or <code>features.cli_daybreak=true</code>; <code>daybreak=true</code> alone is insufficient. By default, controls and indicators are hidden, <code>/daybreak</code> is unavailable, and automatic Cyber routing is omitted—even for saved Daybreak threads. Saved preferences remain intact. Opt-in routing requires eligible ChatGPT sign-in, the OpenAI provider, and advertised model/program support.</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Select a Cyber access program per turn with <code>codex exec --cyber-access-program</code> or the TypeScript SDK’s <code>cyberAccessProgram</code> option. The explicit exec override remains available with <code>cli_daybreak</code> disabled and leaves the saved choice unchanged.</span></div>
+      <div class="entry row-divider" data-type="fix"><span class="pill fix">Fix</span><span class="e-desc">Approved filesystem escalation can now grant broader write access while preserving denied reads and network restrictions. Background tasks retain their originating turn’s permissions.</span></div>
+      <div class="entry row-divider" data-type="fix"><span class="pill fix">Fix</span><span class="e-desc">Explicit launch permissions survive terminal reconnects and new sessions, while implicit client settings no longer overwrite server or saved-thread web-search settings.</span></div>
+      <div class="entry row-divider" data-type="fix"><span class="pill fix">Fix</span><span class="e-desc">Elevated Windows terminal sessions can start using an embedded server, and sandboxed PowerShell preserves relative paths beneath protected user profiles.</span></div>
+      <div class="entry row-divider" data-type="fix"><span class="pill fix">Fix</span><span class="e-desc">Enter correctly submits buffered input after paste detection expires, including in Vim insert mode.</span></div>
+      <div class="entry row-divider" data-type="fix"><span class="pill fix">Fix</span><span class="e-desc">Thread resume includes the latest committed history. Startup detects recoverable SQLite corruption earlier and preserves damaged databases as backups.</span></div>
+      <div class="entry row-divider" data-type="fix"><span class="pill fix">Fix</span><span class="e-desc">Responses retries and WebSocket-to-HTTP fallback honor server retry guidance, reducing premature failures during overload.</span></div>
+    </div>
     <div class="version-block" id="cx0.160.1" data-date="2026-10-05">
       <div class="version-head">
         <span class="ver-badge">v0.160.1</span><span class="ver-date" data-en="Oct 5 Mon">10월 5일 월</span><span class="ver-ago"></span>
