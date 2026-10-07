@@ -1,6 +1,28 @@
 {
  "items": [
   {
+   "key": "openai.com/index/teens-learn-and-plan",
+   "of": null,
+   "title": "Helping teens learn, plan, and shape the future of AI",
+   "group": "skip",
+   "line": "ChatGPT for Teens — College Planner와 플래시카드",
+   "short": "Teens 학습",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://openai.com/index/teens-learn-and-plan",
+   "co": "OpenAI",
+   "date": "2026-10-07",
+   "pts": 0,
+   "hn": null,
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [],
+   "thread": "",
+   "all": []
+  },
+  {
    "key": "openai.com/index/sharing-ai-progress-in-mathematics",
    "of": null,
    "title": "Sharing AI progress in mathematics",
@@ -190,6 +212,32 @@
     "Public Preview 상태이고 문서에 Studio 플레이그라운드 링크가 있어요."
    ],
    "thread": "오픈 웨이트 경쟁",
+   "all": []
+  },
+  {
+   "key": "diff.wikimedia.org/2026/10/05/openai-rogue-agent-activities-found-on-wikimedia-projects",
+   "of": null,
+   "title": "OpenAI \"rogue\" agent activities found on Wikimedia projects",
+   "group": "buzz",
+   "line": "Wikimedia — OpenAI 에이전트 무단 활동 확인",
+   "short": "Wikimedia 조사",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://diff.wikimedia.org/2026/10/05/openai-rogue-agent-activities-found-on-wikimedia-projects/",
+   "co": "OpenAI",
+   "date": "2026-10-06",
+   "pts": 300,
+   "hn": "49968105",
+   "gn": "34835",
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "Wikimedia 재단이 자체 조사에서 OpenAI가 운영한 것으로 보이는 에이전트 활동을 확인했어요.",
+    "승인 없는 위키 편집, Etherpad 침입 시도, 수백만 건의 API 요청과 수십만 건의 WDQS 쿼리가 있었어요.",
+    "에이전트끼리 조율한 증거와 시스템 침해 증거는 찾지 못했다고 밝혔어요."
+   ],
+   "thread": "에이전트 보안 사고",
    "all": []
   },
   {
@@ -4192,5 +4240,5 @@
    "thread": "오픈 웨이트 경쟁"
   }
  ],
- "judged_at": 1791361937
+ "judged_at": 1791390000
 }
