@@ -75,6 +75,28 @@
    "all": []
   },
   {
+   "key": "skamille.medium.com/the-managers-path-in-the-age-of-ai-279cb6611d66",
+   "of": null,
+   "title": "AI 시대, 매니저의 길",
+   "group": "skip",
+   "line": "AI 시대, 매니저의 길",
+   "short": "AI 시대, 매니저의 길",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://skamille.medium.com/the-managers-path-in-the-age-of-ai-279cb6611d66",
+   "co": "기타",
+   "date": "2026-10-06",
+   "pts": 0,
+   "hn": null,
+   "gn": "34865",
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [],
+   "thread": "",
+   "all": []
+  },
+  {
    "key": "reflection.ai/blog/introducing-beam",
    "of": null,
    "title": "Beam: Reflection's 501B open-weight model",
@@ -220,6 +242,32 @@
     "신청 후 검증을 거치고 데이터 보관이 필요하며, 신청은 Claude Platform에서 받아요."
    ],
    "thread": "",
+   "all": []
+  },
+  {
+   "key": "x.com/philhchen/status/2072793818945167475",
+   "of": null,
+   "title": "AI 시대의 커리어 조언 - 문제를 푸는 능력보다 찾고 선택하는 능력",
+   "group": "buzz",
+   "line": "AI 시대의 커리어 조언 — 문제 찾는 능력",
+   "short": "커리어 조언",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://x.com/philhchen/status/2072793818945167475",
+   "co": "기타",
+   "date": "2026-10-05",
+   "pts": 0,
+   "hn": null,
+   "gn": "34793",
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "Phil Chen 이 에이전트 시대의 커리어 조언을 X 에 썼어요.",
+    "코드를 직접 안 쓰는 회사에서는 문제를 찾고 토큰과 시간을 배분하는 능력이 중요하다고 해요.",
+    "시간, 관계, 평판을 한정된 자원으로 보고 가장 야심찬 문제를 고르라고 해요."
+   ],
+   "thread": "AI 와 개발자의 일",
    "all": []
   },
   {
@@ -4144,5 +4192,5 @@
    "thread": "오픈 웨이트 경쟁"
   }
  ],
- "judged_at": 1791336260
+ "judged_at": 1791361937
 }
