@@ -1,6 +1,32 @@
 {
  "items": [
   {
+   "key": "rswebsols.com/news/meta-and-microsoft-take-steps-to-reduce-employee-usage-of-claude-ai",
+   "of": null,
+   "title": "Meta and Microsoft take steps to reduce employee usage of Claude AI",
+   "group": "buzz",
+   "line": "Meta, Microsoft 의 Claude 사용 축소",
+   "short": "Claude 사용 축소",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://www.rswebsols.com/news/meta-and-microsoft-take-steps-to-reduce-employee-usage-of-claude-ai/",
+   "co": "Anthropic",
+   "date": "2026-10-08",
+   "pts": 339,
+   "hn": "49997161",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "Meta 와 Microsoft 가 직원의 Claude 사용을 줄이고 있다고 The Information 이 보도했어요.",
+    "Microsoft 는 월 AI 지출 한도를 직원당 10만 달러에서 약 1만 달러로 낮췄고, Meta 의 Claude Code 사용자는 6만 명에서 3만 명쯤으로 줄었어요.",
+    "두 회사는 GitHub Copilot, MetaCode, Muse Code 같은 자체 도구로 옮기는 중이고, 고객용 Claude 제공은 이어져요."
+   ],
+   "thread": "AI 와 개발자의 일",
+   "all": []
+  },
+  {
    "key": "openai.com/index/gpt-6-for-everyone",
    "of": null,
    "title": "GPT‑6 and Intelligent UI for everyone",
@@ -4292,5 +4318,5 @@
    "thread": "오픈 웨이트 경쟁"
   }
  ],
- "judged_at": 1791410132
+ "judged_at": 1791449315
 }
