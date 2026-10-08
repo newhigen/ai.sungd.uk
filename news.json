@@ -53,6 +53,80 @@
    "all": []
   },
   {
+   "key": "github.com/openai/math/blob/main/history.md",
+   "of": null,
+   "title": "OpenAI Withdraws 3 Math Papers",
+   "group": "buzz",
+   "line": "OpenAI 수학 논문 3편 철회",
+   "short": "수학 논문 철회",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://github.com/openai/math/blob/main/history.md",
+   "co": "OpenAI",
+   "date": "2026-10-08",
+   "pts": 334,
+   "hn": "50003107",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "OpenAI가 수학 논문 저장소에서 논문 3편을 철회했어요.",
+    "부호 오류로 안정화 트레이스 상쇄 논증이 무효가 됐고, 이를 쓴 두 편이 함께 철회됐어요.",
+    "다른 14편은 증명을 고쳤고, 핵심 결과의 형식화는 719개 중 300개(약 42%)예요."
+   ],
+   "thread": "",
+   "all": []
+  },
+  {
+   "key": "claude.dev/blog/building-effective-agent-automations",
+   "of": null,
+   "title": "Building effective agent automations",
+   "group": "know",
+   "line": "에이전트 자동화 — Managed Agents 예시",
+   "short": "에이전트 자동화",
+   "note": "Managed Agents는 API 쪽이라 구독으론 어려워요",
+   "w": 2,
+   "event": "",
+   "url": "https://claude.dev/blog/building-effective-agent-automations/",
+   "co": "Anthropic",
+   "date": "2026-10-08",
+   "pts": 0,
+   "hn": null,
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "Anthropic이 Claude Managed Agents로 만든 매일 브리프 자동화 예시를 풀어 썼어요.",
+    "일정에 맞춰 Slack과 GitHub를 읽고, 북마크로 지난 실행 이후 바뀐 것만 Slack에 올려요.",
+    "Claude Code에서 /claude-api managed-agents-onboard 명령으로 설정할 수 있고, Managed Agents는 베타예요."
+   ],
+   "thread": "늘 켜 두는 에이전트",
+   "all": []
+  },
+  {
+   "key": "anthropic.com/news/genesis-mission-commitment",
+   "of": null,
+   "title": "Building on our commitment to American scientific discovery",
+   "group": "skip",
+   "line": "Genesis Mission — 과학 연구에 1억 5천만 달러",
+   "short": "Genesis Mission",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://www.anthropic.com/news/genesis-mission-commitment",
+   "co": "Anthropic",
+   "date": "2026-10-08",
+   "pts": 0,
+   "hn": null,
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [],
+   "thread": "",
+   "all": []
+  },
+  {
    "key": "anthropic.com/claude-haiku-5-5",
    "of": null,
    "title": "Claude Haiku 5.5",
@@ -4318,5 +4392,5 @@
    "thread": "오픈 웨이트 경쟁"
   }
  ],
- "judged_at": 1791449315
+ "judged_at": 1791476554
 }
