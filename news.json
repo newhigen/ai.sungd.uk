@@ -1,6 +1,28 @@
 {
  "items": [
   {
+   "key": "cnbc.com/2026/10/08/open-ai-revenue-nvidia-oracle-coreweave.html",
+   "of": null,
+   "title": "OpenAI annualised revenues $20B less than previously signalled",
+   "group": "skip",
+   "line": "OpenAI 연 매출 — 500억 달러로 정정",
+   "short": "OpenAI 매출",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://www.cnbc.com/2026/10/08/open-ai-revenue-nvidia-oracle-coreweave.html",
+   "co": "OpenAI",
+   "date": "2026-10-09",
+   "pts": 330,
+   "hn": "50008187",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [],
+   "thread": "",
+   "all": []
+  },
+  {
    "key": "rswebsols.com/news/meta-and-microsoft-take-steps-to-reduce-employee-usage-of-claude-ai",
    "of": null,
    "title": "Meta and Microsoft take steps to reduce employee usage of Claude AI",
@@ -24,6 +46,32 @@
     "두 회사는 GitHub Copilot, MetaCode, Muse Code 같은 자체 도구로 옮기는 중이고, 고객용 Claude 제공은 이어져요."
    ],
    "thread": "AI 와 개발자의 일",
+   "all": []
+  },
+  {
+   "key": "quesma.com/blog/invisible-cities-one-shot",
+   "of": null,
+   "title": "I gave Opus 5.5 one prompt and six hours to visualize Invisible Cities",
+   "group": "buzz",
+   "line": "Opus 5.5 에게 프롬프트 하나와 6시간",
+   "short": "Opus 5.5 디자인",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://quesma.com/blog/invisible-cities-one-shot/",
+   "co": "기타",
+   "date": "2026-10-08",
+   "pts": 325,
+   "hn": "50004790",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "Quesma 글쓴이가 같은 프롬프트로 GPT-6 Astra 와 Claude Opus 5.5 에 three.js 시각화를 시켰어요.",
+    "Astra 는 Codex 에서 53분, Opus 5.5 는 Claude Code 에서 서브에이전트 6개로 1시간 25분 걸렸어요.",
+    "API 토큰 비용은 Astra 약 10달러, Opus 5.5 약 74달러였어요."
+   ],
+   "thread": "",
    "all": []
   },
   {
@@ -123,6 +171,58 @@
    "demo": null,
    "demo_as": "듣기",
    "s": [],
+   "thread": "",
+   "all": []
+  },
+  {
+   "key": "anthropic.com/news/anthropic-cyber-mission",
+   "of": null,
+   "title": "Introducing the Anthropic Cyber Mission",
+   "group": "know",
+   "line": "Anthropic Cyber Mission — 방어자 지원",
+   "short": "Cyber Mission",
+   "note": "오픈소스 프로젝트는 OSS Scanner 에 등록해 볼 수 있어요",
+   "w": 2,
+   "event": "",
+   "url": "https://www.anthropic.com/news/anthropic-cyber-mission",
+   "co": "Anthropic",
+   "date": "2026-10-08",
+   "pts": 0,
+   "hn": null,
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "Anthropic이 핵심 인프라와 오픈소스를 지키는 장기 노력 Cyber Mission 을 시작했어요.",
+    "핵심 인프라 방어 프로그램 CIDP 에 Accenture, CrowdStrike, Palo Alto Networks 등이 참여해요.",
+    "OSS Scanner 는 등록한 오픈소스 프로젝트에 가장 강한 모델의 정기 스캔을 무료로 줘요."
+   ],
+   "thread": "",
+   "all": []
+  },
+  {
+   "key": "anthropic.com/news/2026-usage-policy-update",
+   "of": null,
+   "title": "2026 Usage Policy update",
+   "group": "know",
+   "line": "2026 Usage Policy 개정",
+   "short": "이용 정책",
+   "note": "11월 12일부터 적용돼요. 하드웨어 연결 조건을 봐 둬요",
+   "w": 1,
+   "event": "",
+   "url": "https://www.anthropic.com/news/2026-usage-policy-update",
+   "co": "Anthropic",
+   "date": "2026-10-08",
+   "pts": 0,
+   "hn": null,
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "Anthropic이 해마다 하는 Usage Policy 개정본을 냈어요.",
+    "기만 활동 섹션 신설, 무기와 감시 금지 문구 명확화, 고위험 사용 요건 재작성, 모델에 대한 지속적 학대 금지가 들어갔어요.",
+    "새 정책은 11월 12일부터 효력이 생겨요."
+   ],
    "thread": "",
    "all": []
   },
@@ -4392,5 +4492,5 @@
    "thread": "오픈 웨이트 경쟁"
   }
  ],
- "judged_at": 1791476554
+ "judged_at": 1791496765
 }
