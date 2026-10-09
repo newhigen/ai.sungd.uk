@@ -23,6 +23,28 @@
    "all": []
   },
   {
+   "key": "twitter.com/danintheory/status/2108065033070789090",
+   "of": null,
+   "title": "OpenAI withdraws three mathematical results",
+   "group": "skip",
+   "line": "OpenAI 수학 결과 3건 철회",
+   "short": "수학 철회",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://twitter.com/danintheory/status/2108065033070789090",
+   "co": "OpenAI",
+   "date": "2026-10-08",
+   "pts": 304,
+   "hn": "50002650",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [],
+   "thread": "",
+   "all": []
+  },
+  {
    "key": "rswebsols.com/news/meta-and-microsoft-take-steps-to-reduce-employee-usage-of-claude-ai",
    "of": null,
    "title": "Meta and Microsoft take steps to reduce employee usage of Claude AI",
@@ -124,6 +146,32 @@
     "다른 14편은 증명을 고쳤고, 핵심 결과의 형식화는 719개 중 300개(약 42%)예요."
    ],
    "thread": "",
+   "all": []
+  },
+  {
+   "key": "dgt.is/blog/2026-10-07-deepseek-freek-out",
+   "of": null,
+   "title": "Why isn't the industry freaking out about DeepSeek 4.1 Flash?",
+   "group": "buzz",
+   "line": "DeepSeek 4.1 Flash 후기 — 왜 긴장 안 하나",
+   "short": "DeepSeek 후기",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://www.dgt.is/blog/2026-10-07-deepseek-freek-out/",
+   "co": "기타",
+   "date": "2026-10-08",
+   "pts": 708,
+   "hn": "50000488",
+   "gn": "35032",
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "한 개발자가 DeepSeek 4.1 Flash를 한 달간 12개 프로젝트에서 써 본 후기예요.",
+    "KV cache를 V1 대비 약 437배 줄여서, 하루 종일 세션도 1달러 안쪽이라고 해요.",
+    "중요한 검토에만 Opus 5.5를 불러 쓰고, OpenCode Go 월 10달러 구독으로 쓴다고 해요."
+   ],
+   "thread": "오픈 웨이트 경쟁",
    "all": []
   },
   {
@@ -4492,5 +4540,5 @@
    "thread": "오픈 웨이트 경쟁"
   }
  ],
- "judged_at": 1791496765
+ "judged_at": 1791535902
 }
