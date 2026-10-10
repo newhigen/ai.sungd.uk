@@ -49,6 +49,32 @@
    "all": []
   },
   {
+   "key": "usage.o-c.do/ko",
+   "of": null,
+   "title": "usAge - Claude·Codex·Cursor 등 AI 서비스의 사용량·잔여 한도·초기화 시각을 확인하는 앱",
+   "group": "try",
+   "line": "usAge — AI 사용량과 한도 확인 앱",
+   "short": "usAge",
+   "note": "Claude, Codex 한도를 폰 위젯으로 봐요",
+   "w": 1,
+   "event": "",
+   "url": "https://usage.o-c.do/ko",
+   "co": "기타",
+   "date": "2026-10-08",
+   "pts": 0,
+   "hn": null,
+   "gn": "35106",
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "여러 AI 서비스의 사용량과 초기화 시각을 한 화면에서 보는 앱이에요.",
+    "Claude, Codex, Cursor 등을 지원하고 Android 12 이상에서 위젯도 써요.",
+    "무료는 서비스 하나만 연결되고, 더 연결하려면 한 번 결제하는 Pro가 필요해요."
+   ],
+   "thread": "",
+   "all": []
+  },
+  {
    "key": "twitter.com/danintheory/status/2108065033070789090",
    "of": null,
    "title": "OpenAI withdraws three mathematical results",
@@ -398,6 +424,32 @@
     "gpt-6-luna만 지원하고 입력 100만 토큰당 0.10달러이며, 몇 주 안에 GA를 예상해요."
    ],
    "thread": "의사결정 모델",
+   "all": []
+  },
+  {
+   "key": "borretti.me/article/no-man-is-an-island",
+   "of": null,
+   "title": "누구도 섬이 아니다 - AI가 지적 공동체를 해체할 때",
+   "group": "buzz",
+   "line": "누구도 섬이 아니다 — AI 와 지적 공동체",
+   "short": "누구도 섬이 아니다",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://borretti.me/article/no-man-is-an-island",
+   "co": "기타",
+   "date": "2026-10-07",
+   "pts": 0,
+   "hn": null,
+   "gn": "35086",
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "AI가 지적 공동체를 해체하면 개인의 지적 활동도 줄어든다는 에세이예요.",
+    "지적 활동에는 공동체가 주는 공유 자료와 외적 동기가 필요하다고 해요.",
+    "소프트웨어 엔지니어링 담론이 얕아지고 글과 코드를 공개할 이유가 줄었다고 말해요."
+   ],
+   "thread": "AI 와 개발자의 일",
    "all": []
   },
   {
@@ -4566,5 +4618,5 @@
    "thread": "오픈 웨이트 경쟁"
   }
  ],
- "judged_at": 1791592905
+ "judged_at": 1791615394
 }
