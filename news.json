@@ -401,6 +401,32 @@
    "all": []
   },
   {
+   "key": "jross.me/open-source-as-we-know-it-is-dead",
+   "of": null,
+   "title": "우리가 알던 오픈소스는 죽었다",
+   "group": "buzz",
+   "line": "우리가 알던 오픈소스는 죽었다",
+   "short": "오픈소스의 죽음",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://jross.me/open-source-as-we-know-it-is-dead/",
+   "co": "기타",
+   "date": "2026-10-07",
+   "pts": 0,
+   "hn": null,
+   "gn": "34900",
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "게임 서버 개발자 jross가 AI 때문에 오픈소스가 죽어 간다는 글을 썼어요.",
+    "Sindre Sorhus와 Hono가 외부 PR을 막았고, curl은 버그 바운티를 끝냈어요.",
+    "GitHub도 PR 끄기, 사용자별 PR 상한, 스팸 PR 보관 같은 설정을 내놨어요."
+   ],
+   "thread": "AI 와 개발자의 일",
+   "all": []
+  },
+  {
    "key": "developers.openai.com/api/docs/guides/decisions",
    "of": null,
    "title": "Decisions API is in public beta",
@@ -4618,5 +4644,5 @@
    "thread": "오픈 웨이트 경쟁"
   }
  ],
- "judged_at": 1791615394
+ "judged_at": 1791639134
 }
