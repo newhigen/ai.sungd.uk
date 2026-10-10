@@ -1,6 +1,32 @@
 {
  "items": [
   {
+   "key": "techcrunch.com/2026/10/08/fired-openai-safety-researchers-dispute-misconduct-claims-warn-of-chilling-effect",
+   "of": null,
+   "title": "OpenAI fires three safety researchers for \"mishandling research information\"",
+   "group": "buzz",
+   "line": "해고된 OpenAI 안전 연구자 3명 — 공개 서한",
+   "short": "OpenAI 해고 서한",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://techcrunch.com/2026/10/08/fired-openai-safety-researchers-dispute-misconduct-claims-warn-of-chilling-effect/",
+   "co": "OpenAI",
+   "date": "2026-10-09",
+   "pts": 310,
+   "hn": "50018350",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "OpenAI에서 해고된 안전 연구자 3명이 해고 사유를 부인하는 공개 서한을 냈어요.",
+    "OpenAI는 연구 정보를 규정과 다르게 다뤘다고 하고, 세 사람은 보복성 해고라며 위축 효과를 경고해요.",
+    "OpenAI는 서한에 공식 답변을 내지 않았고, 내부 메모로 보복이 아니라고 밝혔어요."
+   ],
+   "thread": "AI 연구소 감시",
+   "all": []
+  },
+  {
    "key": "cnbc.com/2026/10/08/open-ai-revenue-nvidia-oracle-coreweave.html",
    "of": null,
    "title": "OpenAI annualised revenues $20B less than previously signalled",
@@ -4540,5 +4566,5 @@
    "thread": "오픈 웨이트 경쟁"
   }
  ],
- "judged_at": 1791535902
+ "judged_at": 1791592905
 }
