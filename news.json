@@ -1,6 +1,32 @@
 {
  "items": [
   {
+   "key": "rea.tools",
+   "of": null,
+   "title": "REA Reverse - 무엇이든 리버스 엔지니어링하기",
+   "group": "buzz",
+   "line": "REA — 코딩 에이전트용 리버스 엔지니어링",
+   "short": "REA",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://rea.tools/",
+   "co": "기타",
+   "date": "2026-10-10",
+   "pts": 0,
+   "hn": null,
+   "gn": "35105",
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "REA는 코딩 에이전트가 프로그램을 직접 검사하고 동작을 설명하게 하는 도구예요.",
+    "npx rea-agents@latest setup 으로 설치하고, 네이티브 바이너리, JavaScript와 Electron, 브라우저 활동을 분석해요.",
+    "분석한 기능을 설명하거나 바꾸거나 다시 만드는 데 쓰고, 설치 계획을 보여 주고 승인을 받아요."
+   ],
+   "thread": "",
+   "all": []
+  },
+  {
    "key": "techcrunch.com/2026/10/08/fired-openai-safety-researchers-dispute-misconduct-claims-warn-of-chilling-effect",
    "of": null,
    "title": "OpenAI fires three safety researchers for \"mishandling research information\"",
@@ -4615,5 +4641,5 @@
    "all": []
   }
  ],
- "judged_at": 1791764775
+ "judged_at": 1791789242
 }
