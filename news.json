@@ -645,6 +645,32 @@
    "all": []
   },
   {
+   "key": "cloud.google.com/blog/products/ai-machine-learning/welcome-to-gemini-at-work-2026",
+   "of": null,
+   "title": "구글, 업무용 Gemini 에이전트 발표 — 장시간 작업과 기억 유지, Claude 지원",
+   "group": "know",
+   "line": "Gemini agent — 업무용 만능 에이전트",
+   "short": "Gemini agent",
+   "note": "기업용 발표라 Pro 에 오는지 지켜봐요",
+   "w": 3,
+   "event": "",
+   "url": "https://cloud.google.com/blog/products/ai-machine-learning/welcome-to-gemini-at-work-2026",
+   "co": "기타",
+   "date": "2026-10-06",
+   "pts": 0,
+   "hn": null,
+   "gn": "35151",
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "Google Cloud가 업무용 단일 에이전트 Gemini agent를 발표했어요.",
+    "클라우드에서 돌아 노트북을 닫아도 작업이 이어지고, 기기가 달라져도 기억을 유지해요.",
+    "Gemini 모델과 Anthropic의 Claude 모델을 작업에 맞게 골라 쓰고, 스킬과 MCP 서버를 연결해요."
+   ],
+   "thread": "늘 켜 두는 에이전트",
+   "all": []
+  },
+  {
    "key": "claude.dev/blog/claude-code-in-the-cloud",
    "of": null,
    "title": "Claude Code in the cloud: a field guide to cloud sessions",
@@ -4587,62 +4613,7 @@
    "hn": null,
    "gn": null,
    "all": []
-  },
-  {
-   "key": "openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex",
-   "of": null,
-   "title": "Our decision on Cursor following its acquisition by SpaceX",
-   "group": "skip",
-   "line": "Cursor — SpaceX 인수 뒤 OpenAI 결정",
-   "short": "Cursor 인수",
-   "note": "",
-   "w": 1,
-   "event": "",
-   "url": "https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex/",
-   "co": "OpenAI",
-   "date": "2026-08-29",
-   "pts": 852,
-   "hn": "49486172",
-   "gn": null,
-   "all": []
-  },
-  {
-   "key": "lwn.net/Articles/1091231",
-   "of": null,
-   "title": "Debian votes to allow \"responsible use of generative AI\"",
-   "group": "buzz",
-   "line": "Debian, 책임 있는 생성형 AI 사용 허용",
-   "short": "Debian AI",
-   "note": "",
-   "w": 1,
-   "event": "",
-   "url": "https://lwn.net/Articles/1091231/",
-   "co": "기타",
-   "date": "2026-08-29",
-   "pts": 517,
-   "hn": "49489982",
-   "gn": null,
-   "all": []
-  },
-  {
-   "key": "huggingface.co/zai-org/GLM-5.3",
-   "of": null,
-   "title": "GLM-5.3 is now open-weight",
-   "group": "buzz",
-   "line": "GLM-5.3 오픈 웨이트 공개",
-   "short": "GLM-5.3",
-   "note": "",
-   "w": 2,
-   "event": "",
-   "url": "https://huggingface.co/zai-org/GLM-5.3",
-   "co": "기타",
-   "date": "2026-08-29",
-   "pts": 806,
-   "hn": "49479878",
-   "gn": null,
-   "all": [],
-   "thread": "오픈 웨이트 경쟁"
   }
  ],
- "judged_at": 1791639134
+ "judged_at": 1791764775
 }
