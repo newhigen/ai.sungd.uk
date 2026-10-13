@@ -1,6 +1,58 @@
 {
  "items": [
   {
+   "key": "research.meta.ai/blog/muse-wonder",
+   "of": null,
+   "title": "Muse Wonder",
+   "group": "know",
+   "line": "Muse Wonder — Meta 의 새 프런티어 모델",
+   "short": "Muse Wonder",
+   "note": "Meta 모델 API와 Muse Code 전용이라 구독 밖이에요",
+   "w": 3,
+   "event": "",
+   "url": "https://research.meta.ai/blog/muse-wonder",
+   "co": "기타",
+   "date": "2026-10-13",
+   "pts": 507,
+   "hn": "50059115",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "Meta가 Muse Wonder와 Muse Wonder Full 모델을 냈어요.",
+    "개인과 업무용 에이전트, 메모리, 코딩에서 최고 성능이라고 내세워요.",
+    "Meta Model API와 Muse Code에서 오늘 쓸 수 있고, Full은 Muse Code 구독자 전용이에요."
+   ],
+   "thread": "",
+   "all": []
+  },
+  {
+   "key": "github.com/openai/codex/issues/48195",
+   "of": null,
+   "title": "Codex CLI installs a persistent, self-updating background daemon by default",
+   "group": "buzz",
+   "line": "Codex CLI 가 백그라운드 데몬을 기본으로 설치",
+   "short": "Codex 데몬",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://github.com/openai/codex/issues/48195",
+   "co": "OpenAI",
+   "date": "2026-10-13",
+   "pts": 433,
+   "hn": "50060694",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "Codex CLI 0.157.0부터 세션을 열면 백그라운드 데몬이 뜬다는 이슈예요.",
+    "데몬은 약 374MB를 복사하고 매시간 스스로 업데이트하며 창을 닫아도 남아요.",
+    "codex features disable daemon_auto_start 로 끌 수 있고, daemon stop 은 업데이트 프로세스를 못 끈다고 해요."
+   ],
+   "thread": "",
+   "all": []
+  },
+  {
    "key": "twitter.com/karpathy/status/2109361546505966046",
    "of": null,
    "title": "The gap in shared understanding of LLM capability is widening",
@@ -198,6 +250,28 @@
     "두 회사는 GitHub Copilot, MetaCode, Muse Code 같은 자체 도구로 옮기는 중이고, 고객용 Claude 제공은 이어져요."
    ],
    "thread": "AI 와 개발자의 일",
+   "all": []
+  },
+  {
+   "key": "reddit.com/r/ClaudeAI/s/mbe5IY2LF9",
+   "of": null,
+   "title": "I think I found a planet nobody knew existed. I used Claude Code to find it",
+   "group": "buzz",
+   "line": "Claude Code 로 새 행성을 찾았다는 글",
+   "short": "행성 발견",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://www.reddit.com/r/ClaudeAI/s/mbe5IY2LF9",
+   "co": "Anthropic",
+   "date": "2026-10-08",
+   "pts": 301,
+   "hn": "50002665",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [],
+   "thread": "",
    "all": []
   },
   {
@@ -4602,5 +4676,5 @@
    "all": []
   }
  ],
- "judged_at": 1791827066
+ "judged_at": 1791851550
 }
