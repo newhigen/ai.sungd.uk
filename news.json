@@ -1,6 +1,32 @@
 {
  "items": [
   {
+   "key": "z.ai/blog/glm-legal",
+   "of": null,
+   "title": "GLM-Legal",
+   "group": "buzz",
+   "line": "GLM-Legal — 법률 특화 모델",
+   "short": "GLM-Legal",
+   "note": "",
+   "w": 3,
+   "event": "",
+   "url": "https://z.ai/blog/glm-legal",
+   "co": "기타",
+   "date": "2026-10-13",
+   "pts": 529,
+   "hn": "50058507",
+   "gn": "35252",
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "Z.ai가 GLM-5.3-Flash 기반 법률 특화 모델 GLM-Legal을 냈어요.",
+    "Harvey LAB 전체 통과율 19.2%로, 기반 모델보다 12.5%p 올랐어요.",
+    "API는 신청제 베타이고, 데스크톱 에이전트 AutoClaw에는 곧 들어와요."
+   ],
+   "thread": "",
+   "all": []
+  },
+  {
    "key": "research.meta.ai/blog/muse-wonder",
    "of": null,
    "title": "Muse Wonder",
@@ -4676,5 +4702,5 @@
    "all": []
   }
  ],
- "judged_at": 1791851550
+ "judged_at": 1791877021
 }
