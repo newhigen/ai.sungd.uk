@@ -27,6 +27,32 @@
    "all": []
   },
   {
+   "key": "yyhh.org/blog/2026/10/ai-is-a-tool",
+   "of": null,
+   "title": "AI is a tool and using it well takes skill",
+   "group": "buzz",
+   "line": "AI 는 도구이며 잘 쓰려면 숙련이 필요하다",
+   "short": "AI 는 도구다",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://yyhh.org/blog/2026/10/ai-is-a-tool/",
+   "co": "기타",
+   "date": "2026-10-13",
+   "pts": 542,
+   "hn": "50063427",
+   "gn": "35268",
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "Rich Hickey 의 글 「'AI' is Not a Tool」에 대한 반박 글이에요.",
+    "LLM 도 사람이 지시하고 결과를 살피고 고치며 쓰는 도구라고 주장해요.",
+    "AI 업계의 「go rogue」 같은 의인화 표현을 따라 쓰는 것도 비판해요."
+   ],
+   "thread": "",
+   "all": []
+  },
+  {
    "key": "research.meta.ai/blog/muse-wonder",
    "of": null,
    "title": "Muse Wonder",
@@ -128,6 +154,32 @@
     "프롬프트가 구체적이지 않으면 호환성, 지연, 메모리 같은 설계 판단이 동전 던지기가 된다고 해요."
    ],
    "thread": "AI 와 개발자의 일",
+   "all": []
+  },
+  {
+   "key": "nishtahir.com/build-your-own-decision-model",
+   "of": null,
+   "title": "Qwen으로 나만의 의사결정 모델 만들기",
+   "group": "know",
+   "line": "Qwen 으로 나만의 의사결정 모델 만들기",
+   "short": "Qwen 의사결정 모델",
+   "note": "Jev 같은 방식을 직접 따라 해 본 글이에요",
+   "w": 1,
+   "event": "",
+   "url": "https://nishtahir.com/build-your-own-decision-model/",
+   "co": "기타",
+   "date": "2026-10-11",
+   "pts": 0,
+   "hn": null,
+   "gn": "35145",
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "Jev 같은 의사결정 모델을 Qwen3-1.7B 로 직접 만들어 본 글이에요.",
+    "출력을 A~E 선택지 토큰으로 제한해 한 번의 순전파로 답을 골라요.",
+    "CommonsenseQA 정확도 59.4%, 파인튜닝 62.4%이고 온도 조정으로 확신도를 맞춰요."
+   ],
+   "thread": "의사결정 모델",
    "all": []
   },
   {
@@ -4646,61 +4698,7 @@
    "hn": "49525378",
    "gn": null,
    "all": []
-  },
-  {
-   "key": "openai.com/index/chatgpt-connects-health-records-and-healthcare-sources",
-   "of": null,
-   "title": "Healthcare organizations can now connect EHR and additional industry data to ChatGPT",
-   "group": "skip",
-   "line": "ChatGPT 에 의료 기록 연결",
-   "short": "의료 기록",
-   "note": "",
-   "w": 1,
-   "event": "",
-   "url": "https://openai.com/index/chatgpt-connects-health-records-and-healthcare-sources",
-   "co": "OpenAI",
-   "date": "2026-09-01",
-   "pts": 0,
-   "hn": null,
-   "gn": null,
-   "all": []
-  },
-  {
-   "key": "mvakde.github.io/blog/44-on-arc-1",
-   "of": null,
-   "title": "I trained a small transformer in 1.5hrs and it beats many LLMs",
-   "group": "buzz",
-   "line": "1.5시간 학습한 작은 트랜스포머",
-   "short": "작은 트랜스포머",
-   "note": "",
-   "w": 1,
-   "event": "",
-   "url": "https://mvakde.github.io/blog/44-on-arc-1/",
-   "co": "기타",
-   "date": "2026-09-01",
-   "pts": 671,
-   "hn": "49519939",
-   "gn": null,
-   "all": []
-  },
-  {
-   "key": "anthropic.com/news/enterprise-frontier-safeguards",
-   "of": null,
-   "title": "Developing Enterprise Frontier Safeguards with our customers",
-   "group": "skip",
-   "line": "기업 고객과 만드는 Frontier Safeguards",
-   "short": "Frontier Safeguards",
-   "note": "",
-   "w": 1,
-   "event": "",
-   "url": "https://www.anthropic.com/news/enterprise-frontier-safeguards",
-   "co": "Anthropic",
-   "date": "2026-09-01",
-   "pts": 0,
-   "hn": null,
-   "gn": null,
-   "all": []
   }
  ],
- "judged_at": 1791877021
+ "judged_at": 1791906716
 }
