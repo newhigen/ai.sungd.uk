@@ -741,6 +741,28 @@
    "all": []
   },
   {
+   "key": "apple.com/kr/newsroom/2026/10/apple-unveils-the-new-apple-tv-4k",
+   "of": null,
+   "title": "Apple, 새로운 Apple TV 4K 공개",
+   "group": "skip",
+   "line": "Apple TV 4K — 새 셋톱박스 공개",
+   "short": "Apple TV 4K",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://www.apple.com/kr/newsroom/2026/10/apple-unveils-the-new-apple-tv-4k/",
+   "co": "기타",
+   "date": "2026-10-08",
+   "pts": 0,
+   "hn": null,
+   "gn": "35310",
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [],
+   "thread": "",
+   "all": []
+  },
+  {
    "key": "anthropic.com/news/genesis-mission-commitment",
    "of": null,
    "title": "Building on our commitment to American scientific discovery",
@@ -4689,5 +4711,5 @@
    "all": []
   }
  ],
- "judged_at": 1792010116
+ "judged_at": 1792021874
 }
