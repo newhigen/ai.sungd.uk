@@ -1,6 +1,28 @@
 {
  "items": [
   {
+   "key": "sfstandard.com/2026/10/13/openai-engineer-arrested-alleged-bugging-executive-conference-room",
+   "of": null,
+   "title": "OpenAI engineer arrested in bugging of executive conference room",
+   "group": "skip",
+   "line": "OpenAI 엔지니어 체포 — 회의실 도청 혐의",
+   "short": "OpenAI 도청 체포",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://sfstandard.com/2026/10/13/openai-engineer-arrested-alleged-bugging-executive-conference-room/",
+   "co": "OpenAI",
+   "date": "2026-10-14",
+   "pts": 385,
+   "hn": "50078141",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [],
+   "thread": "",
+   "all": []
+  },
+  {
    "key": "developers.googleblog.com/gemini-4-argon-for-robotics",
    "of": null,
    "title": "Gemini 4 Argon for Robotics",
@@ -4844,5 +4866,5 @@
    "all": []
   }
  ],
- "judged_at": 1791925816
+ "judged_at": 1791939923
 }
