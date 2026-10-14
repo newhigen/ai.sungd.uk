@@ -750,7 +750,7 @@ html[data-tab="home"] .ptools,html[data-tab="home"] .ptop,html[data-tab="home"] 
        title="Antigravity CLI 공식 릴리스 전체">공식 릴리스 <i>↗</i></a></span>
   <span class="pdone"><span class="pcount">해봄 <b class="doneAll">0</b>/<span class="totAll">0</span></span>
     <button class="clrb btn">모두 해제</button></span>
-  <span class="pstamp"><!--SYNC--><span class="s-y">2026-</span><span class="s-md">10-14</span><span class="s-t"> 15:04</span><!--/SYNC--></span>
+  <span class="pstamp"><!--SYNC--><span class="s-y">2026-</span><span class="s-md">10-15</span><span class="s-t"> 05:34</span><!--/SYNC--></span>
 </div>
 
 <div class="tab" id="home"></div>
@@ -1105,7 +1105,253 @@ html[data-tab="home"] .ptools,html[data-tab="home"] .ptop,html[data-tab="home"] 
      지우면 update_changelog·update_codex 가 꽂을 자리를 잃는다. -->
 <div id="data">
 <!--CC-DATA-->
-    <p class="range"><strong>v2.0.0</strong> → <strong>v2.1.299</strong> &nbsp;·&nbsp; <span class="range-dates" data-en="2025.9.29 – 2026.10.14">2025.9.29 – 2026.10.14</span></p>
+    <p class="range"><strong>v2.0.0</strong> → <strong>v2.1.300</strong> &nbsp;·&nbsp; <span class="range-dates" data-en="2025.9.29 – 2026.10.14">2025.9.29 – 2026.10.14</span></p>
+  <!-- ── v2.1.300 ── -->
+  <div class="version-block" id="v2.1.300" data-types="feature improve security fix" data-date="2026-10-14">
+    <div class="version-head">
+      <span class="ver-badge">v2.1.300</span><span class="ver-date">10월 14일 수</span><span class="ver-ago"></span>
+      <div class="ver-summary"><span class="pill feature">기능 ×43</span><span class="pill improve">개선 ×4</span><span class="pill security">보안 ×2</span><span class="pill fix">Fix ×39</span></div>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Added <code>virtualText</code> to a mod's prompt decorations: text drawn in the prompt box that never enters the draft or the submitted prompt</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Added <code>cache_creation_5m_tokens</code> and <code>cache_creation_1h_tokens</code> to the OpenTelemetry <code>api_request</code> event, splitting cache writes by lifetime</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Added <code>$.ui.view({ agentId })</code> for mods: shows an agent's transcript in the main view when you ask, and <code>$.ui.view({})</code> goes back</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Added a <code>dir</code> prop on a mod's <code>Text</code> for right-to-left text: on Windows and in VS Code's terminal its rows read in that direction and sit flush right</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Added <code>/advisor</code> on Claude Platform on AWS; no advisor runs until you pick one with <code>/advisor</code>, <code>advisorModel</code> or <code>--advisor</code>, and <code>CLAUDE_CODE_DISABLE_ADVISOR_TOOL=1</code> turns it off</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Added OpenTelemetry GenAI semantic-convention attributes to trace spans, such as <code>gen_ai.provider.name</code>, <code>gen_ai.conversation.id</code>, <code>gen_ai.tool.name</code> and <code>error.type</code></span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Added support for rewriting a workflow agent's <code>prompt</code> and <code>model</code> in the <code>agent.spawn</code> mod hook, which could only refuse workflow agents before</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Added the <code>prompt.change</code> mod hook, raised when the prompt box's text changes without a typed edit: a recalled history entry, a clear, an undo, or a plugin's fill</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Self-hosted runner: Fixed the runner and orchestrator freezing (no polls, <code>/healthz</code> or <code>SIGTERM</code> shutdown) while nobody reads their output; logs keep the latest 256 KiB and count drops (not on Windows)</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Changed <code>CLAUDE_CODE_PROVIDER_MANAGED_BY_HOST</code> sessions to ignore CA-bundle, tool-proxy, git TLS and git config variables like <code>SSL_CERT_FILE</code> in settings; under Claude Desktop, only in project settings</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Changed exit to force-kill background commands still running 1.5 seconds after being asked to stop; in fullscreen mode they could previously be left running</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Changed Claude Desktop's Code tab to apply managed settings when <code>forceLoginGatewayUrl</code> names an Anthropic-operated gateway that serves the session's hostname; that gateway must be reachable at start</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Changed <code>claude gateway</code> to stop at start, naming the key, on a <code>desktop:</code> policy key that Claude Desktop cannot use from a gateway, where it earlier started with a warning</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Changed large requests to api.anthropic.com to use gzip compression even when telemetry is disabled; set <code>CLAUDE_CODE_GZIP_REQUEST_BODIES=0</code> to turn it off</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Changed the <code>claude-api</code> skill to leave Managed Agents sessions in place unless you ask to archive or delete them</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Changed background sessions to resume a carried workflow through the Workflow tool's approval instead of running it from the handoff file</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Changed local session transcripts to also record each API request's system prompt, tools and parameters, so a transcript you choose to share can reproduce a request exactly</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Changed the <code>/sandbox</code> mode options to read "Sandbox commands" instead of "Sandbox BashTool"</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Changed <code>PermissionRequest</code> hooks in Cowork cloud sessions: a <code>setMode</code> update in a hook's allow is now ignored; the rest of the approval still applies</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Changed hooks: <code>updatedInput</code> from PreToolUse and PermissionRequest hooks is now validated like Claude's own input: unknown keys are dropped, and input the tool rejects denies the call</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Removed the <code>--sandbox</code> and <code>--no-sandbox</code> flags from <code>claude remote-control</code>, which had no effect; passing either now exits with an error. Set <code>sandbox.enabled</code> in settings to sandbox sessions</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[VSCode] Added the <code>claudeCode.attachSelection</code> setting to stop text selected in the editor from being added to your messages</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[VSCode] Fixed fast mode staying on after usage credits ran out, which made each request be refused and re-sent; it now turns off until you turn it back on, with an error notice</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[VSCode] Fixed the Thinking toggle switching to Off on models that always think; the toggle is no longer shown for those models</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[VSCode] Fixed "Edit prompt" on a flagged message opening the file or command menu over the restored prompt; Enter now sends it as written</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[VSCode] Fixed Shift+dragging a file onto the prompt on Windows inserting an unreadable <code>/c:/…</code> path instead of a mention relative to the working directory</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[VSCode] Fixed changes to VS Code's chat font size settings needing a window reload or being undone by a theme change; diffs and the plan preview now follow them too</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[VSCode] Fixed "Resume session" and tabs restored after a reload opening an empty new conversation instead of one that had moved into a git worktree</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[VSCode] Fixed ↑ then Enter on a recalled slash command running it without its arguments; the command and file menus no longer open over a recalled prompt until you edit it</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[VSCode] Fixed Shift+dragging a file from the Explorer or an editor tab onto the prompt inserting nothing in WSL, SSH and Dev Container windows</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[VSCode] Fixed Ctrl+Alt+F toggling Focus view instead of opening Find in the Explorer, other tree views, or the Debug Console on Windows and Linux</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[VSCode] Fixed the check for sessions open in other windows or terminals creating extra processes on macOS: it now starts <code>/bin/ps</code> directly instead of searching PATH for <code>ps</code> on every check</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[VSCode] Windows: Fixed a conversation showing "still open somewhere else" after a crash or power loss, when Windows had since restarted and given the old process ID to another program</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[Cloud sessions] Fixed "Allow for this task" missing from Cowork's approval prompts for connector tools where an organization turns off "Always allow" (regression in 2.1.292)</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[Cloud sessions] Fixed most commands in the / menu losing their descriptions in cloud sessions once you sent a second message</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[Remote Control] Fixed the diff view in Remote Control sessions on claude.ai and the desktop app showing deleted and renamed files as modified; requires Claude Code v2.1.296 or later on your machine</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[Claude Tag] Added support for Slack Connect channels: an Owner or Claude Tag admin can let Claude in Slack answer in channels shared with another organization; it's off by default</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[Claude Tag] Added a private Allow once / Deny card in Slack threads for connector actions that need your approval, so Claude asks instead of refusing; others only see that it's waiting on you</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[Claude Tag] Added support for Slack voice clips in Claude in Slack: Claude reads Slack's transcript of a clip when Slack has one</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[Claude Tag] Fixed Claude in Slack not answering another app that tags it in a thread under a message Claude itself posted to the channel</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[Claude Tag] Changed access bundles an admin attached to a Slack channel to keep applying once the channel becomes a Slack Connect channel, with no need to remove and re-attach them</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[Code Review] Fixed Code Review ignoring <code>@claude review</code> comments from people with write access whose GitHub organization membership is private; their comments now start a review</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[Code Review] Fixed Code Review's "paused for this repository" comment sending admins to Code Review settings; it now says who can fix it and links the Git providers page</span>
+    </div>
+    <div class="tabs-container">
+      <div class="tabs-bar">
+        <div class="tab" data-tab="improve" onclick="toggleTab(this)">⚡ 개선 <span class="tab-count">4</span></div>
+        <div class="tab" data-tab="security" onclick="toggleTab(this)">🔒 보안 <span class="tab-count">2</span></div>
+        <div class="tab" data-tab="fix" onclick="toggleTab(this)">🐛 수정 <span class="tab-count">39</span></div>
+      </div>
+      <div class="tab-panels">
+        <div class="tab-panel" data-tab="improve">
+          <div class="coll-rows">
+            <div class="coll-item"><span class="coll-item-desc">Improved WebFetch in Cowork cloud sessions to tell Claude that a page failed moments ago instead of fetching it again</span></div>
+            <div class="coll-item"><span class="coll-item-desc">Improved mod sharing in the built-in <code>plugin-authoring</code> skill: Claude scans a mod's files for keys before opening them, and asks before scanning a folder outside the project</span></div>
+            <div class="coll-item"><span class="coll-item-desc">Improved the note Claude 3 models get about an @-mentioned PDF, so they less often answer without reading it</span></div>
+            <div class="coll-item"><span class="coll-item-desc">Improved artifact updates: Claude now applies a small change and republishes the artifact in one call, and makes larger edits and republishes within a single response</span></div>
+          </div>
+        </div>
+        <div class="tab-panel" data-tab="security">
+          <div class="coll-rows">
+            <div class="coll-item"><span class="coll-item-desc">Fixed <code>claude --help</code> naming a removed tool in its description of <code>--restricted</code></span></div>
+            <div class="coll-item"><span class="coll-item-desc">Fixed a login refused by <code>forceLoginOrgUUID</code> leaving the refused organization's token stored, or live after <code>/login</code></span></div>
+          </div>
+        </div>
+        <div class="tab-panel" data-tab="fix">
+          <div class="chip-grid">
+            <span class="chip">cloud sessions telling Claude that an organization policy…</span>
+            <span class="chip">/autocompact warning about high token usage when you…</span>
+            <span class="chip">SessionEnd hooks sometimes not running when you exit…</span>
+            <span class="chip">claude agents not refreshing any pull request&#x27;s status…</span>
+            <span class="chip">Claude being told a background agent was lost,…</span>
+            <span class="chip">subagents you had typed messages to disappearing from…</span>
+            <span class="chip">a completed parent agent dropping off the breadcrumb…</span>
+            <span class="chip">agents view taking a typed word such as…</span>
+            <span class="chip">automatic tool search (ENABLE_TOOL_SEARCH=auto) turning off part-way through…</span>
+            <span class="chip">diff view in Claude Desktop and Remote Control…</span>
+            <span class="chip">Artifact tool&#x27;s verbose and ctrl+o line reading Artifact(&quot;(unprintable…</span>
+            <span class="chip">first transcript entry written after resuming a session…</span>
+            <span class="chip">/branch dropping messages, and claude purge skipping subfolder…</span>
+            <span class="chip">plugin WorktreeCreate and WorktreeRemove hooks not running when…</span>
+            <span class="chip">OpenTelemetry tool_result events missing git_commit_id after git commit…</span>
+            <span class="chip">a prompt that a mod&#x27;s prompt.submit hook rewrote…</span>
+            <span class="chip">a note meant for Claude about mod hot-reloading…</span>
+            <span class="chip">agent hooks ignoring their model: aliases like haiku…</span>
+            <span class="chip">--worktree sessions sometimes starting from the wrong commit…</span>
+            <span class="chip">branch showing as &quot;.invalid&quot; and --worktree failing to…</span>
+            <span class="chip">Claude naming files in the session scratchpad by…</span>
+            <span class="chip">claude remote-control servers giving up on renewing their…</span>
+            <span class="chip">--worktree failing in a worktree of a bare…</span>
+            <span class="chip">starting Claude Code in a VS Code, Cursor…</span>
+            <span class="chip">a mod&#x27;s prompt.edit hook not being raised for…</span>
+            <span class="chip">a conversation failing on every turn with a…</span>
+            <span class="chip">resuming a headless or Agent SDK session losing…</span>
+            <span class="chip">Claude not being told about an MCP server&#x27;s…</span>
+            <span class="chip">Remote Control sessions being marked stopped while still…</span>
+            <span class="chip">resuming a headless or Agent SDK session losing…</span>
+            <span class="chip">Claude polling a background command&#x27;s output file or…</span>
+            <span class="chip">feature flags and staged rollouts staying stale behind…</span>
+            <span class="chip">claude daemon stop --any printing &quot;stopped&quot; while a…</span>
+            <span class="chip">claude daemon stop exiting with no output, and…</span>
+            <span class="chip">Write, Edit and NotebookEdit in Cowork cloud sessions…</span>
+            <span class="chip">Claude searching for deferred tools already loaded earlier…</span>
+            <span class="chip">secondary (dim) text looking the same as normal…</span>
+            <span class="chip">cloud sessions hanging 5 minutes per turn when…</span>
+            <span class="chip">a cloud session sometimes running an already answered…</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- ── v2.1.299 ── -->
   <div class="version-block" id="v2.1.299" data-types="feature improve security fix" data-date="2026-10-14">
     <div class="version-head">
