@@ -115,6 +115,28 @@
    "all": []
   },
   {
+   "key": "anthropic.com/news/singapore-office-opening",
+   "of": null,
+   "title": "Singapore office and government MOU | Anthropic",
+   "group": "skip",
+   "line": "Anthropic 싱가포르 사무소 — 정부와 MOU",
+   "short": "싱가포르 사무소",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://www.anthropic.com/news/singapore-office-opening",
+   "co": "Anthropic",
+   "date": "2026-10-14",
+   "pts": 0,
+   "hn": null,
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [],
+   "thread": "",
+   "all": []
+  },
+  {
    "key": "anthropic.com/engineering/redesigning-source-control",
    "of": null,
    "title": "Redesigning source control at Anthropic",
@@ -4866,5 +4888,5 @@
    "all": []
   }
  ],
- "judged_at": 1791939923
+ "judged_at": 1791978240
 }
