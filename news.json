@@ -1,6 +1,32 @@
 {
  "items": [
   {
+   "key": "sunshowers.io/posts/anthropic-mononoke",
+   "of": null,
+   "title": "Anthropic's Scion is heavily inspired by Mononoke",
+   "group": "buzz",
+   "line": "Scion 이 Mononoke 를 닮았다는 글",
+   "short": "Scion 논란",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://sunshowers.io/posts/anthropic-mononoke/",
+   "co": "Anthropic",
+   "date": "2026-10-15",
+   "pts": 306,
+   "hn": "50094694",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "Meta 에서 Mononoke 를 만든 개발자가 Anthropic 의 버전 관리 시스템 Scion 을 짚은 글이에요.",
+    "Scion 의 derived data 설명이 자기가 2022년에 쓴 Mononoke 설명과 거의 같다고 해요.",
+    "Sapling 만 언급되고 Mononoke 는 빠졌다며, LLM 시대일수록 선행 설계에 출처를 밝히자고 해요."
+   ],
+   "thread": "",
+   "all": []
+  },
+  {
    "key": "csoonline.com/article/4234854/ai-agents-arent-going-rogue-frontier-labs-are-skipping-security-basics.html",
    "of": null,
    "title": "AI agents aren't 'going rogue.' Frontier labs are skipping security basics",
@@ -24,6 +50,32 @@
     "Hugging Face 사고는 며칠간 아무도 몰랐고, 책임을 연구소에 묻는 법안과 FTC 조사도 거론돼요."
    ],
    "thread": "에이전트 보안 사고",
+   "all": []
+  },
+  {
+   "key": "arca.live/b/aihomelab/185810092",
+   "of": null,
+   "title": "동네 치과의 AX 전환기",
+   "group": "buzz",
+   "line": "동네 치과의 AX 전환기",
+   "short": "치과 AX",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://arca.live/b/aihomelab/185810092",
+   "co": "기타",
+   "date": "2026-10-15",
+   "pts": 0,
+   "hn": null,
+   "gn": "35381",
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "치과 원장이 AI 코딩 에이전트(Claude 와 Codex)로 병원 업무를 직접 자동화한 후기예요.",
+    "DGX Spark급 12대에 DeepSeek 와 GLM 을 돌려 보험 서류 904개를 69분에 읽었다고 해요.",
+    "환자 정보가 병원 밖으로 나가지 않게 로컬 AI 로 돌리고, 에이전트끼리 교차 검증시켜요."
+   ],
+   "thread": "",
    "all": []
   },
   {
@@ -412,6 +464,32 @@
     "프롬프트가 구체적이지 않으면 호환성, 지연, 메모리 같은 설계 판단이 동전 던지기가 된다고 해요."
    ],
    "thread": "AI 와 개발자의 일",
+   "all": []
+  },
+  {
+   "key": "github.com/stacklok/mecatl",
+   "of": null,
+   "title": "Mecatl - 자체 인프라에서 AI 에이전트를 실행하는 클라우드 네이티브 런타임",
+   "group": "buzz",
+   "line": "Mecatl — 클라우드 네이티브 에이전트 하네스",
+   "short": "Mecatl",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://github.com/stacklok/mecatl",
+   "co": "기타",
+   "date": "2026-10-12",
+   "pts": 0,
+   "hn": null,
+   "gn": "35378",
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "Stacklok 이 오픈소스 에이전트 하네스 Mecatl 을 공개했어요.",
+    "에이전트 루프, 권한, hooks, subagents 를 갖추고 로컬, 원격, Kubernetes 에서 같은 루프로 돌아가요.",
+    "Apache 2.0 라이선스이고, mecated 서버는 기본으로 인증이 없어 로컬 한 사용자용이에요."
+   ],
+   "thread": "",
    "all": []
   },
   {
@@ -4711,5 +4789,5 @@
    "all": []
   }
  ],
- "judged_at": 1792021874
+ "judged_at": 1792038244
 }
