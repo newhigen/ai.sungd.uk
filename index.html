@@ -750,7 +750,7 @@ html[data-tab="home"] .ptools,html[data-tab="home"] .ptop,html[data-tab="home"] 
        title="Antigravity CLI 공식 릴리스 전체">공식 릴리스 <i>↗</i></a></span>
   <span class="pdone"><span class="pcount">해봄 <b class="doneAll">0</b>/<span class="totAll">0</span></span>
     <button class="clrb btn">모두 해제</button></span>
-  <span class="pstamp"><!--SYNC--><span class="s-y">2026-</span><span class="s-md">10-15</span><span class="s-t"> 05:34</span><!--/SYNC--></span>
+  <span class="pstamp"><!--SYNC--><span class="s-y">2026-</span><span class="s-md">10-16</span><span class="s-t"> 07:07</span><!--/SYNC--></span>
 </div>
 
 <div class="tab" id="home"></div>
@@ -1110,7 +1110,144 @@ html[data-tab="home"] .ptools,html[data-tab="home"] .ptop,html[data-tab="home"] 
      지우면 update_changelog·update_codex 가 꽂을 자리를 잃는다. -->
 <div id="data">
 <!--CC-DATA-->
-    <p class="range"><strong>v2.0.0</strong> → <strong>v2.1.300</strong> &nbsp;·&nbsp; <span class="range-dates" data-en="2025.9.29 – 2026.10.14">2025.9.29 – 2026.10.14</span></p>
+    <p class="range"><strong>v2.0.0</strong> → <strong>v2.1.301</strong> &nbsp;·&nbsp; <span class="range-dates" data-en="2025.9.29 – 2026.10.15">2025.9.29 – 2026.10.15</span></p>
+  <!-- ── v2.1.301 ── -->
+  <div class="version-block" id="v2.1.301" data-types="feature improve security fix" data-date="2026-10-15">
+    <div class="version-head">
+      <span class="ver-badge">v2.1.301</span><span class="ver-date">10월 15일 목</span><span class="ver-ago"></span>
+      <div class="ver-summary"><span class="pill feature">기능 ×19</span><span class="pill improve">개선 ×4</span><span class="pill security">보안 ×6</span><span class="pill fix">Fix ×22</span></div>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Added <code>CLAUDE_CODE_RETRY_WATCHDOG_MAX_USAGE_LIMIT_WAIT_MS</code> so unattended retry mode (<code>CLAUDE_CODE_RETRY_WATCHDOG</code>) ends a request at a usage limit that resets too far away instead of waiting</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Added OpenTelemetry tracing guidance to the <code>claude-api</code> skill, including setting up trace destinations with the <code>ant</code> CLI</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Added the <code>%</code> motion to vim mode: jump to the matching bracket, alone or with d/c/y</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Added <code>rows</code> to a mod's <code>Input</code>: a text field of several lines in the terminal, where Enter submits and Shift+Enter or a backslash before Enter starts a new line</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Added <code>classifier_verdict</code> and <code>permission_mode</code> to OpenTelemetry <code>tool_decision</code> events, so auto mode classifier decisions can be told apart from permission rules</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Added <code>classifier_category</code> to OpenTelemetry <code>tool_decision</code> events, naming the built-in rule a classifier block matched, when <code>OTEL_LOG_TOOL_DETAILS=1</code></span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Fullscreen mode: Fixed <code>/compact</code> and auto-compact briefly freezing the UI while the visible transcript is rebuilt</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Self-hosted runner: Fixed sessions started from Slack being unable to find or attach a repository when managed settings restrict MCP servers; use <code>deniedMcpServers</code> to keep those tools off</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Self-hosted runner: Fixed sessions being reported as having a deleted source branch, and not retried, when an unrelated setup or session failure quoted git's missing-ref wording</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Self-hosted runner: Fixed the log promising a retry of a failed or declined session release for a session that is ending; repeated failures now show a count</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Windows: Fixed stopped background PowerShell commands missing the closing <code>[killed]</code> line in their output file</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Changed a mod hook's <code>.catch</code> handler to run only when the hook throws or times out; events raised beneath the hook's own calls now skip that hook without asking its <code>.catch</code></span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Changed a mod's <code>$.env.set</code> to resolve with <code>{}</code> once the variable is set or unset, or with <code>{ deny }</code> saying why when the write is not made</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[VSCode] Added LaTeX math rendering in Claude's responses, including <code>$$</code> and multi-line <code>\[ … \]</code> blocks and inline <code>$…$</code> and <code>\(…\)</code> math</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[VSCode] Added a "Get more usage" link to the usage-limit banner for Pro and Max plans in the VS Code and JetBrains panels</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[VSCode] Fixed a conversation that crashes or freezes the panel being reopened on every reload</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[VSCode] Fixed the chat panel slowing down during long thinking: it no longer re-parses the whole thinking text on every update</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[VSCode] Fixed diagnostics showing "[object Object]" instead of the rule code (e.g. MD013) for some language servers</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[VSCode] Fixed the native dictation audio module being loaded, to check microphone permission, where dictation is not offered (non-claude.ai sign-ins, remote windows)</span>
+    </div>
+    <div class="tabs-container">
+      <div class="tabs-bar">
+        <div class="tab" data-tab="improve" onclick="toggleTab(this)">⚡ 개선 <span class="tab-count">4</span></div>
+        <div class="tab" data-tab="security" onclick="toggleTab(this)">🔒 보안 <span class="tab-count">6</span></div>
+        <div class="tab" data-tab="fix" onclick="toggleTab(this)">🐛 수정 <span class="tab-count">22</span></div>
+      </div>
+      <div class="tab-panels">
+        <div class="tab-panel" data-tab="improve">
+          <div class="coll-rows">
+            <div class="coll-item"><span class="coll-item-desc">Improved switching to a model with a smaller context window: a conversation too long for the new model is now summarized by the previous model first</span></div>
+            <div class="coll-item"><span class="coll-item-desc">Improved rendering performance while a long-running subagent works: its progress trail now updates incrementally instead of being reprocessed in full on every render</span></div>
+            <div class="coll-item"><span class="coll-item-desc">Improved artifacts: pages Claude writes now paint the band above a sticky header, so scrolled text no longer shows there in the mobile apps</span></div>
+            <div class="coll-item"><span class="coll-item-desc">Improved mods: in VS Code and the desktop and mobile apps, a tree drawn above the question dialog can now hold Markdown and up to 48 rows; the terminal keeps 12 plain rows</span></div>
+          </div>
+        </div>
+        <div class="tab-panel" data-tab="security">
+          <div class="coll-rows">
+            <div class="coll-item"><span class="coll-item-desc">Fixed workflow agents sometimes skipping their step, and the run still reporting success, after reading the harness note that their task text carries no user authority</span></div>
+            <div class="coll-item"><span class="coll-item-desc">Fixed switching to a model whose name contains <code>application-inference-profile</code> running your <code>awsAuthRefresh</code> command and delaying model-switch hooks when the provider is not Bedrock</span></div>
+            <div class="coll-item"><span class="coll-item-desc">Fixed sign-in refresh timeouts and unexpected sign-outs after a short command such as <code>claude auth status</code> or <code>claude plugin list</code> exited in the middle of a token refresh</span></div>
+            <div class="coll-item"><span class="coll-item-desc">Fixed a tool call cut off by a message sent mid-turn during its permission check being reported to the model as rejected by the user</span></div>
+            <div class="coll-item"><span class="coll-item-desc">Fixed the permission prompt for a plugin or skill hook's <code>ask</code> decision not showing which plugin or skill the hook comes from</span></div>
+            <div class="coll-item"><span class="coll-item-desc">Fixed workflow scripts asking for permission or being refused when read, edited or re-run after a Bash <code>cd</code> in the same session</span></div>
+          </div>
+        </div>
+        <div class="tab-panel" data-tab="fix">
+          <div class="chip-grid">
+            <span class="chip">quitting removing a worktree made by a WorktreeCreate…</span>
+            <span class="chip">fable (and best) model alias erroring on the…</span>
+            <span class="chip">a misleading &quot;Please run /login&quot; error when a…</span>
+            <span class="chip">Grep and Glob reporting no matches when the…</span>
+            <span class="chip">artifact updates being refused where a PreToolUse hook…</span>
+            <span class="chip">skills and commands with very many or very…</span>
+            <span class="chip">skills, commands and hooks using very large amounts…</span>
+            <span class="chip">stray characters such as &gt;0q covering the folder…</span>
+            <span class="chip">stray GOK text appearing in the prompt at…</span>
+            <span class="chip">a case where switching to a model with…</span>
+            <span class="chip">conversations being compacted over and over, on a…</span>
+            <span class="chip">vim mode sometimes staying in INSERT after Escape…</span>
+            <span class="chip">Esc discarding a typed AskUserQuestion answer in vim…</span>
+            <span class="chip">Read tool reading binary files such as .xlsm,…</span>
+            <span class="chip">a Markdown table with only a header row…</span>
+            <span class="chip">/claude-api skill saying CMEK external-key endpoints aren&#x27;t available…</span>
+            <span class="chip">skills no longer being listed to the model…</span>
+            <span class="chip">compaction row in a resumed session offering ctrl+o…</span>
+            <span class="chip">&quot;new task? /clear to save tokens&quot; hint coming…</span>
+            <span class="chip">/diff not noticing a conflicted cherry-pick or revert…</span>
+            <span class="chip">dim text on the dark ANSI theme and…</span>
+            <span class="chip">a mod&#x27;s $.model.fork returning nothing-to-fork when called before…</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- ── v2.1.300 ── -->
   <div class="version-block" id="v2.1.300" data-types="feature improve security fix" data-date="2026-10-14">
     <div class="version-head">
