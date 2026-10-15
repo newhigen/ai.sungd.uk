@@ -21726,7 +21726,25 @@ html[data-tab="home"] .ptools,html[data-tab="home"] .ptop,html[data-tab="home"] 
   </div>
 <!--/CC-DATA-->
 <!--CX-DATA-->
-    <p class="range"><strong>v0.69.0</strong> → <strong>v0.162.1</strong> &nbsp;·&nbsp; <span class="range-dates" data-en="2025.12.10 – 2026.10.9">2025.12.10 – 2026.10.9</span></p>
+    <p class="range"><strong>v0.69.0</strong> → <strong>v0.163.0</strong> &nbsp;·&nbsp; <span class="range-dates" data-en="2025.12.10 – 2026.10.15">2025.12.10 – 2026.10.15</span></p>
+    <div class="version-block" id="cx0.163.0" data-date="2026-10-15">
+      <div class="version-head">
+        <span class="ver-badge">v0.163.0</span><span class="ver-date" data-en="Oct 15 Thu">10월 15일 목</span><span class="ver-ago"></span>
+        <div class="ver-summary"><span class="pill feature">기능 ×6</span><span class="pill fix">Fix ×6</span></div>
+      </div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Open <code>/config</code> to search preferences across categories, change supported settings immediately, and see which changes require a restart.</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Send a follow-up while Codex is responding to steer it immediately. Interrupting a turn also stops active Code Mode cells and their nested tool calls.</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Configure a leader key in <code>/keymap</code>. The default is <code>Ctrl+X</code>, shortcut hints stay open until you choose or cancel, and voice mute moves to <code>F9</code>.</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Restart a managed background server from <code>/daemon</code>. Codex warns about work the restart could interrupt, then reconnects automatically.</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Codex can run independent read-only tools in parallel, including skill, memory, and conversation-history lookups.</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Daybreak is enabled by default for eligible accounts. <code>codex exec</code> can also select it with an OpenAI API key when the server offers access.</span></div>
+      <div class="entry row-divider" data-type="fix"><span class="pill fix">Fix</span><span class="e-desc">Resuming a saved thread restores its permissions and network approvals, while respecting explicit overrides and current managed policy.</span></div>
+      <div class="entry row-divider" data-type="fix"><span class="pill fix">Fix</span><span class="e-desc">The network proxy now checks permission before a DNS lookup, rejects duplicate <code>Host</code> headers, and prevents credential aliases from bypassing inspection hooks.</span></div>
+      <div class="entry row-divider" data-type="fix"><span class="pill fix">Fix</span><span class="e-desc">Return to an existing side conversation with <code>/side</code> after switching threads. Answers to pending prompts also go back to the thread that asked.</span></div>
+      <div class="entry row-divider" data-type="fix"><span class="pill fix">Fix</span><span class="e-desc">On Windows, <code>Ctrl+V</code> and <code>Shift+Insert</code> paste text as well as images. On WSL, repeated pastes reuse the clipboard reader, and copy attempts time out instead of hanging.</span></div>
+      <div class="entry row-divider" data-type="fix"><span class="pill fix">Fix</span><span class="e-desc">Local commands finish promptly when a child keeps an output pipe open. Remote commands preserve late-arriving output so the final poll can still collect it.</span></div>
+      <div class="entry row-divider" data-type="fix"><span class="pill fix">Fix</span><span class="e-desc"><code>codex exec</code> no longer prints the same file diff again after an unrelated command.</span></div>
+    </div>
     <div class="version-block" id="cx0.162.1" data-date="2026-10-09">
       <div class="version-head">
         <span class="ver-badge">v0.162.1</span><span class="ver-date" data-en="Oct 9 Fri">10월 9일 금</span><span class="ver-ago"></span>
