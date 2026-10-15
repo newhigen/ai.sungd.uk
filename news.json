@@ -1,6 +1,32 @@
 {
  "items": [
   {
+   "key": "research.meta.ai/blog/muse-spark-open",
+   "of": null,
+   "title": "Muse Spark Open",
+   "group": "know",
+   "line": "Muse Spark Open — Meta 의 오픈 웨이트 모델",
+   "short": "Muse Spark Open",
+   "note": "오픈 웨이트 경쟁을 잇고, 맥에서도 돌려요",
+   "w": 3,
+   "event": "",
+   "url": "https://research.meta.ai/blog/muse-spark-open",
+   "co": "기타",
+   "date": "2026-10-16",
+   "pts": 503,
+   "hn": "50107379",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "Meta가 오픈 웨이트 모델 Muse Spark Open의 가중치를 공개했어요.",
+    "816B 파라미터(활성 42B)에 1M 토큰 컨텍스트이고, 코딩과 에이전트 작업용이에요.",
+    "Hugging Face에서 받고, Mac Studio M5 Ultra 두 대에서 MLX로 돌려요. 라이선스는 제한적 상업 조건이에요."
+   ],
+   "thread": "오픈 웨이트 경쟁",
+   "all": []
+  },
+  {
    "key": "sunshowers.io/posts/anthropic-mononoke",
    "of": null,
    "title": "Anthropic's Scion is heavily inspired by Mononoke",
@@ -4743,5 +4769,5 @@
    "all": []
   }
  ],
- "judged_at": 1792090946
+ "judged_at": 1792102109
 }
