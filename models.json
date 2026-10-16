@@ -8,6 +8,7 @@
 "Apriel-v1.5-15B-Thinker": "2025-09-30",
 "Apriel-v1.6-15B-Thinker": "2025-11-25",
 "Arctic Instruct": "2024-04-24",
+"Beam 1.0": "2026-10-16",
 "Celeris-1": "2026-07-24",
 "Claude 2.0": "2023-07-11",
 "Claude 2.1": "2023-11-21",
@@ -447,6 +448,7 @@
 "tb4": {
 "A.X-K2": 0,
 "Apodex 1.1": 0,
+"Beam 1.0": 3.0,
 "Celeris-1": 0,
 "Claude 4.5 Haiku": 0,
 "Claude 4.5 Sonnet": 0,
