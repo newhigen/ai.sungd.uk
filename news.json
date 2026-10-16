@@ -79,6 +79,32 @@
    "all": []
   },
   {
+   "key": "claude.dev/blog/solving-code-review-at-anthropic",
+   "of": null,
+   "title": "How the Claude Code team does code review",
+   "group": "try",
+   "line": "Claude Code 팀의 코드 리뷰 — 에이전트 시대 리뷰법",
+   "short": "코드 리뷰법",
+   "note": "/code-review 와 REVIEW.md 따라 해 봐요",
+   "w": 2,
+   "event": "",
+   "url": "https://claude.dev/blog/solving-code-review-at-anthropic/",
+   "co": "Anthropic",
+   "date": "2026-10-15",
+   "pts": 0,
+   "hn": null,
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "Claude Code 팀이 에이전트가 쓴 코드를 어떻게 리뷰하는지 정리한 글이에요.",
+    "6월부터 9월까지 머지된 PR은 2배 넘게 늘고 되돌린 비율은 40% 넘게 줄었어요.",
+    "/code-review 와 /security-review 를 쓰고, CLAUDE.md 와 REVIEW.md 로 리뷰어에게 기준을 알려줘요."
+   ],
+   "thread": "",
+   "all": []
+  },
+  {
    "key": "arca.live/b/aihomelab/185810092",
    "of": null,
    "title": "동네 치과의 AX 전환기",
@@ -4769,5 +4795,5 @@
    "all": []
   }
  ],
- "judged_at": 1792102109
+ "judged_at": 1792113009
 }
