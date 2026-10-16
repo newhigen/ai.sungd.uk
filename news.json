@@ -53,6 +53,32 @@
    "all": []
   },
   {
+   "key": "kylekukshtel.com/ai-harness-engineering-game-development-claude-code",
+   "of": null,
+   "title": "게임 개발용 AI 하네스를 설계하는 방법",
+   "group": "buzz",
+   "line": "Your Game Is A Harness — 게임 개발용 하네스",
+   "short": "게임 하네스",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://kylekukshtel.com/ai-harness-engineering-game-development-claude-code",
+   "co": "기타",
+   "date": "2026-10-15",
+   "pts": 0,
+   "hn": null,
+   "gn": "35355",
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "게임 개발자 Kyle Kukshtel이 Indie Rodeo 발표를 글로 옮겼어요.",
+    "게임은 코드 아닌 요소가 많아 LLM이 못 읽으니, 이를 에이전트가 다룰 형태로 바꿔야 한다고 해요.",
+    "문제를 context engineering로 보고, 하네스로 게임 내부를 열어 보자고 해요."
+   ],
+   "thread": "",
+   "all": []
+  },
+  {
    "key": "csoonline.com/article/4234854/ai-agents-arent-going-rogue-frontier-labs-are-skipping-security-basics.html",
    "of": null,
    "title": "AI agents aren't 'going rogue.' Frontier labs are skipping security basics",
@@ -176,6 +202,32 @@
    "demo_as": "듣기",
    "s": [],
    "thread": "",
+   "all": []
+  },
+  {
+   "key": "natemeyvis.com/where-is-all-the-new-good-software",
+   "of": null,
+   "title": "AI 코딩이 그렇게 뛰어나다면, 새롭고 좋은 소프트웨어는 다 어디에 있나?",
+   "group": "buzz",
+   "line": "새롭고 좋은 소프트웨어는 어디에 — AI 코딩 회의론 답",
+   "short": "좋은 소프트웨어는?",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://www.natemeyvis.com/where-is-all-the-new-good-software/",
+   "co": "기타",
+   "date": "2026-10-14",
+   "pts": 0,
+   "hn": null,
+   "gn": "35319",
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "AI 코딩이 그렇게 좋다면 새 소프트웨어가 왜 안 보이냐는 물음에 답하는 글이에요.",
+    "버그와 성능 개선, 비공개 도구 증가, 조직 병목 등 9가지 가설을 들어요.",
+    "저자가 일부는 근거가 약한 추측이라고 밝히고, 날짜는 10월 12일이에요."
+   ],
+   "thread": "AI 와 개발자의 일",
    "all": []
   },
   {
@@ -4795,5 +4847,5 @@
    "all": []
   }
  ],
- "judged_at": 1792113009
+ "judged_at": 1792134173
 }
