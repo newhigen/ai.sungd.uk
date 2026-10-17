@@ -1,6 +1,32 @@
 {
  "items": [
   {
+   "key": "mercor.com/research/labor-index/benchmark-map",
+   "of": null,
+   "title": "90% of US working hours are spent on tasks not covered well by AI benchmarks",
+   "group": "buzz",
+   "line": "Mercor 벤치마크 지도 — 미국 일자리 커버리지",
+   "short": "벤치마크 지도",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://www.mercor.com/research/labor-index/benchmark-map/",
+   "co": "기타",
+   "date": "2026-10-17",
+   "pts": 542,
+   "hn": "50121179",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "Mercor가 AI 벤치마크 29개가 미국 직업을 얼마나 덮는지 지도로 냈어요.",
+    "923개 직업 중 208개, 18,797개 업무 중 924개만 덮이고, 미국 근무 시간의 90%는 거의 덮이지 않아요.",
+    "O*NET 분류와 LLM 판정으로 매겼고, 벤치마크 목록이 일부라 결과는 잠정이라고 밝혔어요."
+   ],
+   "thread": "",
+   "all": []
+  },
+  {
    "key": "anthropic.com/research/ecdsa-curve-origins",
    "of": null,
    "title": "Claude reveals ECDSA curve origins",
@@ -4842,5 +4868,5 @@
    "all": []
   }
  ],
- "judged_at": 1792228261
+ "judged_at": 1792244196
 }
