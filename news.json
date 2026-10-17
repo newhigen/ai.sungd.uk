@@ -283,6 +283,32 @@
    "all": []
   },
   {
+   "key": "github.com/cobanov/PS5LM",
+   "of": null,
+   "title": "PS5LM - 탈옥한 PS5에서 llama.cpp로 모든 GGUF 모델을 콘솔에서 네이티브 실행",
+   "group": "know",
+   "line": "PS5LM — 탈옥한 PS5를 모델 서버로",
+   "short": "PS5LM",
+   "note": "의사결정 모델 줄기를 이어요. Claude Code 연결 문서가 있어요",
+   "w": 1,
+   "event": "",
+   "url": "https://github.com/cobanov/PS5LM",
+   "co": "기타",
+   "date": "2026-10-14",
+   "pts": 0,
+   "hn": null,
+   "gn": "35496",
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "탈옥한 PS5에서 llama.cpp로 GGUF 모델을 돌려 집 안 모델 서버로 쓰는 오픈소스예요.",
+    "OpenAI와 Anthropic 호환 API를 내고, Jev 같은 의사결정 모델(d1, Clef)도 /v1/systemone으로 답해요.",
+    "펌웨어 7.00~13.60 탈옥과 여러 payload가 필요하고, Qwen 3.5 9B는 PS5 Slim에서 초당 55토큰이에요."
+   ],
+   "thread": "의사결정 모델",
+   "all": []
+  },
+  {
    "key": "developers.googleblog.com/gemini-4-argon-for-robotics",
    "of": null,
    "title": "Gemini 4 Argon for Robotics",
@@ -4816,5 +4842,5 @@
    "all": []
   }
  ],
- "judged_at": 1792210187
+ "judged_at": 1792228261
 }
