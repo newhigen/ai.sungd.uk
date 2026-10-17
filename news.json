@@ -53,6 +53,28 @@
    "all": []
   },
   {
+   "key": "huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+   "of": null,
+   "title": "DeepSeek-v4.1-Flash-1017",
+   "group": "skip",
+   "line": "DeepSeek-V4.1-Flash-1017 — Hugging Face 모델 카드",
+   "short": "DeepSeek 1017",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+   "co": "기타",
+   "date": "2026-10-17",
+   "pts": 615,
+   "hn": "50129045",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [],
+   "thread": "오픈 웨이트 경쟁",
+   "all": []
+  },
+  {
    "key": "anthropic.com/research/ecdsa-curve-origins",
    "of": null,
    "title": "Claude reveals ECDSA curve origins",
@@ -4840,5 +4862,5 @@
    "thread": "AI 와 개발자의 일"
   }
  ],
- "judged_at": 1792256354
+ "judged_at": 1792275101
 }
