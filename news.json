@@ -1,6 +1,32 @@
 {
  "items": [
   {
+   "key": "openrouter.ai/deepseek/deepseek-v4.1-flash-1017",
+   "of": null,
+   "title": "DeepSeek: DeepSeek v4.1 Flash 1017",
+   "group": "know",
+   "line": "DeepSeek v4.1 Flash 1017",
+   "short": "DeepSeek 1017",
+   "note": "9월 Flash 를 잇는 새 판이에요",
+   "w": 2,
+   "event": "",
+   "url": "https://openrouter.ai/deepseek/deepseek-v4.1-flash-1017",
+   "co": "기타",
+   "date": "2026-10-17",
+   "pts": 509,
+   "hn": "50129121",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "DeepSeek가 V4.1 Flash 1017을 OpenRouter에 올렸어요. 출시일은 10월 17일이에요.",
+    "컨텍스트 1.0M, 가격은 입력 $0.10, 출력 $0.50 (100만 토큰당)이에요.",
+    "Artificial Analysis Intelligence Index 39.5, Terminal-Bench 4.0 26.8%로 나와 있어요."
+   ],
+   "thread": "오픈 웨이트 경쟁",
+   "all": []
+  },
+  {
    "key": "mercor.com/research/labor-index/benchmark-map",
    "of": null,
    "title": "90% of US working hours are spent on tasks not covered well by AI benchmarks",
@@ -4812,61 +4838,7 @@
    "gn": null,
    "all": [],
    "thread": "AI 와 개발자의 일"
-  },
-  {
-   "key": "openrouter.ai/openai/gpt-6-astra",
-   "of": null,
-   "title": "GPT-6 Astra on OpenRouter",
-   "group": "skip",
-   "line": "OpenRouter 의 GPT-6 Astra",
-   "short": "OpenRouter Astra",
-   "note": "",
-   "w": 1,
-   "event": "",
-   "url": "https://openrouter.ai/openai/gpt-6-astra",
-   "co": "OpenAI",
-   "date": "2026-09-05",
-   "pts": 320,
-   "hn": "49570545",
-   "gn": null,
-   "all": []
-  },
-  {
-   "key": "nytimes.com/2026/09/04/technology/open-source-ai-anthropic-openai.html",
-   "of": null,
-   "title": "Corporate America is getting hooked on open-source AI",
-   "group": "skip",
-   "line": "기업이 오픈소스 AI 에 빠지는 중",
-   "short": "오픈소스 AI",
-   "note": "",
-   "w": 1,
-   "event": "",
-   "url": "https://www.nytimes.com/2026/09/04/technology/open-source-ai-anthropic-openai.html",
-   "co": "Anthropic",
-   "date": "2026-09-05",
-   "pts": 334,
-   "hn": "49566137",
-   "gn": null,
-   "all": []
-  },
-  {
-   "key": "anthropic.com/research/formalizing-fermats-last-theorem",
-   "of": null,
-   "title": "Formalizing Fermat's Last Theorem",
-   "group": "skip",
-   "line": "페르마의 마지막 정리 형식화",
-   "short": "페르마 형식화",
-   "note": "",
-   "w": 1,
-   "event": "",
-   "url": "https://www.anthropic.com/research/formalizing-fermats-last-theorem",
-   "co": "Anthropic",
-   "date": "2026-09-05",
-   "pts": 773,
-   "hn": "49568506",
-   "gn": null,
-   "all": []
   }
  ],
- "judged_at": 1792244196
+ "judged_at": 1792256354
 }
