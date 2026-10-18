@@ -127,6 +127,32 @@
    "all": []
   },
   {
+   "key": "alexwang.ai/posts/associative-memory",
+   "of": null,
+   "title": "You could have invented transformers from memory",
+   "group": "buzz",
+   "line": "트랜스포머를 기억 장치로 풀어낸 글",
+   "short": "연상 기억 글",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://alexwang.ai/posts/associative-memory/",
+   "co": "기타",
+   "date": "2026-10-17",
+   "pts": 533,
+   "hn": "50122878",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "Alex Wang이 선형 층, MLP, self-attention을 기억 저장소로 보는 직관을 풀어 쓴 글이에요.",
+    "64차원 키 기준으로 저장 용량이 약 64개, 약 2,700개, 100만 개 넘게 늘어나는 흐름을 보여줘요.",
+    "기억이 늘수록 서로 간섭하는 정도를 재는 interference-to-signal ratio 로 용량을 따져요."
+   ],
+   "thread": "",
+   "all": []
+  },
+  {
    "key": "research.meta.ai/blog/muse-spark-open",
    "of": null,
    "title": "Muse Spark Open",
@@ -4862,5 +4888,5 @@
    "thread": "AI 와 개발자의 일"
   }
  ],
- "judged_at": 1792275101
+ "judged_at": 1792302187
 }
