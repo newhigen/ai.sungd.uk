@@ -1,6 +1,32 @@
 {
  "items": [
   {
+   "key": "api-docs.deepseek.com/guides/search",
+   "of": null,
+   "title": "DeepSeek search and fetch – $0.75 per 1000 successful requests",
+   "group": "buzz",
+   "line": "DeepSeek Search, Fetch API",
+   "short": "DeepSeek 검색",
+   "note": "",
+   "w": 2,
+   "event": "",
+   "url": "https://api-docs.deepseek.com/guides/search/",
+   "co": "기타",
+   "date": "2026-10-18",
+   "pts": 543,
+   "hn": "50138531",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "DeepSeek가 에이전트와 RAG용 Search API와 Fetch API를 냈어요.",
+    "Search는 검색 결과를 구조화해 돌려주고, Fetch는 웹 페이지를 Markdown으로 가져와요.",
+    "각각 성공 요청 1,000건에 $0.75예요. DeepSeek Harness, Claude Code, Codex에서 쓰는 서버 도구 호출은 11월 1일 0시(베이징)부터 과금돼요."
+   ],
+   "thread": "",
+   "all": []
+  },
+  {
    "key": "anthropic.com/research/employment-at-anthropic",
    "of": null,
    "title": "How employment is changing at Anthropic",
@@ -4899,5 +4925,5 @@
    "all": []
   }
  ],
- "judged_at": 1792355368
+ "judged_at": 1792371779
 }
