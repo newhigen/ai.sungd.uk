@@ -1,6 +1,28 @@
 {
  "items": [
   {
+   "key": "equator.org/articles/arundhati-roy-artificial-intelligence",
+   "of": null,
+   "title": "인공지능은 자본주의의 최종 목적지다",
+   "group": "skip",
+   "line": "Apocalypse Now and Then — AI 비판 에세이",
+   "short": "AI 비판 에세이",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://www.equator.org/articles/arundhati-roy-artificial-intelligence",
+   "co": "기타",
+   "date": "2026-10-18",
+   "pts": 0,
+   "hn": null,
+   "gn": "35544",
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [],
+   "thread": "",
+   "all": []
+  },
+  {
    "key": "api-docs.deepseek.com/guides/search",
    "of": null,
    "title": "DeepSeek search and fetch – $0.75 per 1000 successful requests",
@@ -4925,5 +4947,5 @@
    "all": []
   }
  ],
- "judged_at": 1792371779
+ "judged_at": 1792389750
 }
