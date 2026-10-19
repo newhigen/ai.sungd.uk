@@ -49,6 +49,58 @@
    "all": []
   },
   {
+   "key": "mistral.ai/news/timestral",
+   "of": null,
+   "title": "Timestral: Mistral's time-series foundation models",
+   "group": "buzz",
+   "line": "Timestral — 시계열 예측 모델",
+   "short": "Timestral",
+   "note": "",
+   "w": 3,
+   "event": "",
+   "url": "https://mistral.ai/news/timestral/",
+   "co": "기타",
+   "date": "2026-10-19",
+   "pts": 526,
+   "hn": "50150434",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "Mistral이 첫 시계열 파운데이션 모델 Timestral을 공개했어요.",
+    "5M, 28M, 123M, 209M 네 가지 크기이고 GIFT-Eval, TIME, fev-bench에서 1위라고 해요.",
+    "GPU 없이 CPU로 돌고, 라이선스는 Modified MIT이며 GitHub 저장소가 열려 있어요."
+   ],
+   "thread": "",
+   "all": []
+  },
+  {
+   "key": "arxiv.org/abs/2610.18861",
+   "of": null,
+   "title": "Hybrid Reasoning Agents: LLM agents that think in latent space, act through text",
+   "group": "buzz",
+   "line": "Hybrid Reasoning Agents — 잠재 공간에서 생각하는 에이전트",
+   "short": "HybridAgent",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://arxiv.org/abs/2610.18861",
+   "co": "기타",
+   "date": "2026-10-19",
+   "pts": 502,
+   "hn": "50145337",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "Together 쪽 연구진이 잠재 공간에서 생각하고 텍스트로 행동하는 에이전트 논문을 냈어요.",
+    "벤치마크 11개에서 성능 10.4% 향상, 토큰 35.5%에서 54.7% 감소를 보고해요.",
+    "추론이 1.8배에서 2.6배 빨라지고, 코드와 데이터는 GitHub에 공개돼 있어요."
+   ],
+   "thread": "",
+   "all": []
+  },
+  {
    "key": "equator.org/articles/arundhati-roy-artificial-intelligence",
    "of": null,
    "title": "인공지능은 자본주의의 최종 목적지다",
@@ -4981,5 +5033,5 @@
    "all": []
   }
  ],
- "judged_at": 1792437245
+ "judged_at": 1792452712
 }
