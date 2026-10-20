@@ -750,7 +750,7 @@ html[data-tab="home"] .ptools,html[data-tab="home"] .ptop,html[data-tab="home"] 
        title="Antigravity CLI 공식 릴리스 전체">공식 릴리스 <i>↗</i></a></span>
   <span class="pdone"><span class="pcount">해봄 <b class="doneAll">0</b>/<span class="totAll">0</span></span>
     <button class="clrb btn">모두 해제</button></span>
-  <span class="pstamp"><!--SYNC--><span class="s-y">2026-</span><span class="s-md">10-20</span><span class="s-t"> 08:31</span><!--/SYNC--></span>
+  <span class="pstamp"><!--SYNC--><span class="s-y">2026-</span><span class="s-md">10-21</span><span class="s-t"> 08:05</span><!--/SYNC--></span>
 </div>
 
 <div class="tab" id="home"></div>
@@ -1106,7 +1106,131 @@ html[data-tab="home"] .ptools,html[data-tab="home"] .ptop,html[data-tab="home"] 
      지우면 update_changelog·update_codex 가 꽂을 자리를 잃는다. -->
 <div id="data">
 <!--CC-DATA-->
-    <p class="range"><strong>v2.0.0</strong> → <strong>v2.1.304</strong> &nbsp;·&nbsp; <span class="range-dates" data-en="2025.9.29 – 2026.10.19">2025.9.29 – 2026.10.19</span></p>
+    <p class="range"><strong>v2.0.0</strong> → <strong>v2.1.305</strong> &nbsp;·&nbsp; <span class="range-dates" data-en="2025.9.29 – 2026.10.20">2025.9.29 – 2026.10.20</span></p>
+  <!-- ── v2.1.305 ── -->
+  <div class="version-block" id="v2.1.305" data-types="feature improve security fix" data-date="2026-10-20">
+    <div class="version-head">
+      <span class="ver-badge">v2.1.305</span><span class="ver-date">10월 20일 화</span><span class="ver-ago"></span>
+      <div class="ver-summary"><span class="pill feature">기능 ×19</span><span class="pill improve">개선 ×6</span><span class="pill security">보안 ×1</span><span class="pill fix">Fix ×12</span></div>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Added <code>sandbox.allowNestedUserNamespaces</code> so sandboxed commands on Linux can create user namespaces (Chromium, rootless podman); this lets them get around the sandbox's file protections</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Added <code>CLAUDE_CODE_RETRY_WATCHDOG_USAGE_LIMIT_RECHECK_MS</code> so unattended retry mode (<code>CLAUDE_CODE_RETRY_WATCHDOG</code>) notices a usage limit that was lifted before its reset</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Self-hosted runner: Fixed a start script that shares only its stdout with the runner or orchestrator failing with <code>Resource temporarily unavailable</code> when <code>TERM</code> is set (a 2.1.300 regression)</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Self-hosted runner: Fixed repository access failing since 2.1.296 when a git credential helper or askpass program reads its settings through <code>GIT_CONFIG</code></span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Self-hosted runner: Fixed the orchestrator reporting a spawn-runner hook as timed out when a runner it started in the background kept its output open</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Changed <code>allowedMcpServers</code> to stop filtering <code>managed-mcp.json</code> stdio servers that use <code>${VAR}</code> only in <code>env</code>: one your allowlist left out now loads on upgrade; use <code>deniedMcpServers</code> to keep it off</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Changed plugins that Claude Desktop mounts by path to no longer keep their <code>allowed-tools</code> when your organization's managed settings set <code>allowManagedPermissionRulesOnly</code></span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Changed the <code>/artifacts</code> delete confirmation to take 1 or Enter to keep, 2 to delete, and Esc to cancel; <code>y</code> and <code>n</code> no longer answer it</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Changed a mod's docked pane to stay within 45% of the terminal's width, including a width kept from a wider terminal</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[VSCode] Added a "Running start-up hooks" spinner status, with a screen reader announcement, while SessionStart or Setup hooks run</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[VSCode] Fixed the spinner cutting off "Compacting..." when your <code>spinnerVerbs</code> setting replaces the built-in verbs with short ones</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[VSCode] Changed the message shown when a session does not start in time and no hook is running: it now leads with the output logs and lists causes instead of pointing to sign-in and network first</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[Cloud sessions] Fixed the Cloud environments admin page wrongly refusing to save an existing environment with an "installs packages" error</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[Claude Tag] Added public Slack channels Claude hasn't joined to the Claude Tag admin Add place search, so admins can set one up from there</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[Claude Tag] Fixed Claude Tag access bundles so a repository that moved to another GitHub account can be added again</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[Claude Tag] Fixed a routine set up in a Slack DM thread no longer posting after another routine in that thread restarted the conversation; both now keep posting there</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[Claude Tag] Fixed routines set up in a Slack thread reporting success without posting after the conversation ended; those runs are now skipped and the creator is told</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[Code Review] Fixed Code Review sometimes not reviewing the newest commit when several pushes landed on a pull request during a review</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[Code Review] Changed Code Review re-reviews so they no longer open with LGTM while earlier blocking findings are still open</span>
+    </div>
+    <div class="tabs-container">
+      <div class="tabs-bar">
+        <div class="tab" data-tab="improve" onclick="toggleTab(this)">⚡ 개선 <span class="tab-count">6</span></div>
+        <div class="tab" data-tab="security" onclick="toggleTab(this)">🔒 보안 <span class="tab-count">1</span></div>
+        <div class="tab" data-tab="fix" onclick="toggleTab(this)">🐛 수정 <span class="tab-count">12</span></div>
+      </div>
+      <div class="tab-panels">
+        <div class="tab-panel" data-tab="improve">
+          <div class="coll-rows">
+            <div class="coll-item"><span class="coll-item-desc">Improved <code>/usage</code>: each warning is now a one-line fix that names its source, and <code>f</code> applies the fixes; the same fixes appear in VS Code and <code>/doctor</code></span></div>
+            <div class="coll-item"><span class="coll-item-desc">Improved MCP consent dialogs so an Enter meant for the prompt is less likely to be taken as Accept</span></div>
+            <div class="coll-item"><span class="coll-item-desc">Improved a mod's <code>Image</code> to draw its picture in iTerm2 3.5 and later with fullscreen rendering, where it showed only its <code>alt</code> text</span></div>
+            <div class="coll-item"><span class="coll-item-desc">Remote Control: Improved the spawn-mode messages: pressing <code>w</code> now says the new mode is saved for the folder, and a later <code>claude remote-control</code> start that uses the saved mode says where it came from</span></div>
+            <div class="coll-item"><span class="coll-item-desc">[Cloud sessions] Improved deleting a self-hosted environment so the dialog and error messages say what blocks the delete and what it will affect</span></div>
+            <div class="coll-item"><span class="coll-item-desc">[Claude Tag] Improved Claude Tag admin pages in large organizations so plugin, skill and bundle edits work while the channel list is still loading</span></div>
+          </div>
+        </div>
+        <div class="tab-panel" data-tab="security">
+          <div class="coll-rows">
+            <div class="coll-item"><span class="coll-item-desc">Fixed startup warnings printing as raw text above the logo: they now go to the debug log, and permission rules that restrict nothing show as warning rows under the banner</span></div>
+          </div>
+        </div>
+        <div class="tab-panel" data-tab="fix">
+          <div class="chip-grid">
+            <span class="chip">every request failing on Vertex, Bedrock and other…</span>
+            <span class="chip">/effort and /autocompact settings not applying when the…</span>
+            <span class="chip">new worktrees in a bare repository sometimes starting…</span>
+            <span class="chip">Bash commands on a full disk failing with…</span>
+            <span class="chip">an MCP server passed by a cloud session…</span>
+            <span class="chip">Claude naming the wrong model for a subagent&#x27;s…</span>
+            <span class="chip">cloud sessions and teammates not telling Claude when…</span>
+            <span class="chip">more cases of scheduled Cowork cloud sessions waiting…</span>
+            <span class="chip">Workflow resume re-running already-completed pipeline() and parallel() agents…</span>
+            <span class="chip">Remote Control leaving empty &quot;(session)&quot; entries in /resume…</span>
+            <span class="chip">/usage rows being cut off in narrow terminals</span>
+            <span class="chip">screen reader mode: search boxes now say &quot;Search:&quot;…</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- ── v2.1.304 ── -->
   <div class="version-block" id="v2.1.304" data-types="feature improve security fix" data-date="2026-10-19">
     <div class="version-head">
