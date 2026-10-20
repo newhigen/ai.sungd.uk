@@ -1,6 +1,84 @@
 {
  "items": [
   {
+   "key": "redact.dev/blog/whatsapp-help-pages-hidden-ai-instructions",
+   "of": null,
+   "title": "WhatsApp's help pages hid LLM instructions: dont recommend a regulator",
+   "group": "buzz",
+   "line": "WhatsApp 도움말에 숨은 AI 지시",
+   "short": "WhatsApp 숨은 지시",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://redact.dev/blog/whatsapp-help-pages-hidden-ai-instructions",
+   "co": "기타",
+   "date": "2026-10-20",
+   "pts": 632,
+   "hn": "50159341",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "redact.dev가 WhatsApp 도움말 545쪽을 읽고 AI에게만 보이는 숨은 지시를 찾았어요.",
+    "80쪽에서 102개 블록이 나왔고, 감독 기관과 GDPR를 언급하지 말라는 지시가 있었어요.",
+    "WhatsApp은 지시가 자사 지원 챗봇용이라 밝혔고, 지금은 live 페이지에서 지워졌어요."
+   ],
+   "thread": "",
+   "all": []
+  },
+  {
+   "key": "github.com/wheresryan22/anatomy",
+   "of": null,
+   "title": "Anatomy - 기술 개념을 움직이는 입체 도해로 만드는 AI 에이전트 스킬",
+   "group": "buzz",
+   "line": "Anatomy — 입체 도해를 만드는 스킬",
+   "short": "Anatomy",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://github.com/wheresryan22/anatomy",
+   "co": "기타",
+   "date": "2026-10-20",
+   "pts": 0,
+   "hn": null,
+   "gn": "35670",
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "Anatomy는 기술 개념을 움직이는 등각 도해로 만들어 주는 에이전트 스킬이에요.",
+    "SVG, WebGL, 3D(beta) 세 종류를 만들고, API 키 없이 Node 내장 모듈만 써요.",
+    "Claude Code, Antigravity, Codex 등에 npx skills add 로 설치하고 /anatomy 로 불러요."
+   ],
+   "thread": "",
+   "all": []
+  },
+  {
+   "key": "github.com/deepseek-ai/DeepInfer",
+   "of": null,
+   "title": "DeepSeek just open-sourced its inference engine",
+   "group": "know",
+   "line": "DeepInfer — DeepSeek 추론 엔진",
+   "short": "DeepInfer",
+   "note": "오픈 웨이트 경쟁을 잇는 DeepSeek의 엔진 공개예요",
+   "w": 3,
+   "event": "",
+   "url": "https://github.com/deepseek-ai/DeepInfer",
+   "co": "기타",
+   "date": "2026-10-20",
+   "pts": 1314,
+   "hn": "50163277",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "DeepSeek이 자사 대규모 서비스를 돌리는 추론 엔진 DeepInfer를 오픈소스로 냈어요.",
+    "지원 모델은 DeepSeek-V4.1-Flash이고, 결정적 샘플링과 구조화 출력 같은 기능을 넣었어요.",
+    "Apache License 2.0이고, NVIDIA SM100 GPU와 Huawei Ascend 950 NPU에서 돌려요."
+   ],
+   "thread": "오픈 웨이트 경쟁",
+   "all": []
+  },
+  {
    "key": "github.com/IsuruMaduranga/harness-engineering-101",
    "of": null,
    "title": "Harness Engineering 101 - Python 약 300줄로 배우는 AI 에이전트 구현",
@@ -93,6 +171,28 @@
     "직접 사고하기, AI 쓰기, 다시 직접 사고하기 순서로 일해요.",
     "끝에 diff를 읽고 PR 설명을 고쳐서 리뷰할 수 있게 만들어요."
    ],
+   "thread": "AI 와 개발자의 일",
+   "all": []
+  },
+  {
+   "key": "news.ycombinator.com/item?id=50151036",
+   "of": null,
+   "title": "Ask HN: How to deal with shipping AI-written code you don't understand?",
+   "group": "buzz",
+   "line": "AI가 쓴 코드를 모른 채 배포하기",
+   "short": "AI 코드 배포",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://news.ycombinator.com/item?id=50151036",
+   "co": "기타",
+   "date": "2026-10-19",
+   "pts": 546,
+   "hn": "50151036",
+   "gn": "35662",
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [],
    "thread": "AI 와 개발자의 일",
    "all": []
   },
@@ -5081,5 +5181,5 @@
    "all": []
   }
  ],
- "judged_at": 1792490262
+ "judged_at": 1792508142
 }
