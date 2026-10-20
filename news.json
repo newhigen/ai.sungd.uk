@@ -1,6 +1,54 @@
 {
  "items": [
   {
+   "key": "github.com/IsuruMaduranga/harness-engineering-101",
+   "of": null,
+   "title": "Harness Engineering 101 - Python 약 300줄로 배우는 AI 에이전트 구현",
+   "group": "buzz",
+   "line": "Harness Engineering 101 — 300줄 에이전트 입문서",
+   "short": "Harness 101",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://github.com/IsuruMaduranga/harness-engineering-101",
+   "co": "기타",
+   "date": "2026-10-20",
+   "pts": 0,
+   "hn": null,
+   "gn": "35651",
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "Isuru Wijesiri가 AI 에이전트를 처음부터 만드는 입문서를 냈어요.",
+    "프레임워크 없이 순수 Python 약 300줄 하네스를 16개 장에 걸쳐 키워요.",
+    "서브에이전트, MCP, 스킬, 훅, 가드레일을 다루고 책은 웹에서 읽을 수 있어요."
+   ],
+   "thread": "",
+   "all": []
+  },
+  {
+   "key": "youtube.com/watch",
+   "of": null,
+   "title": "수학에 뛰어들기에 지금보다 좋은 때는 없었다, 3Blue1Brown [영상]",
+   "group": "skip",
+   "line": "3Blue1Brown — 수학에 뛰어들기 좋은 때",
+   "short": "3Blue1Brown",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://www.youtube.com/watch?v=LKrwhjOI8Nc",
+   "co": "기타",
+   "date": "2026-10-19",
+   "pts": 0,
+   "hn": null,
+   "gn": "35607",
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [],
+   "thread": "",
+   "all": []
+  },
+  {
    "key": "wjcl.com/article/savannah-police-officer-ice-agent-flock-access/74135816",
    "of": null,
    "title": "Ousted Savannah police officer gave ICE agent husband access to Flock system",
@@ -5033,5 +5081,5 @@
    "all": []
   }
  ],
- "judged_at": 1792452712
+ "judged_at": 1792490262
 }
