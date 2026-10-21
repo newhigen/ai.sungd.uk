@@ -1,6 +1,54 @@
 {
  "items": [
   {
+   "key": "claude.com/product/claude-duet",
+   "of": null,
+   "title": "Claude Duet",
+   "group": "know",
+   "line": "Claude Duet — 먼저 챙겨 주는 에이전트",
+   "short": "Claude Duet",
+   "note": "대기자 명단이라 Max 도 바로는 못 써요",
+   "w": 3,
+   "event": "",
+   "url": "https://claude.com/product/claude-duet",
+   "co": "Anthropic",
+   "date": "2026-10-22",
+   "pts": 273,
+   "hn": "50186037",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "Anthropic이 먼저 알아서 움직이는 에이전트 앱 Claude Duet을 research preview로 냈어요.",
+    "Opus 5.5가 구동하고, 자기 클라우드 컴퓨터에서 일하며 6,000개 넘는 커넥터와 플러그인을 써요.",
+    "Pro와 Max 플랜의 미국 사용자 대상이고, 지금은 대기자 명단에 등록하는 단계예요."
+   ],
+   "thread": "늘 켜 두는 에이전트",
+   "all": []
+  },
+  {
+   "key": "openai.com/index/scaling-ai-research-for-complex-biological-data",
+   "of": null,
+   "title": "Using thousands of AI agents to uncover new leads in biological data",
+   "group": "skip",
+   "line": "GPT-Rosalind 에이전트 수천 개 — 생물 데이터 분석",
+   "short": "Rosalind 에이전트",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://openai.com/index/scaling-ai-research-for-complex-biological-data/",
+   "co": "OpenAI",
+   "date": "2026-10-21",
+   "pts": 123,
+   "hn": "50180752",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [],
+   "thread": "",
+   "all": []
+  },
+  {
    "key": "openai.com/index/openai-models-google-cloud",
    "of": null,
    "title": "OpenAI models are coming to Google Cloud",
@@ -5187,5 +5235,5 @@
    "all": []
   }
  ],
- "judged_at": 1792610068
+ "judged_at": 1792624260
 }
