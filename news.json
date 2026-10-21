@@ -1,6 +1,54 @@
 {
  "items": [
   {
+   "key": "mistral.ai/news/voxtral-3",
+   "of": null,
+   "title": "Voxtral 3",
+   "group": "know",
+   "line": "Voxtral 3 — 음성 인식과 합성, 음성 에이전트 SDK",
+   "short": "Voxtral 3",
+   "note": "Mistral 음성 모델이라 구독 밖이에요",
+   "w": 3,
+   "event": "",
+   "url": "https://mistral.ai/news/voxtral-3/",
+   "co": "기타",
+   "date": "2026-10-21",
+   "pts": 675,
+   "hn": "50168396",
+   "gn": "35725",
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "Mistral이 음성 인식, 음성 합성 모델군 Voxtral 3와 voice agent SDK를 냈어요.",
+    "Small Transcribe 3는 50개 넘는 언어를, Mini TTS 3는 35개 넘는 언어를 다뤄요.",
+    "Mistral의 EU 호스팅 API나 자체 인프라 배포로 쓰고, Mini TTS는 100만 자에 13달러예요."
+   ],
+   "thread": "음성 모델 경쟁",
+   "all": []
+  },
+  {
+   "key": "anthropic.com/research/claude-scorpion-toxin-binder-design",
+   "of": null,
+   "title": "Claude designed protein binders against scorpion neurotoxins",
+   "group": "skip",
+   "line": "Claude 전갈 독소 단백질 결합체 설계",
+   "short": "전갈 독소",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://www.anthropic.com/research/claude-scorpion-toxin-binder-design",
+   "co": "Anthropic",
+   "date": "2026-10-21",
+   "pts": 106,
+   "hn": "50170021",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [],
+   "thread": "",
+   "all": []
+  },
+  {
    "key": "reuters.com/technology/us-banning-chinese-ai-deepseek-government-agency-it-systems-2026-10-19",
    "of": null,
    "title": "DeepSeek banned from U.S. federal civilian agencies under new DHS order",
@@ -355,6 +403,28 @@
    "w": 1,
    "event": "",
    "url": "https://www.anthropic.com/news/public-benefit-fund",
+   "co": "Anthropic",
+   "date": "2026-10-18",
+   "pts": 0,
+   "hn": null,
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [],
+   "thread": "",
+   "all": []
+  },
+  {
+   "key": "anthropic.com/news/announcements",
+   "of": null,
+   "title": "Announcements",
+   "group": "skip",
+   "line": "Anthropic Announcements — 소식 목록 페이지",
+   "short": "Announcements",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://www.anthropic.com/news/announcements",
    "co": "Anthropic",
    "date": "2026-10-18",
    "pts": 0,
@@ -5111,5 +5181,5 @@
    "thread": "늘 켜 두는 에이전트"
   }
  ],
- "judged_at": 1792523327
+ "judged_at": 1792576926
 }
