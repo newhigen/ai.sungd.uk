@@ -750,7 +750,7 @@ html[data-tab="home"] .ptools,html[data-tab="home"] .ptop,html[data-tab="home"] 
        title="Antigravity CLI 공식 릴리스 전체">공식 릴리스 <i>↗</i></a></span>
   <span class="pdone"><span class="pcount">해봄 <b class="doneAll">0</b>/<span class="totAll">0</span></span>
     <button class="clrb btn">모두 해제</button></span>
-  <span class="pstamp"><!--SYNC--><span class="s-y">2026-</span><span class="s-md">10-21</span><span class="s-t"> 18:59</span><!--/SYNC--></span>
+  <span class="pstamp"><!--SYNC--><span class="s-y">2026-</span><span class="s-md">10-22</span><span class="s-t"> 08:10</span><!--/SYNC--></span>
 </div>
 
 <div class="tab" id="home"></div>
@@ -1110,7 +1110,130 @@ html[data-tab="home"] .ptools,html[data-tab="home"] .ptop,html[data-tab="home"] 
      지우면 update_changelog·update_codex 가 꽂을 자리를 잃는다. -->
 <div id="data">
 <!--CC-DATA-->
-    <p class="range"><strong>v2.0.0</strong> → <strong>v2.1.306</strong> &nbsp;·&nbsp; <span class="range-dates" data-en="2025.9.29 – 2026.10.21">2025.9.29 – 2026.10.21</span></p>
+    <p class="range"><strong>v2.0.0</strong> → <strong>v2.1.307</strong> &nbsp;·&nbsp; <span class="range-dates" data-en="2025.9.29 – 2026.10.21">2025.9.29 – 2026.10.21</span></p>
+  <!-- ── v2.1.307 ── -->
+  <div class="version-block" id="v2.1.307" data-types="feature improve security fix" data-date="2026-10-21">
+    <div class="version-head">
+      <span class="ver-badge">v2.1.307</span><span class="ver-date">10월 21일 수</span><span class="ver-ago"></span>
+      <div class="ver-summary"><span class="pill feature">기능 ×17</span><span class="pill improve">개선 ×7</span><span class="pill security">보안 ×2</span><span class="pill fix">Fix ×17</span></div>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Added <code>/claude-api api-version</code> to move Claude API code to API version <code>2026-10-21</code></span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Added the <code>claude_code.safety_event</code> OpenTelemetry event for each tool call a permission rule, auto mode, a safety check, a hook or the sandbox stopped, prompted or sent back</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Self-hosted runner: Fixed sessions with <code>--use-anthropic-git-proxy</code> committing a <code>.claude/settings.local.json</code> left in the clone by an earlier session</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Self-hosted runner: Fixed archiving or requeueing a session, or stopping the runner, during its checkout hook leaving the hook's processes running and the runner's slot held</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Changed the notice Claude gets when the WebSearch budget is used up to also tell it not to query search engines in a browser or through computer use</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Changed the <code>axScreenReader</code> setting and <code>CLAUDE_AX_SCREEN_READER</code> in a settings <code>env</code> block to apply only from user, managed or <code>--settings</code> settings (since 2.1.305)</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Self-hosted runner: Changed checkout hooks to be stopped after 30 minutes by default, failing the session's setup; if yours needs longer, raise <code>--checkout-hook-timeout-min</code> or set it to <code>0</code></span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Self-hosted runner: Changed the certificate file built for Anthropic-managed git to filter its trusted certificates as the CLI does; a <code>[runner:warn]</code> line gives the number left out</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[VSCode] Added a notice on the microphone button when voice dictation stops by itself (15 seconds without recognized speech, or the 2-minute limit), saying why and that the text so far is kept</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[VSCode] Fixed part of a list item or table cell with LaTeX math pasting as a new list or table in rich text editors</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[VSCode] Fixed dictation failing behind a TLS-inspecting proxy when <code>NODE_EXTRA_CA_CERTS</code> is set only in <code>~/.claude/settings.json</code>; it now also follows <code>CLAUDE_CODE_CERT_STORE</code></span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[VSCode] Changed the "still open somewhere else" notice to also cover a Claude process left over from an extension restart, which usually ends on its own within about 10 minutes</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[VSCode] Changed voice dictation to filter its trusted certificates as the CLI does</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[VSCode] Changed the extension's own requests to filter their trusted certificates as the CLI does, and to trust the <code>NODE_EXTRA_CA_CERTS</code> file named in the environment or in user settings</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[Cloud sessions] Fixed the repository picker saying "No repositories match" while a search was still running; it now shows "Searching…" until the results arrive</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[Cloud sessions] Fixed the "Waiting for a runner" status on self-hosted environments being cut off; with on-demand runners it now counts up from your last message and shows failed attempts</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[Code Review] Added <code>@claude review stop</code> (also <code>off</code> and <code>pause</code>) to Code Review, ending an <code>@claude review always</code> subscription on a pull request without starting a new review</span>
+    </div>
+    <div class="tabs-container">
+      <div class="tabs-bar">
+        <div class="tab" data-tab="improve" onclick="toggleTab(this)">⚡ 개선 <span class="tab-count">7</span></div>
+        <div class="tab" data-tab="security" onclick="toggleTab(this)">🔒 보안 <span class="tab-count">2</span></div>
+        <div class="tab" data-tab="fix" onclick="toggleTab(this)">🐛 수정 <span class="tab-count">17</span></div>
+      </div>
+      <div class="tab-panels">
+        <div class="tab-panel" data-tab="improve">
+          <div class="coll-rows">
+            <div class="coll-item"><span class="coll-item-desc">Improved recovery from unparseable tool calls: Claude Code now retries the call up to twice before ending the turn with an error</span></div>
+            <div class="coll-item"><span class="coll-item-desc">Improved fork subagents launched together: each is now told which launch is its own, so forks are much less likely to try to start each other's work</span></div>
+            <div class="coll-item"><span class="coll-item-desc">Improved browser sign-in: the success page now appears as soon as sign-in completes, without waiting for your account profile to load</span></div>
+            <div class="coll-item"><span class="coll-item-desc">Improved web search errors in cloud and self-hosted runner sessions: a search refused with a 403 that gives a reason now shows that reason instead of a generic "Authentication error"</span></div>
+            <div class="coll-item"><span class="coll-item-desc">Improved the time to the first reply in cloud sessions when one of the desktop app's MCP servers can't connect</span></div>
+            <div class="coll-item"><span class="coll-item-desc">Improved Remote Control connect time for sessions whose transcript contains large pasted images or PDF reads</span></div>
+            <div class="coll-item"><span class="coll-item-desc">[VSCode] Fixed a long prompt expanded with Show more covering the whole chat panel: a pinned prompt is now capped at 40% of the panel and scrolls</span></div>
+          </div>
+        </div>
+        <div class="tab-panel" data-tab="security">
+          <div class="coll-rows">
+            <div class="coll-item"><span class="coll-item-desc">Fixed MCP servers showing "needs authentication" in <code>claude -p</code> on macOS while the login keychain was locked; they now say why, and the next run after an unlock connects without a new sign-in</span></div>
+            <div class="coll-item"><span class="coll-item-desc">Fixed <code>/permissions</code> &gt; Recently denied not showing the denied shell command, and auto mode's local classifier ignoring an approval from there when it checks a retried command; approving a row now names the command, not its description</span></div>
+          </div>
+        </div>
+        <div class="tab-panel" data-tab="fix">
+          <div class="chip-grid">
+            <span class="chip">requests failing with a model-not-found error when CLAUDE_CODE_DISABLE_1M_CONTEXT…</span>
+            <span class="chip">prompt-caching-scope beta header being sent behind custom ANTHROPIC_BASE_URL…</span>
+            <span class="chip">MCP servers being reported as timed out, and…</span>
+            <span class="chip">HTTP MCP tool calls being sent twice when…</span>
+            <span class="chip">a turn sometimes starting without an SDK MCP…</span>
+            <span class="chip">some &quot;Autocompact is thrashing&quot; errors in turns that…</span>
+            <span class="chip">/autocompact in cloud sessions going back to the…</span>
+            <span class="chip">a conversation cleared with /clear sometimes coming back…</span>
+            <span class="chip">CLAUDE_STREAM_FIRST_BYTE_TIMEOUT_MS being ignored in Claude apps gateway sessions</span>
+            <span class="chip">telemetry from Claude Desktop sessions behind a Claude…</span>
+            <span class="chip">/help and the / command menu showing long…</span>
+            <span class="chip">subagent transcripts recording placeholder token usage and an…</span>
+            <span class="chip">model switches through the Agent SDK&#x27;s setModel(), and…</span>
+            <span class="chip">a background command stopped through a connected app…</span>
+            <span class="chip">WebFetch in Cowork cloud sessions reporting a tool…</span>
+            <span class="chip">write tools on a directly configured GitHub MCP…</span>
+            <span class="chip">Artifact tool reads failing with a connection reset…</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- ── v2.1.306 ── -->
   <div class="version-block" id="v2.1.306" data-types="fix" data-date="2026-10-21">
     <div class="version-head">
