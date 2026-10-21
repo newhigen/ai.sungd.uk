@@ -1,6 +1,58 @@
 {
  "items": [
   {
+   "key": "openai.com/index/openai-models-google-cloud",
+   "of": null,
+   "title": "OpenAI models are coming to Google Cloud",
+   "group": "know",
+   "line": "OpenAI on Google Cloud — Model Garden 에 OpenAI 모델",
+   "short": "OpenAI on GCP",
+   "note": "Antigravity 에도 곧 들어와요",
+   "w": 2,
+   "event": "",
+   "url": "https://openai.com/index/openai-models-google-cloud/",
+   "co": "OpenAI",
+   "date": "2026-10-21",
+   "pts": 140,
+   "hn": "50180079",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "OpenAI 와 Google Cloud 가 OpenAI 모델과 Codex 를 Model Garden 에 넣기로 했어요.",
+    "OpenAI 모델이 곧 Google Antigravity 와 Gemini Agent 에도 들어온다고 해요.",
+    "정식 출시는 몇 주 안으로 계획돼 있고, Microsoft 가 여전히 주 클라우드 파트너예요."
+   ],
+   "thread": "",
+   "all": []
+  },
+  {
+   "key": "openai.com/index/coordinated-disclosure-of-critical-vulnerabilities",
+   "of": null,
+   "title": "Patch the Planet: global response coordination as agents uncover vulnerabilities",
+   "group": "know",
+   "line": "Patch the Planet — PHP 취약점 공동 대응",
+   "short": "Patch the Planet",
+   "note": "Codex 스킬로 PHP 버전 점검기가 나왔어요",
+   "w": 2,
+   "event": "",
+   "url": "https://openai.com/index/coordinated-disclosure-of-critical-vulnerabilities/",
+   "co": "OpenAI",
+   "date": "2026-10-21",
+   "pts": 178,
+   "hn": "50181175",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "OpenAI 가 GPT-5.6 Sol 로 찾은 PHP 치명적 취약점의 공동 대응 과정을 공개했어요.",
+    "PHP 버전 점검기를 Codex 스킬로 내놓고, 대응 5단계 틀과 Daybreak 접근 10억 달러 지원을 밝혔어요.",
+    "PHP 를 쓰는 곳은 유지관리자 패치와 안내에 따라 업데이트를 적용하는 게 우선이에요."
+   ],
+   "thread": "에이전트 보안 사고",
+   "all": []
+  },
+  {
    "key": "openai.com/index/chatgpt-ads-expands-26-new-countries",
    "of": null,
    "title": "ChatGPT Ads expands to 26 new countries as over 100,000 advertisers have used the platform",
@@ -115,6 +167,28 @@
     "오픈소스 25개 프로젝트에서 493개 문제를 찾았고, OpenSSH 10.4의 ML-DSA-44 코드 약 4,500줄도 포함돼요.",
     "기본 설정, 설정 조합, 인증 전 도달 코드 세 방법을 쓰고, 개발자가 따라 할 방법도 다뤄요."
    ],
+   "thread": "",
+   "all": []
+  },
+  {
+   "key": "anthropic.com/news/christopher-stubbs-joins-long-term-benefit-trust",
+   "of": null,
+   "title": "Physicist Christopher Stubbs joins Anthropic's Long-Term Benefit Trust",
+   "group": "skip",
+   "line": "Christopher Stubbs — Long-Term Benefit Trust 합류",
+   "short": "LTBT 합류",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://www.anthropic.com/news/christopher-stubbs-joins-long-term-benefit-trust",
+   "co": "Anthropic",
+   "date": "2026-10-21",
+   "pts": 0,
+   "hn": null,
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [],
    "thread": "",
    "all": []
   },
@@ -704,6 +778,32 @@
     "Hugging Face에서 받고, Mac Studio M5 Ultra 두 대에서 MLX로 돌려요. 라이선스는 제한적 상업 조건이에요."
    ],
    "thread": "오픈 웨이트 경쟁",
+   "all": []
+  },
+  {
+   "key": "github.com/humanlayer/advanced-context-engineering-for-coding-agents/blob/main/benchmarking-new-models-on-slop-code-bench.md",
+   "of": null,
+   "title": "SlopCodeBench 10/2026 – Opus 5.5, Astra wins overall, xhigh considered harmful",
+   "group": "buzz",
+   "line": "SlopCodeBench 10/2026 — xhigh 는 해롭다?",
+   "short": "SlopCodeBench",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://github.com/humanlayer/advanced-context-engineering-for-coding-agents/blob/main/benchmarking-new-models-on-slop-code-bench.md",
+   "co": "기타",
+   "date": "2026-10-16",
+   "pts": 301,
+   "hn": "50108717",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "Dex Horthy 가 SlopCodeBench 에 최신 모델을 돌린 10월 결과를 올렸어요.",
+    "strict 통과율은 Astra XHigh 가 16.33%로 가장 높고, Opus 5.5 는 Medium 이 28개, XHigh 가 25개예요.",
+    "XHigh 는 Medium 보다 비용이 2.11배에서 4.22배인데, 한 번씩만 돌려 원인은 가리지 못했다고 해요."
+   ],
+   "thread": "",
    "all": []
   },
   {
@@ -5087,5 +5187,5 @@
    "all": []
   }
  ],
- "judged_at": 1792594974
+ "judged_at": 1792610068
 }
