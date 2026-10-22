@@ -27,6 +27,28 @@
    "all": []
   },
   {
+   "key": "stevekrouse.com/ends",
+   "of": null,
+   "title": "AI 시대, 아들에게 무엇을 가르쳐야 할까?",
+   "group": "skip",
+   "line": "아들에게 무엇을 가르칠까 — 교육 에세이",
+   "short": "교육 에세이",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://stevekrouse.com/ends",
+   "co": "기타",
+   "date": "2026-10-21",
+   "pts": 0,
+   "hn": null,
+   "gn": "35730",
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [],
+   "thread": "",
+   "all": []
+  },
+  {
    "key": "openai.com/index/scaling-ai-research-for-complex-biological-data",
    "of": null,
    "title": "Using thousands of AI agents to uncover new leads in biological data",
@@ -70,6 +92,32 @@
     "OpenAI 와 Google Cloud 가 OpenAI 모델과 Codex 를 Model Garden 에 넣기로 했어요.",
     "OpenAI 모델이 곧 Google Antigravity 와 Gemini Agent 에도 들어온다고 해요.",
     "정식 출시는 몇 주 안으로 계획돼 있고, Microsoft 가 여전히 주 클라우드 파트너예요."
+   ],
+   "thread": "",
+   "all": []
+  },
+  {
+   "key": "openai.com/index/low-resource-programming-languages",
+   "of": null,
+   "title": "Advanced coding in low-resource programming languages",
+   "group": "know",
+   "line": "OpenAI 희귀 언어 코딩 — COBOL, Fortran 평가",
+   "short": "희귀 언어 코딩",
+   "note": "GPT-6.1 Sol 평가 글이라 Codex 에서 확인해 봐요",
+   "w": 1,
+   "event": "",
+   "url": "https://openai.com/index/low-resource-programming-languages/",
+   "co": "OpenAI",
+   "date": "2026-10-21",
+   "pts": 102,
+   "hn": "50169955",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "OpenAI가 COBOL, Fortran, Visual Basic 같은 자료 적은 언어의 코딩 성능을 공개했어요.",
+    "MultiLangBench에서 GPT-6 Astra는 20개 언어 평균 87.4%로, GPT-5.6 Sol의 26.8%보다 올랐어요.",
+    "COBOL 마이그레이션 평가에서 GPT-6.1 Sol은 낮은 effort로 86.6%, 높이면 97.9%예요."
    ],
    "thread": "",
    "all": []
@@ -5235,5 +5283,5 @@
    "all": []
   }
  ],
- "judged_at": 1792624260
+ "judged_at": 1792643261
 }
