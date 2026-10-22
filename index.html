@@ -24156,7 +24156,25 @@ html[data-tab="home"] .ptools,html[data-tab="home"] .ptop,html[data-tab="home"] 
     </div>
 <!--/CX-DATA-->
 <!--AG-DATA-->
-    <p class="range"><strong>v1.0.4</strong> → <strong>v1.4.4</strong> &nbsp;·&nbsp; <span class="range-dates" data-en="2026.6.1 – 2026.10.21">2026.6.1 – 2026.10.21</span></p>
+    <p class="range"><strong>v1.0.4</strong> → <strong>v1.4.5</strong> &nbsp;·&nbsp; <span class="range-dates" data-en="2026.6.1 – 2026.10.22">2026.6.1 – 2026.10.22</span></p>
+    <div class="version-block" id="ag1.4.5" data-date="2026-10-22">
+      <div class="version-head">
+        <span class="ver-badge">v1.4.5</span><span class="ver-date" data-en="Oct 22 Thu">10월 22일 목</span><span class="ver-ago"></span>
+        <div class="ver-summary"><span class="pill feature">기능 ×9</span><span class="pill fix">Fix ×3</span></div>
+      </div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Improved how agent responses read: a blank line now separates the collapsed thought block from the response, and once the response starts, the collapsed thought shows only its <code>Thought for …</code> header instead of repeating a snippet of the thinking; expand it to see the full thinking.</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Improved <code>/</code> search in the <code>/diff</code> file view to count matches inside folded unchanged lines, such as <code>match 2/5 · +3 hidden</code> or <code>no matches · +1 hidden</code>, and the <code>f</code> hint now reads <code>show N hidden matches</code>.</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Improved <code>/diff</code>'s <code>Commit Tree</code> to mark the selected commit with the same <code>&gt;</code> cursor and selection color as <code>All Changes</code> and <code>Per Turn</code> instead of a highlighted bar, and made <code>Per Turn</code> start with the cursor on the first file instead of its turn header.</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Improved recurring cron schedules created with the agent's <code>schedule</code> tool to fire at a consistent per-schedule offset instead of exactly on the cron boundary, to avoid traffic spikes: schedules that repeat within a day, such as every 30 minutes or hourly, now fire somewhere within their period, fixed-time schedules such as daily at 9:00 still fire within their scheduled minute, and the agent can request exact timing when a schedule needs it. <code>@every</code> schedules are unchanged.</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Improved idle CPU usage by pausing screen refreshes while nothing on screen changes, roughly halving the CLI's CPU use when it is idle.</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Improved CPU usage while a response streams by skipping redundant screen updates and refreshing the credit balance less often.</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Improved rendering speed for long conversations, and made long conversations load faster when you resume them.</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Improved startup CPU usage when the CLI refreshes its conversation summaries.</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Improved memory usage by allocating storage for the prompt and other text inputs as you type instead of reserving it up front.</span></div>
+      <div class="entry row-divider" data-type="fix"><span class="pill fix">Fix</span><span class="e-desc">Fixed the agent silently retrying, potentially without end, when a model response was blocked by content safety filters.</span></div>
+      <div class="entry row-divider" data-type="fix"><span class="pill fix">Fix</span><span class="e-desc">Fixed plugins failing to load when <code>plugin.json</code> gives <code>skills</code> as a single path string, such as <code>"skills": "./skills/"</code>, instead of an array, as some plugins written for other tools do.</span></div>
+      <div class="entry row-divider" data-type="fix"><span class="pill fix">Fix</span><span class="e-desc">Fixed marketplace plugin installs and automatic updates failing with a checksum mismatch or network error when a download was briefly stale or interrupted; the CLI now retries the download once.</span></div>
+    </div>
     <div class="version-block" id="ag1.4.4" data-date="2026-10-21">
       <div class="version-head">
         <span class="ver-badge">v1.4.4</span><span class="ver-date" data-en="Oct 21 Wed">10월 21일 수</span><span class="ver-ago"></span>
