@@ -1,6 +1,32 @@
 {
  "items": [
   {
+   "key": "openai.com/index/decisions-api",
+   "of": null,
+   "title": "Build more responsive apps with the Decisions API",
+   "group": "know",
+   "line": "Decisions API — 정식 출시",
+   "short": "Decisions API",
+   "note": "API 전용이라 구독으로는 못 써요",
+   "w": 2,
+   "event": "",
+   "url": "https://openai.com/index/decisions-api",
+   "co": "OpenAI",
+   "date": "2026-10-23",
+   "pts": 0,
+   "hn": null,
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "OpenAI가 Decisions API를 정식 출시(GA)했어요.",
+    "GPT-6 Luna 기반이고 입력 100만 토큰당 $0.10, 출력 토큰 요금은 없어요.",
+    "GPT-Live 연동과 US, EU 리전 처리가 들어갔고, 요청당 질문은 최대 400개예요."
+   ],
+   "thread": "의사결정 모델",
+   "all": []
+  },
+  {
    "key": "openai.com/index/forward-deployed-engineering-means",
    "of": null,
    "title": "What FDE means at OpenAI",
@@ -46,6 +72,28 @@
     "Pro와 Max 플랜의 미국 사용자 대상이고, 지금은 대기자 명단에 등록하는 단계예요."
    ],
    "thread": "늘 켜 두는 에이전트",
+   "all": []
+  },
+  {
+   "key": "anthropic.com/news/open-call-guest-investigators-life-sciences",
+   "of": null,
+   "title": "Open call for guest investigators in the life sciences",
+   "group": "skip",
+   "line": "생명과학 게스트 연구자 공개 모집",
+   "short": "게스트 연구자",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://www.anthropic.com/news/open-call-guest-investigators-life-sciences",
+   "co": "Anthropic",
+   "date": "2026-10-22",
+   "pts": 0,
+   "hn": null,
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [],
+   "thread": "",
    "all": []
   },
   {
@@ -5183,5 +5231,5 @@
    "all": []
   }
  ],
- "judged_at": 1792696199
+ "judged_at": 1792710739
 }
