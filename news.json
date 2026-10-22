@@ -49,6 +49,32 @@
    "all": []
   },
   {
+   "key": "anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation",
+   "of": null,
+   "title": "Donating Agent Skills to the Agentic AI Foundation",
+   "group": "know",
+   "line": "Agent Skills — AAIF 에 기증",
+   "short": "Skills 기증",
+   "note": "쓰던 스킬 형식은 그대로 써요",
+   "w": 2,
+   "event": "",
+   "url": "https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation",
+   "co": "Anthropic",
+   "date": "2026-10-22",
+   "pts": 0,
+   "hn": null,
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "Anthropic이 Agent Skills 표준을 Linux Foundation 산하 AAIF에 기증했어요.",
+    "출시 이후 스킬 100만 개가 게시됐고 설치는 약 2억 8천만 건이에요.",
+    "이름, 로고, GitHub 조직, 도메인도 넘기고 버전 릴리스와 보안 지침 로드맵을 제안했어요."
+   ],
+   "thread": "",
+   "all": []
+  },
+  {
    "key": "stevekrouse.com/ends",
    "of": null,
    "title": "AI 시대, 아들에게 무엇을 가르쳐야 할까?",
@@ -5157,5 +5183,5 @@
    "all": []
   }
  ],
- "judged_at": 1792681386
+ "judged_at": 1792696199
 }
