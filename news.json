@@ -27,6 +27,58 @@
    "all": []
   },
   {
+   "key": "anthropic.com/research/formal-verification",
+   "of": null,
+   "title": "LLMs are making formal software verification feasible at a much larger scale",
+   "group": "know",
+   "line": "Claude 형식 검증 — 오픈소스 123개 증명",
+   "short": "형식 검증",
+   "note": "Theorem 의 Claude 스킬로 내 코드도 시도해 볼 수 있어요",
+   "w": 2,
+   "event": "",
+   "url": "https://www.anthropic.com/research/formal-verification",
+   "co": "Anthropic",
+   "date": "2026-10-23",
+   "pts": 202,
+   "hn": "50202217",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "Anthropic이 Theorem과 함께 Claude로 오픈소스 라이브러리의 형식 검증을 대규모로 했어요.",
+    "123개 라이브러리의 239개 진입점에서 64 MB 미만 모든 입력에 크래시가 없음을 RISC-V 어셈블리 수준에서 증명했어요.",
+    "증명 일부와 Theorem의 Claude 스킬이 공개됐고, 단일 스레드 정적 바이너리와 Linux 가정이 붙어요."
+   ],
+   "thread": "",
+   "all": []
+  },
+  {
+   "key": "simedw.com/2026/10/21/world-model-terminal",
+   "of": null,
+   "title": "WorldTUI: I trained a 360M model to pretend to be a terminal",
+   "group": "buzz",
+   "line": "WorldTUI — 터미널을 흉내 내는 모델",
+   "short": "WorldTUI",
+   "note": "",
+   "w": 2,
+   "event": "",
+   "url": "https://simedw.com/2026/10/21/world-model-terminal/",
+   "co": "기타",
+   "date": "2026-10-22",
+   "pts": 514,
+   "hn": "50190363",
+   "gn": "35809",
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "3억 6천만 파라미터 모델이 셸 없이 키 입력으로 터미널 화면을 예측해요.",
+    "Qwen2.5-Coder-0.5B를 미세 조정했고, 행을 병렬로 디코딩해 큰 화면 지연을 6.7초에서 0.87초로 줄였어요.",
+    "WebGPU 브라우저 데모(208 MB)가 있고, 파일 읽기 검사는 13개 중 9개를 맞혔어요."
+   ],
+   "thread": "",
+   "all": []
+  },
+  {
    "key": "openai.com/index/forward-deployed-engineering-means",
    "of": null,
    "title": "What FDE means at OpenAI",
@@ -5231,5 +5283,5 @@
    "all": []
   }
  ],
- "judged_at": 1792710739
+ "judged_at": 1792729970
 }
