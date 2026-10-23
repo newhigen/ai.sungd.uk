@@ -27,6 +27,32 @@
    "all": []
   },
   {
+   "key": "modelcompare.ai/blog/ai-models-controversial-take-on-humans",
+   "of": null,
+   "title": "Every AI model has the same \"controversial\" take on humans",
+   "group": "buzz",
+   "line": "AI 모델 12개의 인간에 대한 논쟁적 의견 실험",
+   "short": "모델 인간관 실험",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://www.modelcompare.ai/blog/ai-models-controversial-take-on-humans",
+   "co": "기타",
+   "date": "2026-10-23",
+   "pts": 535,
+   "hn": "50197313",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "ModelCompare가 AI 모델 12개에게 인간에 대한 가장 논쟁적인 의견을 세 번씩 물었어요.",
+    "35개 답 중 29개가 같은 말이었어요. 사람은 진실보다 소속에 충성한다는 내용이에요.",
+    "Claude Opus 5.5는 한 번 반대로 사람이 생각보다 선하다고 답했고, Grok 4.7은 한 번 거절했어요."
+   ],
+   "thread": "",
+   "all": []
+  },
+  {
    "key": "drive.google.com/file/d/1Kve5XiR8kMN260Uc0BW6eeoQi4cJzptA/view",
    "of": null,
    "title": "지능을 전기처럼 쓰는 시대 - AI 네이티브 핸드북 2026 [407p]",
@@ -698,6 +724,32 @@
     "Mistral이 첫 시계열 파운데이션 모델 Timestral을 공개했어요.",
     "5M, 28M, 123M, 209M 네 가지 크기이고 GIFT-Eval, TIME, fev-bench에서 1위라고 해요.",
     "GPU 없이 CPU로 돌고, 라이선스는 Modified MIT이며 GitHub 저장소가 열려 있어요."
+   ],
+   "thread": "",
+   "all": []
+  },
+  {
+   "key": "github.com/openai/openai-cli",
+   "of": null,
+   "title": "OpenAI CLI - OpenAI REST API를 위한 공식 명령줄 도구",
+   "group": "buzz",
+   "line": "OpenAI CLI — API용 공식 명령줄 도구",
+   "short": "OpenAI CLI",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://github.com/openai/openai-cli",
+   "co": "기타",
+   "date": "2026-10-19",
+   "pts": 0,
+   "hn": null,
+   "gn": "35818",
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "OpenAI가 REST API를 터미널과 셸 스크립트에서 부르는 공식 CLI를 냈어요.",
+    "이미지 생성, 파일 업로드, 배치 요청, 모델 목록 내보내기 같은 명령을 지원해요.",
+    "API 키가 필요하고, 코딩 에이전트가 필요하면 Codex CLI를 쓰라고 안내해요."
    ],
    "thread": "",
    "all": []
@@ -5305,5 +5357,5 @@
    "all": []
   }
  ],
- "judged_at": 1792749353
+ "judged_at": 1792767281
 }
