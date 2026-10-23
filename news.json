@@ -27,6 +27,28 @@
    "all": []
   },
   {
+   "key": "drive.google.com/file/d/1Kve5XiR8kMN260Uc0BW6eeoQi4cJzptA/view",
+   "of": null,
+   "title": "지능을 전기처럼 쓰는 시대 - AI 네이티브 핸드북 2026 [407p]",
+   "group": "skip",
+   "line": "AI 네이티브 핸드북 2026 — 407쪽 PDF",
+   "short": "AI 핸드북",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://drive.google.com/file/d/1Kve5XiR8kMN260Uc0BW6eeoQi4cJzptA/view",
+   "co": "기타",
+   "date": "2026-10-23",
+   "pts": 0,
+   "hn": null,
+   "gn": "35846",
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [],
+   "thread": "",
+   "all": []
+  },
+  {
    "key": "anthropic.com/research/formal-verification",
    "of": null,
    "title": "LLMs are making formal software verification feasible at a much larger scale",
@@ -5283,5 +5305,5 @@
    "all": []
   }
  ],
- "judged_at": 1792729970
+ "judged_at": 1792749353
 }
