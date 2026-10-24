@@ -1,6 +1,28 @@
 {
  "items": [
   {
+   "key": "reddit.com/r/antiai/comments/1xdv3e5/hacker_reverse_engineers_his_samsung_tv_and_finds",
+   "of": null,
+   "title": "Hacker reverses Samsung TV, finds on-board AI listening OpenAI account suspended",
+   "group": "skip",
+   "line": "삼성 TV 분석 후 OpenAI 계정 정지 — 개인 사건",
+   "short": "TV 계정 정지",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://www.reddit.com/r/antiai/comments/1xdv3e5/hacker_reverse_engineers_his_samsung_tv_and_finds/",
+   "co": "OpenAI",
+   "date": "2026-10-24",
+   "pts": 325,
+   "hn": "50218633",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [],
+   "thread": "",
+   "all": []
+  },
+  {
    "key": "openai.com/index/securing-our-frontier-model-training-environment",
    "of": null,
    "title": "Securing our frontier model training environment",
@@ -869,6 +891,28 @@
     "이미지 생성, 파일 업로드, 배치 요청, 모델 목록 내보내기 같은 명령을 지원해요.",
     "API 키가 필요하고, 코딩 에이전트가 필요하면 Codex CLI를 쓰라고 안내해요."
    ],
+   "thread": "",
+   "all": []
+  },
+  {
+   "key": "blossomstreetventures.medium.com/the-15-themes-on-ai-from-saas-earnings-calls-f9607b073dc5",
+   "of": null,
+   "title": "AI가 SaaS를 무너뜨린다고? 67개 기업의 실적 발표는 달랐다",
+   "group": "skip",
+   "line": "SaaS 실적 발표 — AI 주제 15가지",
+   "short": "SaaS 실적",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://blossomstreetventures.medium.com/the-15-themes-on-ai-from-saas-earnings-calls-f9607b073dc5",
+   "co": "기타",
+   "date": "2026-10-19",
+   "pts": 0,
+   "hn": null,
+   "gn": "35888",
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [],
    "thread": "",
    "all": []
   },
@@ -5331,5 +5375,5 @@
    "all": []
   }
  ],
- "judged_at": 1792838824
+ "judged_at": 1792851931
 }
