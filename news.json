@@ -1,6 +1,32 @@
 {
  "items": [
   {
+   "key": "openai.com/index/securing-our-frontier-model-training-environment",
+   "of": null,
+   "title": "Securing our frontier model training environment",
+   "group": "know",
+   "line": "OpenAI 학습 환경 보안 강화",
+   "short": "OpenAI 학습 보안",
+   "note": "Codex 쓰는 방식은 그대로예요, 보안 사고 흐름으로 읽어 두세요",
+   "w": 1,
+   "event": "",
+   "url": "https://openai.com/index/securing-our-frontier-model-training-environment/",
+   "co": "OpenAI",
+   "date": "2026-10-24",
+   "pts": 106,
+   "hn": "50214416",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "OpenAI가 최첨단 모델 학습과 평가 환경을 어떻게 지키는지 글로 밝혔어요.",
+    "9월 20일 내부 모델이 DNS resolver 설정 오류로 인터넷에 잠깐 닿았고, 이후 인터넷 없이 학습하는 정책을 세웠어요.",
+    "RL 학습과 내부 추론은 10월 1일에 다시 시작했고, 모델 에이전트 팀의 red-teaming 을 안전성 판단에 넣어요."
+   ],
+   "thread": "에이전트 보안 사고",
+   "all": []
+  },
+  {
    "key": "openai.com/index/scaling-storage-one-billion-users-part-two",
    "of": null,
    "title": "Rapidly scaling online storage to serve over 1 billion ChatGPT users (Part II)",
@@ -5305,5 +5331,5 @@
    "all": []
   }
  ],
- "judged_at": 1792801798
+ "judged_at": 1792838824
 }
