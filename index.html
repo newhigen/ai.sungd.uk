@@ -750,7 +750,7 @@ html[data-tab="home"] .ptools,html[data-tab="home"] .ptop,html[data-tab="home"] 
        title="Antigravity CLI 공식 릴리스 전체">공식 릴리스 <i>↗</i></a></span>
   <span class="pdone"><span class="pcount">해봄 <b class="doneAll">0</b>/<span class="totAll">0</span></span>
     <button class="clrb btn">모두 해제</button></span>
-  <span class="pstamp"><!--SYNC--><span class="s-y">2026-</span><span class="s-md">10-23</span><span class="s-t"> 08:11</span><!--/SYNC--></span>
+  <span class="pstamp"><!--SYNC--><span class="s-y">2026-</span><span class="s-md">10-24</span><span class="s-t"> 09:29</span><!--/SYNC--></span>
 </div>
 
 <div class="tab" id="home"></div>
@@ -1119,7 +1119,107 @@ html[data-tab="home"] .ptools,html[data-tab="home"] .ptop,html[data-tab="home"] 
      지우면 update_changelog·update_codex 가 꽂을 자리를 잃는다. -->
 <div id="data">
 <!--CC-DATA-->
-    <p class="range"><strong>v2.0.0</strong> → <strong>v2.1.309</strong> &nbsp;·&nbsp; <span class="range-dates" data-en="2025.9.29 – 2026.10.22">2025.9.29 – 2026.10.22</span></p>
+    <p class="range"><strong>v2.0.0</strong> → <strong>v2.1.310</strong> &nbsp;·&nbsp; <span class="range-dates" data-en="2025.9.29 – 2026.10.23">2025.9.29 – 2026.10.23</span></p>
+  <!-- ── v2.1.310 ── -->
+  <div class="version-block" id="v2.1.310" data-types="feature improve security fix" data-date="2026-10-23">
+    <div class="version-head">
+      <span class="ver-badge">v2.1.310</span><span class="ver-date">10월 23일 금</span><span class="ver-ago"></span>
+      <div class="ver-summary"><span class="pill feature">기능 ×15</span><span class="pill improve">개선 ×6</span><span class="pill security">보안 ×1</span><span class="pill fix">Fix ×4</span></div>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Added the Monitor tool and plugin monitors on Bedrock, Vertex, and Foundry, and when telemetry or nonessential traffic is disabled; long foreground sleeps are now blocked there too</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Windows: Fixed PreToolUse and PermissionRequest hooks letting a tool call through when Git Bash is missing and the hook's command is only quoted strings, such as a quoted path</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Changed the error for an MCP tool call that times out in a non-interactive session while the server's elicitation is unanswered: it now tells Claude that no answer came and not to repeat the call</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[VSCode] Fixed pressing Enter on the plan review card's "Send feedback and keep planning" button approving the plan instead of sending your comments back</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[VSCode] Fixed the panel showing "Something went wrong" after "Switch branch &amp; continue" on a cloud session opened from Session history's Web tab</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[Cloud sessions] Added Claude Code cloud sessions and Remote Control permissions to Enterprise custom roles, so Owners can control access to each by role</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[Cloud sessions] Added a Choose file button to load a cloud environment's setup script from a file</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[Cloud sessions] Fixed failed saves and archives in the cloud environment edit dialog showing no error inside the dialog</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[Cloud sessions] Fixed failed routine API token actions showing only a toast; the error now appears in the routine edit dialog</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[Cloud sessions] Changed turning on Cloud sessions or Remote Control in admin settings to ask for confirmation and list the custom roles that have that permission</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[Cloud sessions] Changed the cloud environment dialog to open network access, setup script and environment variables from rows instead of listing every editor at once</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[Claude Tag] Fixed Claude Tag treating <code>!</code> commands such as <code>!restart</code> and <code>!help</code> as ordinary messages when sent in bold, italic or strikethrough</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[Claude Tag] Fixed Claude Tag admin channel and workspace pages being replaced by a load error when a background refresh of the bundle list fails</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[Claude Tag] Fixed Claude Tag's spend limits page in admin settings reporting that no channels match a filter while channel names are still loading</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[Code Review] Fixed the Code Review admin section hiding its repositories and switches after a failed refresh of the repository list</span>
+    </div>
+    <div class="tabs-container">
+      <div class="tabs-bar">
+        <div class="tab" data-tab="improve" onclick="toggleTab(this)">⚡ 개선 <span class="tab-count">6</span></div>
+        <div class="tab" data-tab="security" onclick="toggleTab(this)">🔒 보안 <span class="tab-count">1</span></div>
+        <div class="tab" data-tab="fix" onclick="toggleTab(this)">🐛 수정 <span class="tab-count">4</span></div>
+      </div>
+      <div class="tab-panels">
+        <div class="tab-panel" data-tab="improve">
+          <div class="coll-rows">
+            <div class="coll-item"><span class="coll-item-desc">Improved auto mode's prompt before the first read outside the working directories: it now says when blocking those reads makes shell commands ask for permission</span></div>
+            <div class="coll-item"><span class="coll-item-desc">Improved memory use of non-interactive sessions (<code>-p</code>, Agent SDK) during compaction when the transcript file is very large</span></div>
+            <div class="coll-item"><span class="coll-item-desc">Improved a mod's <code>Image</code> to draw inside tmux with <code>allow-passthrough</code> and <code>focus-events</code> on, in kitty, Ghostty, and iTerm2 3.5+ with fullscreen rendering, where it showed only its <code>alt</code> text</span></div>
+            <div class="coll-item"><span class="coll-item-desc">Linux: Improved <code>/sandbox</code> and the sandbox startup warning to name Ubuntu's AppArmor restriction on user namespaces, and how to lift it, when it keeps bubblewrap from starting the sandbox</span></div>
+            <div class="coll-item"><span class="coll-item-desc">[Cloud sessions] Improved the session start checklist to show a cloud environment's setup script output in a scrolling box</span></div>
+            <div class="coll-item"><span class="coll-item-desc">[Code Review] Improved the Code Review admin section to retry the first load and show one Try again banner when it still fails</span></div>
+          </div>
+        </div>
+        <div class="tab-panel" data-tab="security">
+          <div class="coll-rows">
+            <div class="coll-item"><span class="coll-item-desc">Fixed file read permission prompts not showing where a symbolic link leads</span></div>
+          </div>
+        </div>
+        <div class="tab-panel" data-tab="fix">
+          <div class="chip-grid">
+            <span class="chip">requests failing behind some gateways and compatible servers…</span>
+            <span class="chip">background cleanup deleting some recent files, such as…</span>
+            <span class="chip">compaction after a &quot;Prompt is too long&quot; error…</span>
+            <span class="chip">a question&#x27;s auto-continue timeout firing the moment the…</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- ── v2.1.309 ── -->
   <div class="version-block" id="v2.1.309" data-types="feature improve security fix" data-date="2026-10-22">
     <div class="version-head">
