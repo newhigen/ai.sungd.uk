@@ -23,6 +23,32 @@
    "all": []
   },
   {
+   "key": "kimi.ai/blog/kimi-k3-1-pro",
+   "of": null,
+   "title": "Kimi K3.1 Pro and K3.1 Pro Highspeed",
+   "group": "know",
+   "line": "Kimi K3.1 Pro — 3T급 오픈 웨이트 모델",
+   "short": "Kimi K3.1 Pro",
+   "note": "오픈 웨이트 경쟁이 이어져요. 가중치는 11월 4일까지",
+   "w": 3,
+   "event": "",
+   "url": "https://www.kimi.ai/blog/kimi-k3-1-pro",
+   "co": "기타",
+   "date": "2026-10-24",
+   "pts": 675,
+   "hn": "50212065",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "Kimi가 K3 시리즈 첫 모델 K3.1 Pro와 Highspeed를 냈어요.",
+    "Terminal-Bench 4.0에서 65.7%로 GPT-6 Astra(58.2%)보다 높고 Claude Opus 5.5(66.4%)에 근접해요.",
+    "Kimi.ai, Kimi Code, API에서 오늘 쓸 수 있고 전체 가중치는 11월 4일까지 공개돼요."
+   ],
+   "thread": "오픈 웨이트 경쟁",
+   "all": []
+  },
+  {
    "key": "sverigesradio.se/artikel/chat-gpt-och-claude-forbjuder-regeringskansliet",
    "of": null,
    "title": "Swedish government offices to ban ChatGPT and Claude",
@@ -5279,5 +5305,5 @@
    "all": []
   }
  ],
- "judged_at": 1792782262
+ "judged_at": 1792801798
 }
