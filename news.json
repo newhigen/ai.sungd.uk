@@ -1,6 +1,32 @@
 {
  "items": [
   {
+   "key": "apollo.com/wealth/insights-news/insights/daily-spark/no-signs-of-ai-payoff-outside-the-tech-sector",
+   "of": null,
+   "title": "No signs of AI payoff outside the tech sector",
+   "group": "buzz",
+   "line": "Apollo — 기술업계 밖 AI 성과 없음",
+   "short": "AI 투자 성과",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://www.apollo.com/wealth/insights-news/insights/daily-spark/no-signs-of-ai-payoff-outside-the-tech-sector",
+   "co": "기타",
+   "date": "2026-10-25",
+   "pts": 523,
+   "hn": "50224463",
+   "gn": "35937",
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "Apollo 수석 이코노미스트가 기술업계 밖에서는 AI 성과가 없다는 글을 냈어요.",
+    "1인당 매출과 이익률이 Mag 7 은 오르지만 S&P 493 은 제자리라고 해요.",
+    "일반 기업은 토큰 지출을 성장이 아닌 비용으로 보기 시작했다고 해요."
+   ],
+   "thread": "",
+   "all": []
+  },
+  {
    "key": "reddit.com/r/antiai/comments/1xdv3e5/hacker_reverse_engineers_his_samsung_tv_and_finds",
    "of": null,
    "title": "Hacker reverses Samsung TV, finds on-board AI listening OpenAI account suspended",
@@ -5364,5 +5390,5 @@
    "all": []
   }
  ],
- "judged_at": 1792890228
+ "judged_at": 1792907941
 }
