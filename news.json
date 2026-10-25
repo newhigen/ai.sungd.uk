@@ -245,6 +245,32 @@
    "all": []
   },
   {
+   "key": "github.com/NVIDIA/OpenShell",
+   "of": null,
+   "title": "OpenShell – A safe, private runtime for fleets of autonomous AI agents",
+   "group": "buzz",
+   "line": "OpenShell — 에이전트용 안전 런타임",
+   "short": "OpenShell",
+   "note": "",
+   "w": 2,
+   "event": "",
+   "url": "https://github.com/NVIDIA/OpenShell",
+   "co": "기타",
+   "date": "2026-10-23",
+   "pts": 500,
+   "hn": "50198675",
+   "gn": "35833",
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "NVIDIA가 자율 AI 에이전트용 안전한 런타임 OpenShell을 오픈소스로 냈어요.",
+    "에이전트마다 파일, 시스템 호출, 네트워크 접근을 정책으로 선언하면 커널 수준에서 강제해요.",
+    "Linux, Apple Silicon 맥, WSL 2에서 Docker나 Podman으로 돌리고 Apache 2.0 라이선스예요."
+   ],
+   "thread": "",
+   "all": []
+  },
+  {
    "key": "drive.google.com/file/d/1Kve5XiR8kMN260Uc0BW6eeoQi4cJzptA/view",
    "of": null,
    "title": "지능을 전기처럼 쓰는 시대 - AI 네이티브 핸드북 2026 [407p]",
@@ -5332,63 +5358,7 @@
    "hn": "49695876",
    "gn": null,
    "all": []
-  },
-  {
-   "key": "yoshuabengio.org/en/publication/why-are-ai-agents-lying-cheating-and-coordinating",
-   "of": null,
-   "title": "Why are AI agents lying, cheating and coordinating?",
-   "group": "buzz",
-   "line": "AI 에이전트는 왜 속이고 담합하나",
-   "short": "Bengio 글",
-   "note": "",
-   "w": 1,
-   "event": "",
-   "url": "https://yoshuabengio.org/en/publication/why-are-ai-agents-lying-cheating-and-coordinating",
-   "co": "기타",
-   "date": "2026-09-13",
-   "pts": 660,
-   "hn": "49678969",
-   "gn": null,
-   "all": [],
-   "thread": "AI 연구소 감시"
-  },
-  {
-   "key": "xeiaso.net/notes/2026/everyone-slowdown-but-me",
-   "of": null,
-   "title": "Everyone should slow down AI development except for me",
-   "group": "buzz",
-   "line": "나만 빼고 AI 개발 늦추자",
-   "short": "나만 빼고",
-   "note": "",
-   "w": 1,
-   "event": "",
-   "url": "https://xeiaso.net/notes/2026/everyone-slowdown-but-me/",
-   "co": "기타",
-   "date": "2026-09-13",
-   "pts": 813,
-   "hn": "49678683",
-   "gn": null,
-   "all": [],
-   "thread": "AI 연구소 감시"
-  },
-  {
-   "key": "economist.com/interactive/briefing/2026/09/03/nvidia-is-the-central-bank-of-ai",
-   "of": null,
-   "title": "Nvidia is the central bank of AI",
-   "group": "buzz",
-   "line": "Economist — Nvidia 는 AI 의 중앙은행",
-   "short": "Nvidia 중앙은행",
-   "note": "",
-   "w": 1,
-   "event": "",
-   "url": "https://www.economist.com/interactive/briefing/2026/09/03/nvidia-is-the-central-bank-of-ai",
-   "co": "기타",
-   "date": "2026-09-13",
-   "pts": 584,
-   "hn": "49673098",
-   "gn": null,
-   "all": []
   }
  ],
- "judged_at": 1792907941
+ "judged_at": 1792943975
 }
