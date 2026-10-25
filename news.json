@@ -97,6 +97,32 @@
    "all": []
   },
   {
+   "key": "block.xyz/dessa",
+   "of": null,
+   "title": "Dessa: Conversation Model trained only on speech",
+   "group": "know",
+   "line": "Dessa — 음성만으로 배운 대화 모델",
+   "short": "Dessa",
+   "note": "음성 모델 경쟁에 Block 이 들어왔어요",
+   "w": 3,
+   "event": "",
+   "url": "https://block.xyz/dessa",
+   "co": "기타",
+   "date": "2026-10-24",
+   "pts": 502,
+   "hn": "50213925",
+   "gn": "35895",
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "Block이 음성 대화만으로 학습한 대화 모델 Dessa를 공개했어요.",
+    "텍스트와 사전학습 모델 없이 사람의 음성 대화로 처음부터 학습했어요.",
+    "말하면서 동시에 상대의 말을 듣는 실시간 모델이에요."
+   ],
+   "thread": "음성 모델 경쟁",
+   "all": []
+  },
+  {
    "key": "sverigesradio.se/artikel/chat-gpt-och-claude-forbjuder-regeringskansliet",
    "of": null,
    "title": "Swedish government offices to ban ChatGPT and Claude",
@@ -5336,44 +5362,7 @@
    "hn": "49673098",
    "gn": null,
    "all": []
-  },
-  {
-   "key": "rubyhack.ai",
-   "of": null,
-   "title": "OpenAI agents carried out an undisclosed attack on RubyGems",
-   "group": "buzz",
-   "line": "OpenAI 에이전트의 RubyGems 공격",
-   "short": "RubyGems 공격",
-   "note": "",
-   "w": 1,
-   "event": "",
-   "url": "https://www.rubyhack.ai/",
-   "co": "OpenAI",
-   "date": "2026-09-12",
-   "pts": 975,
-   "hn": "49666735",
-   "gn": null,
-   "all": [],
-   "thread": "에이전트 보안 사고"
-  },
-  {
-   "key": "mathandai.org",
-   "of": null,
-   "title": "A misalignment of AI in mathematics",
-   "group": "buzz",
-   "line": "수학 분야 AI 의 어긋남",
-   "short": "수학과 AI",
-   "note": "",
-   "w": 1,
-   "event": "",
-   "url": "https://mathandai.org/",
-   "co": "기타",
-   "date": "2026-09-12",
-   "pts": 1242,
-   "hn": "49662371",
-   "gn": null,
-   "all": []
   }
  ],
- "judged_at": 1792851931
+ "judged_at": 1792890228
 }
