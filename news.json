@@ -1,6 +1,58 @@
 {
  "items": [
   {
+   "key": "openai.com/index/introducing-gpt-6-1-terra",
+   "of": null,
+   "title": "GPT-6.1 Terra",
+   "group": "try",
+   "line": "GPT-6.1 Terra",
+   "short": "GPT-6.1 Terra",
+   "note": "Codex 모델 목록에 떴는지 보기",
+   "w": 3,
+   "event": "",
+   "url": "https://openai.com/index/introducing-gpt-6-1-terra/",
+   "co": "OpenAI",
+   "date": "2026-10-27",
+   "pts": 429,
+   "hn": "50248124",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "OpenAI가 빠르고 효율적인 모델 GPT-6.1 Terra를 냈어요.",
+    "Terminal-Bench 4.0에서 max effort로 50.3%, GPT-5.6 Terra는 21.5%였어요.",
+    "Plus 포함 ChatGPT Work와 Codex에서 오늘부터 쓰고, API는 입력 100만 토큰에 1달러예요."
+   ],
+   "thread": "",
+   "all": []
+  },
+  {
+   "key": "openai.com/index/building-scientific-understanding-with-academic-communities",
+   "of": null,
+   "title": "Working with academic communities to build scientific understanding",
+   "group": "know",
+   "line": "OpenAI 학계 협업 — 수학, 컴퓨터과학, 물리 발견 3건",
+   "short": "OpenAI 학계 협업",
+   "note": "쓸 수 있는 건 없고 흐름만 알아 둬요",
+   "w": 1,
+   "event": "",
+   "url": "https://openai.com/index/building-scientific-understanding-with-academic-communities/",
+   "co": "OpenAI",
+   "date": "2026-10-27",
+   "pts": 116,
+   "hn": "50251344",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "OpenAI가 조화해석, 복잡도 이론, 양자장론 발견 3건을 발표했어요.",
+    "모델이 국소 평활화 추측을 증명했고, Exponential Time Hypothesis가 틀렸다고 주장해요.",
+    "외부 전문가 그룹이 검증하고, 증명과 Lean 형식화는 GitHub에 공개했어요."
+   ],
+   "thread": "",
+   "all": []
+  },
+  {
    "key": "sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm",
    "of": null,
    "title": "Anthropic S-1",
@@ -5468,5 +5520,5 @@
    "thread": "에이전트 보안 사고"
   }
  ],
- "judged_at": 1793034985
+ "judged_at": 1793054135
 }
