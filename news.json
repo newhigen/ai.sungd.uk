@@ -1,6 +1,28 @@
 {
  "items": [
   {
+   "key": "sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm",
+   "of": null,
+   "title": "Anthropic S-1",
+   "group": "skip",
+   "line": "Anthropic S-1 — 상장 신청서 원문",
+   "short": "Anthropic S-1",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm",
+   "co": "Anthropic",
+   "date": "2026-10-26",
+   "pts": 978,
+   "hn": "50242939",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [],
+   "thread": "",
+   "all": []
+  },
+  {
    "key": "minimaxir.com/2026/10/cheap-llms",
    "of": null,
    "title": "OpenAI and Anthropic cut their LLM prices by up to 80% within a few months. Why?",
@@ -49,6 +71,28 @@
     "생검으로 확인된 200건 중 CNN은 125건(62%), 두 LLM은 84건과 85건(42%)을 맞혔어요.",
     "표본이 작고 LLM은 한 번씩만 돌렸으며, 데이터는 LLM 학습에 들었을 수 있다고 적었어요."
    ],
+   "thread": "",
+   "all": []
+  },
+  {
+   "key": "anthropic.com/news/s1-sec",
+   "of": null,
+   "title": "Anthropic files S-1 with the SEC for proposed initial public offering",
+   "group": "skip",
+   "line": "Anthropic S-1 — 상장 신청 공지",
+   "short": "Anthropic S-1",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://www.anthropic.com/news/s1-sec",
+   "co": "Anthropic",
+   "date": "2026-10-26",
+   "pts": 0,
+   "hn": null,
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [],
    "thread": "",
    "all": []
   },
@@ -5422,43 +5466,7 @@
    "gn": null,
    "all": [],
    "thread": "에이전트 보안 사고"
-  },
-  {
-   "key": "twitter.com/DavidSacks/status/2098973625252708460",
-   "of": null,
-   "title": "David Sacks: OpenAI and Anthropic Don't Need Regulations to Pace Frontier Models",
-   "group": "skip",
-   "line": "David Sacks — 선도 모델에 규제 불필요",
-   "short": "Sacks 발언",
-   "note": "",
-   "w": 1,
-   "event": "",
-   "url": "https://twitter.com/DavidSacks/status/2098973625252708460",
-   "co": "Anthropic",
-   "date": "2026-09-14",
-   "pts": 334,
-   "hn": "49685991",
-   "gn": null,
-   "all": []
-  },
-  {
-   "key": "tenderlovemaking.com/2026/09/11/what-a-time-to-be-alive",
-   "of": null,
-   "title": "OpenAI bots knew about the RubyGems caching vulnerability",
-   "group": "skip",
-   "line": "OpenAI 봇의 RubyGems 캐싱 취약점 인지",
-   "short": "RubyGems 후속",
-   "note": "",
-   "w": 1,
-   "event": "",
-   "url": "https://tenderlovemaking.com/2026/09/11/what-a-time-to-be-alive/",
-   "co": "OpenAI",
-   "date": "2026-09-14",
-   "pts": 512,
-   "hn": "49695876",
-   "gn": null,
-   "all": []
   }
  ],
- "judged_at": 1793012276
+ "judged_at": 1793034985
 }
