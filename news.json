@@ -1,6 +1,80 @@
 {
  "items": [
   {
+   "key": "minimaxir.com/2026/10/cheap-llms",
+   "of": null,
+   "title": "OpenAI and Anthropic cut their LLM prices by up to 80% within a few months. Why?",
+   "group": "buzz",
+   "line": "LLM 가격 인하 — OpenAI와 Anthropic이 몇 달 만에 최대 80%",
+   "short": "LLM 가격 인하",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://minimaxir.com/2026/10/cheap-llms/",
+   "co": "Anthropic",
+   "date": "2026-10-26",
+   "pts": 327,
+   "hn": "50236102",
+   "gn": "36009",
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "minimaxir가 6월부터 OpenAI와 Anthropic의 모델 가격 변화를 시간순으로 정리했어요.",
+    "GPT-5.6 Luna는 80% 내렸고, Opus 5.5는 Opus 5보다 총비용이 40~60% 줄었다고 해요.",
+    "인하는 Codex와 Claude Code 구독에도 적용되고, 원인은 DeepSeek 같은 오픈 웨이트 모델의 가격 압박으로 봐요."
+   ],
+   "thread": "",
+   "all": []
+  },
+  {
+   "key": "lynchlab.net/llm-skin-cancer",
+   "of": null,
+   "title": "A 10-year-old CNN outperforms frontier LLMs for skin cancer diagnosis",
+   "group": "buzz",
+   "line": "피부암 진단 — 10년 된 CNN이 최신 LLM 앞섬",
+   "short": "피부암 CNN",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://lynchlab.net/llm-skin-cancer",
+   "co": "기타",
+   "date": "2026-10-26",
+   "pts": 568,
+   "hn": "50233779",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "피부과 의사가 GPT-6 Astra, Claude Fable 5.1, 옛 CNN을 피부암 진단으로 비교했어요.",
+    "생검으로 확인된 200건 중 CNN은 125건(62%), 두 LLM은 84건과 85건(42%)을 맞혔어요.",
+    "표본이 작고 LLM은 한 번씩만 돌렸으며, 데이터는 LLM 학습에 들었을 수 있다고 적었어요."
+   ],
+   "thread": "",
+   "all": []
+  },
+  {
+   "key": "arxiv.org/abs/2610.29162",
+   "of": null,
+   "title": "AI가 쓴 글은 왜 이해하기 어려울까?",
+   "group": "skip",
+   "line": "AI가 쓴 글은 왜 이해하기 어려울까 — 논문",
+   "short": "AI 글 난이도",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://arxiv.org/abs/2610.29162",
+   "co": "기타",
+   "date": "2026-10-25",
+   "pts": 0,
+   "hn": null,
+   "gn": "35947",
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [],
+   "thread": "",
+   "all": []
+  },
+  {
    "key": "apricitas.io/p/ai-and-the-fall-of-the-creative-class",
    "of": null,
    "title": "America has lost 200k of jobs in media, film and the arts. How much is AI?",
@@ -5386,5 +5460,5 @@
    "all": []
   }
  ],
- "judged_at": 1792973146
+ "judged_at": 1793012276
 }
