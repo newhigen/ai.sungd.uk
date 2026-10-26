@@ -1,6 +1,32 @@
 {
  "items": [
   {
+   "key": "apricitas.io/p/ai-and-the-fall-of-the-creative-class",
+   "of": null,
+   "title": "America has lost 200k of jobs in media, film and the arts. How much is AI?",
+   "group": "buzz",
+   "line": "AI 와 창작 직군의 몰락 — 미국 일자리 20만 개 감소",
+   "short": "창작 직군",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://www.apricitas.io/p/ai-and-the-fall-of-the-creative-class",
+   "co": "기타",
+   "date": "2026-10-25",
+   "pts": 500,
+   "hn": "50226419",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "Apricitas 가 AI 와 창작 산업 일자리 감소를 다룬 글이에요.",
+    "미국 미디어와 예술 일자리가 4년간 20만 개 넘게 줄었고, 최근 1년에만 약 5만 개예요.",
+    "AI 영향만 따로 떼어 증명하기는 어렵다고 글이 밝혀요."
+   ],
+   "thread": "",
+   "all": []
+  },
+  {
    "key": "apollo.com/wealth/insights-news/insights/daily-spark/no-signs-of-ai-payoff-outside-the-tech-sector",
    "of": null,
    "title": "No signs of AI payoff outside the tech sector",
@@ -5360,5 +5386,5 @@
    "all": []
   }
  ],
- "judged_at": 1792943975
+ "judged_at": 1792973146
 }
