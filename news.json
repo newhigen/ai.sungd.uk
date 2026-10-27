@@ -1,6 +1,28 @@
 {
  "items": [
   {
+   "key": "deepmind.google/blog/genie-4-a-new-generation-of-world-simulation",
+   "of": null,
+   "title": "Genie 4",
+   "group": "know",
+   "line": "Genie 4 — 세계 시뮬레이션 모델",
+   "short": "Genie 4",
+   "note": "Gemini 앱에 들어왔는지는 따로 봐요",
+   "w": 3,
+   "event": "",
+   "url": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/",
+   "co": "Google",
+   "date": "2026-10-28",
+   "pts": 462,
+   "hn": "50261319",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [],
+   "thread": "",
+   "all": []
+  },
+  {
    "key": "openai.com/index/introducing-gpt-6-1-terra",
    "of": null,
    "title": "GPT-6.1 Terra",
@@ -50,6 +72,32 @@
     "외부 전문가 그룹이 검증하고, 증명과 Lean 형식화는 GitHub에 공개했어요."
    ],
    "thread": "",
+   "all": []
+  },
+  {
+   "key": "oioannou.com/blog/ai-promised-less-work",
+   "of": null,
+   "title": "AI promised less work. I've never worked more",
+   "group": "buzz",
+   "line": "AI 가 일을 줄여 준다더니 — 더 바빠진 개발자",
+   "short": "AI 와 더 바쁨",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://oioannou.com/blog/ai-promised-less-work/",
+   "co": "기타",
+   "date": "2026-10-27",
+   "pts": 599,
+   "hn": "50257325",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "VP of Technology 인 필자가 에이전트를 병렬로 돌리며 오히려 더 바빠졌다고 써요.",
+    "GitHub 기여가 2026년 10월 27일까지 2,102건으로 2021~2025년 어느 해보다 많아요.",
+    "에이전트마다 가끔 확인을 요구해 맥락 전환이 늘고, 몇 주 몰입 뒤 지치는 주기가 세 번 있었어요."
+   ],
+   "thread": "AI 와 개발자의 일",
    "all": []
   },
   {
@@ -5573,26 +5621,7 @@
    "gn": null,
    "all": [],
    "thread": "음성 모델 경쟁"
-  },
-  {
-   "key": "effort.news/irregular",
-   "of": null,
-   "title": "A single firm is behind OpenAI, Anthropic, and Meta hacking scandals",
-   "group": "buzz",
-   "line": "OpenAI, Anthropic, Meta 해킹 사건 뒤의 한 회사",
-   "short": "해킹 배후 회사",
-   "note": "",
-   "w": 1,
-   "event": "",
-   "url": "https://www.effort.news/irregular",
-   "co": "Anthropic",
-   "date": "2026-09-15",
-   "pts": 694,
-   "hn": "49704132",
-   "gn": null,
-   "all": [],
-   "thread": "에이전트 보안 사고"
   }
  ],
- "judged_at": 1793110843
+ "judged_at": 1793131329
 }
