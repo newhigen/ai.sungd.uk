@@ -23048,7 +23048,25 @@ html[data-tab="home"] .ptools,html[data-tab="home"] .ptop,html[data-tab="home"] 
   </div>
 <!--/CC-DATA-->
 <!--CX-DATA-->
-    <p class="range"><strong>v0.69.0</strong> → <strong>v0.164.0</strong> &nbsp;·&nbsp; <span class="range-dates" data-en="2025.12.10 – 2026.10.23">2025.12.10 – 2026.10.23</span></p>
+    <p class="range"><strong>v0.69.0</strong> → <strong>v0.165.0</strong> &nbsp;·&nbsp; <span class="range-dates" data-en="2025.12.10 – 2026.10.27">2025.12.10 – 2026.10.27</span></p>
+    <div class="version-block" id="cx0.165.0" data-date="2026-10-27">
+      <div class="version-head">
+        <span class="ver-badge">v0.165.0</span><span class="ver-date" data-en="Oct 27 Tue">10월 27일 화</span><span class="ver-ago"></span>
+        <div class="ver-summary"><span class="pill feature">기능 ×6</span><span class="pill fix">Fix ×6</span></div>
+      </div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Added a built-in Google Cloud Vertex AI provider, configured with <code>model_provider = "gcp"</code>.</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Added GPT-6.1 Terra to the model catalogs.</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Added a repository filter to the session picker and directory grouping to the agent command center, making it easier to navigate sessions across linked worktrees.</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Added experimental attached thread forks to the app-server API.</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Enabled reasoning effort changes during a conversation by default for supported models.</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Enabled memory v2 by default for fresh profiles and added support for importing external-agent memories into it.</span></div>
+      <div class="entry row-divider" data-type="fix"><span class="pill fix">Fix</span><span class="e-desc">Fixed fresh TUI sessions to honor the server’s default approval reviewer when no explicit override is provided.</span></div>
+      <div class="entry row-divider" data-type="fix"><span class="pill fix">Fix</span><span class="e-desc">Kept TUI preferences editable and immediately applicable when execution settings are invalid.</span></div>
+      <div class="entry row-divider" data-type="fix"><span class="pill fix">Fix</span><span class="e-desc">Cancelled remote MCP tool requests when their local response futures are dropped.</span></div>
+      <div class="entry row-divider" data-type="fix"><span class="pill fix">Fix</span><span class="e-desc">Prevented queued agent messages from restarting work after an interrupt or a switch to Plan mode.</span></div>
+      <div class="entry row-divider" data-type="fix"><span class="pill fix">Fix</span><span class="e-desc">Stopped retrying when a provider reports that a model was not found, preserving its error message.</span></div>
+      <div class="entry row-divider" data-type="fix"><span class="pill fix">Fix</span><span class="e-desc">Closed a marketplace URL validation gap that could allow Git to connect to a different host than the one checked against allowed patterns.</span></div>
+    </div>
     <div class="version-block" id="cx0.164.0" data-date="2026-10-23">
       <div class="version-head">
         <span class="ver-badge">v0.164.0</span><span class="ver-date" data-en="Oct 23 Fri">10월 23일 금</span><span class="ver-ago"></span>
