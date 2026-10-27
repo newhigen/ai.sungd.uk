@@ -53,6 +53,32 @@
    "all": []
   },
   {
+   "key": "magazine.sebastianraschka.com/p/building-reasoning-models",
+   "of": null,
+   "title": "Sebastian Raschka's from-scratch video course on building reasoning models",
+   "group": "buzz",
+   "line": "Raschka 추론 모델 영상 강의 — 처음부터 만들기",
+   "short": "추론 모델 강의",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://magazine.sebastianraschka.com/p/building-reasoning-models",
+   "co": "기타",
+   "date": "2026-10-27",
+   "pts": 559,
+   "hn": "50245138",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "Sebastian Raschka가 추론 모델을 처음부터 만드는 영상 강의를 공개했어요.",
+    "코딩 영상 8편, 11시간 분량이고 작은 Qwen3 모델에 Python과 PyTorch로 구현해요.",
+    "평가, inference scaling, 강화학습, distillation을 다루고 학습에는 GPU가 있으면 편해요."
+   ],
+   "thread": "",
+   "all": []
+  },
+  {
    "key": "sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm",
    "of": null,
    "title": "Anthropic S-1",
@@ -5520,5 +5546,5 @@
    "thread": "에이전트 보안 사고"
   }
  ],
- "judged_at": 1793054135
+ "judged_at": 1793066337
 }
