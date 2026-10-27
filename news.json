@@ -79,6 +79,28 @@
    "all": []
   },
   {
+   "key": "github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf",
+   "of": null,
+   "title": "The Exponential Time Hypothesis Is False [pdf]",
+   "group": "skip",
+   "line": "Exponential Time Hypothesis 반증 — OpenAI 논문",
+   "short": "ETH 반증 논문",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf",
+   "co": "OpenAI",
+   "date": "2026-10-27",
+   "pts": 559,
+   "hn": "50251661",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [],
+   "thread": "",
+   "all": []
+  },
+  {
    "key": "sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm",
    "of": null,
    "title": "Anthropic S-1",
@@ -5546,5 +5568,5 @@
    "thread": "에이전트 보안 사고"
   }
  ],
- "judged_at": 1793066337
+ "judged_at": 1793086834
 }
