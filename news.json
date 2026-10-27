@@ -1,6 +1,28 @@
 {
  "items": [
   {
+   "key": "stanforddaily.com/2026/10/27/professors-books-pirated-to-train-claude",
+   "of": null,
+   "title": "Anthropic trained Claude on illegally obtained Stanford professors' books",
+   "group": "skip",
+   "line": "Claude 학습에 쓰인 스탠퍼드 교수 책 — 저작권 소송",
+   "short": "교수 책 소송",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://stanforddaily.com/2026/10/27/professors-books-pirated-to-train-claude/",
+   "co": "Anthropic",
+   "date": "2026-10-28",
+   "pts": 424,
+   "hn": "50260814",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [],
+   "thread": "",
+   "all": []
+  },
+  {
    "key": "deepmind.google/blog/genie-4-a-new-generation-of-world-simulation",
    "of": null,
    "title": "Genie 4",
@@ -141,6 +163,28 @@
    "date": "2026-10-27",
    "pts": 559,
    "hn": "50251661",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [],
+   "thread": "",
+   "all": []
+  },
+  {
+   "key": "anthropic.com/news/expanding-partnership-gsa",
+   "of": null,
+   "title": "Expanding our partnership with GSA to bring Claude to all levels of government",
+   "group": "skip",
+   "line": "GSA 제휴 확대 — 정부용 Claude 40% 할인",
+   "short": "GSA 제휴",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://www.anthropic.com/news/expanding-partnership-gsa",
+   "co": "Anthropic",
+   "date": "2026-10-27",
+   "pts": 0,
+   "hn": null,
    "gn": null,
    "demo": null,
    "demo_as": "듣기",
@@ -5623,5 +5667,5 @@
    "thread": "음성 모델 경쟁"
   }
  ],
- "judged_at": 1793131329
+ "judged_at": 1793144529
 }
