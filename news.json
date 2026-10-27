@@ -197,6 +197,32 @@
    "all": []
   },
   {
+   "key": "danluu.com/ambitious",
+   "of": null,
+   "title": "우리가 만드는 소프트웨어에 더 큰 야심을 가져야 한다",
+   "group": "buzz",
+   "line": "더 큰 야심으로 소프트웨어 만들기",
+   "short": "더 큰 야심",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://danluu.com/ambitious/",
+   "co": "기타",
+   "date": "2026-10-25",
+   "pts": 0,
+   "hn": null,
+   "gn": "35950",
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "Dan Luu가 에이전트 시대에는 소프트웨어에 더 큰 야심을 가질 만하다고 썼어요.",
+    "정규식 엔진, ripgrep 포크, Rust 빌드 가속을 각각 한 자릿수 시간 안에 만들었다고 해요.",
+    "예전 비용 감각을 버리라는 주장이고, 모델이 좋아질수록 더 어려운 일을 맡게 된다고 해요."
+   ],
+   "thread": "AI 와 개발자의 일",
+   "all": []
+  },
+  {
    "key": "arxiv.org/abs/2610.29162",
    "of": null,
    "title": "AI가 쓴 글은 왜 이해하기 어려울까?",
@@ -5568,5 +5594,5 @@
    "thread": "에이전트 보안 사고"
   }
  ],
- "judged_at": 1793086834
+ "judged_at": 1793110843
 }
