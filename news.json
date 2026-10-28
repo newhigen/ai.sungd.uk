@@ -45,6 +45,32 @@
    "all": []
   },
   {
+   "key": "d2.naver.com/helloworld/1975819",
+   "of": null,
+   "title": "AI 시대의 개발자를 꿈꾸는 학생 개발자에게",
+   "group": "buzz",
+   "line": "AI 시대의 개발자를 꿈꾸는 학생 개발자에게",
+   "short": "학생 개발자에게",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://d2.naver.com/helloworld/1975819",
+   "co": "기타",
+   "date": "2026-10-28",
+   "pts": 0,
+   "hn": null,
+   "gn": "36135",
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "네이버 D2가 2018년 글의 후속으로 학생 개발자의 AI 시대 질문에 답했어요.",
+    "모든 개발자가 AI 에이전트 팀의 관리자가 되고, 사람은 책임과 승인을 맡는다고 해요.",
+    "Claude Code를 만드는 Anthropic 팀이 PR 위험도를 세 단계로 나눠 승인하는 사례도 들어요."
+   ],
+   "thread": "AI 와 개발자의 일",
+   "all": []
+  },
+  {
    "key": "anthropic.com/research/early-progress-drug-development",
    "of": null,
    "title": "Early progress on accelerating drug development with Claude",
@@ -194,6 +220,32 @@
    "demo_as": "듣기",
    "s": [],
    "thread": "",
+   "all": []
+  },
+  {
+   "key": "fishbowl.pastiche.org/2026/10/26/ai-skills",
+   "of": null,
+   "title": "2026년, “AI 활용법”은 가치가 없다",
+   "group": "buzz",
+   "line": "“AI Skills” are worthless in 2026 — AI 활용법은 가치 없다",
+   "short": "AI 활용법 무가치론",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://fishbowl.pastiche.org/2026/10/26/ai-skills",
+   "co": "기타",
+   "date": "2026-10-27",
+   "pts": 0,
+   "hn": null,
+   "gn": "36075",
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "Charles Miller가 2026년에 AI 활용법은 가치가 없다는 글을 썼어요.",
+    "모델을 잘 쓰는 요령은 효과가 있으면 몇 달 뒤 제품 기본 경험으로 흡수된다고 말해요.",
+    "몇 주면 익히고 몇 달 뒤 낡는 기술이라, 앞서 가기보다 무리와 보폭을 맞추겠다는 입장이에요."
+   ],
+   "thread": "AI 와 개발자의 일",
    "all": []
   },
   {
@@ -5693,5 +5745,5 @@
    "thread": "음성 모델 경쟁"
   }
  ],
- "judged_at": 1793165039
+ "judged_at": 1793191199
 }
