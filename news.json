@@ -45,6 +45,32 @@
    "all": []
   },
   {
+   "key": "anthropic.com/research/early-progress-drug-development",
+   "of": null,
+   "title": "Early progress on accelerating drug development with Claude",
+   "group": "know",
+   "line": "Claude 신약 개발 — 파트너 6곳 중간 결과",
+   "short": "Claude 신약 개발",
+   "note": "내 도구와는 거리가 먼 연구 글이에요",
+   "w": 1,
+   "event": "",
+   "url": "https://www.anthropic.com/research/early-progress-drug-development",
+   "co": "Anthropic",
+   "date": "2026-10-28",
+   "pts": 186,
+   "hn": "50265609",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "Anthropic이 제약사와 바이오 기업 6곳과 신약 개발 협업의 중간 결과를 냈어요.",
+    "Generate는 Claude Code로 CAR T 설계를 70% 줄였고, Enveda는 문서 검토 시간을 89% 줄였어요.",
+    "Mithril Medicine을 인수해 근이영양증 신약 연구를 직접 시작했고, 임상은 빨라야 2028년 말이에요."
+   ],
+   "thread": "",
+   "all": []
+  },
+  {
    "key": "openai.com/index/introducing-gpt-6-1-terra",
    "of": null,
    "title": "GPT-6.1 Terra",
@@ -5667,5 +5693,5 @@
    "thread": "음성 모델 경쟁"
   }
  ],
- "judged_at": 1793144529
+ "judged_at": 1793165039
 }
