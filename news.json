@@ -119,6 +119,32 @@
    "all": []
   },
   {
+   "key": "brangus.io/survival-llm",
+   "of": null,
+   "title": "Survival LLM: AI assistant and emergency library that runs on your own computer",
+   "group": "buzz",
+   "line": "Survival LLM — 인터넷 없이 쓰는 비상 AI",
+   "short": "Survival LLM",
+   "note": "",
+   "w": 2,
+   "event": "",
+   "url": "https://www.brangus.io/survival-llm",
+   "co": "기타",
+   "date": "2026-10-28",
+   "pts": 514,
+   "hn": "50264853",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "Survival LLM은 내 컴퓨터에서만 도는 무료 오픈소스 AI 비서와 비상 자료실이에요.",
+    "메모리에 맞는 모델(Nemotron 3.5, Qwen3.8 27B, Granite 4.2 8B)을 받고 위키백과 약 93만 개 문서를 찾아 출처와 함께 답해요.",
+    "Apple Silicon 맥(macOS 14 이상)과 64비트 Windows 10, 11에서 쓰고, 설치 때만 인터넷이 필요해요."
+   ],
+   "thread": "",
+   "all": []
+  },
+  {
    "key": "anthropic.com/research/early-progress-drug-development",
    "of": null,
    "title": "Early progress on accelerating drug development with Claude",
@@ -141,6 +167,28 @@
     "Generate는 Claude Code로 CAR T 설계를 70% 줄였고, Enveda는 문서 검토 시간을 89% 줄였어요.",
     "Mithril Medicine을 인수해 근이영양증 신약 연구를 직접 시작했고, 임상은 빨라야 2028년 말이에요."
    ],
+   "thread": "",
+   "all": []
+  },
+  {
+   "key": "anthropic.com/news/ai-for-science-expands-foundations-research-institutions",
+   "of": null,
+   "title": "AI for Science expands to foundations and institutions",
+   "group": "skip",
+   "line": "AI for Science — 재단과 연구기관으로 확대",
+   "short": "AI for Science",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://www.anthropic.com/news/ai-for-science-expands-foundations-research-institutions",
+   "co": "Anthropic",
+   "date": "2026-10-28",
+   "pts": 0,
+   "hn": null,
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [],
    "thread": "",
    "all": []
   },
@@ -5683,5 +5731,5 @@
    "all": []
   }
  ],
- "judged_at": 1793213212
+ "judged_at": 1793228748
 }
