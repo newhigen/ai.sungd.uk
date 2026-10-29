@@ -24838,7 +24838,19 @@ html[data-tab="home"] .ptools,html[data-tab="home"] .ptop,html[data-tab="home"] 
     </div>
 <!--/CX-DATA-->
 <!--AG-DATA-->
-    <p class="range"><strong>v1.0.4</strong> → <strong>v1.4.9</strong> &nbsp;·&nbsp; <span class="range-dates" data-en="2026.6.1 – 2026.10.28">2026.6.1 – 2026.10.28</span></p>
+    <p class="range"><strong>v1.0.4</strong> → <strong>v1.4.10</strong> &nbsp;·&nbsp; <span class="range-dates" data-en="2026.6.1 – 2026.10.29">2026.6.1 – 2026.10.29</span></p>
+    <div class="version-block" id="ag1.4.10" data-date="2026-10-29">
+      <div class="version-head">
+        <span class="ver-badge">v1.4.10</span><span class="ver-date" data-en="Oct 29 Thu">10월 29일 목</span><span class="ver-ago"></span>
+        <div class="ver-summary"><span class="pill feature">기능 ×3</span><span class="pill fix">Fix ×3</span></div>
+      </div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Improved streaming of agent replies: lines that scroll off the top of the screen are now scrolled into your terminal's scrollback instead of repainting the whole screen, and text wrapping writes whole runs of text at a time, so streaming writes about 70% fewer bytes to the terminal and stays much smoother over slow SSH connections.</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Improved memory use shortly after startup: the CLI now returns about 100 MB of memory left over from startup to the operating system 15 seconds after the interactive UI opens; print and headless modes are unaffected.</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Improved the after-compaction size shown in the compaction marker and in <code>/context</code> to also count what the summary carries into the next prompt, such as your earlier requests and artifact, subagent, and running-task snapshots, so it is closer to the real size; the <code>(N summary)</code> label still shows the summary alone.</span></div>
+      <div class="entry row-divider" data-type="fix"><span class="pill fix">Fix</span><span class="e-desc">Fixed subagents losing the task their parent agent gave them, and the parent's ID, after their context was compacted, including with <code>/compact</code>; a subagent's summary now keeps the parent agent's 10 most recent messages.</span></div>
+      <div class="entry row-divider" data-type="fix"><span class="pill fix">Fix</span><span class="e-desc">Fixed conversations with many or large images, such as screenshots or pasted images, being rejected for exceeding the model's request size limit: images are now capped at 2000 pixels per side and large PNGs are sent as JPEGs when that is much smaller, and an image saved as JPEG but labeled PNG, such as a pasted image or browser screenshot, is no longer rejected for a mismatched type.</span></div>
+      <div class="entry row-divider" data-type="fix"><span class="pill fix">Fix</span><span class="e-desc">Fixed the <code>/browser</code> subagent not receiving the current page's snapshot when the selected page belongs to an isolated browser context, such as a page opened with <code>isolatedContext</code> or attached from an Incognito window.</span></div>
+    </div>
     <div class="version-block" id="ag1.4.9" data-date="2026-10-28">
       <div class="version-head">
         <span class="ver-badge">v1.4.9</span><span class="ver-date" data-en="Oct 28 Wed">10월 28일 수</span><span class="ver-ago"></span>
