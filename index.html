@@ -124,6 +124,7 @@ html[data-tab="models"] .ptools,html[data-tab="models"] .ptop,html[data-tab="mod
 .mchart .ax{stroke:var(--line);stroke-width:1}
 .mchart .nm{fill:var(--ink);font-size:11px}
 .mchart .ef{font-size:9.5px;fill:#999a9c}
+.mchart .ref{stroke:#d97757;stroke-width:1;stroke-dasharray:4 3}.mchart .rl{fill:#c0603f;font-size:10px;paint-order:stroke;stroke:var(--bg);stroke-width:3px}
 .mchart .nm,.mchart .ef{paint-order:stroke;stroke:var(--bg);stroke-width:3px}
 .mc-hint{display:none;font-family:var(--mono);font-size:10px;color:#999a9c;text-align:right;margin-top:2px}
 /* 폰 — 칩은 그림 아래(엄지 쪽), 그림은 가로로 밀고 점수 축은 왼쪽에 남긴다 */
@@ -1085,7 +1086,7 @@ html[data-tab="home"] .ptools,html[data-tab="home"] .ptop,html[data-tab="home"] 
 </div>
 <!--/MODELS-STATUS-->
 <div class="mdl">
-<p class="lead"><b>코딩 모델 · 성능 대비 비용</b> <span class="masof" data-asof="2026-10-03" data-new="Haiku 5.5, GPT-6.1 Terra, Gemini 4 Carbon">2026-10-03 기준</span></p>
+<p class="lead"><b>코딩 모델 · 성능 대비 비용</b> <span class="masof" data-asof="2026-10-29">2026-10-29 기준</span></p>
 <p class="mdesc">Terminal-Bench 4.0 점수와 과제 하나에 드는 비용이에요. 모델마다 effort 단계를 가벼운 쪽부터 이었어요. 왼쪽 위일수록 싸게 잘 풀어요.</p>
 <div class="mchart" id="mchart"><div class="mc-chips"></div><div class="mc-fig"></div><p class="mc-hint">밀면 $20 까지 →</p></div>
 <div class="box0 mtry">
@@ -1097,7 +1098,7 @@ html[data-tab="home"] .ptools,html[data-tab="home"] .ptop,html[data-tab="home"] 
 <div class="it t2" data-t="가장 어려운 과제만 Sonnet 5.5 max 로" data-k="md:sonnet55-max-hard"><div class="row"><span class="sev">추천</span><button class="box" data-off="[x]">[ ]</button><span class="cmd">/effort max</span><span class="tt">가장 어려운 과제만 Sonnet 5.5 max 로</span><span class="ds">63.6점으로 1위, 값은 Opus 5.5 max 의 1.4배 — $13.11 → $18.76</span></div></div>
 </div>
 <p class="mfoot">과제당 비용은 API 정가로 낸 값이에요. 구독이면 한도를 얼마나 빨리 쓰는지의 상대 비교로 읽어요.<br>
-출처 <a href="https://artificialanalysis.ai/evaluations/terminalbench-4-0" target="_blank" rel="noopener noreferrer">Artificial Analysis · Terminal-Bench 4.0 (mini-swe-agent) ↗</a> · Gemini 4 Argon 은 AA 에 high 하나만 올라 있어요. Sonnet 5 는 AA 에 모든 effort 가 2~14점으로 올라 있어요. 실행 이상일 수 있어 해볼 것에선 뺐어요.</p>
+출처 <a href="https://artificialanalysis.ai/evaluations/terminalbench-4-0" target="_blank" rel="noopener noreferrer">Artificial Analysis · Terminal-Bench 4.0 (mini-swe-agent) ↗</a> · Gemini 4 Carbon 과 Argon 은 AA 에 high 하나만 올라 있어요. Sonnet 5 는 AA 에 모든 effort 가 2~14점으로 올라 있어요. 실행 이상일 수 있어 해볼 것에선 뺐어요.</p>
 </div>
 <!--/MODELS-->
 </div>
@@ -26522,13 +26523,18 @@ countTop();
 
 /* ── 모델 차트 — 성능 대비 비용. 데이터는 MD·MC, 새 모델이 나올 때만 손으로 ── */
 (function () {
-  // [모델, effort, 점수, 과제당 비용 $] — Terminal-Bench 4.0 · Artificial Analysis · 2026-10-03
+  // [모델, effort, 점수, 과제당 비용 $] — Terminal-Bench 4.0 · Artificial Analysis · 2026-10-29
   const MD = [
     ["Sonnet 5.5","low",20.7,1.84],["Sonnet 5.5","medium",29.8,2.25],["Sonnet 5.5","high",43.9,3.06],["Sonnet 5.5","xhigh",57.1,8.87],["Sonnet 5.5","max",63.6,18.76],
     ["GPT-6.1 Sol","low",30.8,0.38],["GPT-6.1 Sol","medium",48.0,0.61],["GPT-6.1 Sol","high",51.5,0.83],["GPT-6.1 Sol","xhigh",54.0,1.03],["GPT-6.1 Sol","max",56.1,1.82],
-    // Gemini 4 Argon 은 AA 에 high 하나만 있다
+    // GPT-6.1 Terra 의 none 은 AA 의 Non-reasoning — medium 보다 점수는 낮고 값은 높게 나온 그대로
+    ["GPT-6.1 Terra","none",26.8,0.38],["GPT-6.1 Terra","low",15.2,0.11],["GPT-6.1 Terra","medium",32.3,0.28],["GPT-6.1 Terra","high",41.9,0.44],["GPT-6.1 Terra","xhigh",46.5,0.66],["GPT-6.1 Terra","max",55.6,1.49],
+    // Gemini 4 Carbon, Gemini 4 Argon 은 AA 에 high 하나만 있다
+    ["Gemini 4 Carbon","high",65.2,10.05],
     ["Gemini 4 Argon","high",57.1,6.78],
     ["Opus 5.5","low",31.3,2.08],["Opus 5.5","medium",52.5,4.04],["Opus 5.5","high",56.6,5.12],["Opus 5.5","xhigh",59.6,8.78],["Opus 5.5","max",59.6,13.11],
+    // Haiku 5.5 — AA 각주: 긴 문맥 입력의 5배 가격은 아직 비용에 안 들어갔다
+    ["Haiku 5.5","low",12.6,0.12],["Haiku 5.5","medium",15.2,0.19],["Haiku 5.5","high",21.7,0.33],["Haiku 5.5","xhigh",29.3,0.46],["Haiku 5.5","max",32.8,0.65],
     ["Opus 5","low",26.3,5.18],["Opus 5","medium",34.3,9.18],["Opus 5","high",46.0,13.14],["Opus 5","xhigh",46.5,17.35],["Opus 5","max",49.0,19.29],
     ["Fable 5.1","low",40.4,7.32],["Fable 5.1","medium",44.9,9.12],["Fable 5.1","high",52.0,11.64],["Fable 5.1","xhigh",55.1,15.78],["Fable 5.1","max",52.0,19.22],
     // Sonnet 5 는 AA 에 모든 effort 가 2~14점으로 올라 있다. 실행 이상일 수 있어 처음엔 끄고 각주로 밝힌다
@@ -26539,13 +26545,16 @@ countTop();
     ["Gemini 3.8 Flash","low",10.1,5.38],["Gemini 3.8 Flash","medium",19.7,4.61],["Gemini 3.8 Flash","high",19.7,5.84],
   ].map(([m, e, s, c]) => ({m, e, s, c}));
   // 도구 색 계열 안에서 모델마다 다른 값 — Claude Code 주황·붉은 계열, Codex 먹의 농담, Antigravity 파랑
-  // 칩 순서 = 이 순서. 앞 다섯은 세 회사의 최신 모델, 나머지는 최고 점수 순
-  const MC = {"Opus 5.5":"#d97757","Sonnet 5.5":"#e8a02a","GPT-6 Astra":"#1c1e23","GPT-6.1 Sol":"#6e7076","Gemini 4 Argon":"#1f4fb8",
+  // 칩 순서 = 이 순서. 앞은 세 회사의 최신 모델, 나머지는 최고 점수 순. Terra 는 Sol 과 붙어 있어 먹 대신 흙빛으로 가른다
+  const MC = {"Opus 5.5":"#d97757","Sonnet 5.5":"#e8a02a","GPT-6 Astra":"#1c1e23","GPT-6.1 Sol":"#6e7076","GPT-6.1 Terra":"#9a7b52","Gemini 4 Carbon":"#1f4fb8",
+              "Gemini 4 Argon":"#7f9fdc","Haiku 5.5":"#f0b48a",
               "Fable 5.1":"#c8205a","Opus 5":"#8a3510","GPT-6 Sol":"#9a9ca1","Gemini 3.8 Flash":"#8fb0ee","Sonnet 5":"#d4a900","GPT-6 Luna":"#c4c5c8"};
   // 처음 켜 두는 모델 — 데스크톱·폰 같다. 나머지는 회색으로 깔리고 칩으로 켠다
-  const DEFAULT_ON = ["Opus 5.5", "Sonnet 5.5", "GPT-6 Astra", "GPT-6.1 Sol", "Gemini 4 Argon"];
+  const DEFAULT_ON = ["Opus 5.5", "Sonnet 5.5", "GPT-6 Astra", "GPT-6.1 Sol", "GPT-6.1 Terra", "Gemini 4 Carbon"];
   const EORD = ["none","low","medium","high","xhigh","max"];
-  const XMAX = 20, YMAX = 65, NS = "http://www.w3.org/2000/svg";
+  // 기준선 — 지금 쓰는 모델. 이 선보다 위에 있고 이 점보다 왼쪽이면 더 잘하고 더 싸다
+  const REF = ["Opus 5.5", "high"];
+  const XMAX = 20, YMAX = 70, NS = "http://www.w3.org/2000/svg";
   const root = document.getElementById("mchart");
   if (!root) return;
   const chipsEl = root.querySelector(".mc-chips"), fig = root.querySelector(".mc-fig");
@@ -26592,9 +26601,18 @@ countTop();
     for (const v of yt) { add(s, "line", {class:"ax", x1:mg.l, x2:W-mg.r, y1:Y(v), y2:Y(v)}); add(s, "text", {x:mg.l-6, y:Y(v)+3, "text-anchor":"end"}, v); }
     for (let v = 0; v <= XMAX; v += 2) add(s, "text", {x:X(v), y:H-mg.b+15, "text-anchor":"middle"}, "$" + v);
     add(s, "text", {x:W-mg.r, y:H-3, "text-anchor":"end"}, "과제당 비용 →");
+    const ref = MD.find((p) => p.m === REF[0] && p.e === REF[1]), refBox = [];
+    if (ref) {
+      const y = Y(ref.s), t = `기준 ${REF[0]} ${REF[1]} ${ref.s}`, w = t.length * 5.8;
+      add(s, "line", {class:"ref", x1:mg.l, x2:W-mg.r, y1:y, y2:y});
+      // 선 위, 그림 오른쪽 끝에 붙인다 — 선 끝에 놓이는 모델 이름은 이 자리를 피한다
+      const x = W - mg.r, ty = y - 5;
+      add(s, "text", {class:"rl", x, y:ty, "text-anchor":"end"}, esc(t));
+      refBox.push({x0:x - w, x1:x, y0:ty - 10, y1:ty + 2});
+    }
 
     const lit = hover ? new Set([hover]) : on;
-    const placed = [];
+    const placed = [...refBox];
     const onLine = [], over = (l, b) => l.some((q) => b.x0 < q.x1 && b.x1 > q.x0 && b.y0 < q.y1 && b.y1 > q.y0);
     const hit = (b, loose) => over(placed, b) || (!loose && over(onLine, b));
     const labs = [];
@@ -26627,7 +26645,8 @@ countTop();
       for (const [q, dx, dy, a, loose] of tries) {
         const x = X(q.c), y = Y(q.s);
         const x0 = a === "start" ? x + dx : a === "end" ? x + dx - w : x - w / 2;
-        const b = {x0, x1: x0 + w, y0: y + dy - 10, y1: y + dy + 2};
+        // 이름표끼리 붙어 한 낱말로 읽히지 않게 좌우 2px 를 띄운다
+        const b = {x0: x0 - 2, x1: x0 + w + 2, y0: y + dy - 10, y1: y + dy + 2};
         if (hit(b, loose) || b.x1 > W || b.x0 < mg.l) continue;
         add(s, "text", {class: L.name ? "nm" : "ef", "text-anchor": a, x: x + dx, y: y + dy}, esc(txt));
         // 한 칸 떨어진 자리면 점에서 이름표 모서리까지 짧은 선
