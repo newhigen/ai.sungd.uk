@@ -44,6 +44,8 @@ LINES = [
     ('Qwen', r'^Qwen([\d.]+) (?:Max|Plus)$'),
     ('DeepSeek', r'^DeepSeek (V[\d.]+)(?: Pro| Flash)?(?: \d{4})?$'),
     ('Kimi', r'^Kimi (K[\d.]+)(?: Code| Pro)?$'),
+    # Meta 는 Spark(작은 줄)와 Wonder(큰 줄)를 한 줄에 — Wonder 는 Full 만, Spark Open 과 Glimmer 는 뺀다
+    ('Meta Muse', r'^Muse (Spark [\d.]+|Wonder(?= Full$))'),
   ]),
 ]
 OPEN = {'Z.ai GLM', 'Qwen', 'DeepSeek', 'Kimi'}
