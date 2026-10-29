@@ -127,6 +127,32 @@
    "all": []
   },
   {
+   "key": "artificialanalysis.ai/articles/gemini-4-carbon-new-number-1",
+   "of": null,
+   "title": "Gemini 4 Carbon is the new #1 on the Artificial Analysis Intelligence Index v5",
+   "group": "buzz",
+   "line": "Gemini 4 Carbon — Intelligence Index v5 1위",
+   "short": "Carbon 1위",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://artificialanalysis.ai/articles/gemini-4-carbon-new-number-1",
+   "co": "Google",
+   "date": "2026-10-29",
+   "pts": 323,
+   "hn": "50288019",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "Artificial Analysis가 Gemini 4 Carbon을 Intelligence Index v5 1위로 올렸어요.",
+    "점수는 59이고, Antigravity CLI 기준 코딩 에이전트 지수는 Claude Code의 Opus 5.5(62)에 3점 뒤져요.",
+    "일부 사용자에게만 풀렸고, 100만 토큰 문맥에 입출력 $4/$20, 출시 할인 50%가 걸려 있어요."
+   ],
+   "thread": "",
+   "all": []
+  },
+  {
    "key": "stanforddaily.com/2026/10/27/professors-books-pirated-to-train-claude",
    "of": null,
    "title": "Anthropic trained Claude on illegally obtained Stanford professors' books",
@@ -5793,5 +5819,5 @@
    "all": []
   }
  ],
- "judged_at": 1793292695
+ "judged_at": 1793310251
 }
