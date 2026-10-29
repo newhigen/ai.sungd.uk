@@ -30,10 +30,12 @@ LINES = [
   ('OpenAI', '#1c1e23', 'CX', 'Codex', 'GPT-', [
     ('Astra', r'^GPT-([\d.]+)(?: Astra)?$'),
     ('Sol', r'^GPT-([\d.]+) Sol$'),
+    ('Terra', r'^GPT-([\d.]+) Terra$'),
     ('Luna', r'^GPT-(?:([\d.]+) Luna|([\d.]+ mini))$'),
   ]),
   ('Google', '#3b6fd6', 'AG', 'Antigravity', 'Gemini ', [
     ('Pro', r'^Gemini ([\d.]+ (?:Pro|Argon|Ultra))(?: Preview)?$'),
+    ('Carbon', r'^Gemini ([\d.]+) Carbon(?: Preview)?$'),
     ('Flash', r'^Gemini ([\d.]+) Flash$'),
   ]),
   ('그 밖', '#8a8d93', None, None, None, [
