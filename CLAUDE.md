@@ -22,7 +22,7 @@ models.json   모델 출시일과 Terminal-Bench 4.0 점수. update_models.py �
 
 ## 배포
 
-GitHub Pages 가 main 루트를 그대로 서빙한다. `.github/workflows/daily-update.yml` 이 매시 5분에 돈다.
+GitHub Pages 가 main 루트를 그대로 서빙한다. `.github/workflows/daily-update.yml` 은 두 주기로 돈다. 패치노트 수집과 큐레이션(1, 3단계)은 주 1회 월요일 05:20 KST, 모델 현황과 소식은 매시 5분이다. 수동 실행은 주간 단계까지 다 돈다.
 
 1. 버전 수집 — 새 버전이 없으면 여기서 끝나고 비용이 없다.
 2. 글 수집 — Anthropic, OpenAI 새 글을 `new_blog.json` 으로.

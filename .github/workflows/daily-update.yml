@@ -1,13 +1,14 @@
-name: Changelog watch (hourly)
+name: Changelog watch (weekly curation, hourly news)
 
-# 한 시간마다 패치노트를 본다. 새 버전이 없으면 스크립트가 바로 빠져나가 커밋도 토큰도 0이라,
-# 자주 봐도 드는 건 러너 1분뿐이다(공개 저장소라 무료). 새 버전이 있는 시각에만
-# 큐레이션이 돌아, 값은 하루 한 번 돌 때와 같고 화면만 한 시간 안에 따라붙는다.
-# (2026-08-13 까지는 하루 한 번 20:20 UTC = 05:20 KST 였다.)
+# 패치노트 수집과 큐레이션(새로 나온 것, 용도별)은 주 1회, 월요일 05:20 KST 에 돈다.
+# 수집 스크립트가 추적 중인 최신보다 새로운 버전을 모두 잡아, 한 주 밀린 버전이 한 번에 큐레이션된다.
+# 모델 현황(토큰 0)과 소식(주인 탭)은 매시 그대로 돈다.
+# (2026-08-13 까지 하루 한 번 05:20 KST, 2026-10-29 까지 매시. 9/23 뒤로 Now 해봄 기록이 0이라 주 1회로 줄였다.)
 on:
   schedule:
-    - cron: "5 * * * *"     # 매시 5분 — GitHub cron 은 정시에 몰려 밀리므로 5분 비켜 놓는다
-  workflow_dispatch:          # 수동 실행 버튼
+    - cron: "5 * * * *"     # 매시 5분 — 모델 현황, 소식. GitHub cron 은 정시에 몰려 밀리므로 5분 비켜 놓는다
+    - cron: "20 20 * * 0"   # 일 20:20 UTC = 월 05:20 KST — 패치노트 수집과 큐레이션
+  workflow_dispatch:          # 수동 실행 버튼 — 주간 단계까지 다 돈다
 
 permissions:
   contents: write
@@ -20,6 +21,8 @@ concurrency:
 jobs:
   update:
     runs-on: ubuntu-latest
+    env:
+      WEEKLY: ${{ github.event.schedule == '20 20 * * 0' || github.event_name == 'workflow_dispatch' }}
     steps:
       - uses: actions/checkout@v4
 
@@ -30,6 +33,7 @@ jobs:
       # ── 1단계(a): Claude Code 버전 목록 (토큰 0, 순수 스크립트) ──
       - name: Update Claude Code version list
         id: update
+        if: env.WEEKLY == 'true'
         run: python scripts/update_changelog.py
 
       - name: Commit CC version list
@@ -44,6 +48,7 @@ jobs:
       # ── 1단계(b): Codex 버전 목록 (토큰 0, openai/codex GitHub releases) ──
       - name: Update Codex version list
         id: codex
+        if: env.WEEKLY == 'true'
         run: python scripts/update_codex.py
 
       - name: Commit Codex version list
@@ -58,6 +63,7 @@ jobs:
       # ── 1단계(c): Antigravity CLI 버전 목록 (토큰 0, google-antigravity/antigravity-cli GitHub releases) ──
       - name: Update Antigravity version list
         id: agy
+        if: env.WEEKLY == 'true'
         run: python scripts/update_agy.py
 
       - name: Commit Antigravity version list
