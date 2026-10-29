@@ -1,6 +1,32 @@
 {
  "items": [
   {
+   "key": "gist.github.com/flamerix-ai/c3905705cc4205e5de3011fa2e74efce",
+   "of": null,
+   "title": "Claude Code regularly sends each background agent’s transcript to its model",
+   "group": "try",
+   "line": "agent_summary — 상태줄 토큰 낭비",
+   "short": "agent_summary",
+   "note": "맥은 시험 전이라 Linux 결과만 있어요",
+   "w": 2,
+   "event": "",
+   "url": "https://gist.github.com/flamerix-ai/c3905705cc4205e5de3011fa2e74efce",
+   "co": "Anthropic",
+   "date": "2026-10-29",
+   "pts": 358,
+   "hn": "50284255",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "Flamerix AI가 Claude Code 백그라운드 에이전트의 상태줄 요약이 토큰을 쓴다고 밝혔어요.",
+    "약 30초마다 에이전트 전체 대화를 모델에 보내, 지출의 16.4%, 요청의 19.7%를 차지했대요.",
+    "끄는 설정은 없어 Bun preload로 막았고, Linux만 시험했어요. 업데이트 뒤엔 다시 확인해야 해요."
+   ],
+   "thread": "",
+   "all": []
+  },
+  {
    "key": "deepmind.google/blog/gemini-4-carbon-our-next-frontier-model",
    "of": null,
    "title": "Gemini 4 Carbon: Our next frontier model",
@@ -145,6 +171,32 @@
    "all": []
   },
   {
+   "key": "blog.adrq.dev/here-be-monsters-what-do-you-still-need-to-know-when-agents-do-the-work",
+   "of": null,
+   "title": "AI 에이전트가 코드를 작성해도 개발자는 무엇을 알아야 할까?",
+   "group": "buzz",
+   "line": "Here Be Monsters — 에이전트 시대 개발자의 앎",
+   "short": "Here Be Monsters",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://blog.adrq.dev/here-be-monsters-what-do-you-still-need-to-know-when-agents-do-the-work",
+   "co": "기타",
+   "date": "2026-10-28",
+   "pts": 0,
+   "hn": null,
+   "gn": "36162",
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "에이전트가 코드를 쓰는 시대에 시스템 주인이 무엇을 알아야 하는지 쓴 글이에요.",
+    "기초, 폭넓은 지식, 필요할 때 깊이 파고드는 능력을 꼽아요.",
+    "Codex가 한 줄에 컴포넌트를 쓴 App.tsx가 SonarQube 복잡도 경고를 낸 일화로 시작해요."
+   ],
+   "thread": "AI 와 개발자의 일",
+   "all": []
+  },
+  {
    "key": "anthropic.com/research/early-progress-drug-development",
    "of": null,
    "title": "Early progress on accelerating drug development with Claude",
@@ -189,6 +241,32 @@
    "demo": null,
    "demo_as": "듣기",
    "s": [],
+   "thread": "",
+   "all": []
+  },
+  {
+   "key": "spectrum.ieee.org/wikipedia-wikiproject-ai-writing-cleanup",
+   "of": null,
+   "title": "Wikipedia's Cleanup of AI-Generated Content",
+   "group": "buzz",
+   "line": "Wikipedia AI Cleanup — AI 생성 글 정리",
+   "short": "Wikipedia 정리",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://spectrum.ieee.org/wikipedia-wikiproject-ai-writing-cleanup",
+   "co": "기타",
+   "date": "2026-10-27",
+   "pts": 504,
+   "hn": "50257326",
+   "gn": "36115",
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "IEEE Spectrum이 WikiProject AI Cleanup 공동 창립자 Ellia Lebleu를 인터뷰했어요.",
+    "2023년에 시작한 자원봉사 프로젝트로, 지침을 어기는 AI 생성 글을 찾아 지워요.",
+    "초기엔 'stands as a testament' 같은 상투어로 잡았고, 지금은 더 미묘한 글을 찾는 도구를 만들어요."
+   ],
    "thread": "",
    "all": []
   },
@@ -5731,5 +5809,5 @@
    "all": []
   }
  ],
- "judged_at": 1793228748
+ "judged_at": 1793267253
 }
