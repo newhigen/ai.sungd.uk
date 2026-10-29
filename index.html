@@ -29,9 +29,9 @@
     gtag('config', 'GT-KT4BFVVJ');
   </script>
   <style>
-/* 글꼴 — 스위트(눈누 https://noonnu.cc/font_page/1150). 화살표(→)만 Arial 로: 스위트의 → 는 > 꼴이다 */
+/* 글꼴 — 프리젠테이션 하나(숫자, 코드 칩 포함). 화살표(→)만 Arial 로 */
 @font-face{font-family:Arw;src:local("ArialMT");unicode-range:U+2190-21FF}
-/* 스위트 — SUNN YOUN · 눈누 https://noonnu.cc/font_page/1150 · 라이선스는 그 페이지에서 */
+/* 프리젠테이션 — 이주임 · 눈누 https://noonnu.cc/font_page/1369 · SIL OFL */
 @font-face { font-family: 'Freesentation'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2404@1.0/Freesentation-4Regular.woff2') format('woff2'); font-weight: 400; font-display: swap; }
 @font-face { font-family: 'Freesentation'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2404@1.0/Freesentation-5Medium.woff2') format('woff2'); font-weight: 500; font-display: swap; }
 @font-face { font-family: 'Freesentation'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2404@1.0/Freesentation-6SemiBold.woff2') format('woff2'); font-weight: 600; font-display: swap; }
@@ -358,9 +358,6 @@ dialog::backdrop{background:rgba(28,30,35,.30)}
 html:not(.own) .ptabs a[data-tab="news"]{display:none}
 html[data-tab="news"] .ptools,html[data-tab="news"] .ptop,html[data-tab="news"] .pdone{display:none}
 .nwz{max-width:1180px;word-break:keep-all}
-.nwz .ar.dim{padding:1px 11px}.nwz .ar.dim .dt,.nwz .ar.dim .np,.nwz .ar.dim .co,.nwz .ar.dim .gp{opacity:.55}
-.nwz .ar.dim .tt{font-size:11.5px;color:#999a9c}.nwz .ar.dim .tt a{font-weight:400;color:inherit;border-bottom-color:#ececec}
-.nwz .ar.dim .cv{display:none}.nwz .ar.dim .np b{font-weight:400;color:inherit}.nwz .ar.dim .np i{background:#dce6ff}.nwz .ar.dim.d1{margin-top:6px}
 .nwz .nvd{font-size:11.5px;color:#999a9c;margin:2px 0 4px}
 .nwz a{color:inherit;text-decoration:none}
 .nwz .ar{display:grid;grid-template-columns:48px 70px 76px 62px minmax(0,1fr);gap:9px;padding:4px 11px;margin:0 -11px;align-items:baseline}
@@ -443,6 +440,10 @@ body{font-variant-numeric:tabular-nums}
 .nwz .to{font-size:13px;margin-left:10px}
 .nwz .tt a.dm{font-size:12.5px;font-weight:600;margin-left:10px;padding:1px 8px;border-radius:4px;white-space:nowrap;
   text-decoration:none;color:#1e4fd8;background:#eff3ff}.nwz .tt a.dm:hover{background:#dce6ff}
+/* 홈 소식의 7개 밖 — 접지 않고 작고 옅은 줄로 */
+.nwz .ar.dim{padding-top:1px;padding-bottom:1px}.nwz .ar.dim .dt,.nwz .ar.dim .np,.nwz .ar.dim .co,.nwz .ar.dim .gp{opacity:.55}
+.nwz .ar.dim .tt{font-size:11.5px;color:#999a9c}.nwz .ar.dim .tt a{font-size:inherit;font-weight:400;color:inherit;text-decoration-color:#ececec}
+.nwz .ar.dim .cv{display:none}.nwz .ar.dim .np b{font-weight:400;color:inherit}.nwz .ar.dim .np i{background:#dce6ff}.nwz .ar.dim.d1{margin-top:6px}
 .nwz .bgs{display:block;columns:2 320px;column-gap:44px;margin:8px 0 20px var(--c-tt)}
 .nwz .bg{break-inside:avoid;margin-bottom:16px}
 .nwz .bgh{font-size:12.5px;font-weight:700;color:var(--dim);margin:0 0 4px}
@@ -719,6 +720,7 @@ html[data-tab="home"] .ptools,html[data-tab="home"] .ptop,html[data-tab="home"] 
   #home .nwz .ar .tt{grid-area:tt;grid-column:auto;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:14px}
   #home .nwz .ar .tt .to{display:none}
   #home .nwz .ar .gp{grid-area:gp;justify-self:end;font-size:11.5px}
+  #home .nwz .ar.dim{padding:2px 0}#home .nwz .ar.dim.d1{margin-top:6px}#home .nwz .ar.dim .tt{font-size:12px}
   .hg{grid-template-columns:minmax(0,1fr);row-gap:26px}
   .hm{grid-template-columns:minmax(0,1fr) 84px 108px;column-gap:10px}
   .hm .mh-tool{justify-self:end}
