@@ -43,7 +43,7 @@ LINES = [
     ('Z.ai GLM', r'^GLM-([\d.]+)$'),
     ('Qwen', r'^Qwen([\d.]+) (?:Max|Plus)$'),
     ('DeepSeek', r'^DeepSeek (V[\d.]+)(?: Pro| Flash)?(?: \d{4})?$'),
-    ('Kimi', r'^Kimi (K[\d.]+)(?: Code)?$'),
+    ('Kimi', r'^Kimi (K[\d.]+)(?: Code| Pro)?$'),
   ]),
 ]
 OPEN = {'Z.ai GLM', 'Qwen', 'DeepSeek', 'Kimi'}
