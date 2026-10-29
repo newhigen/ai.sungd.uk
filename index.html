@@ -8,8 +8,6 @@
   <meta name="description" content="Claude Code·Codex·Antigravity 새 기능 중 오늘 써볼 만한 것을 골라 체크리스트로 보여준다. ai.sungd.uk" />
   <meta name="google-site-verification" content="VLi2Q2MCHzrYvm80ry_lSLF1AueEC0iJDzkSxVWIqY8" />
   <link rel="canonical" href="https://ai.sungd.uk/" />
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" />
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=GT-KT4BFVVJ"></script>
   <script>
@@ -34,21 +32,19 @@
 /* 글꼴 — 스위트(눈누 https://noonnu.cc/font_page/1150). 화살표(→)만 Arial 로: 스위트의 → 는 > 꼴이다 */
 @font-face{font-family:Arw;src:local("ArialMT");unicode-range:U+2190-21FF}
 /* 스위트 — SUNN YOUN · 눈누 https://noonnu.cc/font_page/1150 · 라이선스는 그 페이지에서 */
-@font-face { font-family: 'Suite'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Light.woff2') format('woff2'); font-weight: 300; font-display: swap; }
-@font-face { font-family: 'Suite'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2') format('woff2'); font-weight: 400; font-display: swap; }
-@font-face { font-family: 'Suite'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Medium.woff2') format('woff2'); font-weight: 500; font-display: swap; }
-@font-face { font-family: 'Suite'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-SemiBold.woff2') format('woff2'); font-weight: 600; font-display: swap; }
-@font-face { font-family: 'Suite'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Bold.woff2') format('woff2'); font-weight: 700; font-display: swap; }
-@font-face { font-family: 'Suite'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-ExtraBold.woff2') format('woff2'); font-weight: 800; font-display: swap; }
-@font-face { font-family: 'Suite'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Heavy.woff2') format('woff2'); font-weight: 900; font-display: swap; }
+@font-face { font-family: 'Freesentation'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2404@1.0/Freesentation-4Regular.woff2') format('woff2'); font-weight: 400; font-display: swap; }
+@font-face { font-family: 'Freesentation'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2404@1.0/Freesentation-5Medium.woff2') format('woff2'); font-weight: 500; font-display: swap; }
+@font-face { font-family: 'Freesentation'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2404@1.0/Freesentation-6SemiBold.woff2') format('woff2'); font-weight: 600; font-display: swap; }
+@font-face { font-family: 'Freesentation'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2404@1.0/Freesentation-7Bold.woff2') format('woff2'); font-weight: 700; font-display: swap; }
+@font-face { font-family: 'Freesentation'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2404@1.0/Freesentation-8ExtraBold.woff2') format('woff2'); font-weight: 800; font-display: swap; }
 
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--sans:Arw,Suite,-apple-system,system-ui,sans-serif;
-      --mono:"JetBrains Mono",ui-monospace,"SF Mono",Menlo,monospace;
+:root{--sans:Arw,Freesentation,-apple-system,system-ui,sans-serif;
+      --mono:Freesentation,-apple-system,system-ui,sans-serif;
       --bg:#ffffff;--ink:#1c1e23;--dim:#838487;--faint:#b7b8b9;--line:#dededf;--line2:#dadadb;
       --acc:#2f6bff;--green:#1e7a48;--boxw:34px}
 html{color-scheme:light;scrollbar-gutter:stable}
-body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:13px;
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:13px;font-variant-numeric:tabular-nums;
      line-height:1.55;-webkit-font-smoothing:antialiased;padding:0 22px}
 .wrap{max-width:1400px;margin:0 auto;padding:30px 0 90px}
 #data{display:none}
@@ -362,6 +358,9 @@ dialog::backdrop{background:rgba(28,30,35,.30)}
 html:not(.own) .ptabs a[data-tab="news"]{display:none}
 html[data-tab="news"] .ptools,html[data-tab="news"] .ptop,html[data-tab="news"] .pdone{display:none}
 .nwz{max-width:1180px;word-break:keep-all}
+.nwz .ar.dim{padding:1px 11px}.nwz .ar.dim .dt,.nwz .ar.dim .np,.nwz .ar.dim .co,.nwz .ar.dim .gp{opacity:.55}
+.nwz .ar.dim .tt{font-size:11.5px;color:#999a9c}.nwz .ar.dim .tt a{font-weight:400;color:inherit;border-bottom-color:#ececec}
+.nwz .ar.dim .cv{display:none}.nwz .ar.dim .np b{font-weight:400;color:inherit}.nwz .ar.dim .np i{background:#dce6ff}.nwz .ar.dim.d1{margin-top:6px}
 .nwz .nvd{font-size:11.5px;color:#999a9c;margin:2px 0 4px}
 .nwz a{color:inherit;text-decoration:none}
 .nwz .ar{display:grid;grid-template-columns:48px 70px 76px 62px minmax(0,1fr);gap:9px;padding:4px 11px;margin:0 -11px;align-items:baseline}
@@ -26939,11 +26938,13 @@ function home() {
     var PR = ['g-try', 'g-event', 'g-know', 'g-buzz'];
     var pr = function (a) { for (var i = 0; i < PR.length; i++) if (a.classList.contains(PR[i])) return i; return 9 };
     var pts = function (a) { var b = a.querySelector('.np b'); return b ? +b.textContent : 0 };
-    var top = ars.slice().sort(function (a, b) { return pr(a) - pr(b) || pts(b) - pts(a) }).slice(0, 5);
+    var all = ars.slice().sort(function (a, b) { return pr(a) - pr(b) || pts(b) - pts(a) }), top = all.slice(0, 7), rest = all.slice(7);
     var sec = document.createElement('section'); sec.className = 'hb nwz';
-    sec.innerHTML = '<h2 class="wkh"><b>소식</b><em>' + cd.querySelector('span').textContent.replace(/──\s*/, '') + ' · ' + ars.length + '개 중 ' + top.length + '개</em>' +
+    sec.innerHTML = '<h2 class="wkh"><b>소식</b><em>' + cd.querySelector('span').textContent.replace(/──\s*/, '') + ' · ' + ars.length + '개</em>' +
       '<a class="hmore" data-go="news" href="#!news">소식 전체 →</a></h2>';
     top.forEach(function (a) { sec.appendChild(a.cloneNode(true)) });
+    // 7개 밖은 접지 않고 작고 옅은 줄로 잇는다
+    rest.forEach(function (a, i) { var c = a.cloneNode(true); c.classList.add('dim'); if (!i) c.classList.add('d1'); sec.appendChild(c) });
     g.appendChild(sec);
   }
   // 용도별 탭 위에도 같은 전환
