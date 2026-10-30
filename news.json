@@ -1,6 +1,28 @@
 {
  "items": [
   {
+   "key": "phorion.io/blog/offical-claude-code-vsx-compromise",
+   "of": null,
+   "title": "Backdoor in Claude Code for VS Code extension on the Cursor Marketplace",
+   "group": "skip",
+   "line": "Claude Code 확장 백도어 — Phorion 분석",
+   "short": "확장 백도어",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://phorion.io/blog/offical-claude-code-vsx-compromise/",
+   "co": "Anthropic",
+   "date": "2026-10-30",
+   "pts": 611,
+   "hn": "50300683",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [],
+   "thread": "에이전트 보안 사고",
+   "all": []
+  },
+  {
    "key": "doublepulsar.com/anthropic-hacked-to-deliver-remote-access-trojan-to-claude-developer-laptops-worldwide-1148a92baae2",
    "of": null,
    "title": "Claude Code VS Code extension with backdoor released on Cursor marketplace",
@@ -5810,5 +5832,5 @@
    "all": []
   }
  ],
- "judged_at": 1793375312
+ "judged_at": 1793392781
 }
