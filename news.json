@@ -1007,6 +1007,32 @@
    "all": []
   },
   {
+   "key": "artificialanalysis.ai/articles/artificial-analysis-intelligence-index-v5",
+   "of": null,
+   "title": "AAII v5 공개 - 비공개 평가 비중을 60%로 높인 AI 모델 역량 지수",
+   "group": "buzz",
+   "line": "AAII v5 — 비공개 평가 60% 지수",
+   "short": "AAII v5",
+   "note": "",
+   "w": 2,
+   "event": "",
+   "url": "https://artificialanalysis.ai/articles/artificial-analysis-intelligence-index-v5",
+   "co": "기타",
+   "date": "2026-10-23",
+   "pts": 0,
+   "hn": null,
+   "gn": "36197",
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "Artificial Analysis가 Intelligence Index v5를 내고 벤치마크 2개를 추가, 3개를 개편했어요.",
+    "지수의 60%가 비공개 테스트 세트나 비공개 정답 기반이고, Claude Opus 5.5 (max)가 58점으로 1위예요.",
+    "오픈 웨이트 최고 Kimi K3.1 Pro는 46점으로 격차가 3점에서 12점으로 벌어졌어요."
+   ],
+   "thread": "오픈 웨이트 경쟁",
+   "all": []
+  },
+  {
    "key": "anthropic.com/research/formal-verification",
    "of": null,
    "title": "LLMs are making formal software verification feasible at a much larger scale",
@@ -5819,5 +5845,5 @@
    "all": []
   }
  ],
- "judged_at": 1793310251
+ "judged_at": 1793325045
 }
