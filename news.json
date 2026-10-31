@@ -1,6 +1,54 @@
 {
  "items": [
   {
+   "key": "newsletter.signoz.io/p/ai-isnt-replacing-sres-its-deskilling",
+   "of": null,
+   "title": "AI isn't replacing SREs, it's deskilling them",
+   "group": "buzz",
+   "line": "AI 는 SRE 를 대체하나 숙련도를 깎는다는 글",
+   "short": "SRE 숙련도 저하",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://newsletter.signoz.io/p/ai-isnt-replacing-sres-its-deskilling",
+   "co": "기타",
+   "date": "2026-10-31",
+   "pts": 564,
+   "hn": "50305693",
+   "gn": "36299",
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "SigNoz 뉴스레터가 AI 가 SRE 의 숙련도를 떨어뜨린다고 주장해요.",
+    "장애 대응 대부분을 AI 가 맡으면 드물고 새로운 장애를 풀 직관을 연습할 기회가 줄어든다고 해요.",
+    "해법으로 일부러 사람이 직접 풀어 보는 장애와 human-in-the-loop 설계를 들어요."
+   ],
+   "thread": "AI 와 개발자의 일",
+   "all": []
+  },
+  {
+   "key": "ft.com/content/59383c7f-8d82-493f-bf01-d2e862a1018f",
+   "of": null,
+   "title": "Anthropic may not secure investment-grade rating after IPO, Blackstone says",
+   "group": "skip",
+   "line": "Anthropic 신용등급 — Blackstone 전망",
+   "short": "신용등급",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://www.ft.com/content/59383c7f-8d82-493f-bf01-d2e862a1018f",
+   "co": "Anthropic",
+   "date": "2026-10-31",
+   "pts": 302,
+   "hn": "50307219",
+   "gn": "36306",
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [],
+   "thread": "",
+   "all": []
+  },
+  {
    "key": "phorion.io/blog/offical-claude-code-vsx-compromise",
    "of": null,
    "title": "Backdoor in Claude Code for VS Code extension on the Cursor Marketplace",
@@ -5832,5 +5880,5 @@
    "all": []
   }
  ],
- "judged_at": 1793392781
+ "judged_at": 1793429597
 }
