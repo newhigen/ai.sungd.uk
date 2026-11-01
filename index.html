@@ -25284,7 +25284,26 @@ html[data-tab="home"] .ptools,html[data-tab="home"] .ptop,html[data-tab="home"] 
     </div>
 <!--/CX-DATA-->
 <!--AG-DATA-->
-    <p class="range"><strong>v1.0.4</strong> → <strong>v1.4.10</strong> &nbsp;·&nbsp; <span class="range-dates" data-en="2026.6.1 – 2026.10.29">2026.6.1 – 2026.10.29</span></p>
+    <p class="range"><strong>v1.0.4</strong> → <strong>v1.4.12</strong> &nbsp;·&nbsp; <span class="range-dates" data-en="2026.6.1 – 2026.10.30">2026.6.1 – 2026.10.30</span></p>
+    <div class="version-block" id="ag1.4.12" data-date="2026-10-30">
+      <div class="version-head">
+        <span class="ver-badge">v1.4.12</span><span class="ver-date" data-en="Oct 30 Fri">10월 30일 금</span><span class="ver-ago"></span>
+        <div class="ver-summary"><span class="pill feature">기능 ×1</span><span class="pill fix">Fix ×1</span></div>
+      </div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Added <code>"optional": true</code> for API key providers in a plugin's <code>auth.json</code>, for services that work without a key but raise rate limits with one: when you haven't set the key, the plugin's commands now see the variable as unset and make unauthenticated requests at the free rate limit, instead of failing with <code>401</code> errors or asking you to sign in.</span></div>
+      <div class="entry row-divider" data-type="fix"><span class="pill fix">Fix</span><span class="e-desc">Fixed Markdown tables in long streaming replies leaving misaligned borders and repeated text in your terminal scrollback: a table's rows now stay in the live view until the table is complete, so they reach scrollback with their final column widths.</span></div>
+    </div>
+    <div class="version-block" id="ag1.4.11" data-date="2026-10-30">
+      <div class="version-head">
+        <span class="ver-badge">v1.4.11</span><span class="ver-date" data-en="Oct 30 Fri">10월 30일 금</span><span class="ver-ago"></span>
+        <div class="ver-summary"><span class="pill feature">기능 ×4</span><span class="pill fix">Fix ×1</span></div>
+      </div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Added a billing model choice after you sign in with Google Cloud, so you can pick either a Gemini subscription or Pay As You Go.</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Added <code>terminationBehavior</code> to <code>PreInvocation</code> hooks: returning <code>"terminate"</code> stops the turn before the model is called, for example to block a prompt that contains sensitive data, and hooks can now inject an <code>errorMessage</code> whose <code>userMessage</code> is shown to you without being sent to the model, which also makes a <code>-p</code> run exit with a non-zero code.</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Added a <code>finished_reason</code> field to the result of <code>--output-format json</code> and <code>stream-json</code> runs that says why a turn ended early, <code>print_timeout</code> when <code>--print-timeout</code> expired and the response is partial, <code>interrupted</code> when the run was canceled such as with <code>Ctrl+C</code>, or <code>error</code> for any other failure, so scripts can tell a cut-off answer from a complete one; the field is omitted when the turn finishes normally.</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Improved the <code>/plugin</code> Discover tab for long shelves: each shelf now shows its first 6 plugins followed by a <code>⋯ N more — enter to show</code> row, <code>Ctrl+E</code> expands or collapses the shelf under the cursor, and <code>[</code> and <code>]</code> jump to the previous or next shelf.</span></div>
+      <div class="entry row-divider" data-type="fix"><span class="pill fix">Fix</span><span class="e-desc">Fixed <code>agy plugin import claude</code> printing <code>No claude extensions found.</code> for plugins installed from a Claude Code marketplace: it now reads Claude Code's list of installed plugins, skipping plugins disabled in Claude Code's settings and plugins installed for a single project only, and imported plugins now keep their remote MCP servers (<code>"type": "http"</code> with <code>url</code> and <code>headers</code>) and servers from <code>.mcp.json</code> files without an <code>mcpServers</code> wrapper, expand <code>${CLAUDE_PLUGIN_ROOT}</code> to the installed plugin's directory, and list servers that can't be converted, such as ones using the legacy SSE transport, with a warning instead of reporting them as installed.</span></div>
+    </div>
     <div class="version-block" id="ag1.4.10" data-date="2026-10-29">
       <div class="version-head">
         <span class="ver-badge">v1.4.10</span><span class="ver-date" data-en="Oct 29 Thu">10월 29일 목</span><span class="ver-ago"></span>
