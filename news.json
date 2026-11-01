@@ -1,6 +1,58 @@
 {
  "items": [
   {
+   "key": "twitter.com/jiahaoshao1/status/2116475922190922088",
+   "of": null,
+   "title": "Anthropic blocks users for anything touching training larger models",
+   "group": "buzz",
+   "line": "Anthropic 학습 관련 작업 차단 논란",
+   "short": "학습 작업 차단",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://twitter.com/jiahaoshao1/status/2116475922190922088",
+   "co": "Anthropic",
+   "date": "2026-11-01",
+   "pts": 336,
+   "hn": "50319358",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "한 연구자가 X에서 Anthropic이 자기 작업을 막았다고 주장했어요.",
+    "오픈소스 모델로 만든 rollout인데도 competitor 학습으로 분류됐다고 해요.",
+    "RFT, SFT 관련 요청에서 Opus 5.5가 Opus 5로 내려가거나 세션이 끊긴다고 해요."
+   ],
+   "thread": "",
+   "all": []
+  },
+  {
+   "key": "help.openai.com/en/articles/20001625-understanding-chatgpt-and-codex-usage-limits",
+   "of": null,
+   "title": "ChatGPT and Codex usage limits merging",
+   "group": "know",
+   "line": "ChatGPT와 Codex 사용량 한도 통합",
+   "short": "한도 통합",
+   "note": "12월부터 Plus 한도가 하나로 합쳐져요",
+   "w": 2,
+   "event": "",
+   "url": "https://help.openai.com/en/articles/20001625-understanding-chatgpt-and-codex-usage-limits",
+   "co": "OpenAI",
+   "date": "2026-11-01",
+   "pts": 109,
+   "hn": "50320588",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "OpenAI가 12월부터 ChatGPT와 Codex의 사용량을 하나로 합친다고 안내했어요.",
+    "Plus, Pro, Business 요금제에 적용되고 토큰 단위로 측정해요.",
+    "Settings → Usage에서 남은 사용량과 초기화 시각을 볼 수 있어요."
+   ],
+   "thread": "",
+   "all": []
+  },
+  {
    "key": "parameter.ai/labs/we-found-a-gap-at-openai",
    "of": null,
    "title": "Do the math: How we took over ChatGPT accounts",
@@ -5815,5 +5867,5 @@
    "thread": "오픈 웨이트 경쟁"
   }
  ],
- "judged_at": 1793498675
+ "judged_at": 1793524033
 }
