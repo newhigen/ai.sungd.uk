@@ -53,6 +53,32 @@
    "all": []
   },
   {
+   "key": "github.com/guregodevo/memdoor/tree/main/examples/workflows/team-solve",
+   "of": null,
+   "title": "Memdoor: A team of 5 Qwen3.8-27B models beats Fable 5 on LiveCodeBench Hard",
+   "group": "buzz",
+   "line": "Memdoor team-solve — 작은 모델 5개 팀",
+   "short": "team-solve",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://github.com/guregodevo/memdoor/tree/main/examples/workflows/team-solve",
+   "co": "기타",
+   "date": "2026-11-01",
+   "pts": 358,
+   "hn": "50320995",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "Memdoor가 Qwen3.8-27B 모델 5개로 푸는 team-solve 워크플로를 공개했어요.",
+    "LiveCodeBench Hard 10문제 5회 평균 9.8로, Fable 5 한 번 호출의 8.0보다 높아요.",
+    "문제 10개 표본이라 저자 하네스 9.6과는 같은 수준이고, 오염 가능성은 배제할 수 없어요."
+   ],
+   "thread": "오픈 웨이트 경쟁",
+   "all": []
+  },
+  {
    "key": "parameter.ai/labs/we-found-a-gap-at-openai",
    "of": null,
    "title": "Do the math: How we took over ChatGPT accounts",
@@ -5846,26 +5872,7 @@
    "hn": "49780797",
    "gn": null,
    "all": []
-  },
-  {
-   "key": "qwen.ai/blog",
-   "of": null,
-   "title": "Qwen Image 2.1",
-   "group": "buzz",
-   "line": "Qwen Image 2.1",
-   "short": "Qwen Image",
-   "note": "",
-   "w": 1,
-   "event": "",
-   "url": "https://qwen.ai/blog?id=qwen-image-2.1",
-   "co": "기타",
-   "date": "2026-09-20",
-   "pts": 739,
-   "hn": "49775499",
-   "gn": null,
-   "all": [],
-   "thread": "오픈 웨이트 경쟁"
   }
  ],
- "judged_at": 1793524033
+ "judged_at": 1793551472
 }
