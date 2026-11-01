@@ -401,6 +401,32 @@
    "all": []
   },
   {
+   "key": "tedfactory.com/notes/essays/php2shell-lessons-for-my-systems",
+   "of": null,
+   "title": "PHP2Shell의 원리를 파헤친 뒤, 그 원리로 PHP를 안 쓰는 내 서버를 점검해 봤다",
+   "group": "buzz",
+   "line": "PHP2Shell — AI가 찾은 PHP 취약점 풀이",
+   "short": "PHP2Shell",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://tedfactory.com/notes/essays/php2shell-lessons-for-my-systems/",
+   "co": "기타",
+   "date": "2026-10-28",
+   "pts": 0,
+   "hn": null,
+   "gn": "36397",
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "PHP를 안 쓰는 필자가 AI 도구로 찾은 취약점 PHP2Shell의 원리를 풀었어요.",
+    "코드가 돌기 전 요청 해석 단계의 메모리 문제로, CVSS 9.2짜리 CVE 두 개예요.",
+    "PHP 8.5.12, 8.4.27, 8.3.36, 8.2.35로 올려야 하고, 8.1 이하는 공식 패치가 없어요."
+   ],
+   "thread": "",
+   "all": []
+  },
+  {
    "key": "stanforddaily.com/2026/10/27/professors-books-pirated-to-train-claude",
    "of": null,
    "title": "Anthropic trained Claude on illegally obtained Stanford professors' books",
@@ -5874,5 +5900,5 @@
    "all": []
   }
  ],
- "judged_at": 1793551472
+ "judged_at": 1793567083
 }
