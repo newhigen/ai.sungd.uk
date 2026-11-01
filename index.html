@@ -752,7 +752,7 @@ html[data-tab="home"] .ptools,html[data-tab="home"] .ptop,html[data-tab="home"] 
        title="Antigravity CLI 공식 릴리스 전체">공식 릴리스 <i>↗</i></a></span>
   <span class="pdone"><span class="pcount">해봄 <b class="doneAll">0</b>/<span class="totAll">0</span></span>
     <button class="clrb btn">모두 해제</button></span>
-  <span class="pstamp"><!--SYNC--><span class="s-y">2026-</span><span class="s-md">10-28</span><span class="s-t"> 08:41</span><!--/SYNC--></span>
+  <span class="pstamp"><!--SYNC--><span class="s-y">2026-</span><span class="s-md">11-02</span><span class="s-t"> 08:41</span><!--/SYNC--></span>
 </div>
 
 <div class="tab" id="home"></div>
@@ -1128,7 +1128,437 @@ html[data-tab="home"] .ptools,html[data-tab="home"] .ptop,html[data-tab="home"] 
      지우면 update_changelog·update_codex 가 꽂을 자리를 잃는다. -->
 <div id="data">
 <!--CC-DATA-->
-    <p class="range"><strong>v2.0.0</strong> → <strong>v2.1.312</strong> &nbsp;·&nbsp; <span class="range-dates" data-en="2025.9.29 – 2026.10.27">2025.9.29 – 2026.10.27</span></p>
+    <p class="range"><strong>v2.0.0</strong> → <strong>v2.1.316</strong> &nbsp;·&nbsp; <span class="range-dates" data-en="2025.9.29 – 2026.10.31">2025.9.29 – 2026.10.31</span></p>
+  <!-- ── v2.1.316 ── -->
+  <div class="version-block" id="v2.1.316" data-types="feature improve security fix" data-date="2026-10-31">
+    <div class="version-head">
+      <span class="ver-badge">v2.1.316</span><span class="ver-date">10월 31일 토</span><span class="ver-ago"></span>
+      <div class="ver-summary"><span class="pill feature">기능 ×26</span><span class="pill improve">개선 ×5</span><span class="pill security">보안 ×5</span><span class="pill fix">Fix ×19</span></div>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Added <code>CLAUDE_CODE_DISABLE_ULTRATHINK</code>, which turns the <code>ultrathink</code> keyword off</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Added pooled group budgets to the Claude apps gateway: one monthly budget that a group's members share, on top of each member's own limit, set with <code>pooled_budget</code> on the spend limits admin API</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Added <code>CLAUDE_CODE_DISABLE_LOOPED_CROSS_CERT_DROP</code> to keep system cross-certificates that certify each other in a loop, for servers whose private CA needs one</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Added <code>CLAUDE_CODE_SUBAGENT_EFFORT</code> to set the effort level subagents run at when nothing else names one, instead of inheriting the session's</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Added <code>managed.policy_mode: layered</code> to the Claude apps gateway: every policy that matches a developer applies, each merged over the ones listed below it, not only the first</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Added <code>guardrail.input_tagging</code> on Claude apps gateway Bedrock upstreams, which wraps prompts in the input tags that an Amazon Bedrock guardrail's prompt attacks filter needs; <code>all_messages_and_system</code> also tags the system prompt</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Deprecated fast mode for Opus 4.8 as of October 30, 2026; it will be removed on November 30, 2026. After removal, fast mode requests on Opus 4.8 return an error and do not fall back to standard Opus 4.8. Migrate to Opus 5.5 to keep the speedup</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Self-hosted runner: Fixed a message sent while Claude was working being answered after a Stop, once the session's process had been replaced</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Self-hosted runner: Fixed an MCP server's on/off switch sometimes being lost when a session moved to a new machine</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Windows: Fixed the Bash tool losing your aliases and functions in Git Bash when the rc file sets errexit and pipefail and only winpty aliases, or none, are defined</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Changed auto mode so that an <code>autoMode.allow</code> list without <code>"$defaults"</code> no longer removes the built-in rule on scheduled-task prompts</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Changed server-managed settings for Team and Enterprise logins: settings fetched from Anthropic's API now apply without an approval prompt, and a stored copy that doesn't verify is refused</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[VSCode] Added sign-in to a Claude apps gateway from the chat panel, with no terminal needed</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[VSCode] Changed <code>ultrathink</code> to run its turn at <code>xhigh</code> effort and show in a rainbow in the chat box, as in the terminal</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[VSCode] Fixed the missing Effort slider, Ultracode switch and model name when the model setting has the <code>[1m]</code> tag, such as <code>opus[1m]</code></span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[VSCode] Fixed saved <code>/btw</code> side-question history being deleted too early while a settings file has errors</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[VSCode] Fixed a conversation coming back in Auto mode after a reload or restart when its plan was approved with "Yes, and manually approve edits"</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[Cloud sessions] Added a form card to cloud sessions, so you can fill in or decline a form an MCP server asks for instead of the request being canceled without you seeing it</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[Cloud sessions] Added a "Catching up…" line that shows while a cloud or Remote Control session you switch back to is still bringing its messages up to date</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[Cloud sessions] Changed network secrets so Enterprise members can add and delete them on their own cloud environments, instead of only viewing them</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[Cloud sessions] Fixed file search in a cloud session's Files pane showing folders as ../.. paths after Claude changed directory; results now show their path from the project's root</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[Claude Tag] Fixed Claude refusing to edit or append to a canvas it made in a Slack channel, from that channel, once the canvas was also shared to another channel or a DM</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[Claude Tag] Fixed untagged replies going unanswered in a Slack Connect thread when both organizations have installed Claude and Slack delivered the reply to the other organization's app</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[Claude Tag] Fixed a cloud scheduled task's live status checklist in Slack staying half-done; a run can now edit the top-level messages it posted during that run</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[Claude Tag] Changed a Slack channel's Respond automatically switch to a "How Claude participates" choice on the channel's Configure page and in Claude Tag admin settings</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[Code Review] Added a findings-by-severity card to the Code Review analytics page, showing the period's total findings, a daily chart stacked by severity, and each severity's count</span>
+    </div>
+    <div class="tabs-container">
+      <div class="tabs-bar">
+        <div class="tab" data-tab="improve" onclick="toggleTab(this)">⚡ 개선 <span class="tab-count">5</span></div>
+        <div class="tab" data-tab="security" onclick="toggleTab(this)">🔒 보안 <span class="tab-count">5</span></div>
+        <div class="tab" data-tab="fix" onclick="toggleTab(this)">🐛 수정 <span class="tab-count">19</span></div>
+      </div>
+      <div class="tab-panels">
+        <div class="tab-panel" data-tab="improve">
+          <div class="coll-rows">
+            <div class="coll-item"><span class="coll-item-desc">Improved <code>/code-review</code> started from the Code tab in Claude Desktop or on the web: cloud and <code>claude remote-control</code> sessions now show the findings card, not a plain-text list</span></div>
+            <div class="coll-item"><span class="coll-item-desc">Improved <code>/diff</code> on large repositories: each refresh usually runs one fewer full-repository git command, and refreshes are spaced out when git is slow</span></div>
+            <div class="coll-item"><span class="coll-item-desc">Improved the messages shown when <code>/ultrareview</code>, a cloud session or a cloud agent finds no GitHub remote: they now say to create a repository at https://github.com/new, and <code>/ultrareview</code> no longer suggests a <code>gh</code> command that <code>gh</code> rejects</span></div>
+            <div class="coll-item"><span class="coll-item-desc">Improved SSL certificate errors to name the likely causes, among them a server that leaves out an intermediate certificate, and the fix for each</span></div>
+            <div class="coll-item"><span class="coll-item-desc">[Cloud sessions] Improved the Changes pane for cloud sessions: the note about what the list leaves out is now a badge beside the branch name, not a row above the diff</span></div>
+          </div>
+        </div>
+        <div class="tab-panel" data-tab="security">
+          <div class="coll-rows">
+            <div class="coll-item"><span class="coll-item-desc">Fixed shell commands being left running on macOS and Linux when Claude Code exits by itself, for example when credentials are refused or a cloud session is archived</span></div>
+            <div class="coll-item"><span class="coll-item-desc">Fixed <code>claude auth login</code> refusing to run where managed settings require a Claude apps gateway; in a terminal it now shows the gateway sign-in</span></div>
+            <div class="coll-item"><span class="coll-item-desc">Fixed <code>--restricted</code> sessions uploading files from outside the working directories when a Read allow rule covered them</span></div>
+            <div class="coll-item"><span class="coll-item-desc">Fixed a managed <code>autoMode.allow</code> list without <code>"$defaults"</code> getting the built-in exceptions back from a host app's <code>--settings</code>, a first rule added in <code>/permissions</code>, or <code>/auto-mode-setup</code></span></div>
+            <div class="coll-item"><span class="coll-item-desc">Fixed plugin MCP <code>headersHelper</code> scripts receiving a corrupted <code>CLAUDE_PLUGIN_ROOT</code> and server URL when a credential-named environment variable was set to a switch value such as <code>1</code></span></div>
+          </div>
+        </div>
+        <div class="tab-panel" data-tab="fix">
+          <div class="chip-grid">
+            <span class="chip">bash aliases with line breaks in their value…</span>
+            <span class="chip">bash scripts started from the Bash tool stopping…</span>
+            <span class="chip">PowerShell hooks not blocking on exit code 2…</span>
+            <span class="chip">some network requests hanging when a compressed response…</span>
+            <span class="chip">sonnet, opus and haiku on Vertex AI and…</span>
+            <span class="chip">Claude apps gateway not checking every model a…</span>
+            <span class="chip">prompts containing invisible characters needing a second Enter…</span>
+            <span class="chip">sub-agents that inherited a parent sub-agent&#x27;s model moving…</span>
+            <span class="chip">cloud sessions and cloud scheduled tasks not being…</span>
+            <span class="chip">claude -p text output sometimes not saying why…</span>
+            <span class="chip">CLAUDE_CODE_AUTO_MODE_SERVER=1 being ignored in sessions started by a…</span>
+            <span class="chip">SDK register_repo_root control request not loading the CLAUDE.md…</span>
+            <span class="chip">Artifact tool showing ? for artifact database access…</span>
+            <span class="chip">/model &lt;id&gt; not warning when the model isn&#x27;t…</span>
+            <span class="chip">&quot;hold space to speak&quot; hint using up its…</span>
+            <span class="chip">Grep and Glob never returning when the search…</span>
+            <span class="chip">a rare case where resuming a conversation did…</span>
+            <span class="chip">first-run setup dropping words from the security notes…</span>
+            <span class="chip">Enterprise survey card taking a typed 1 or…</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── v2.1.314 ── -->
+  <div class="version-block" id="v2.1.314" data-types="feature improve security fix" data-date="2026-10-30">
+    <div class="version-head">
+      <span class="ver-badge">v2.1.314</span><span class="ver-date">10월 30일 금</span><span class="ver-ago"></span>
+      <div class="ver-summary"><span class="pill feature">기능 ×40</span><span class="pill improve">개선 ×16</span><span class="pill security">보안 ×10</span><span class="pill fix">Fix ×53</span></div>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Added <code>permissions.blockWritesOutsideWorkingDirectories</code>: Write, Edit and NotebookEdit refuse paths outside the working directories in every permission mode</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Added an optional <code>groups</code> list to Claude apps gateway upstreams: only developers in the listed IdP groups are sent to that upstream, on failover too</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Added <code>guardrail_trace</code> to Claude apps gateway Bedrock upstreams, to log which Amazon Bedrock guardrail filter fired on a request, without the matched text</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Added idle compaction to VS Code and Claude Desktop's Code tab: a 200K+ token conversation left idle is summarized, and the summary is used on your next message if the prompt cache has expired</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Self-hosted runner: Fixed an idle session moving to another runner instead of pausing when the runner's request to pause it lost its connection before Anthropic answered</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Updated the <code>/claude-api</code> skill: its Datadog setup for API tracing now sends the <code>dd-llmobs-enabled: true</code> header, as the Console does, and its <code>ant</code> install instructions drop the outdated macOS <code>xattr</code> step</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Updated the bundled dataviz skill to advise printing y-axis tick labels in full under 10,000, and horizontal ones in full under a million where they fit</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Updated the bundled dataviz skill to answer donut and pie chart requests with ranked bars or a segmented bar that prints its values</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Changed Claude's file tools to ask before editing the local copy of your organization's server-managed settings, as they do for your settings files</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Changed <code>/ultrareview</code> to check workspace trust before it runs git, as <code>claude ultrareview</code> does</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Changed the Bash tool's shell to clear any inherited <code>which</code> alias or function and to stop passing exported <code>which</code>/<code>unsetenv</code> functions to commands, so <code>which</code> is the system command or zsh builtin</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Changed <code>/permissions</code> Recently blocked to refuse approving a call you can't read in full, including one the terminal is too short to show</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Changed auto mode in Cowork cloud sessions: a hook's allow of an MCP tool call now counts as no answer, so the classifier or a permission prompt decides</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Changed hook <code>if</code> conditions such as <code>Monitor(tail *)</code> to match the Monitor tool's shell commands as <code>Bash(tail *)</code> matches Bash's</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Changed the <code>claude-api</code> skill to ask to read a Managed Agents workflow run's workflow before changing the agent to improve that run</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Changed flagged requests to retry on another model, not end in a refusal, when <code>ANTHROPIC_DEFAULT_OPUS_MODEL</code>, <code>availableModels</code> or <code>deniedModels</code> leaves only an older Opus model, or none</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Changed idle compaction to also run for subscribers with telemetry turned off, and on Bedrock, Vertex, Foundry and LLM gateways once the one-hour prompt cache is on</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">Changed <code>FORCE_HYPERLINK=false</code> (also <code>no</code> and <code>off</code>) to turn hyperlinks off instead of on</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">macOS: Changed <code>git grep</code> in most commands that Claude runs to use the C locale, to avoid a reported memory leak in macOS's regex library on files that aren't valid UTF-8</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[VSCode] Fixed "Clear authentication" for MCP servers reporting success when the saved sign-in could not be removed</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[VSCode] Fixed missing spinner and Stop button while a queued message's hooks run</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[VSCode] Fixed session group changes that cannot be saved, such as a delete, failing silently; an error notification now appears</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[VSCode] Fixed Cmd+F / Ctrl+F not opening the find widget in the plan preview tab</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[VSCode] Fixed the voice dictation shortcut (Ctrl+D) doing nothing under non-Latin keyboard layouts such as Russian, Greek or Hebrew</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[VSCode] Fixed missed one-time saved scheduled tasks being deleted without asking when the extension opened without a chat</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[VSCode] Changed <code>CLAUDE_CODE_DISABLE_CFC_PROMPT</code> to also stop the extension adding the Claude in Chrome instructions to a session's messages; the browser tools stay available</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[Cloud sessions] Added an Include completed button to the Scheduled tasks page when finished one-off tasks are the only ones hidden, so you can show them without opening the Sort menu</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[Cloud sessions] Fixed recently used self-hosted environments never appearing among the recent environments on the new session card</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[Cloud sessions] Fixed cloud sessions reporting uncommitted changes every turn after Claude moved a branch to a commit it had pushed from another worktree</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[Cloud sessions] Fixed the self-hosted environment details dialog in admin settings squeezing its content out of view in very short windows or at high zoom; the dialog now scrolls</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[Cloud sessions] Fixed the permission mode picker staying on Auto after a running cloud or Remote Control session refused the switch; it now shows the mode in use and tells you</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[Cloud sessions] Changed cloud sessions from the web, desktop and mobile apps to start even when a setup script exits with an error, instead of failing to start</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[Remote Control] Fixed the permission mode button in Remote Control sessions showing the wrong mode until you typed; while your computer is online it now shows the real mode on open</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[Claude Tag] Added a dismissible link to the Claude Tag API docs on the Bundles and Channels tabs in admin settings, for Enterprise organizations with Slack connected</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[Claude Tag] Fixed <code>@Claude !restart</code> giving up after one failed workspace check in channels shared across Enterprise Grid workspaces; it now retries, then asks you to run it again</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[Claude Tag] Fixed a second confirmation DM and channel note when you connect your Claude account from Slack twice from the same link within a few minutes</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[Claude Tag] Fixed follow-up messages in Slack showing no sign of progress while Claude's session waits for a self-hosted runner; Claude now posts a wait notice in the thread</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[Claude Tag] Fixed Claude sometimes not answering a tag in its own thread in Slack Connect channels where both organizations have installed Claude</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[Claude Tag] Fixed Retry on plugin and skill pages in Claude Tag admin settings discarding unsaved access changes after a failed load; your edits now stay in place</span>
+    </div>
+    <div class="entry row-divider" data-type="feature">
+      <span class="pill feature">기능</span>
+      <span class="e-desc">[Claude Tag] Fixed the repositories control in Claude Tag admin settings showing the same action twice; its menu now lists only what the button doesn't already do</span>
+    </div>
+    <div class="tabs-container">
+      <div class="tabs-bar">
+        <div class="tab" data-tab="improve" onclick="toggleTab(this)">⚡ 개선 <span class="tab-count">16</span></div>
+        <div class="tab" data-tab="security" onclick="toggleTab(this)">🔒 보안 <span class="tab-count">10</span></div>
+        <div class="tab" data-tab="fix" onclick="toggleTab(this)">🐛 수정 <span class="tab-count">53</span></div>
+      </div>
+      <div class="tab-panels">
+        <div class="tab-panel" data-tab="improve">
+          <div class="coll-rows">
+            <div class="coll-item"><span class="coll-item-desc">Improved memory use in long headless and SDK turns that run many subagents: the parent session no longer keeps each subagent's tool results until the turn ends</span></div>
+            <div class="coll-item"><span class="coll-item-desc">Improved prompt history: Ctrl+R now matches text inside collapsed <code>[Pasted text]</code> pills</span></div>
+            <div class="coll-item"><span class="coll-item-desc">Improved the <code>/design-sync</code> upload prompt to show the folder, the project and the files it will upload or delete</span></div>
+            <div class="coll-item"><span class="coll-item-desc">Improved <code>/permissions</code> review tab, now called Recently blocked: the footer says what Esc will do with marked rows</span></div>
+            <div class="coll-item"><span class="coll-item-desc">Improved auto mode's blocked calls: messages name the command, say Claude may retry and auto mode checks again, and point to <code>/permissions</code> to review</span></div>
+            <div class="coll-item"><span class="coll-item-desc">Improved permission prompts: a long reason takes fewer rows, so it pushes the command being approved off the screen on fewer terminals</span></div>
+            <div class="coll-item"><span class="coll-item-desc">Improved the cloud session error shown while a request refused for your claude.ai login is still being retried: it now also suggests <code>claude auth login</code></span></div>
+            <div class="coll-item"><span class="coll-item-desc">Improved the behavior of stored claude.ai, Team, and Enterprise logins when MDM and remote settings differ on base URL or <code>apiKeyHelper</code></span></div>
+            <div class="coll-item"><span class="coll-item-desc">Improved <code>/config</code> in agent view to say how to stop agent view opening by default</span></div>
+            <div class="coll-item"><span class="coll-item-desc">Improved session auto-titles: a session that starts with a skill or a prompt-based command such as <code>/security-review</code> now gets a title from it instead of staying untitled</span></div>
+            <div class="coll-item"><span class="coll-item-desc">Improved <code>--resume</code> speed and memory use on damaged transcripts</span></div>
+            <div class="coll-item"><span class="coll-item-desc">Improved <code>/context</code> speed in sessions with ten thousand or more MCP tools</span></div>
+            <div class="coll-item"><span class="coll-item-desc">Self-hosted runner: Improved the error shown when a session's branch isn't on the git remote: it now covers a never-pushed branch, says how to fix each case, and no longer suggests retrying</span></div>
+            <div class="coll-item"><span class="coll-item-desc">[Cloud sessions] Improved scheduled tasks: runs in Anthropic's cloud now load the plugins enabled on your claude.ai account</span></div>
+            <div class="coll-item"><span class="coll-item-desc">[Cloud sessions] Improved Test connection for GitHub Enterprise in admin settings to also connect the way cloud sessions do, and to warn you when that second test fails</span></div>
+            <div class="coll-item"><span class="coll-item-desc">[Cloud sessions] Improved cloud session transcripts: a rename row now names the new title, and repository and environment lists show as a table instead of one line of JSON</span></div>
+          </div>
+        </div>
+        <div class="tab-panel" data-tab="security">
+          <div class="coll-rows">
+            <div class="coll-item"><span class="coll-item-desc">Fixed MCP servers that also work without sign-in showing "needs authentication" after their stored sign-in stopped working; they are now used signed out</span></div>
+            <div class="coll-item"><span class="coll-item-desc">Fixed extra sign-in renewals when several sessions share an Anthropic profile login and the credentials lock is busy</span></div>
+            <div class="coll-item"><span class="coll-item-desc">Fixed an administrator's TLS trust settings in managed settings not being applied in Claude Desktop sessions</span></div>
+            <div class="coll-item"><span class="coll-item-desc">Fixed the Bedrock and Vertex model upgrade offer coming back at every start when managed settings pin the model</span></div>
+            <div class="coll-item"><span class="coll-item-desc">Fixed <code>forceRemoteSettingsRefresh</code> set only in remote managed settings no longer applying once the stored copy had expired, which let sessions start without policy when the server could not be reached</span></div>
+            <div class="coll-item"><span class="coll-item-desc">Fixed the <code>sandbox.excludedCommands</code> setting description saying listed commands always run outside the sandbox; it now says every command in a call must match an entry</span></div>
+            <div class="coll-item"><span class="coll-item-desc">Fixed sandbox protections not applying to a worktree entered by <code>claude -p --resume</code> or <code>--continue</code></span></div>
+            <div class="coll-item"><span class="coll-item-desc">Fixed a settings file excluded with <code>--setting-sources</code> still supplying some settings, such as auto mode rules and saved permission consents</span></div>
+            <div class="coll-item"><span class="coll-item-desc">Fixed auto mode reporting a call as blocked, and listing it in <code>/permissions</code>, when its safety check gave no verdict</span></div>
+            <div class="coll-item"><span class="coll-item-desc">Fixed the session name from /rename disappearing while Claude asks for permission or a plan decision, so side-by-side sessions stay identifiable</span></div>
+          </div>
+        </div>
+        <div class="tab-panel" data-tab="fix">
+          <div class="chip-grid">
+            <span class="chip">sessions failing turn after turn with &quot;Invalid effort…</span>
+            <span class="chip">claude -p exiting with code 0 and no…</span>
+            <span class="chip">Bedrock sessions with many images failing every turn…</span>
+            <span class="chip">Microsoft Foundry sessions failing when the resource has…</span>
+            <span class="chip">repeated refused requests behind a gateway that doesn&#x27;t…</span>
+            <span class="chip">TLS connections failing with UNABLE_TO_GET_ISSUER_CERT when the system…</span>
+            <span class="chip">claude mcp logout reporting success when the MCP…</span>
+            <span class="chip">claude ultrareview and claude remote-control asking the workspace…</span>
+            <span class="chip">model switching being refused on machines with managed…</span>
+            <span class="chip">&quot;Continue automatically at usage limit&quot; continuing more than…</span>
+            <span class="chip">background and cloud sessions started with Ultracode turning…</span>
+            <span class="chip">last broken reply and its retry prompts staying…</span>
+            <span class="chip">a PreCompact hook with very large output making…</span>
+            <span class="chip">background diff refreshes briefly taking the repository&#x27;s index…</span>
+            <span class="chip">markdown tables jumping between grid and stacked layouts…</span>
+            <span class="chip">/resume picker showing the text of CLAUDE.md or…</span>
+            <span class="chip">/btw answering from the main conversation when asked…</span>
+            <span class="chip">pasting an image over SSH to a Linux…</span>
+            <span class="chip">claude remote-control sessions that failed to start when…</span>
+            <span class="chip">model switches over Remote Control that take over…</span>
+            <span class="chip">shell and MCP calls that auto mode, a…</span>
+            <span class="chip">hooks matching Bash not running on shell commands…</span>
+            <span class="chip">a Claude apps gateway Vertex upstream hanging for…</span>
+            <span class="chip">Claude apps gateway&#x27;s start-up warning for a deprecated…</span>
+            <span class="chip">/upgrade opening the browser and starting a new…</span>
+            <span class="chip">--resume, and rewinding past a switch to another…</span>
+            <span class="chip">requests failing when a gateway or cloud provider…</span>
+            <span class="chip">model IDs spelled with a dot behind an…</span>
+            <span class="chip">Remote Control clients showing a stray &quot;Compacted (ctrl+o…</span>
+            <span class="chip">cloud sessions tip and the Remote Control idle…</span>
+            <span class="chip">a resumed claude.ai cloud session making a model…</span>
+            <span class="chip">WebFetch in Cowork cloud sessions silently dropping a…</span>
+            <span class="chip">Claude being told only that a command was…</span>
+            <span class="chip">blank lines at the top of a code…</span>
+            <span class="chip">a blank line appearing above some ⎿ rows…</span>
+            <span class="chip">vim mode dw, dW, yw and yW carrying…</span>
+            <span class="chip">x and Enter in the agent panel sometimes…</span>
+            <span class="chip">pasted text and dragged-in files being lost in…</span>
+            <span class="chip">pasted text being lost when a row in…</span>
+            <span class="chip">vim mode p over a character selection ignoring…</span>
+            <span class="chip">vim mode aw and iw taking the line…</span>
+            <span class="chip">↓ selecting footer items hidden by the ?…</span>
+            <span class="chip">Esc on a command&#x27;s panel, such as /btw,…</span>
+            <span class="chip">welcome header in fullscreen mode showing the session&#x27;s…</span>
+            <span class="chip">fullscreen transcript being left mid-conversation after &quot;Restore conversation&quot;…</span>
+            <span class="chip">a rare case where a deleted session could…</span>
+            <span class="chip">prompts containing tags such as &lt;bash-stdout&gt; or &lt;local-command-stdout&gt;…</span>
+            <span class="chip">sessions staying untitled when the first prompt failed…</span>
+            <span class="chip">skill file watcher checking every removed skill kept…</span>
+            <span class="chip">background sessions that fail to start being reported…</span>
+            <span class="chip">tip and idle reminder about push notifications appearing…</span>
+            <span class="chip">~/.claude/skills/.trash and ~/.claude/plugins/.trash growing without limit: each now…</span>
+            <span class="chip">Bash edit diff listing a whole file as…</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- ── v2.1.312 ── -->
   <div class="version-block" id="v2.1.312" data-types="feature improve security fix" data-date="2026-10-27">
     <div class="version-head">
