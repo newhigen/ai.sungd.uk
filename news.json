@@ -1,6 +1,176 @@
 {
  "items": [
   {
+   "key": "blog.google/innovation-and-ai/technology/ai/google-ai-updates-october-2026#2",
+   "of": "blog.google/innovation-and-ai/technology/ai/google-ai-updates-october-2026",
+   "title": "",
+   "group": "know",
+   "line": "EmbeddingGemma 2",
+   "short": "EmbeddingGemma 2",
+   "note": "오픈 임베딩이 영상과 소리까지 넓어졌어요",
+   "w": 2,
+   "event": "",
+   "url": "https://blog.google/innovation-and-ai/technology/developers-tools/embeddinggemma-2/",
+   "co": "Google",
+   "date": "2026-11-03",
+   "pts": 0,
+   "hn": null,
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [],
+   "thread": "오픈 웨이트 경쟁",
+   "all": []
+  },
+  {
+   "key": "blog.google/innovation-and-ai/technology/ai/google-ai-updates-october-2026#1",
+   "of": "blog.google/innovation-and-ai/technology/ai/google-ai-updates-october-2026",
+   "title": "",
+   "group": "try",
+   "line": "AI Studio 앱 Google Play 설치",
+   "short": "AI Studio 앱 Google Play 설치",
+   "note": "갤럭시에서 AI Studio 앱 만들어 보기",
+   "w": 2,
+   "event": "",
+   "url": "https://blog.google/products-and-platforms/platforms/google-play/google-play-updates-october-2026/",
+   "co": "Google",
+   "date": "2026-11-03",
+   "pts": 0,
+   "hn": null,
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [],
+   "thread": "",
+   "all": []
+  },
+  {
+   "key": "blog.google/innovation-and-ai/technology/ai/google-ai-updates-october-2026",
+   "of": null,
+   "title": "The latest AI news we announced in October 2026",
+   "group": "event",
+   "line": "Google AI 10월 소식 — 발표 17개",
+   "short": "Google 10월",
+   "note": "",
+   "w": 3,
+   "event": "",
+   "url": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-october-2026/",
+   "co": "Google",
+   "date": "2026-11-03",
+   "pts": 0,
+   "hn": null,
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [],
+   "thread": "",
+   "all": [
+    {
+     "cat": "모델",
+     "name": "Gemini 4 Argon",
+     "line": "개발자와 소비자에게 나간 프런티어 추론 모델",
+     "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/"
+    },
+    {
+     "cat": "모델",
+     "name": "Gemini 4 Carbon",
+     "line": "장기 엔지니어링과 사이버 방어에 강한 다음 모델",
+     "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/"
+    },
+    {
+     "cat": "모델",
+     "name": "Gemini 4 Argon for Robotics",
+     "line": "물리 세계 추론에 쓰는 Argon",
+     "url": "https://developers.googleblog.com/gemini-4-argon-for-robotics/"
+    },
+    {
+     "cat": "모델",
+     "name": "Genie 4",
+     "line": "소리까지 나오는 실시간 세계 시뮬레이션",
+     "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/introducing-genie-4/"
+    },
+    {
+     "cat": "모델",
+     "name": "EmbeddingGemma 2",
+     "line": "코드와 영상, 소리를 한 공간에 담는 오픈 임베딩",
+     "url": "https://blog.google/innovation-and-ai/technology/developers-tools/embeddinggemma-2/",
+     "thread": "오픈 웨이트 경쟁"
+    },
+    {
+     "cat": "개발 도구",
+     "name": "AI Studio 앱 Google Play 설치",
+     "line": "AI Studio 로 만든 개인 앱을 폰에 설치",
+     "url": "https://blog.google/products-and-platforms/platforms/google-play/google-play-updates-october-2026/"
+    },
+    {
+     "cat": "개발 도구",
+     "name": "Playground",
+     "line": "글로 게임을 만들고 나누는 실험 플랫폼",
+     "url": "https://blog.google/innovation-and-ai/technology/ai/playground-experimental-gaming-platform/"
+    },
+    {
+     "cat": "개발 도구",
+     "name": "Flow Music 플러그인",
+     "line": "음악용 악기와 플러그인을 바이브 코딩",
+     "url": "https://blog.google/innovation-and-ai/models-and-research/google-labs/create-music-production-plugins-google-flow/"
+    },
+    {
+     "cat": "안전",
+     "name": "SynthID Detector",
+     "line": "AI 생성물 확인 도구를 영어로 전 세계 확대",
+     "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/synth-id-ai-content/"
+    },
+    {
+     "cat": "안전",
+     "name": "Android 사기 방어",
+     "line": "Messages 에 대화형 사기 탐지 모드 추가",
+     "url": "https://blog.google/security/new-android-scam-protections/"
+    },
+    {
+     "cat": "기기와 건강",
+     "name": "Google Fitbit Edge",
+     "line": "Gemini Health Coach 를 쓰는 피트니스 트래커",
+     "url": "https://blog.google/products-and-platforms/devices/fitbit/google-fitbit-edge/"
+    },
+    {
+     "cat": "기기와 건강",
+     "name": "Google Health 55개 업데이트",
+     "line": "사진 식단 기록과 Health Guardian 추가",
+     "url": "https://blog.google/products-and-platforms/products/google-health/fitbit-google-health-updates/"
+    },
+    {
+     "cat": "기기와 건강",
+     "name": "AMIE Lancet 연구",
+     "line": "진료 전 병력 수집 AI 를 실제 클리닉에서 평가",
+     "url": "https://blog.google/innovation-and-ai/technology/health/amie-clinical-study-lancet/"
+    },
+    {
+     "cat": "학습",
+     "name": "Gemini Notebook 학습 기능",
+     "line": "퀴즈와 슬라이드, 영상 개요 조정",
+     "url": "https://blog.google/innovation-and-ai/products/gemini-notebook/co-create-slides-videos/"
+    },
+    {
+     "cat": "연구",
+     "name": "Project Suncatcher 위성",
+     "line": "우주 TPU 에서 Gemma 4 가 낸 첫 응답",
+     "url": "https://blog.google/innovation-and-ai/models-and-research/google-research/project-suncatcher-satellite-response/"
+    },
+    {
+     "cat": "연구",
+     "name": "Research@ 2026",
+     "line": "Deep Review 공개와 지리 추론 에이전트",
+     "url": "https://blog.google/innovation-and-ai/technology/research/research-capabilities-intelligence-2026/"
+    },
+    {
+     "cat": "연구",
+     "name": "양자 컴퓨팅 magic state",
+     "line": "Willow 에서 오류를 약 40배 줄임",
+     "url": "https://blog.google/innovation-and-ai/models-and-research/quantum-computing/magic-state-cultivation-quantum-computing/"
+    }
+   ]
+  },
+  {
    "key": "twitter.com/jiahaoshao1/status/2116475922190922088",
    "of": null,
    "title": "Anthropic blocks users for anything touching training larger models",
@@ -5844,61 +6014,7 @@
    "hn": "49802161",
    "gn": null,
    "all": []
-  },
-  {
-   "key": "pirateface.co",
-   "of": null,
-   "title": "Pirate Face Rescues LLM Models from Deletion",
-   "group": "buzz",
-   "line": "Pirate Face — 삭제될 모델 구하기",
-   "short": "Pirate Face",
-   "note": "",
-   "w": 1,
-   "event": "",
-   "url": "https://pirateface.co/",
-   "co": "기타",
-   "date": "2026-09-21",
-   "pts": 569,
-   "hn": "49776699",
-   "gn": null,
-   "all": []
-  },
-  {
-   "key": "buchodi.com/chatgpt-now-knows-what-you-do-on-other-websites-via-ad-collector",
-   "of": null,
-   "title": "ChatGPT now knows what you do on other websites via ad collector",
-   "group": "buzz",
-   "line": "ChatGPT 가 다른 사이트 활동을 안다는 글",
-   "short": "광고 수집기",
-   "note": "",
-   "w": 1,
-   "event": "",
-   "url": "https://www.buchodi.com/chatgpt-now-knows-what-you-do-on-other-websites-via-ad-collector/",
-   "co": "OpenAI",
-   "date": "2026-09-21",
-   "pts": 764,
-   "hn": "49776729",
-   "gn": null,
-   "all": []
-  },
-  {
-   "key": "agentexecutor.io",
-   "of": null,
-   "title": "AX – Google’s Open Agentic Orchestrator",
-   "group": "know",
-   "line": "AX — Google 의 열린 에이전트 오케스트레이터",
-   "short": "AX",
-   "note": "Google 에서 낸 오픈 도구예요",
-   "w": 2,
-   "event": "",
-   "url": "https://agentexecutor.io",
-   "co": "기타",
-   "date": "2026-09-21",
-   "pts": 666,
-   "hn": "49780797",
-   "gn": null,
-   "all": []
   }
  ],
- "judged_at": 1793567083
+ "judged_at": 1793643093
 }
