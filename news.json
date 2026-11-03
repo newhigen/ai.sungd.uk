@@ -1,6 +1,58 @@
 {
  "items": [
   {
+   "key": "rikiyat.github.io/blog/weight-space-programming",
+   "of": null,
+   "title": "Astra can read and write weights to improve Qwen",
+   "group": "buzz",
+   "line": "Weight-Space Programming — LLM이 가중치를 직접 씀",
+   "short": "가중치 프로그래밍",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://rikiyat.github.io/blog/weight-space-programming/",
+   "co": "기타",
+   "date": "2026-11-03",
+   "pts": 1900,
+   "hn": "50341174",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "MIT CSAIL 연구진이 LLM이 신경망 가중치를 직접 읽고 쓰는 실험을 공개했어요.",
+    "GPT-6 Astra가 Qwen3.5-0.8B 가중치의 0.016%를 고쳐 MATH-500을 7.9%에서 48.1%로 올렸어요.",
+    "경사하강법 없이, 파이썬 커널에서 가중치를 편집했다고 해요."
+   ],
+   "thread": "",
+   "all": []
+  },
+  {
+   "key": "openai.com/index/scaling-git-at-openai",
+   "of": null,
+   "title": "Scaling Git at OpenAI",
+   "group": "know",
+   "line": "Pando — OpenAI의 Git 호환 백엔드",
+   "short": "Pando",
+   "note": "Codex 때문에 Git 서버를 새로 만들었어요",
+   "w": 1,
+   "event": "",
+   "url": "https://openai.com/index/scaling-git-at-openai",
+   "co": "OpenAI",
+   "date": "2026-11-03",
+   "pts": 0,
+   "hn": null,
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "OpenAI가 Codex로 늘어난 작업량을 받으려고 Git 호환 백엔드 Pando를 만들었어요.",
+    "브랜치마다 따로 갱신해 쓰기를 늘리고, packfile을 재사용해 읽기를 빠르게 해요.",
+    "중앙값 push 지연이 약 5배 줄고, 하루 약 1페타바이트의 Git 데이터를 내려줘요."
+   ],
+   "thread": "",
+   "all": []
+  },
+  {
    "key": "blog.google/innovation-and-ai/technology/ai/google-ai-updates-october-2026#2",
    "of": "blog.google/innovation-and-ai/technology/ai/google-ai-updates-october-2026",
    "title": "",
@@ -6016,5 +6068,5 @@
    "all": []
   }
  ],
- "judged_at": 1793643093
+ "judged_at": 1793669484
 }
