@@ -1,6 +1,50 @@
 {
  "items": [
   {
+   "key": "vickiboykis.com/2026/10/17/how-to-learn-ml-in-2026-interview",
+   "of": null,
+   "title": "2026년 머신러닝을 배우는 방법",
+   "group": "skip",
+   "line": "2026년 머신러닝 배우는 법 — 인터뷰",
+   "short": "ML 배우기",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://vickiboykis.com/2026/10/17/how-to-learn-ml-in-2026-interview/",
+   "co": "기타",
+   "date": "2026-11-03",
+   "pts": 0,
+   "hn": null,
+   "gn": "36504",
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [],
+   "thread": "",
+   "all": []
+  },
+  {
+   "key": "techpolicy.press/the-sec-should-block-anthropics-ipo-to-protect-the-public",
+   "of": null,
+   "title": "The SEC Should Block Anthropic's IPO to Protect the Public",
+   "group": "skip",
+   "line": "Anthropic IPO — SEC 가 막아야 한다는 주장",
+   "short": "IPO 반대",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://www.techpolicy.press/the-sec-should-block-anthropics-ipo-to-protect-the-public/",
+   "co": "Anthropic",
+   "date": "2026-11-03",
+   "pts": 335,
+   "hn": "50344919",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [],
+   "thread": "",
+   "all": []
+  },
+  {
    "key": "rikiyat.github.io/blog/weight-space-programming",
    "of": null,
    "title": "Astra can read and write weights to improve Qwen",
@@ -50,6 +94,32 @@
     "중앙값 push 지연이 약 5배 줄고, 하루 약 1페타바이트의 Git 데이터를 내려줘요."
    ],
    "thread": "",
+   "all": []
+  },
+  {
+   "key": "businessinsider.com/anthropic-claude-internal-ai-use-exceeds-employee-pay-tokens-2026-11",
+   "of": null,
+   "title": "Anthropic's internal AI use, at retail prices, now exceeds its employee pay",
+   "group": "buzz",
+   "line": "Anthropic 내부 AI 사용액이 인건비 초과",
+   "short": "AI 사용액 > 인건비",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://www.businessinsider.com/anthropic-claude-internal-ai-use-exceeds-employee-pay-tokens-2026-11",
+   "co": "Anthropic",
+   "date": "2026-11-03",
+   "pts": 322,
+   "hn": "50339494",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "Business Insider가 Anthropic IPO 서류에서 내부 Claude 사용 규모를 짚었어요.",
+    "소매가로 환산한 내부 사용액이 4월에 월 인건비를 넘었고, 9월엔 1월의 250배를 넘었어요.",
+    "9월에 추가된 코드의 90% 넘게를 Claude가 썼고, 실제 현금 지출은 아니에요."
+   ],
+   "thread": "AI 와 개발자의 일",
    "all": []
   },
   {
@@ -6068,5 +6138,5 @@
    "all": []
   }
  ],
- "judged_at": 1793669484
+ "judged_at": 1793697890
 }
