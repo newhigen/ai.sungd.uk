@@ -1,6 +1,54 @@
 {
  "items": [
   {
+   "key": "nytimes.com/2026/11/03/us/google-search-schools-restrict-ai.html",
+   "of": null,
+   "title": "Google will turn off search for schools that reject AI",
+   "group": "buzz",
+   "line": "Google — AI 거부 학교의 검색 중단",
+   "short": "학교 검색 중단",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://www.nytimes.com/2026/11/03/us/google-search-schools-restrict-ai.html",
+   "co": "기타",
+   "date": "2026-11-04",
+   "pts": 518,
+   "hn": "50353192",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [],
+   "thread": "",
+   "all": []
+  },
+  {
+   "key": "github.com/postmanlabs/postman-app-support/issues/14370",
+   "of": null,
+   "title": "Postman silently auto-installs AI plugins and attempts to share all API data",
+   "group": "buzz",
+   "line": "Postman — 코딩 에이전트에 플러그인 자동 설치",
+   "short": "Postman 플러그인",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://github.com/postmanlabs/postman-app-support/issues/14370",
+   "co": "기타",
+   "date": "2026-11-04",
+   "pts": 917,
+   "hn": "50354960",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "Postman 데스크톱이 Codex와 Claude Code에 자기 플러그인을 자동 설치했다는 이슈가 올라왔어요.",
+    "설치 로그에 claude-code:installed, codex:installed가 찍혔고, 설치 프로그램이 자기 시작 훅을 스스로 신뢰 처리하려 했어요.",
+    "훅은 API 작업마다 postman:api-engineer 스킬을 먼저 불러오게 하고, 원격 MCP는 인증 없이 켜져 실패했어요."
+   ],
+   "thread": "에이전트 보안 사고",
+   "all": []
+  },
+  {
    "key": "vickiboykis.com/2026/10/17/how-to-learn-ml-in-2026-interview",
    "of": null,
    "title": "2026년 머신러닝을 배우는 방법",
@@ -20,6 +68,32 @@
    "demo_as": "듣기",
    "s": [],
    "thread": "",
+   "all": []
+  },
+  {
+   "key": "usecaddie.app/blog/agents",
+   "of": null,
+   "title": "에이전트와 함께 개발하기 위한 실용 원칙",
+   "group": "buzz",
+   "line": "에이전트와 개발하기 위한 실용 원칙",
+   "short": "에이전트 원칙",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://usecaddie.app/blog/agents",
+   "co": "기타",
+   "date": "2026-11-03",
+   "pts": 0,
+   "hn": null,
+   "gn": "36502",
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "에이전트가 코드 대부분을 쓰는 시대의 개발 원칙을 정리한 글이에요.",
+    "일은 작업 시작, 결과 검증, 좋은 결과의 기준 가르치기 세 가지로 남는다고 해요.",
+    "혼자 에이전트와 Caddie를 15일 동안 730커밋으로 만들었다는 사례가 나와요."
+   ],
+   "thread": "AI 와 개발자의 일",
    "all": []
   },
   {
@@ -93,6 +167,28 @@
     "브랜치마다 따로 갱신해 쓰기를 늘리고, packfile을 재사용해 읽기를 빠르게 해요.",
     "중앙값 push 지연이 약 5배 줄고, 하루 약 1페타바이트의 Git 데이터를 내려줘요."
    ],
+   "thread": "",
+   "all": []
+  },
+  {
+   "key": "news.ycombinator.com/item?id=50352757",
+   "of": null,
+   "title": "OpenAI seems to be silently re-enabling model training on Codex chats",
+   "group": "buzz",
+   "line": "Codex 대화 모델 학습 재활성화 의혹",
+   "short": "Codex 학습 의혹",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://news.ycombinator.com/item?id=50352757",
+   "co": "OpenAI",
+   "date": "2026-11-03",
+   "pts": 413,
+   "hn": "50352757",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [],
    "thread": "",
    "all": []
   },
@@ -6110,5 +6206,5 @@
    "all": []
   }
  ],
- "judged_at": 1793727727
+ "judged_at": 1793747549
 }
