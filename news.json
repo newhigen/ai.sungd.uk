@@ -97,6 +97,32 @@
    "all": []
   },
   {
+   "key": "honnibal.dev/blog/astra-read-write-misleading",
+   "of": null,
+   "title": "The 'Astra can read and write weights to improve Qwen' post is misleading",
+   "group": "buzz",
+   "line": "Astra 가중치 조작 글 반박 — 오해 소지",
+   "short": "Astra 가중치 반박",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://honnibal.dev/blog/astra-read-write-misleading",
+   "co": "기타",
+   "date": "2026-11-03",
+   "pts": 694,
+   "hn": "50351111",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "honnibal.dev 글이 「Astra 가 가중치를 읽고 써서 Qwen 을 개선한다」는 글이 오해를 부른다고 짚었어요.",
+    "원문 초록과 달리 가중치만 보는 실험은 17K~172K 크기 망 셋뿐이고, Qwen 실험은 Python 을 쓰고 모델을 50번 돌려요.",
+    "Qwen3.5 MATH-500 이 7.9%에서 48.1%로 오른 것은 사람 ML 엔지니어도 하는 일을 Astra 가 해낸 것이라고 봐요."
+   ],
+   "thread": "",
+   "all": []
+  },
+  {
    "key": "businessinsider.com/anthropic-claude-internal-ai-use-exceeds-employee-pay-tokens-2026-11",
    "of": null,
    "title": "Anthropic's internal AI use, at retail prices, now exceeds its employee pay",
@@ -6082,61 +6108,7 @@
    "hn": "49803892",
    "gn": null,
    "all": []
-  },
-  {
-   "key": "x.ai/news/grok-4-7",
-   "of": null,
-   "title": "Grok 4.7",
-   "group": "buzz",
-   "line": "Grok 4.7",
-   "short": "Grok 4.7",
-   "note": "",
-   "w": 2,
-   "event": "",
-   "url": "https://x.ai/news/grok-4-7",
-   "co": "기타",
-   "date": "2026-09-22",
-   "pts": 609,
-   "hn": "49788838",
-   "gn": null,
-   "all": []
-  },
-  {
-   "key": "cryptocellar.org/bgac/the-mvueh-break.html",
-   "of": null,
-   "title": "OpenAI GPT–6 Astra breaks Enigma message that has resisted solution since 2005",
-   "group": "buzz",
-   "line": "GPT-6 Astra 가 푼 2005년 Enigma 암호문",
-   "short": "Enigma 해독",
-   "note": "",
-   "w": 1,
-   "event": "",
-   "url": "https://www.cryptocellar.org/bgac/the-mvueh-break.html",
-   "co": "OpenAI",
-   "date": "2026-09-22",
-   "pts": 738,
-   "hn": "49801324",
-   "gn": null,
-   "all": []
-  },
-  {
-   "key": "arcturus-labs.com/blog/2026/09/21/will-openai-eat-jevs-lunch",
-   "of": null,
-   "title": "OpenAI is well positioned to fast-follow Jev",
-   "group": "skip",
-   "line": "OpenAI 가 Jev 를 따라잡을까",
-   "short": "Jev 글",
-   "note": "",
-   "w": 1,
-   "event": "",
-   "url": "https://arcturus-labs.com/blog/2026/09/21/will-openai-eat-jevs-lunch/",
-   "co": "OpenAI",
-   "date": "2026-09-22",
-   "pts": 328,
-   "hn": "49802161",
-   "gn": null,
-   "all": []
   }
  ],
- "judged_at": 1793697890
+ "judged_at": 1793727727
 }
