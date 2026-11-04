@@ -1,6 +1,32 @@
 {
  "items": [
   {
+   "key": "simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights",
+   "of": null,
+   "title": "Qwen 3.8 27B on my laptop can interpret model weights, too",
+   "group": "buzz",
+   "line": "Qwen 3.8 27B — 노트북에서 가중치 읽기",
+   "short": "Qwen 가중치 읽기",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/",
+   "co": "기타",
+   "date": "2026-11-04",
+   "pts": 552,
+   "hn": "50355251",
+   "gn": "36542",
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "Simon Willison이 노트북의 Qwen 3.8 27B로 모델 가중치를 읽게 해 봤어요.",
+    "도구 없이 가중치 숫자만 보고 Pac-Man, Pong, Breakout은 맞혔고 Freeway는 틀렸어요.",
+    "17GB 모델이 게임 하나에 46분에서 1시간 넘게 걸렸고, 기본 컨텍스트 8192로는 오류가 났어요."
+   ],
+   "thread": "오픈 웨이트 경쟁",
+   "all": []
+  },
+  {
    "key": "nytimes.com/2026/11/03/us/google-search-schools-restrict-ai.html",
    "of": null,
    "title": "Google will turn off search for schools that reject AI",
@@ -6206,5 +6232,5 @@
    "all": []
   }
  ],
- "judged_at": 1793747549
+ "judged_at": 1793772009
 }
