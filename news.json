@@ -441,6 +441,50 @@
    ]
   },
   {
+   "key": "arstechnica.com/gadgets/2026/10/fujifilm-to-boost-tape-production-5x-as-ai-fuels-archiving-demand",
+   "of": null,
+   "title": "Fujifilm to boost tape production 5x as AI fuels archiving demand",
+   "group": "skip",
+   "line": "Fujifilm 자기 테이프 — 생산 5배 확대",
+   "short": "Fujifilm 테이프",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://arstechnica.com/gadgets/2026/10/fujifilm-to-boost-tape-production-5x-as-ai-fuels-archiving-demand/",
+   "co": "기타",
+   "date": "2026-11-02",
+   "pts": 502,
+   "hn": "50336918",
+   "gn": "36536",
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [],
+   "thread": "",
+   "all": []
+  },
+  {
+   "key": "andrewchen.substack.com/p/new-founder-archetypes-in-the-ai-84e",
+   "of": null,
+   "title": "AI 시대의 새로운 창업자 유형",
+   "group": "skip",
+   "line": "AI 시대의 새로운 창업자 유형",
+   "short": "창업자 유형",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://andrewchen.substack.com/p/new-founder-archetypes-in-the-ai-84e",
+   "co": "기타",
+   "date": "2026-11-02",
+   "pts": 0,
+   "hn": null,
+   "gn": "36433",
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [],
+   "thread": "",
+   "all": []
+  },
+  {
    "key": "twitter.com/jiahaoshao1/status/2116475922190922088",
    "of": null,
    "title": "Anthropic blocks users for anything touching training larger models",
@@ -6232,5 +6276,5 @@
    "all": []
   }
  ],
- "judged_at": 1793772009
+ "judged_at": 1793801922
 }
