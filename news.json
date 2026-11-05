@@ -23,6 +23,58 @@
    "all": []
   },
   {
+   "key": "openai.com/index/introducing-images-2-6",
+   "of": null,
+   "title": "Images 2.6",
+   "group": "try",
+   "line": "Images 2.6 — GIF도 만드는 이미지 모델",
+   "short": "Images 2.6",
+   "note": "ChatGPT 앱에서 GIF 만들어 보세요",
+   "w": 3,
+   "event": "",
+   "url": "https://openai.com/index/introducing-images-2-6/",
+   "co": "OpenAI",
+   "date": "2026-11-05",
+   "pts": 104,
+   "hn": "50372945",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "OpenAI가 Images 2.6을 ChatGPT, Codex, API에 냈어요.",
+    "이미지 생성이 50% 빨라졌고 GIF 애니메이션을 만들 수 있어요.",
+    "모든 구독 등급의 ChatGPT와 Codex에서 오늘부터 쓸 수 있어요."
+   ],
+   "thread": "",
+   "all": []
+  },
+  {
+   "key": "openai.com/index/a-thousand-fewer-paths-to-root",
+   "of": null,
+   "title": "A thousand fewer paths to root",
+   "group": "know",
+   "line": "A thousand fewer paths to root — 리눅스 커널 취약점 탐색",
+   "short": "커널 취약점",
+   "note": "당장 쓸 건 없고 곧 나올 cyber 모델 소식이에요",
+   "w": 2,
+   "event": "",
+   "url": "https://openai.com/index/a-thousand-fewer-paths-to-root/",
+   "co": "OpenAI",
+   "date": "2026-11-05",
+   "pts": 111,
+   "hn": "50372929",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "OpenAI가 리눅스 커널 취약점을 찾는 연구 프로토타입을 공개했어요.",
+    "후보 2,308건 중 1,724건을 재현하고 로컬 권한 상승 exploit 948건을 만들었어요.",
+    "곧 나올 cyber 모델이 핵심이고, 사람이 검토한 보고와 패치를 메인테이너에 보내고 있어요."
+   ],
+   "thread": "",
+   "all": []
+  },
+  {
    "key": "anthropic.com/research/provable-inference",
    "of": null,
    "title": "Progress on provable inference for large language models",
@@ -6275,5 +6327,5 @@
    "all": []
   }
  ],
- "judged_at": 1793826888
+ "judged_at": 1793844719
 }
