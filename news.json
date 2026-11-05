@@ -75,6 +75,28 @@
    "all": []
   },
   {
+   "key": "huggingface.co/moonshotai/Kimi-K3.1-Pro",
+   "of": null,
+   "title": "Kimi K3.1 Pro model weights are out",
+   "group": "skip",
+   "line": "Kimi K3.1 Pro — 가중치 공개",
+   "short": "Kimi K3.1 Pro",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro",
+   "co": "기타",
+   "date": "2026-11-05",
+   "pts": 538,
+   "hn": "50366999",
+   "gn": "36595",
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [],
+   "thread": "오픈 웨이트 경쟁",
+   "all": []
+  },
+  {
    "key": "anthropic.com/research/provable-inference",
    "of": null,
    "title": "Progress on provable inference for large language models",
@@ -6327,5 +6349,5 @@
    "all": []
   }
  ],
- "judged_at": 1793844719
+ "judged_at": 1793875311
 }
