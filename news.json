@@ -1,6 +1,32 @@
 {
  "items": [
   {
+   "key": "github.com/anthropics/claude-code/issues/107757",
+   "of": null,
+   "title": "Claude Code sends your email address to websites",
+   "group": "buzz",
+   "line": "Claude Code 이메일 노출 — User-Agent 헤더 신고",
+   "short": "이메일 노출",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://github.com/anthropics/claude-code/issues/107757",
+   "co": "Anthropic",
+   "date": "2026-11-06",
+   "pts": 851,
+   "hn": "50385272",
+   "gn": "36676",
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "Claude Code 이슈로, 웹 검색 중 User-Agent 헤더에 이메일이 실려 나갔다는 신고예요.",
+    "신고자는 스팸 메일이 하루 수십 통 온다며 이 동작을 하네스에서 아예 빼 달라고 했어요.",
+    "버전 2.1.318, macOS 에서 확인됐고 이슈는 열려 있으며 area:security 라벨이 붙었어요."
+   ],
+   "thread": "",
+   "all": []
+  },
+  {
    "key": "openai.com/index/openai-to-acquire-pierre",
    "of": null,
    "title": "OpenAI to acquire Pierre Computer Company",
@@ -6300,5 +6326,5 @@
    "thread": "음성 모델 경쟁"
   }
  ],
- "judged_at": 1793923428
+ "judged_at": 1793946300
 }
