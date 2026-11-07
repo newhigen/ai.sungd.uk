@@ -53,6 +53,28 @@
    "all": []
   },
   {
+   "key": "finance.yahoo.com/technology/ai/articles/mark-cuban-says-facebook-knowingly-213000020.html",
+   "of": null,
+   "title": "Cuban: Facebook knowingly runs AI deepfake scam ads; docs say $16B fraud revenue",
+   "group": "skip",
+   "line": "Cuban 의 Facebook 딥페이크 사기 광고 비판",
+   "short": "딥페이크 광고",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://finance.yahoo.com/technology/ai/articles/mark-cuban-says-facebook-knowingly-213000020.html",
+   "co": "기타",
+   "date": "2026-11-06",
+   "pts": 505,
+   "hn": "50385870",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [],
+   "thread": "",
+   "all": []
+  },
+  {
    "key": "blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash",
    "of": null,
    "title": "Gemini Omni 1.2 Flash",
@@ -6253,5 +6275,5 @@
    "all": []
   }
  ],
- "judged_at": 1794012610
+ "judged_at": 1794034792
 }
