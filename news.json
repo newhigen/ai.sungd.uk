@@ -27,6 +27,28 @@
    "all": []
   },
   {
+   "key": "bloomberg.com/news/articles/2026-11-06/anthropic-ipo-valuation-expectations-pressured-after-ai-rout",
+   "of": null,
+   "title": "Anthropic IPO buyers see valuation as low as $1.1T",
+   "group": "skip",
+   "line": "Anthropic IPO — 기업가치 전망 하락",
+   "short": "Anthropic IPO",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://www.bloomberg.com/news/articles/2026-11-06/anthropic-ipo-valuation-expectations-pressured-after-ai-rout",
+   "co": "Anthropic",
+   "date": "2026-11-07",
+   "pts": 306,
+   "hn": "50394906",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [],
+   "thread": "",
+   "all": []
+  },
+  {
    "key": "anthropic.com/research/components-of-agent-memory",
    "of": null,
    "title": "The Components of Agent Memory",
@@ -48,6 +70,32 @@
     "Anthropic이 Claude에 메모리를 붙이는 방식과 평가를 정리한 글을 냈어요.",
     "강한 모델은 고정 규칙보다 무엇을 적을지 스스로 판단할 때 성능이 더 좋았어요.",
     "dreaming은 쉬는 동안 기록을 돌아보며 틀린 메모를 고치는 방식이에요."
+   ],
+   "thread": "",
+   "all": []
+  },
+  {
+   "key": "8rank.ai/game/apple-intelligence-personal-knowledge-graph",
+   "of": null,
+   "title": "Every Mac comes with an (undocumented) family member classifier",
+   "group": "buzz",
+   "line": "Apple 개인 지식 그래프 — 맥에 숨은 분류기",
+   "short": "Apple 지식 그래프",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://8rank.ai/game/apple-intelligence-personal-knowledge-graph",
+   "co": "기타",
+   "date": "2026-11-07",
+   "pts": 543,
+   "hn": "50403097",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "8rank.ai가 맥에 들어 있는 Apple 개인 지식 그래프를 분석한 글이에요.",
+    "knowledgeconstructiond 등 데몬 둘이 연락처, 사진, 캘린더, 가족 공유 정보로 그래프를 만들어요.",
+    "SQLite 51개가 평문으로 저장되고, 읽어 볼 대시보드 iKnow를 오픈소스로 냈어요."
    ],
    "thread": "",
    "all": []
@@ -6212,5 +6260,5 @@
    "all": []
   }
  ],
- "judged_at": 1794076752
+ "judged_at": 1794091133
 }
