@@ -1,6 +1,32 @@
 {
  "items": [
   {
+   "key": "thestateofai.com/news/goldman-sachs-claude-code-traders-bankers",
+   "of": null,
+   "title": "Goldman Sachs Is Pulling Claude Code from Its Bankers and Traders",
+   "group": "buzz",
+   "line": "Goldman Sachs — 트레이더 Claude Code 회수",
+   "short": "Goldman 회수",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://www.thestateofai.com/news/goldman-sachs-claude-code-traders-bankers",
+   "co": "Anthropic",
+   "date": "2026-11-09",
+   "pts": 347,
+   "hn": "50415628",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "Goldman Sachs가 Claude Code와 GitHub 사용을 엔지니어에게만 허용했어요.",
+    "10월 내부 지침으로 트레이더와 은행가는 막혔고, strats는 계속 쓸 수 있어요.",
+    "4월에는 홍콩 은행가의 Claude 접근도 막았고, Goldman은 Anthropic IPO 주관사예요."
+   ],
+   "thread": "AI 와 개발자의 일",
+   "all": []
+  },
+  {
    "key": "caleb.software/posts/claude-to-pi.html",
    "of": null,
    "title": "Goodbye Claude, Hello Pi",
@@ -6292,43 +6318,7 @@
    ],
    "thread": "",
    "all": []
-  },
-  {
-   "key": "discourse.haskell.org/t/how-to-keep-enjoying-programming-in-a-world-of-llms/14705",
-   "of": null,
-   "title": "LLM 시대에도 프로그래밍을 계속 즐기는 법",
-   "group": "skip",
-   "line": "LLM 시대에도 프로그래밍을 즐기는 법",
-   "short": "프로그래밍의 즐거움",
-   "note": "",
-   "w": 1,
-   "event": "",
-   "url": "https://discourse.haskell.org/t/how-to-keep-enjoying-programming-in-a-world-of-llms/14705",
-   "co": "기타",
-   "date": "2026-09-27",
-   "pts": 0,
-   "hn": null,
-   "gn": "34336",
-   "all": []
-  },
-  {
-   "key": "authorsguild.org/news/ag-v-openai-top-execs-knew-mass-book-piracy-was-illegal",
-   "of": null,
-   "title": "Unsealed Briefs in Authors’ Case v. Microsoft/OpenAI",
-   "group": "buzz",
-   "line": "작가들의 OpenAI 소송 — 공개된 서면",
-   "short": "도서 소송",
-   "note": "",
-   "w": 1,
-   "event": "",
-   "url": "https://authorsguild.org/news/ag-v-openai-top-execs-knew-mass-book-piracy-was-illegal/",
-   "co": "OpenAI",
-   "date": "2026-09-27",
-   "pts": 627,
-   "hn": "49863864",
-   "gn": "34352",
-   "all": []
   }
  ],
- "judged_at": 1794132523
+ "judged_at": 1794171739
 }
