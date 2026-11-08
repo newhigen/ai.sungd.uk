@@ -1,6 +1,54 @@
 {
  "items": [
   {
+   "key": "caleb.software/posts/claude-to-pi.html",
+   "of": null,
+   "title": "Goodbye Claude, Hello Pi",
+   "group": "buzz",
+   "line": "Goodbye Claude, Hello Pi",
+   "short": "Claude에서 Pi로",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://caleb.software/posts/claude-to-pi.html",
+   "co": "Anthropic",
+   "date": "2026-11-08",
+   "pts": 303,
+   "hn": "50410107",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "Claude Code를 오래 쓴 개발자가 주 하네스를 Pi로 옮겼다는 글이에요.",
+    "IDE 연결이 세션 하나뿐인 점, 올해 릴리스 244개 중 3/4이 시스템 프롬프트를 바꾼 점을 이유로 들어요.",
+    "Pi는 오픈 소스 하네스이고, 글쓴이는 확장을 직접 짜서 쓰고 있어요."
+   ],
+   "thread": "",
+   "all": []
+  },
+  {
+   "key": "apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again",
+   "of": null,
+   "title": "Claude Code's \"Don't Ask Again\" exposes passwords in 1,122 public GitHub files",
+   "group": "buzz",
+   "line": "Claude Code \"Don't Ask Again\" 비밀번호 노출",
+   "short": "권한 허용 노출",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again",
+   "co": "Anthropic",
+   "date": "2026-11-08",
+   "pts": 393,
+   "hn": "50407882",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [],
+   "thread": "에이전트 보안 사고",
+   "all": []
+  },
+  {
    "key": "hightouch.com/blog/llm-judges-identity-resolution",
    "of": null,
    "title": "A Jev that can ask Opus for help gives Opus accuracy at 4x lower cost",
@@ -590,6 +638,28 @@
     "훅은 API 작업마다 postman:api-engineer 스킬을 먼저 불러오게 하고, 원격 MCP는 인증 없이 켜져 실패했어요."
    ],
    "thread": "에이전트 보안 사고",
+   "all": []
+  },
+  {
+   "key": "github.com/milind-soni/OpenMausBot",
+   "of": null,
+   "title": "OpenMausBot - 봇이 사용할 가상 머신을 제공하는 오픈소스 Grok Bot 대체재",
+   "group": "skip",
+   "line": "OpenMausBot — 봇용 가상 머신",
+   "short": "OpenMausBot",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://github.com/milind-soni/OpenMausBot",
+   "co": "기타",
+   "date": "2026-11-04",
+   "pts": 0,
+   "hn": null,
+   "gn": "36782",
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [],
+   "thread": "",
    "all": []
   },
   {
@@ -6260,5 +6330,5 @@
    "all": []
   }
  ],
- "judged_at": 1794091133
+ "judged_at": 1794132523
 }
