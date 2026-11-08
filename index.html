@@ -24222,7 +24222,44 @@ html[data-tab="home"] .ptools,html[data-tab="home"] .ptop,html[data-tab="home"] 
   </div>
 <!--/CC-DATA-->
 <!--CX-DATA-->
-    <p class="range"><strong>v0.69.0</strong> → <strong>v0.165.0</strong> &nbsp;·&nbsp; <span class="range-dates" data-en="2025.12.10 – 2026.10.27">2025.12.10 – 2026.10.27</span></p>
+    <p class="range"><strong>v0.69.0</strong> → <strong>v0.167.0</strong> &nbsp;·&nbsp; <span class="range-dates" data-en="2025.12.10 – 2026.11.6">2025.12.10 – 2026.11.6</span></p>
+    <div class="version-block" id="cx0.167.0" data-date="2026-11-06">
+      <div class="version-head">
+        <span class="ver-badge">v0.167.0</span><span class="ver-date" data-en="Nov 6 Fri">11월 6일 금</span><span class="ver-ago"></span>
+        <div class="ver-summary"><span class="pill feature">기능 ×6</span><span class="pill fix">Fix ×6</span></div>
+      </div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Open the agent command center with <code>codex agents --no-daemon</code>. The command center and session picker now mark unread results (#58238, #58239, #58263, #58264).</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Switch between connected backends from the terminal session picker and keep your drafts when switching (#58280, #58457).</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Preview local image attachments while composing on supported terminals, and open viewed local images from clickable transcript paths (#58261, #58446).</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Find API key and cloud provider options under “Sign in another way.” Enable <code>gcp_setup_wizard</code> to set up Google Cloud Vertex AI with Application Default Credentials or a credential file (#57857, #58427).</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Opt into macOS or Windows system proxy settings from <code>/experimental</code> (#58157).</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Expand patch details directly in the transcript while an approval prompt is open (#58281).</span></div>
+      <div class="entry row-divider" data-type="fix"><span class="pill fix">Fix</span><span class="e-desc">Saved chats stay visible after you switch model providers. If a chat can’t resume, you can read its transcript and prepare an editable prompt to continue in a new chat (#58202).</span></div>
+      <div class="entry row-divider" data-type="fix"><span class="pill fix">Fix</span><span class="e-desc"><code>Ctrl+L</code> clears the terminal display while keeping earlier messages available through <code>Ctrl+T</code> (#58266).</span></div>
+      <div class="entry row-divider" data-type="fix"><span class="pill fix">Fix</span><span class="e-desc">Deleting text that exposes a leading <code>!</code> keeps an ordinary draft in chat mode (#58412).</span></div>
+      <div class="entry row-divider" data-type="fix"><span class="pill fix">Fix</span><span class="e-desc">Network approval prompts close when their requests end. Concurrent requests to the same endpoint prompt one at a time (#58350, #58351).</span></div>
+      <div class="entry row-divider" data-type="fix"><span class="pill fix">Fix</span><span class="e-desc">Long realtime V3 conversations save completed speech to chat history as the transcript grows (#58221).</span></div>
+      <div class="entry row-divider" data-type="fix"><span class="pill fix">Fix</span><span class="e-desc">Automatic context compaction now accounts for retained output from failed responses and responses with missing token usage data (#58404).</span></div>
+    </div>
+    <div class="version-block" id="cx0.166.0" data-date="2026-10-29">
+      <div class="version-head">
+        <span class="ver-badge">v0.166.0</span><span class="ver-date" data-en="Oct 29 Thu">10월 29일 목</span><span class="ver-ago"></span>
+        <div class="ver-summary"><span class="pill feature">기능 ×6</span><span class="pill fix">Fix ×7</span></div>
+      </div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Added keyboard-driven transcript selection with word, line, and page motions, integrated search, and configurable shortcuts.</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Rendered Markdown consistently in async questions, choices, answers, and transcript replies.</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Added GPT-6.1 Terra to the bundled, Vertex AI, and Amazon Bedrock model catalogs.</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Added <code>codex queue --resume</code> to resume unloaded threads after queueing a message.</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Added clearer safety-block explanations and selectable safer follow-up prompts in the TUI.</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Added <code>codex doctor --network-only</code> for focused configuration, connectivity, and WebSocket diagnostics.</span></div>
+      <div class="entry row-divider" data-type="fix"><span class="pill fix">Fix</span><span class="e-desc">Preserved acknowledged approval and permission settings when resuming or forking threads.</span></div>
+      <div class="entry row-divider" data-type="fix"><span class="pill fix">Fix</span><span class="e-desc">Preserved local image attachments when restoring killed composer text.</span></div>
+      <div class="entry row-divider" data-type="fix"><span class="pill fix">Fix</span><span class="e-desc">Fixed standalone release cleanup on macOS when installations are in use or paths contain non-ASCII characters.</span></div>
+      <div class="entry row-divider" data-type="fix"><span class="pill fix">Fix</span><span class="e-desc">Restored spawned descendant threads when unarchiving their parent.</span></div>
+      <div class="entry row-divider" data-type="fix"><span class="pill fix">Fix</span><span class="e-desc">Fixed app-server thread startup and shutdown races and released completed runtimes promptly.</span></div>
+      <div class="entry row-divider" data-type="fix"><span class="pill fix">Fix</span><span class="e-desc">Improved TUI reconnection recovery, including offline <code>/quit</code> and <code>/exit</code> handling.</span></div>
+      <div class="entry row-divider" data-type="fix"><span class="pill fix">Fix</span><span class="e-desc">Preserved reasoning-token accounting across resume and fork to avoid premature compaction.</span></div>
+    </div>
     <div class="version-block" id="cx0.165.0" data-date="2026-10-27">
       <div class="version-head">
         <span class="ver-badge">v0.165.0</span><span class="ver-date" data-en="Oct 27 Tue">10월 27일 화</span><span class="ver-ago"></span>
