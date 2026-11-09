@@ -1112,219 +1112,219 @@ html[data-tab="home"] .ptools,html[data-tab="home"] .ptop,html[data-tab="home"] 
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Changed auto mode with telemetry or feature flags off, including behind LLM gateways: calls the server can't check are asked about or denied, with no fallback to the built-in classifier; set <code>CLAUDE_CODE_AUTO_MODE_SERVER=0</code> to keep using it (Bedrock, Vertex and Foundry are unchanged)</span>
+      <span class="e-desc" data-en="Changed auto mode with telemetry or feature flags off, including behind LLM gateways: calls the server can't check are asked about or denied, with no fallback to the built-in classifier; set <code>CLAUDE_CODE_AUTO_MODE_SERVER=0</code> to keep using it (Bedrock, Vertex and Foundry are unchanged)">텔레메트리·기능 플래그 꺼짐 시(LLM 게이트웨이 포함) Auto 모드 변경: 서버 확인 불가 호출은 묻거나 거부되며 내장 분류기로 대체 없음; 계속 사용하려면 <code>CLAUDE_CODE_AUTO_MODE_SERVER=0</code> 설정(Bedrock·Vertex·Foundry 변경 없음)</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Changed auto mode behind an LLM gateway: <code>CLAUDE_CODE_AUTO_MODE_SERVER=1</code> turns on the server-side check even with <code>CLAUDE_CODE_DISABLE_EXPERIMENTAL_BETAS</code> set; if managed settings set the latter, they must set the <code>1</code> too</span>
+      <span class="e-desc" data-en="Changed auto mode behind an LLM gateway: <code>CLAUDE_CODE_AUTO_MODE_SERVER=1</code> turns on the server-side check even with <code>CLAUDE_CODE_DISABLE_EXPERIMENTAL_BETAS</code> set; if managed settings set the latter, they must set the <code>1</code> too">LLM 게이트웨이 뒤 Auto 모드 변경: <code>CLAUDE_CODE_DISABLE_EXPERIMENTAL_BETAS</code>가 설정돼도 <code>CLAUDE_CODE_AUTO_MODE_SERVER=1</code>로 서버측 검사 활성화; 관리형 설정이 후자를 설정하면 <code>1</code>도 함께 설정 필요</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Added support for MCP tasks in the terminal: when an MCP server runs a tool call as a task, Claude Code moves it to the background right away and tells Claude the result when it finishes</span>
+      <span class="e-desc" data-en="Added support for MCP tasks in the terminal: when an MCP server runs a tool call as a task, Claude Code moves it to the background right away and tells Claude the result when it finishes">터미널 MCP 작업 지원 추가: MCP 서버가 툴 호출을 작업으로 실행하면 Claude Code가 즉시 백그라운드로 이동하고 완료 시 결과를 Claude에 알림</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Added the <code>CLAUDE_CODE_DISABLE_MCP_TASK_BACKGROUND</code> environment variable to make Claude Code wait for an MCP task inside its tool call instead of moving it to the background right away</span>
+      <span class="e-desc" data-en="Added the <code>CLAUDE_CODE_DISABLE_MCP_TASK_BACKGROUND</code> environment variable to make Claude Code wait for an MCP task inside its tool call instead of moving it to the background right away">MCP 작업을 즉시 백그라운드 이동 대신 툴 호출 내에서 대기하게 하는 <code>CLAUDE_CODE_DISABLE_MCP_TASK_BACKGROUND</code> 환경 변수 추가</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Added <code>permissions.denyInsteadOfPrompting</code> setting: a tool call that would wait on a permission prompt is denied and the turn continues, in terminal sessions, subagents and teammates</span>
+      <span class="e-desc" data-en="Added <code>permissions.denyInsteadOfPrompting</code> setting: a tool call that would wait on a permission prompt is denied and the turn continues, in terminal sessions, subagents and teammates"><code>permissions.denyInsteadOfPrompting</code> 설정 추가: 권한 프롬프트를 기다릴 툴 호출은 거부되고 턴 계속(터미널·서브에이전트·팀원)</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Added <code>/claude-api latency-optimize</code> to find where your Claude API code makes people wait and try faster settings against your eval</span>
+      <span class="e-desc" data-en="Added <code>/claude-api latency-optimize</code> to find where your Claude API code makes people wait and try faster settings against your eval">Claude API 코드의 지연 위치 파악 및 평가 대비 빠른 설정 시도를 위한 <code>/claude-api latency-optimize</code> 추가</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Added the <code>CLAUDE_CODE_DISABLE_FEATURE_FLAGS</code> environment variable, which stops feature-flag fetching without turning off telemetry; every flag then uses its built-in default</span>
+      <span class="e-desc" data-en="Added the <code>CLAUDE_CODE_DISABLE_FEATURE_FLAGS</code> environment variable, which stops feature-flag fetching without turning off telemetry; every flag then uses its built-in default">텔레메트리 유지하면서 기능 플래그 가져오기를 중단하는 <code>CLAUDE_CODE_DISABLE_FEATURE_FLAGS</code> 환경 변수 추가; 모든 플래그는 내장 기본값 사용</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Added spend for today, this week and this month to <code>/usage</code> for developers behind a Claude apps gateway who have no spend limit, when the gateway runs this version or later</span>
+      <span class="e-desc" data-en="Added spend for today, this week and this month to <code>/usage</code> for developers behind a Claude apps gateway who have no spend limit, when the gateway runs this version or later">지출 한도 없는 Claude 앱 게이트웨이 뒤 개발자의 <code>/usage</code>에 오늘·이번 주·이번 달 지출 추가(게이트웨이가 이 버전 이상 실행 시)</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Added <code>admin.pooled_conflict_rule</code> and <code>admin.pooled_priority_order</code> to the Claude apps gateway, to set which pooled group budget pays first for a developer in several groups</span>
+      <span class="e-desc" data-en="Added <code>admin.pooled_conflict_rule</code> and <code>admin.pooled_priority_order</code> to the Claude apps gateway, to set which pooled group budget pays first for a developer in several groups">Claude 앱 게이트웨이에 <code>admin.pooled_conflict_rule</code>·<code>admin.pooled_priority_order</code> 추가 — 여러 그룹의 개발자에 대한 공유 그룹 예산 우선순위 설정</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Added an optional <code>login_notice</code> setting to the Claude apps gateway that shows an operator-defined message on the gateway's browser verification page and on Claude Code's sign-in screen</span>
+      <span class="e-desc" data-en="Added an optional <code>login_notice</code> setting to the Claude apps gateway that shows an operator-defined message on the gateway's browser verification page and on Claude Code's sign-in screen">Claude 앱 게이트웨이에 선택적 <code>login_notice</code> 설정 추가 — 게이트웨이 브라우저 인증·Claude Code 로그인 화면에 운영자 정의 메시지 표시</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Added <code>CLAUDE_GATEWAY_LOG_FORMAT=json</code> to the Claude apps gateway: operational log lines become JSON with <code>severity</code>, <code>time</code> and <code>message</code>, for log collectors that read the level from a field</span>
+      <span class="e-desc" data-en="Added <code>CLAUDE_GATEWAY_LOG_FORMAT=json</code> to the Claude apps gateway: operational log lines become JSON with <code>severity</code>, <code>time</code> and <code>message</code>, for log collectors that read the level from a field">Claude 앱 게이트웨이에 <code>CLAUDE_GATEWAY_LOG_FORMAT=json</code> 추가: 운영 로그 줄이 <code>severity</code>·<code>time</code>·<code>message</code> 필드의 JSON으로 변환 — 필드에서 레벨을 읽는 로그 수집기용</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Added a Claude apps gateway boot warning for a case where another policy's <code>availableModels</code> also allows a custom model id that one policy lists by name</span>
+      <span class="e-desc" data-en="Added a Claude apps gateway boot warning for a case where another policy's <code>availableModels</code> also allows a custom model id that one policy lists by name">다른 정책의 <code>availableModels</code>가 한 정책에서 이름으로 나열된 커스텀 모델 ID를 허용하는 경우에 대한 Claude 앱 게이트웨이 부팅 경고 추가</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Added start-up warnings to the Claude apps gateway for policies with no <code>desktopHome</code> that rely on <code>coworkTabEnabled: false</code> or <code>chatSessionRetentionDays</code>, ahead of Claude Desktop's November 10 change</span>
+      <span class="e-desc" data-en="Added start-up warnings to the Claude apps gateway for policies with no <code>desktopHome</code> that rely on <code>coworkTabEnabled: false</code> or <code>chatSessionRetentionDays</code>, ahead of Claude Desktop's November 10 change"><code>desktopHome</code> 없이 <code>coworkTabEnabled: false</code>·<code>chatSessionRetentionDays</code>에 의존하는 정책에 대한 Claude 앱 게이트웨이 시작 경고 추가 — Claude Desktop 11월 10일 변경 사전 대비</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Added a warning when your claude.ai login ends and Claude Code continues on the sign-in from <code>ant auth login</code>, which bills usage to your Claude Console organization</span>
+      <span class="e-desc" data-en="Added a warning when your claude.ai login ends and Claude Code continues on the sign-in from <code>ant auth login</code>, which bills usage to your Claude Console organization">claude.ai 로그인 종료 후 <code>ant auth login</code>의 로그인으로 계속 실행 시 경고 추가 — 사용량이 Claude Console 조직에 청구됨</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Added a line at startup naming the Claude Console organization that is billed in a case where Claude Code uses the sign-in from <code>ant auth login</code></span>
+      <span class="e-desc" data-en="Added a line at startup naming the Claude Console organization that is billed in a case where Claude Code uses the sign-in from <code>ant auth login</code>"><code>ant auth login</code> 로그인 사용 시 청구되는 Claude Console 조직을 시작 시 명시하는 줄 추가</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Added an "Earlier in this session" row to <code>/tasks</code> that lists finished subagents, so you can reopen one and message it even after it leaves the list or you restart</span>
+      <span class="e-desc" data-en="Added an &quot;Earlier in this session&quot; row to <code>/tasks</code> that lists finished subagents, so you can reopen one and message it even after it leaves the list or you restart">완료된 서브에이전트를 나열하는 &quot;Earlier in this session&quot; 행을 <code>/tasks</code>에 추가 — 목록에서 사라지거나 재시작 후에도 다시 열어 메시지 전송 가능</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Added a note to <code>/loop</code> confirmations in cloud sessions that a timer stops with its container, with an offer of a loop that survives</span>
+      <span class="e-desc" data-en="Added a note to <code>/loop</code> confirmations in cloud sessions that a timer stops with its container, with an offer of a loop that survives">클라우드 세션의 <code>/loop</code> 확인에 타이머가 컨테이너와 함께 중단된다는 안내 및 지속 가능한 루프 제안 추가</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Changed MCP tasks to work in the terminal without feature-flag fetching (Bedrock, Vertex, Foundry, LLM gateways, <code>DISABLE_TELEMETRY</code>); set <code>CLAUDE_CODE_DISABLE_MCP_TASKS=1</code> to turn them off</span>
+      <span class="e-desc" data-en="Changed MCP tasks to work in the terminal without feature-flag fetching (Bedrock, Vertex, Foundry, LLM gateways, <code>DISABLE_TELEMETRY</code>); set <code>CLAUDE_CODE_DISABLE_MCP_TASKS=1</code> to turn them off">기능 플래그 가져오기 없이 터미널에서 MCP 작업 동작하도록 변경(Bedrock·Vertex·Foundry·LLM 게이트웨이·<code>DISABLE_TELEMETRY</code>); 비활성화하려면 <code>CLAUDE_CODE_DISABLE_MCP_TASKS=1</code> 설정</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Changed auto mode so that a project's settings files or a plugin can no longer switch its server-side check back on once you have switched it off outside the project</span>
+      <span class="e-desc" data-en="Changed auto mode so that a project's settings files or a plugin can no longer switch its server-side check back on once you have switched it off outside the project">프로젝트 외부에서 서버측 검사를 끈 후 프로젝트 설정 파일·플러그인이 다시 켤 수 없도록 Auto 모드 변경</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Changed Monitor's WebSocket watch to follow a rule on every Bash command: a deny refuses it, and under an ask rule an allow on Monitor, bypass mode or auto mode no longer skips the prompt</span>
+      <span class="e-desc" data-en="Changed Monitor's WebSocket watch to follow a rule on every Bash command: a deny refuses it, and under an ask rule an allow on Monitor, bypass mode or auto mode no longer skips the prompt">Monitor의 WebSocket 감시가 모든 Bash 명령에 규칙을 따르도록 변경: deny는 거부, ask 규칙에서 Monitor·bypass·auto 모드의 허용이 더 이상 프롬프트를 건너뛰지 않음</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Changed <code>CLAUDE_CODE_PROXY_RESOLVES_HOSTS</code> so that settings files can no longer set it where the host manages the network; set it in the process environment</span>
+      <span class="e-desc" data-en="Changed <code>CLAUDE_CODE_PROXY_RESOLVES_HOSTS</code> so that settings files can no longer set it where the host manages the network; set it in the process environment">호스트가 네트워크를 관리하는 곳에서 설정 파일이 더 이상 <code>CLAUDE_CODE_PROXY_RESOLVES_HOSTS</code>를 설정할 수 없도록 변경; 프로세스 환경에서 설정</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Changed a session's exact Bash or PowerShell ask rule to be refused, not asked about, when a broader deny rule covers the command</span>
+      <span class="e-desc" data-en="Changed a session's exact Bash or PowerShell ask rule to be refused, not asked about, when a broader deny rule covers the command">더 넓은 deny 규칙이 명령을 포함할 때 세션의 정확한 Bash·PowerShell ask 규칙을 질문 대신 거부로 변경</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Changed the Bash tool to ask for permission before running <code>which</code> with flags outside a lookup/display set</span>
+      <span class="e-desc" data-en="Changed the Bash tool to ask for permission before running <code>which</code> with flags outside a lookup/display set">조회·표시 외의 플래그로 <code>which</code> 실행 시 권한 요청하도록 Bash 도구 변경</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Changed <code>--add-dir</code> directories to register plugin marketplaces only once that directory's own trust dialog has been accepted</span>
+      <span class="e-desc" data-en="Changed <code>--add-dir</code> directories to register plugin marketplaces only once that directory's own trust dialog has been accepted">해당 디렉터리의 신뢰 대화상자를 수락한 후에만 플러그인 마켓플레이스를 등록하도록 <code>--add-dir</code> 디렉터리 변경</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Changed nested skill loading: with the Bash sandbox on, skills in <code>.claude/skills</code> folders below the starting folder load only if you start Claude Code there or <code>/cd</code> there</span>
+      <span class="e-desc" data-en="Changed nested skill loading: with the Bash sandbox on, skills in <code>.claude/skills</code> folders below the starting folder load only if you start Claude Code there or <code>/cd</code> there">중첩 스킬 로딩 변경: Bash 샌드박스 켜진 상태에서 시작 폴더 하위 <code>.claude/skills</code>의 스킬은 Claude Code를 그곳에서 시작하거나 <code>/cd</code>로 이동 시에만 로드</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Changed self-paced <code>/loop</code> to end when a turn finishes without rescheduling, instead of scheduling a fallback wakeup; set <code>CLAUDE_CODE_LOOP_KEEPALIVE=1</code> to keep the old behavior</span>
+      <span class="e-desc" data-en="Changed self-paced <code>/loop</code> to end when a turn finishes without rescheduling, instead of scheduling a fallback wakeup; set <code>CLAUDE_CODE_LOOP_KEEPALIVE=1</code> to keep the old behavior">자가 조절 <code>/loop</code>가 재예약 없이 턴 완료 시 종료되도록 변경(대신 폴백 웨이크업 예약 없음); 이전 동작 유지하려면 <code>CLAUDE_CODE_LOOP_KEEPALIVE=1</code> 설정</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Changed PostToolUse hooks to run, with up to 10 seconds to finish, on tool calls that finish after a new message interrupts the turn</span>
+      <span class="e-desc" data-en="Changed PostToolUse hooks to run, with up to 10 seconds to finish, on tool calls that finish after a new message interrupts the turn">새 메시지가 턴을 중단한 후 완료되는 툴 호출에서 PostToolUse 훅이 최대 10초 내에 실행되도록 변경</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Changed what Claude is told after safeguards stop a subagent: retry with a narrower prompt or tell you, instead of doing the work itself</span>
+      <span class="e-desc" data-en="Changed what Claude is told after safeguards stop a subagent: retry with a narrower prompt or tell you, instead of doing the work itself">안전 장치가 서브에이전트를 중단한 후 Claude에게 전달하는 내용 변경: 직접 작업 대신 더 좁은 프롬프트로 재시도하거나 사용자에게 알리도록</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Changed cloud sessions to drop session-scoped allow rules at a move to a new worker when their deny and ask rules can't all be kept, so you may be asked again</span>
+      <span class="e-desc" data-en="Changed cloud sessions to drop session-scoped allow rules at a move to a new worker when their deny and ask rules can't all be kept, so you may be asked again">클라우드 세션이 새 워커로 이동 시 deny·ask 규칙을 모두 유지할 수 없으면 세션 범위 allow 규칙 삭제 — 다시 질문받을 수 있음</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Changed the automatic certificate repair behind a TLS-inspecting proxy: it no longer runs when <code>ALL_PROXY</code> is the only proxy variable set. Set <code>HTTPS_PROXY</code> to the proxy's http:// URL instead</span>
+      <span class="e-desc" data-en="Changed the automatic certificate repair behind a TLS-inspecting proxy: it no longer runs when <code>ALL_PROXY</code> is the only proxy variable set. Set <code>HTTPS_PROXY</code> to the proxy's http:// URL instead">TLS 검사 프록시 뒤 자동 인증서 복구 변경: <code>ALL_PROXY</code>만 설정된 경우 더 이상 실행 안 됨. 대신 프록시의 http:// URL을 <code>HTTPS_PROXY</code>에 설정</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Changed artifact database saves of rows others may have written: each file gets a hidden marker file, and existing files without one, earlier versions' exports among them, are left alone and reported</span>
+      <span class="e-desc" data-en="Changed artifact database saves of rows others may have written: each file gets a hidden marker file, and existing files without one, earlier versions' exports among them, are left alone and reported">다른 사람이 쓴 행의 아티팩트 DB 저장 변경: 각 파일에 숨겨진 마커 파일 생성, 마커 없는 기존 파일(이전 버전 내보내기 포함)은 그대로 두고 보고</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Updated <code>/claude-api managed-agents-onboard</code> templates to match the Claude Console: removed Performance tuner, renamed two, and turned off web search and fetch in five whose prompts don't use them</span>
+      <span class="e-desc" data-en="Updated <code>/claude-api managed-agents-onboard</code> templates to match the Claude Console: removed Performance tuner, renamed two, and turned off web search and fetch in five whose prompts don't use them"><code>/claude-api managed-agents-onboard</code> 템플릿을 Claude Console에 맞게 업데이트: Performance tuner 제거, 두 개 이름 변경, 프롬프트에서 사용하지 않는 다섯 개의 웹 검색·가져오기 비활성화</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Removed <code>shortcuts_list</code> and <code>shortcuts_execute</code>, which listed and started shortcuts saved in the extension, from Claude Code's built-in Claude in Chrome tools</span>
+      <span class="e-desc" data-en="Removed <code>shortcuts_list</code> and <code>shortcuts_execute</code>, which listed and started shortcuts saved in the extension, from Claude Code's built-in Claude in Chrome tools">Claude Code 내장 Chrome용 Claude 도구에서 확장 프로그램에 저장된 단축키를 나열·시작하는 <code>shortcuts_list</code>·<code>shortcuts_execute</code> 제거</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Gateway: Added startup warnings for upstreams that mix AWS GovCloud with other upstreams, and for base URL variables in the gateway's environment</span>
+      <span class="e-desc" data-en="Gateway: Added startup warnings for upstreams that mix AWS GovCloud with other upstreams, and for base URL variables in the gateway's environment">게이트웨이: AWS GovCloud와 다른 업스트림을 혼용하는 업스트림 및 게이트웨이 환경의 기본 URL 변수에 대한 시작 경고 추가</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Gateway: Added a start-up log warning when managed settings name an Amazon Bedrock guardrail in a header, which the gateway doesn't forward, and no <code>bedrock</code> upstream sets a <code>guardrail</code></span>
+      <span class="e-desc" data-en="Gateway: Added a start-up log warning when managed settings name an Amazon Bedrock guardrail in a header, which the gateway doesn't forward, and no <code>bedrock</code> upstream sets a <code>guardrail</code>">게이트웨이: 관리형 설정이 헤더에 Amazon Bedrock 가드레일을 명시하지만 게이트웨이가 전달하지 않고 <code>bedrock</code> 업스트림에 <code>guardrail</code>이 없을 때 시작 로그 경고 추가</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Gateway: Fixed Claude Desktop offering a web search tool that always failed when every upstream is Amazon Bedrock</span>
+      <span class="e-desc" data-en="Gateway: Fixed Claude Desktop offering a web search tool that always failed when every upstream is Amazon Bedrock">게이트웨이: 모든 업스트림이 Amazon Bedrock일 때 항상 실패하는 웹 검색 도구를 Claude Desktop이 제공하던 문제 수정</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Self-hosted runner: Fixed a runner started with <code>--use-anthropic-git-proxy</code> or <code>--configure-git</code> registering before a failed startup check made it exit; it now exits first</span>
+      <span class="e-desc" data-en="Self-hosted runner: Fixed a runner started with <code>--use-anthropic-git-proxy</code> or <code>--configure-git</code> registering before a failed startup check made it exit; it now exits first">자체 호스팅 러너: <code>--use-anthropic-git-proxy</code>·<code>--configure-git</code>으로 시작된 러너가 시작 검사 실패 전에 등록하던 문제 수정 — 이제 먼저 종료</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Self-hosted runner: Changed <code>CLAUDE_RUNNER_CHECKOUT_PATH</code> so that each repository in a session gets its own folder: a folder name already taken in the session gets <code>-2</code>, <code>-3</code>, … at the end</span>
+      <span class="e-desc" data-en="Self-hosted runner: Changed <code>CLAUDE_RUNNER_CHECKOUT_PATH</code> so that each repository in a session gets its own folder: a folder name already taken in the session gets <code>-2</code>, <code>-3</code>, … at the end">자체 호스팅 러너: 세션의 각 저장소가 자체 폴더를 갖도록 <code>CLAUDE_RUNNER_CHECKOUT_PATH</code> 변경 — 세션에서 이미 사용 중인 폴더 이름은 끝에 <code>-2</code>·<code>-3</code>·… 추가</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Self-hosted runner: Removed the end-of-session upload of a session's debug log; a failed session's log stays on the runner host unless <code>--remove-session-state</code> is set</span>
+      <span class="e-desc" data-en="Self-hosted runner: Removed the end-of-session upload of a session's debug log; a failed session's log stays on the runner host unless <code>--remove-session-state</code> is set">자체 호스팅 러너: 세션 종료 시 디버그 로그 업로드 제거 — 실패한 세션의 로그는 <code>--remove-session-state</code>가 설정되지 않으면 러너 호스트에 유지</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">[VSCode] Fixed prompts over 50,000 characters being cut off silently: the prompt now stays in the chat box with a notice, and a paste over the limit is refused with a notice</span>
+      <span class="e-desc" data-en="[VSCode] Fixed prompts over 50,000 characters being cut off silently: the prompt now stays in the chat box with a notice, and a paste over the limit is refused with a notice">[VSCode] 50,000자 초과 프롬프트가 무음으로 잘리던 문제 수정 — 이제 프롬프트가 안내와 함께 채팅 박스에 유지되고 한도 초과 붙여넣기는 안내와 함께 거부</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">[VSCode] Fixed a click on the survey or "Report a problem" buttons sending the unfinished prompt</span>
+      <span class="e-desc" data-en="[VSCode] Fixed a click on the survey or &quot;Report a problem&quot; buttons sending the unfinished prompt">[VSCode] 설문 또는 &quot;Report a problem&quot; 버튼 클릭 시 미완성 프롬프트가 전송되던 문제 수정</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">[VSCode] Fixed cloud sessions opened from the extension's Web tab bringing back turns that <code>/clear</code>, or Retry or Edit of a typed prompt, had removed</span>
+      <span class="e-desc" data-en="[VSCode] Fixed cloud sessions opened from the extension's Web tab bringing back turns that <code>/clear</code>, or Retry or Edit of a typed prompt, had removed">[VSCode] 확장 프로그램 Web 탭에서 열린 클라우드 세션이 <code>/clear</code>·입력 프롬프트의 재시도·편집으로 제거한 턴을 복원하던 문제 수정</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">[VSCode] Fixed a deleted session's file coming back when that session was renamed in the extension</span>
+      <span class="e-desc" data-en="[VSCode] Fixed a deleted session's file coming back when that session was renamed in the extension">[VSCode] 확장 프로그램에서 세션 이름 변경 시 삭제된 세션 파일이 복원되던 문제 수정</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">[VSCode] Fixed Claude carrying out an unapproved plan after a window reload: a step interrupted in plan mode now stops with a notice when the session comes back in another permission mode</span>
+      <span class="e-desc" data-en="[VSCode] Fixed Claude carrying out an unapproved plan after a window reload: a step interrupted in plan mode now stops with a notice when the session comes back in another permission mode">[VSCode] 창 재로드 후 미승인 계획을 Claude가 실행하던 문제 수정 — 계획 모드에서 중단된 단계가 다른 권한 모드로 세션 복귀 시 안내와 함께 중단</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">[VSCode] Changed links in Claude's replies that point at Claude sign-in, connector or API addresses to show as text with the address, instead of opening in the browser</span>
+      <span class="e-desc" data-en="[VSCode] Changed links in Claude's replies that point at Claude sign-in, connector or API addresses to show as text with the address, instead of opening in the browser">[VSCode] Claude 답변의 로그인·커넥터·API 주소 링크가 브라우저 열기 대신 주소와 함께 텍스트로 표시되도록 변경</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">[VSCode] Fixed a possible chat panel freeze when a dropped item's path contains a very long run of "/" characters</span>
+      <span class="e-desc" data-en="[VSCode] Fixed a possible chat panel freeze when a dropped item's path contains a very long run of &quot;/&quot; characters">[VSCode] 드롭한 항목의 경로에 &quot;/&quot; 문자가 매우 길게 이어질 때 채팅 패널이 멈출 수 있던 문제 수정</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">[VSCode] Fixed the <code>claude-vscode.toggleDictation</code> command starting dictation in every open Claude view at once; it now acts only in the view you are using, and a second press stops it</span>
+      <span class="e-desc" data-en="[VSCode] Fixed the <code>claude-vscode.toggleDictation</code> command starting dictation in every open Claude view at once; it now acts only in the view you are using, and a second press stops it">[VSCode] <code>claude-vscode.toggleDictation</code> 명령이 열린 모든 Claude 뷰에서 동시에 받아쓰기를 시작하던 문제 수정 — 이제 현재 뷰에서만 작동하고 두 번 누르면 중단</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">[VSCode] Fixed the chat panel slowing down while a reply with many unclosed <code>$$</code> math fences, each shorter than the last, streams in</span>
+      <span class="e-desc" data-en="[VSCode] Fixed the chat panel slowing down while a reply with many unclosed <code>$$</code> math fences, each shorter than the last, streams in">[VSCode] 각각 이전보다 짧은 닫히지 않은 <code>$$</code> 수식 펜스가 많은 답변이 스트리밍되는 동안 채팅 패널이 느려지던 문제 수정</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">[Cloud sessions] Fixed scheduled tasks silently dropping a connector named memory: runs now keep it, mounted under that name plus a short suffix</span>
+      <span class="e-desc" data-en="[Cloud sessions] Fixed scheduled tasks silently dropping a connector named memory: runs now keep it, mounted under that name plus a short suffix">[Cloud sessions] 예약 작업이 memory라는 이름의 커넥터를 무음으로 삭제하던 문제 수정 — 이제 해당 이름과 짧은 접미사로 마운트되어 유지</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">[Cloud sessions] Fixed Send now on a waiting message in cloud sessions ending running background agents; they now keep running</span>
+      <span class="e-desc" data-en="[Cloud sessions] Fixed Send now on a waiting message in cloud sessions ending running background agents; they now keep running">[Cloud sessions] 클라우드 세션의 대기 메시지에서 지금 전송이 실행 중인 백그라운드 에이전트를 종료하던 문제 수정 — 이제 계속 실행</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">[Code Review] Changed unlinking a GitHub organization to also turn off its All repositories setting in Code Review; it stays off after you relink until you turn it back on</span>
+      <span class="e-desc" data-en="[Code Review] Changed unlinking a GitHub organization to also turn off its All repositories setting in Code Review; it stays off after you relink until you turn it back on">[Code Review] GitHub 조직 연결 해제 시 Code Review의 모든 저장소 설정도 비활성화되도록 변경 — 재연결 후에도 직접 켜기 전까지 꺼진 상태 유지</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">[Claude Tag] Fixed Claude Tag setup blocking launch when the channel list couldn't fully load; admins can now launch without picking a channel</span>
+      <span class="e-desc" data-en="[Claude Tag] Fixed Claude Tag setup blocking launch when the channel list couldn't fully load; admins can now launch without picking a channel">[Claude Tag] 채널 목록이 완전히 로드되지 않을 때 Claude Tag 설정이 실행을 막던 문제 수정 — 이제 채널 선택 없이 실행 가능</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">[Claude Tag] Added a Claude Tag row to the Models admin page for Enterprise orgs with Claude Tag connected, linking to where its model defaults are managed</span>
+      <span class="e-desc" data-en="[Claude Tag] Added a Claude Tag row to the Models admin page for Enterprise orgs with Claude Tag connected, linking to where its model defaults are managed">[Claude Tag] Claude Tag가 연결된 Enterprise 조직의 모델 관리 페이지에 모델 기본값 관리 위치로 연결되는 Claude Tag 행 추가</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">[Claude Tag] Fixed saving auto mode allow rules in Claude Tag admin settings overwriting another admin's changes; the save is now refused with a message</span>
+      <span class="e-desc" data-en="[Claude Tag] Fixed saving auto mode allow rules in Claude Tag admin settings overwriting another admin's changes; the save is now refused with a message">[Claude Tag] Claude Tag 관리 설정에서 auto 모드 허용 규칙 저장이 다른 관리자의 변경사항을 덮어쓰던 문제 수정 — 이제 메시지와 함께 저장 거부</span>
     </div>
     <div class="tabs-container">
       <div class="tabs-bar">
@@ -1449,115 +1449,115 @@ html[data-tab="home"] .ptools,html[data-tab="home"] .ptop,html[data-tab="home"] 
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Added a record of your answer when Claude Code asks to turn on the mods it writes in a session</span>
+      <span class="e-desc" data-en="Added a record of your answer when Claude Code asks to turn on the mods it writes in a session">세션에서 작성한 모드를 켜달라는 Claude Code의 질문에 대한 답변 기록 추가</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Added <code>assume_role</code> on <code>mantle</code> upstreams of the Claude apps gateway, for a role in another AWS account and for per-developer AWS cost attribution</span>
+      <span class="e-desc" data-en="Added <code>assume_role</code> on <code>mantle</code> upstreams of the Claude apps gateway, for a role in another AWS account and for per-developer AWS cost attribution">Claude 앱 게이트웨이의 <code>mantle</code> 업스트림에 <code>assume_role</code> 추가 — 다른 AWS 계정의 역할 및 개발자별 AWS 비용 귀속</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Added an <code>effort</code> option to a mod's <code>$.model.fork</code>, so a quick side job can run at <code>low</code> whatever effort the session uses; the result reports the effort sent</span>
+      <span class="e-desc" data-en="Added an <code>effort</code> option to a mod's <code>$.model.fork</code>, so a quick side job can run at <code>low</code> whatever effort the session uses; the result reports the effort sent">모드의 <code>$.model.fork</code>에 <code>effort</code> 옵션 추가 — 세션 노력 수준과 무관하게 빠른 보조 작업을 <code>low</code>로 실행; 결과에 전송된 노력 수준 보고</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Added the date a stored claude.ai sign-in ends to <code>claude auth status</code> (<code>loginExpiresAt</code>) and to <code>claude -p</code> JSON results (<code>credential_expires_at</code>)</span>
+      <span class="e-desc" data-en="Added the date a stored claude.ai sign-in ends to <code>claude auth status</code> (<code>loginExpiresAt</code>) and to <code>claude -p</code> JSON results (<code>credential_expires_at</code>)">저장된 claude.ai 로그인 만료 날짜를 <code>claude auth status</code>(<code>loginExpiresAt</code>)·<code>claude -p</code> JSON 결과(<code>credential_expires_at</code>)에 추가</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Added a one-line stderr warning to <code>claude -p</code> text output, starting 10 days before a stored claude.ai sign-in ends</span>
+      <span class="e-desc" data-en="Added a one-line stderr warning to <code>claude -p</code> text output, starting 10 days before a stored claude.ai sign-in ends">저장된 claude.ai 로그인 만료 10일 전부터 <code>claude -p</code> 텍스트 출력에 한 줄 stderr 경고 추가</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Changed Claude Code to no longer install or update the IDE extension when started in an IDE terminal; use <code>/ide</code> from an outside terminal or your editor's extensions view</span>
+      <span class="e-desc" data-en="Changed Claude Code to no longer install or update the IDE extension when started in an IDE terminal; use <code>/ide</code> from an outside terminal or your editor's extensions view">IDE 터미널에서 시작 시 IDE 확장 프로그램을 더 이상 설치·업데이트하지 않도록 Claude Code 변경; 외부 터미널의 <code>/ide</code> 또는 편집기 확장 프로그램 뷰 사용</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Changed subagents to stop instead of switching models when "Switch models when a message is flagged" is set to "Ask each time"</span>
+      <span class="e-desc" data-en="Changed subagents to stop instead of switching models when &quot;Switch models when a message is flagged&quot; is set to &quot;Ask each time&quot;">&quot;Switch models when a message is flagged&quot;가 &quot;Ask each time&quot;으로 설정 시 서브에이전트가 모델 전환 대신 중단되도록 변경</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Changed background subagents to move a shell command to the background after 3 minutes on all providers, so the prompt cache doesn't expire while it runs</span>
+      <span class="e-desc" data-en="Changed background subagents to move a shell command to the background after 3 minutes on all providers, so the prompt cache doesn't expire while it runs">프롬프트 캐시 만료 방지를 위해 모든 공급자에서 3분 후 쉘 명령을 백그라운드로 이동하도록 백그라운드 서브에이전트 변경</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Changed subagent progress summaries on Bedrock, Vertex, Foundry, or with telemetry off: on a cold prompt cache, one can now wait up to 5 minutes for the subagent's pending response</span>
+      <span class="e-desc" data-en="Changed subagent progress summaries on Bedrock, Vertex, Foundry, or with telemetry off: on a cold prompt cache, one can now wait up to 5 minutes for the subagent's pending response">Bedrock·Vertex·Foundry 또는 텔레메트리 꺼짐 시 서브에이전트 진행 요약 변경: 프롬프트 캐시가 차가운 경우 대기 중인 응답을 최대 5분까지 대기 가능</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Changed what a mod attaches at <code>prompt.submit</code> to stay in the user's turn rather than go out as a system message</span>
+      <span class="e-desc" data-en="Changed what a mod attaches at <code>prompt.submit</code> to stay in the user's turn rather than go out as a system message">모드가 <code>prompt.submit</code>에 첨부하는 내용이 시스템 메시지로 나가는 대신 사용자 턴에 유지되도록 변경</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Changed <code>deniedMcpServers</code> URL entries to also block Anthropic-provided servers whose upstream URL matches, and connectors in cloud sessions and on self-hosted runners, where the session is given the connector's own URL; otherwise deny a connector by name</span>
+      <span class="e-desc" data-en="Changed <code>deniedMcpServers</code> URL entries to also block Anthropic-provided servers whose upstream URL matches, and connectors in cloud sessions and on self-hosted runners, where the session is given the connector's own URL; otherwise deny a connector by name"><code>deniedMcpServers</code> URL 항목이 업스트림 URL이 일치하는 Anthropic 제공 서버와 클라우드·자체 호스팅 러너의 커넥터도 차단하도록 변경(세션에 커넥터 고유 URL 제공 시); 그 외에는 이름으로 거부</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Changed the <code>/permissions</code> rule details, built-in rules and delete confirmation views to use the standard dialog; pressing Ctrl+C twice there now goes back or cancels instead of quitting</span>
+      <span class="e-desc" data-en="Changed the <code>/permissions</code> rule details, built-in rules and delete confirmation views to use the standard dialog; pressing Ctrl+C twice there now goes back or cancels instead of quitting"><code>/permissions</code> 규칙 세부정보·기본 제공 규칙·삭제 확인 뷰가 표준 대화상자를 사용하도록 변경; 거기서 Ctrl+C 두 번 누르면 종료 대신 뒤로 가기·취소</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Changed <code>/claude-api managed-agents-onboard</code> to give a new agent's built-in tools, and a quickstart template's MCP tools, the <code>auto</code> permission policy ("Judge risky actions") by default, matching the Claude Console; say "run without asking" to opt out</span>
+      <span class="e-desc" data-en="Changed <code>/claude-api managed-agents-onboard</code> to give a new agent's built-in tools, and a quickstart template's MCP tools, the <code>auto</code> permission policy (&quot;Judge risky actions&quot;) by default, matching the Claude Console; say &quot;run without asking&quot; to opt out">Claude Console과 일치하도록 <code>/claude-api managed-agents-onboard</code>가 새 에이전트의 기본 제공 도구 및 퀵스타트 템플릿의 MCP 도구에 <code>auto</code> 권한 정책(&quot;Judge risky actions&quot;)을 기본으로 부여하도록 변경; 옵트아웃하려면 &quot;run without asking&quot; 입력</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Removed the 2.1.288 fix that kept the model's earlier thinking when resuming a conversation started on 2.1.286 or earlier; that thinking can now be dropped</span>
+      <span class="e-desc" data-en="Removed the 2.1.288 fix that kept the model's earlier thinking when resuming a conversation started on 2.1.286 or earlier; that thinking can now be dropped">2.1.286 이전 버전에서 시작된 대화 재개 시 모델의 이전 사고를 유지하던 2.1.288 수정 사항 제거 — 이제 해당 사고 삭제 가능</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Gateway: Added a log warning when the Google access token from a federation (<code>external_account</code>) credentials file is about to expire</span>
+      <span class="e-desc" data-en="Gateway: Added a log warning when the Google access token from a federation (<code>external_account</code>) credentials file is about to expire">게이트웨이: 페더레이션(<code>external_account</code>) 자격증명 파일의 Google 액세스 토큰 만료 임박 시 로그 경고 추가</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Self-hosted runner: Added <code>CLAUDE_RUNNER_SPAWN_REASON</code> to the orchestrator's spawn-runner hook environment: why Anthropic sent the request (e.g. <code>runner_lost</code>, <code>resumed</code>); unset when none was sent</span>
+      <span class="e-desc" data-en="Self-hosted runner: Added <code>CLAUDE_RUNNER_SPAWN_REASON</code> to the orchestrator's spawn-runner hook environment: why Anthropic sent the request (e.g. <code>runner_lost</code>, <code>resumed</code>); unset when none was sent">자체 호스팅 러너: 오케스트레이터의 spawn-runner 훅 환경에 <code>CLAUDE_RUNNER_SPAWN_REASON</code> 추가 — Anthropic이 요청을 보낸 이유(예: <code>runner_lost</code>·<code>resumed</code>); 전송되지 않은 경우 미설정</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Self-hosted runner: Added a startup warning when <code>--release-idle-session-min</code> is the last argument with no value (still ignored) or has a value of only spaces (still read as <code>0</code>)</span>
+      <span class="e-desc" data-en="Self-hosted runner: Added a startup warning when <code>--release-idle-session-min</code> is the last argument with no value (still ignored) or has a value of only spaces (still read as <code>0</code>)">자체 호스팅 러너: <code>--release-idle-session-min</code>이 값 없는 마지막 인수(여전히 무시)이거나 공백만 있는 값(여전히 <code>0</code>으로 읽힘)일 때 시작 경고 추가</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Self-hosted runner: Changed the orchestrator's log lines: <code>ok session=…</code> now prints at every log level on stdout (was debug only, stderr) with <code>reason=…</code> after <code>jti=…</code>, and <code>nack session=…</code> ends its fields with <code>reason=…</code> after <code>retryable=…</code>; update scripts that match <code>retryable=true:</code> or <code>retryable=false:</code></span>
+      <span class="e-desc" data-en="Self-hosted runner: Changed the orchestrator's log lines: <code>ok session=…</code> now prints at every log level on stdout (was debug only, stderr) with <code>reason=…</code> after <code>jti=…</code>, and <code>nack session=…</code> ends its fields with <code>reason=…</code> after <code>retryable=…</code>; update scripts that match <code>retryable=true:</code> or <code>retryable=false:</code>">자체 호스팅 러너: 오케스트레이터 로그 줄 변경 — <code>ok session=…</code>이 이제 모든 로그 레벨에서 stdout에 출력(<code>jti=…</code> 뒤 <code>reason=…</code> 포함), <code>nack session=…</code>은 <code>retryable=…</code> 뒤 <code>reason=…</code>으로 종료; <code>retryable=true:</code>·<code>retryable=false:</code>를 매칭하는 스크립트 업데이트 필요</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Remote Control: Fixed a misleading "spawn error: ENOENT" when a session's working folder is missing; the error now names the folder</span>
+      <span class="e-desc" data-en="Remote Control: Fixed a misleading &quot;spawn error: ENOENT&quot; when a session's working folder is missing; the error now names the folder">Remote Control: 세션 작업 폴더가 없을 때 오해를 부르는 &quot;spawn error: ENOENT&quot;가 표시되던 문제 수정 — 이제 폴더 이름 명시</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">[VSCode] Fixed a window whose sign-in the organization's settings refuse starting a new Claude Code process in the background every minute</span>
+      <span class="e-desc" data-en="[VSCode] Fixed a window whose sign-in the organization's settings refuse starting a new Claude Code process in the background every minute">[VSCode] 조직 설정이 로그인을 거부한 창이 매분 새 Claude Code 프로세스를 백그라운드에서 시작하던 문제 수정</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">[VSCode] Fixed a long word in the chat panel's error banner pushing its close button out of view</span>
+      <span class="e-desc" data-en="[VSCode] Fixed a long word in the chat panel's error banner pushing its close button out of view">[VSCode] 채팅 패널 오류 배너의 긴 단어가 닫기 버튼을 화면 밖으로 밀어내던 문제 수정</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">[Cloud sessions] Added a No repository option: a cloud session on an Anthropic-hosted environment can now start without picking a repository</span>
+      <span class="e-desc" data-en="[Cloud sessions] Added a No repository option: a cloud session on an Anthropic-hosted environment can now start without picking a repository">[Cloud sessions] 저장소 없음 옵션 추가 — Anthropic 호스팅 환경의 클라우드 세션이 이제 저장소 선택 없이 시작 가능</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">[Cloud sessions] Added the usual Chrome names to cloud sessions, so tools other than Playwright can find the built-in Chromium through google-chrome and CHROME_PATH</span>
+      <span class="e-desc" data-en="[Cloud sessions] Added the usual Chrome names to cloud sessions, so tools other than Playwright can find the built-in Chromium through google-chrome and CHROME_PATH">[Cloud sessions] 클라우드 세션에 일반적인 Chrome 이름 추가 — Playwright 외 도구가 google-chrome·CHROME_PATH를 통해 내장 Chromium을 찾을 수 있음</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">[Cloud sessions] Added a New session button to the card shown when a cloud session's environment was deleted, where the message box is hidden</span>
+      <span class="e-desc" data-en="[Cloud sessions] Added a New session button to the card shown when a cloud session's environment was deleted, where the message box is hidden">[Cloud sessions] 클라우드 세션의 환경이 삭제돼 메시지 박스가 숨겨진 카드에 새 세션 버튼 추가</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">[Cloud sessions] Fixed reading GitHub Actions logs in cloud sessions: <code>gh run view --log</code> and <code>gh api</code> log requests now get the log in most environments, not an unreachable redirect</span>
+      <span class="e-desc" data-en="[Cloud sessions] Fixed reading GitHub Actions logs in cloud sessions: <code>gh run view --log</code> and <code>gh api</code> log requests now get the log in most environments, not an unreachable redirect">[Cloud sessions] 클라우드 세션에서 GitHub Actions 로그 읽기 수정 — <code>gh run view --log</code>·<code>gh api</code> 로그 요청이 대부분의 환경에서 도달 불가 리디렉트 대신 로그를 받음</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">[Cloud sessions] Changed connector search results to tell Claude that the search covers only part of the connector directory</span>
+      <span class="e-desc" data-en="[Cloud sessions] Changed connector search results to tell Claude that the search covers only part of the connector directory">[Cloud sessions] 커넥터 검색 결과가 검색이 커넥터 디렉터리의 일부만 커버한다고 Claude에 알리도록 변경</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">[Remote Control] Fixed side-by-side checkouts of one repository looking identical in the environment menu's Remote Control rows; each now shows its own folder name</span>
+      <span class="e-desc" data-en="[Remote Control] Fixed side-by-side checkouts of one repository looking identical in the environment menu's Remote Control rows; each now shows its own folder name">[Remote Control] 한 저장소의 나란히 체크아웃이 환경 메뉴 Remote Control 행에서 동일하게 보이던 문제 수정 — 이제 각자 폴더 이름 표시</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">[Claude Tag] Fixed keyboard focus and screen reader announcements in Claude Tag admin setup; pressing Escape in the connect form no longer also closes the Add dialog</span>
+      <span class="e-desc" data-en="[Claude Tag] Fixed keyboard focus and screen reader announcements in Claude Tag admin setup; pressing Escape in the connect form no longer also closes the Add dialog">[Claude Tag] Claude Tag 관리 설정의 키보드 포커스·스크린 리더 알림 수정 — 연결 폼에서 Escape 누를 때 더 이상 추가 대화상자도 닫히지 않음</span>
     </div>
     <div class="tabs-container">
       <div class="tabs-bar">
@@ -1646,131 +1646,131 @@ html[data-tab="home"] .ptools,html[data-tab="home"] .ptop,html[data-tab="home"] 
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Added a warning to <code>/schedule</code> when a new cloud scheduled task gets connectors you did not ask for, with how to remove them</span>
+      <span class="e-desc" data-en="Added a warning to <code>/schedule</code> when a new cloud scheduled task gets connectors you did not ask for, with how to remove them">새 클라우드 예약 작업에 요청하지 않은 커넥터가 추가될 때 제거 방법과 함께 <code>/schedule</code>에 경고 추가</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Added a check that asks before a web or shell tool call sends your account email address to the network</span>
+      <span class="e-desc" data-en="Added a check that asks before a web or shell tool call sends your account email address to the network">웹·쉘 툴 호출이 계정 이메일 주소를 네트워크로 전송하기 전 확인하는 검사 추가</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Added <code>onFailure: "block"</code> for Agent SDK hook callbacks, so a callback that fails blocks the action instead of letting it run</span>
+      <span class="e-desc" data-en="Added <code>onFailure: &quot;block&quot;</code> for Agent SDK hook callbacks, so a callback that fails blocks the action instead of letting it run">Agent SDK 훅 콜백에 <code>onFailure: &quot;block&quot;</code> 추가 — 실패한 콜백이 작업을 허용 대신 차단</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Added a notice in Claude Desktop's Code tab when your organization's remote managed settings haven't loaded for the session, and another once they do</span>
+      <span class="e-desc" data-en="Added a notice in Claude Desktop's Code tab when your organization's remote managed settings haven't loaded for the session, and another once they do">Claude Desktop 코드 탭에 세션에서 조직의 원격 관리 설정이 로드되지 않은 경우와 로드된 후 각각 알림 추가</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Added a notice when auto mode's check has no answer for a subagent's tool call, which used to leave nothing in the main view</span>
+      <span class="e-desc" data-en="Added a notice when auto mode's check has no answer for a subagent's tool call, which used to leave nothing in the main view">Auto 모드 검사가 서브에이전트의 툴 호출에 답변이 없을 때(기존에는 메인 뷰에 아무것도 표시 안 됨) 알림 추가</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Added <code>anthropic.plan</code>, <code>anthropic.seat_type</code>, <code>anthropic.provider</code> and <code>anthropic.custom_base_url</code> to OTel metrics, events and spans</span>
+      <span class="e-desc" data-en="Added <code>anthropic.plan</code>, <code>anthropic.seat_type</code>, <code>anthropic.provider</code> and <code>anthropic.custom_base_url</code> to OTel metrics, events and spans">OTel 메트릭·이벤트·스팬에 <code>anthropic.plan</code>·<code>anthropic.seat_type</code>·<code>anthropic.provider</code>·<code>anthropic.custom_base_url</code> 추가</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Added a cost report to the Claude apps gateway admin API, <code>GET /v1/organizations/analytics/cost</code>, for reading past spend over a date range in total, per developer, per day or per IdP group</span>
+      <span class="e-desc" data-en="Added a cost report to the Claude apps gateway admin API, <code>GET /v1/organizations/analytics/cost</code>, for reading past spend over a date range in total, per developer, per day or per IdP group">Claude 앱 게이트웨이 관리 API에 비용 보고서 추가(<code>GET /v1/organizations/analytics/cost</code>) — 날짜 범위의 과거 지출을 전체·개발자별·일별·IdP 그룹별로 조회</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Added a daily record of each developer's IdP groups on Claude apps gateways with <code>admin:</code> set, kept for <code>admin.identity_retention_days</code>, which the cost report groups by</span>
+      <span class="e-desc" data-en="Added a daily record of each developer's IdP groups on Claude apps gateways with <code>admin:</code> set, kept for <code>admin.identity_retention_days</code>, which the cost report groups by"><code>admin:</code>이 설정된 Claude 앱 게이트웨이에서 각 개발자의 IdP 그룹을 <code>admin.identity_retention_days</code>만큼 보관하는 일별 기록 추가 — 비용 보고서가 이를 기준으로 그룹화</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Added <code>CLAUDE_CODE_DISABLE_NESTED_SESSION_ID</code>: set it to <code>1</code> on a self-hosted runner to have <code>claude -p</code> run inside a session use that session's ID and transcript, as in earlier versions</span>
+      <span class="e-desc" data-en="Added <code>CLAUDE_CODE_DISABLE_NESTED_SESSION_ID</code>: set it to <code>1</code> on a self-hosted runner to have <code>claude -p</code> run inside a session use that session's ID and transcript, as in earlier versions"><code>CLAUDE_CODE_DISABLE_NESTED_SESSION_ID</code> 추가: 자체 호스팅 러너에서 <code>1</code>로 설정하면 세션 내 <code>claude -p</code> 실행이 이전 버전처럼 해당 세션의 ID·트랜스크립트 사용</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Changed SendMessage so a message to a running background agent arrives earlier: its running command moves to the background, without being stopped</span>
+      <span class="e-desc" data-en="Changed SendMessage so a message to a running background agent arrives earlier: its running command moves to the background, without being stopped">실행 중인 백그라운드 에이전트에 보낸 메시지가 더 일찍 도달하도록 SendMessage 변경 — 실행 중인 명령이 중단 없이 백그라운드로 이동</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Changed subagents and teammates on a different model from the main conversation to use that model's saved effort level or its default, instead of the session's effort level</span>
+      <span class="e-desc" data-en="Changed subagents and teammates on a different model from the main conversation to use that model's saved effort level or its default, instead of the session's effort level">메인 대화와 다른 모델의 서브에이전트·팀원이 세션 노력 수준 대신 해당 모델의 저장된 노력 수준 또는 기본값을 사용하도록 변경</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Changed exit to skip the "Background work is running" prompt for plugin monitors</span>
+      <span class="e-desc" data-en="Changed exit to skip the &quot;Background work is running&quot; prompt for plugin monitors">플러그인 모니터에 대한 &quot;Background work is running&quot; 프롬프트를 종료 시 건너뛰도록 변경</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Changed the built-in <code>plugin-authoring</code> skill to offer once, after a mod you built works, to help share the mod</span>
+      <span class="e-desc" data-en="Changed the built-in <code>plugin-authoring</code> skill to offer once, after a mod you built works, to help share the mod">빌드한 모드가 작동한 후 한 번 모드 공유 도움을 제안하도록 기본 제공 <code>plugin-authoring</code> 스킬 변경</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Removed the Read tool's "file unchanged since your last Read" stub: reading an unchanged file again returns its content</span>
+      <span class="e-desc" data-en="Removed the Read tool's &quot;file unchanged since your last Read&quot; stub: reading an unchanged file again returns its content">Read 도구의 &quot;file unchanged since your last Read&quot; 스텁 제거 — 변경되지 않은 파일을 다시 읽으면 내용 반환</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Windows: Fixed every tool call being refused on some volumes where the native path lookup fails; the working-directory check now compares the folder's identity instead</span>
+      <span class="e-desc" data-en="Windows: Fixed every tool call being refused on some volumes where the native path lookup fails; the working-directory check now compares the folder's identity instead">Windows: 기본 경로 조회가 실패하는 일부 볼륨에서 모든 툴 호출이 거부되던 문제 수정 — 작업 디렉터리 검사가 이제 폴더 ID로 비교</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Windows: Fixed the session scratchpad and other temporary paths growing with your project's path length in sessions not started by Claude Desktop, which made repositories cloned into them hit the 260-character path limit</span>
+      <span class="e-desc" data-en="Windows: Fixed the session scratchpad and other temporary paths growing with your project's path length in sessions not started by Claude Desktop, which made repositories cloned into them hit the 260-character path limit">Windows: Claude Desktop이 시작하지 않은 세션에서 세션 스크래치패드·임시 경로가 프로젝트 경로 길이와 함께 증가하던 문제 수정 — 복제된 저장소가 260자 경로 한도에 도달하는 현상 방지</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Gateway: Fixed the status line and <code>/usage</code> showing a developer's own spend limit as 100% used after their group's pooled budget ran out</span>
+      <span class="e-desc" data-en="Gateway: Fixed the status line and <code>/usage</code> showing a developer's own spend limit as 100% used after their group's pooled budget ran out">게이트웨이: 그룹의 공유 예산 소진 후 상태 표시줄·<code>/usage</code>가 개발자 자신의 지출 한도를 100% 사용으로 표시하던 문제 수정</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Self-hosted runner: Fixed Claude not seeing the interrupted tool call when a session moves to a new runner and the turn is older than <code>CLAUDE_CODE_RESUME_INTERRUPTED_TURN_MAX_AGE_MS</code></span>
+      <span class="e-desc" data-en="Self-hosted runner: Fixed Claude not seeing the interrupted tool call when a session moves to a new runner and the turn is older than <code>CLAUDE_CODE_RESUME_INTERRUPTED_TURN_MAX_AGE_MS</code>">자체 호스팅 러너: 세션이 새 러너로 이동하고 턴이 <code>CLAUDE_CODE_RESUME_INTERRUPTED_TURN_MAX_AGE_MS</code>보다 오래됐을 때 Claude가 중단된 툴 호출을 보지 못하던 문제 수정</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">Self-hosted runner: Fixed an MCP server that was switched off coming back on after the session moved to a new machine, when the session service had refused to save the switch</span>
+      <span class="e-desc" data-en="Self-hosted runner: Fixed an MCP server that was switched off coming back on after the session moved to a new machine, when the session service had refused to save the switch">자체 호스팅 러너: 세션 서비스가 스위치 저장을 거부했을 때 꺼진 MCP 서버가 세션이 새 머신으로 이동 후 다시 켜지던 문제 수정</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">[VSCode] Fixed forked conversations dropping messages: only one of the tool calls Claude ran in parallel was kept, and the last messages a compaction kept were lost, which could leave Claude's answer without the question it answered</span>
+      <span class="e-desc" data-en="[VSCode] Fixed forked conversations dropping messages: only one of the tool calls Claude ran in parallel was kept, and the last messages a compaction kept were lost, which could leave Claude's answer without the question it answered">[VSCode] 포크된 대화에서 메시지가 삭제되던 문제 수정 — Claude가 병렬로 실행한 툴 호출 중 하나만 유지되고 압축이 유지한 마지막 메시지가 손실돼 답변이 질문 없이 남을 수 있었음</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">[VSCode] Fixed a message being lost when Claude did not finish starting in time: the extension now starts Claude once more before showing the error</span>
+      <span class="e-desc" data-en="[VSCode] Fixed a message being lost when Claude did not finish starting in time: the extension now starts Claude once more before showing the error">[VSCode] Claude가 제때 시작을 완료하지 못할 때 메시지가 손실되던 문제 수정 — 이제 확장 프로그램이 오류 표시 전 Claude를 한 번 더 시작</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">[VSCode] Fixed the sign-in screen opening when a request is blocked for its region or network</span>
+      <span class="e-desc" data-en="[VSCode] Fixed the sign-in screen opening when a request is blocked for its region or network">[VSCode] 지역·네트워크로 인해 요청이 차단될 때 로그인 화면이 열리던 문제 수정</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">[VSCode] Fixed the Account panel showing the plan name with a lower-cased second word</span>
+      <span class="e-desc" data-en="[VSCode] Fixed the Account panel showing the plan name with a lower-cased second word">[VSCode] 계정 패널이 플랜 이름의 두 번째 단어를 소문자로 표시하던 문제 수정</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">[VSCode] Fixed file links in a Claude tab opening on top of the chat instead of in another editor group</span>
+      <span class="e-desc" data-en="[VSCode] Fixed file links in a Claude tab opening on top of the chat instead of in another editor group">[VSCode] Claude 탭의 파일 링크가 다른 편집기 그룹 대신 채팅 위에 열리던 문제 수정</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">[VSCode] Fixed attachment chips, menus, banners and dialogs in the Claude panel staying small when <code>chat.fontSize</code> is raised</span>
+      <span class="e-desc" data-en="[VSCode] Fixed attachment chips, menus, banners and dialogs in the Claude panel staying small when <code>chat.fontSize</code> is raised">[VSCode] <code>chat.fontSize</code>를 높였을 때 Claude 패널의 첨부 칩·메뉴·배너·대화상자가 작게 유지되던 문제 수정</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">[VSCode] Fixed <code>ultrathink</code> not raising effort for its turn or showing its rainbow when telemetry is off</span>
+      <span class="e-desc" data-en="[VSCode] Fixed <code>ultrathink</code> not raising effort for its turn or showing its rainbow when telemetry is off">[VSCode] 텔레메트리 꺼짐 시 <code>ultrathink</code>이 해당 턴의 노력을 높이거나 무지개를 표시하지 않던 문제 수정</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">[Cloud sessions] Added a link card to cloud sessions, so you can open or decline a link an MCP server asks you to visit instead of the request going unseen</span>
+      <span class="e-desc" data-en="[Cloud sessions] Added a link card to cloud sessions, so you can open or decline a link an MCP server asks you to visit instead of the request going unseen">[Cloud sessions] 클라우드 세션에 링크 카드 추가 — MCP 서버가 방문을 요청하는 링크를 확인하지 못한 채 넘어가는 대신 열거나 거부 가능</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">[Cloud sessions] Changed the organization environment dialog in admin settings to the personal dialogs' short layout: each section opens from a row, and unsaved input asks before closing</span>
+      <span class="e-desc" data-en="[Cloud sessions] Changed the organization environment dialog in admin settings to the personal dialogs' short layout: each section opens from a row, and unsaved input asks before closing">[Cloud sessions] 관리 설정의 조직 환경 대화상자를 개인 대화상자의 짧은 레이아웃으로 변경 — 각 섹션이 행에서 열리고 저장되지 않은 입력은 닫기 전 확인</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">[Cloud sessions] Fixed adding a network secret for a host that already has one silently replacing it; the Add secret form now refuses and points you to the existing secret</span>
+      <span class="e-desc" data-en="[Cloud sessions] Fixed adding a network secret for a host that already has one silently replacing it; the Add secret form now refuses and points you to the existing secret">[Cloud sessions] 이미 네트워크 시크릿이 있는 호스트에 추가 시 무음으로 덮어쓰던 문제 수정 — 이제 추가 시크릿 폼이 거부하고 기존 시크릿으로 안내</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">[Cloud sessions] Fixed new scheduled tasks ignoring your organization's default environment: the form now starts on the one an admin chose instead of the Anthropic-hosted default</span>
+      <span class="e-desc" data-en="[Cloud sessions] Fixed new scheduled tasks ignoring your organization's default environment: the form now starts on the one an admin chose instead of the Anthropic-hosted default">[Cloud sessions] 새 예약 작업이 조직의 기본 환경을 무시하던 문제 수정 — 이제 폼이 Anthropic 호스팅 기본값 대신 관리자가 선택한 환경으로 시작</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">[Remote Control] Fixed the next message to an idle session going unanswered after you restart <code>claude remote-control</code>, when you sent it within a minute of your previous message</span>
+      <span class="e-desc" data-en="[Remote Control] Fixed the next message to an idle session going unanswered after you restart <code>claude remote-control</code>, when you sent it within a minute of your previous message">[Remote Control] <code>claude remote-control</code> 재시작 후 이전 메시지 1분 내에 유휴 세션으로 보낸 다음 메시지가 응답 없이 넘어가던 문제 수정</span>
     </div>
     <div class="entry row-divider" data-type="feature">
       <span class="pill feature">기능</span>
-      <span class="e-desc">[Claude Tag] Changed newly pasted artifact links in Slack to show a simpler card with an Open button that opens the artifact in Claude, instead of Slack's side panel</span>
+      <span class="e-desc" data-en="[Claude Tag] Changed newly pasted artifact links in Slack to show a simpler card with an Open button that opens the artifact in Claude, instead of Slack's side panel">[Claude Tag] Slack에 새로 붙여넣은 아티팩트 링크가 Slack 사이드 패널 대신 Claude에서 아티팩트를 여는 열기 버튼이 있는 간단한 카드로 표시되도록 변경</span>
     </div>
     <div class="tabs-container">
       <div class="tabs-bar">
@@ -24228,12 +24228,12 @@ html[data-tab="home"] .ptools,html[data-tab="home"] .ptop,html[data-tab="home"] 
         <span class="ver-badge">v0.167.0</span><span class="ver-date" data-en="Nov 6 Fri">11월 6일 금</span><span class="ver-ago"></span>
         <div class="ver-summary"><span class="pill feature">기능 ×6</span><span class="pill fix">Fix ×6</span></div>
       </div>
-      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Open the agent command center with <code>codex agents --no-daemon</code>. The command center and session picker now mark unread results (#58238, #58239, #58263, #58264).</span></div>
-      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Switch between connected backends from the terminal session picker and keep your drafts when switching (#58280, #58457).</span></div>
-      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Preview local image attachments while composing on supported terminals, and open viewed local images from clickable transcript paths (#58261, #58446).</span></div>
-      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Find API key and cloud provider options under “Sign in another way.” Enable <code>gcp_setup_wizard</code> to set up Google Cloud Vertex AI with Application Default Credentials or a credential file (#57857, #58427).</span></div>
-      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Opt into macOS or Windows system proxy settings from <code>/experimental</code> (#58157).</span></div>
-      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Expand patch details directly in the transcript while an approval prompt is open (#58281).</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc" data-en="Open the agent command center with <code>codex agents --no-daemon</code>. The command center and session picker now mark unread results (#58238, #58239, #58263, #58264)."><code>codex agents --no-daemon</code>으로 에이전트 커맨드 센터 열기. 커맨드 센터·세션 선택기가 이제 읽지 않은 결과를 표시 (#58238, #58239, #58263, #58264).</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc" data-en="Switch between connected backends from the terminal session picker and keep your drafts when switching (#58280, #58457).">터미널 세션 선택기에서 연결된 백엔드 간 전환 및 전환 시 초안 유지 (#58280, #58457).</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc" data-en="Preview local image attachments while composing on supported terminals, and open viewed local images from clickable transcript paths (#58261, #58446).">지원 터미널에서 작성 중 로컬 이미지 첨부 미리보기 및 클릭 가능한 트랜스크립트 경로에서 본 로컬 이미지 열기 (#58261, #58446).</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class=”e-desc” data-en=”Find API key and cloud provider options under &quot;Sign in another way.&quot; Enable <code>gcp_setup_wizard</code> to set up Google Cloud Vertex AI with Application Default Credentials or a credential file (#57857, #58427).”>&quot;Sign in another way&quot;에서 API 키·클라우드 공급자 옵션 확인. <code>gcp_setup_wizard</code>를 활성화해 Application Default Credentials·자격증명 파일로 Google Cloud Vertex AI 설정 (#57857, #58427).</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc" data-en="Opt into macOS or Windows system proxy settings from <code>/experimental</code> (#58157)."><code>/experimental</code>에서 macOS·Windows 시스템 프록시 설정 옵트인 (#58157).</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc" data-en="Expand patch details directly in the transcript while an approval prompt is open (#58281).">승인 프롬프트가 열린 동안 트랜스크립트에서 직접 패치 세부정보 펼치기 (#58281).</span></div>
       <div class="entry row-divider" data-type="fix"><span class="pill fix">Fix</span><span class="e-desc">Saved chats stay visible after you switch model providers. If a chat can’t resume, you can read its transcript and prepare an editable prompt to continue in a new chat (#58202).</span></div>
       <div class="entry row-divider" data-type="fix"><span class="pill fix">Fix</span><span class="e-desc"><code>Ctrl+L</code> clears the terminal display while keeping earlier messages available through <code>Ctrl+T</code> (#58266).</span></div>
       <div class="entry row-divider" data-type="fix"><span class="pill fix">Fix</span><span class="e-desc">Deleting text that exposes a leading <code>!</code> keeps an ordinary draft in chat mode (#58412).</span></div>
@@ -24246,12 +24246,12 @@ html[data-tab="home"] .ptools,html[data-tab="home"] .ptop,html[data-tab="home"] 
         <span class="ver-badge">v0.166.0</span><span class="ver-date" data-en="Oct 29 Thu">10월 29일 목</span><span class="ver-ago"></span>
         <div class="ver-summary"><span class="pill feature">기능 ×6</span><span class="pill fix">Fix ×7</span></div>
       </div>
-      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Added keyboard-driven transcript selection with word, line, and page motions, integrated search, and configurable shortcuts.</span></div>
-      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Rendered Markdown consistently in async questions, choices, answers, and transcript replies.</span></div>
-      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Added GPT-6.1 Terra to the bundled, Vertex AI, and Amazon Bedrock model catalogs.</span></div>
-      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Added <code>codex queue --resume</code> to resume unloaded threads after queueing a message.</span></div>
-      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Added clearer safety-block explanations and selectable safer follow-up prompts in the TUI.</span></div>
-      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Added <code>codex doctor --network-only</code> for focused configuration, connectivity, and WebSocket diagnostics.</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc" data-en="Added keyboard-driven transcript selection with word, line, and page motions, integrated search, and configurable shortcuts.">단어·줄·페이지 이동, 통합 검색, 설정 가능한 단축키를 갖춘 키보드 기반 트랜스크립트 선택 추가.</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc" data-en="Rendered Markdown consistently in async questions, choices, answers, and transcript replies.">비동기 질문·선택지·답변·트랜스크립트 답변에서 Markdown을 일관되게 렌더링.</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc" data-en="Added GPT-6.1 Terra to the bundled, Vertex AI, and Amazon Bedrock model catalogs.">번들·Vertex AI·Amazon Bedrock 모델 카탈로그에 GPT-6.1 Terra 추가.</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc" data-en="Added <code>codex queue --resume</code> to resume unloaded threads after queueing a message.">메시지 큐 추가 후 언로드된 스레드를 재개하는 <code>codex queue --resume</code> 추가.</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc" data-en="Added clearer safety-block explanations and selectable safer follow-up prompts in the TUI.">TUI에 더 명확한 안전 차단 설명과 선택 가능한 안전한 후속 프롬프트 추가.</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc" data-en="Added <code>codex doctor --network-only</code> for focused configuration, connectivity, and WebSocket diagnostics.">집중적인 설정·연결성·WebSocket 진단을 위한 <code>codex doctor --network-only</code> 추가.</span></div>
       <div class="entry row-divider" data-type="fix"><span class="pill fix">Fix</span><span class="e-desc">Preserved acknowledged approval and permission settings when resuming or forking threads.</span></div>
       <div class="entry row-divider" data-type="fix"><span class="pill fix">Fix</span><span class="e-desc">Preserved local image attachments when restoring killed composer text.</span></div>
       <div class="entry row-divider" data-type="fix"><span class="pill fix">Fix</span><span class="e-desc">Fixed standalone release cleanup on macOS when installations are in use or paths contain non-ASCII characters.</span></div>
@@ -26048,12 +26048,12 @@ html[data-tab="home"] .ptools,html[data-tab="home"] .ptop,html[data-tab="home"] 
         <span class="ver-badge">v1.5.3</span><span class="ver-date" data-en="Nov 7 Sat">11월 7일 토</span><span class="ver-ago"></span>
         <div class="ver-summary"><span class="pill feature">기능 ×6</span><span class="pill fix">Fix ×12</span></div>
       </div>
-      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Added each subagent's model next to its name in the subagent rows above the prompt and in <code>/agents</code> (hidden on narrow terminals), with the full model and effort in a subagent's detail view, and a <code>model</code> field on each <code>subagents</code> entry in the status line JSON; <code>/agents</code> now shows a single <code>Tip: Press enter on a subagent to view details.</code> line instead of repeating <code>[view details]</code> on every row.</span></div>
-      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Added the <code>PLUGIN_ROOT</code> and <code>PLUGIN_DATA</code> environment variables to hook commands that come from a plugin, pointing to the plugin's folder and its persistent data folder, so plugin hooks can use files bundled with the plugin and keep state between runs; <code>agy plugin validate</code> no longer warns that these variables are not set for hooks.</span></div>
-      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Changed the error shown when Vertex AI reports that the selected model does not exist or that your Google Cloud project cannot use it, which now reads <code>The requested model was not found, or your project does not have access to it.</code> instead of the raw API error.</span></div>
-      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Improved the plugin sign-in screen in <code>/plugin</code>, which now indents the sign-in link like the surrounding text and sets it apart with a blank line, no longer underlines trailing blank space in wrapped links, and uses the plugin's display name from <code>plugin.json</code>, such as <code>Canva</code> instead of <code>canva</code>.</span></div>
-      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Improved <code>agy plugin validate</code> so the <code>category</code> field in <code>plugin.json</code> is accepted instead of reported as an unknown field, with a warning only when it is not a non-empty string.</span></div>
-      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Improved auto-generated conversation titles, which now keep abbreviations and acronyms from your request as written instead of guessing what they stand for.</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc" data-en="Added each subagent's model next to its name in the subagent rows above the prompt and in <code>/agents</code> (hidden on narrow terminals), with the full model and effort in a subagent's detail view, and a <code>model</code> field on each <code>subagents</code> entry in the status line JSON; <code>/agents</code> now shows a single <code>Tip: Press enter on a subagent to view details.</code> line instead of repeating <code>[view details]</code> on every row.">프롬프트 위 서브에이전트 행과 <code>/agents</code>에서 각 서브에이전트 이름 옆에 모델 표시(좁은 터미널에선 숨김), 서브에이전트 상세 뷰에 전체 모델·노력 수준, 상태 표시줄 JSON의 각 <code>subagents</code> 항목에 <code>model</code> 필드 추가; <code>/agents</code>가 모든 행에 <code>[view details]</code> 반복 대신 단일 <code>Tip: Press enter on a subagent to view details.</code> 줄 표시.</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc" data-en="Added the <code>PLUGIN_ROOT</code> and <code>PLUGIN_DATA</code> environment variables to hook commands that come from a plugin, pointing to the plugin's folder and its persistent data folder, so plugin hooks can use files bundled with the plugin and keep state between runs; <code>agy plugin validate</code> no longer warns that these variables are not set for hooks.">플러그인에서 오는 훅 명령에 <code>PLUGIN_ROOT</code>·<code>PLUGIN_DATA</code> 환경 변수 추가 — 플러그인 폴더와 영구 데이터 폴더를 가리켜 플러그인 훅이 번들 파일을 사용하고 실행 간 상태를 유지할 수 있음; <code>agy plugin validate</code>가 훅에 이 변수가 설정되지 않았다는 경고를 더 이상 표시하지 않음.</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc" data-en="Changed the error shown when Vertex AI reports that the selected model does not exist or that your Google Cloud project cannot use it, which now reads <code>The requested model was not found, or your project does not have access to it.</code> instead of the raw API error.">Vertex AI가 선택한 모델이 없거나 Google Cloud 프로젝트가 사용 불가하다고 보고할 때 표시되는 오류 변경 — 원시 API 오류 대신 <code>The requested model was not found, or your project does not have access to it.</code>으로 표시.</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc" data-en="Improved the plugin sign-in screen in <code>/plugin</code>, which now indents the sign-in link like the surrounding text and sets it apart with a blank line, no longer underlines trailing blank space in wrapped links, and uses the plugin's display name from <code>plugin.json</code>, such as <code>Canva</code> instead of <code>canva</code>."><code>/plugin</code>의 플러그인 로그인 화면 개선 — 로그인 링크가 주변 텍스트처럼 들여쓰기되고 빈 줄로 구분, 줄 바꿈 링크의 뒤 공백 밑줄 제거, <code>plugin.json</code>의 표시 이름 사용(예: <code>canva</code> 대신 <code>Canva</code>).</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc" data-en="Improved <code>agy plugin validate</code> so the <code>category</code> field in <code>plugin.json</code> is accepted instead of reported as an unknown field, with a warning only when it is not a non-empty string."><code>plugin.json</code>의 <code>category</code> 필드가 알 수 없는 필드로 보고되는 대신 허용되도록 <code>agy plugin validate</code> 개선 — 비어 있지 않은 문자열이 아닐 때만 경고.</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc" data-en="Improved auto-generated conversation titles, which now keep abbreviations and acronyms from your request as written instead of guessing what they stand for.">자동 생성 대화 제목 개선 — 요청의 약어·두문자어를 의미 추측 대신 그대로 유지.</span></div>
       <div class="entry row-divider" data-type="fix"><span class="pill fix">Fix</span><span class="e-desc">Fixed <code>agy plugin uninstall</code>, <code>agy plugin enable</code>, <code>agy plugin disable</code>, and uninstalling from <code>/plugin</code> failing for plugins installed as symbolic links, such as plugins installed from Antigravity, or for plugins whose names contain spaces or symbols such as <code>c++-tools</code>, and <code>agy plugin list</code> shows symlinked plugins again.</span></div>
       <div class="entry row-divider" data-type="fix"><span class="pill fix">Fix</span><span class="e-desc">Fixed agent turns failing with <code>http2: timeout awaiting response headers</code> when the model took more than 60 seconds to start responding, which are now retried.</span></div>
       <div class="entry row-divider" data-type="fix"><span class="pill fix">Fix</span><span class="e-desc">Fixed every model request failing with a 404 error when an enterprise model gateway URL ended in <code>/v1beta</code>, even though the model list loaded; a trailing <code>/v1beta</code> in the gateway URL is now ignored.</span></div>
@@ -26072,16 +26072,16 @@ html[data-tab="home"] .ptools,html[data-tab="home"] .ptop,html[data-tab="home"] 
         <span class="ver-badge">v1.5.2</span><span class="ver-date" data-en="Nov 6 Fri">11월 6일 금</span><span class="ver-ago"></span>
         <div class="ver-summary"><span class="pill feature">기능 ×10</span><span class="pill fix">Fix ×7</span></div>
       </div>
-      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Added skills from the cloud plugins you connected with <code>/plugin</code> to <code>--remote-agent</code> sessions, so they now appear in the <code>/</code> menu and can be typed at the start of a message, <code>/skills</code> lists them grouped by plugin under <code>Remote agent skills</code>, and <code>/skills reload</code> lists them again.</span></div>
-      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Changed the default for macOS Option-key shortcuts such as <code>alt+m</code>, which now work out of the box without setting Option to act as Alt in your terminal, where previously pressing them did nothing or typed a character such as <code>µ</code>; set <code>AGY_CLI_MAC_OPTION_AS_ALT=0</code> to go back to the old behavior.</span></div>
-      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Changed <code>--dangerously-skip-permissions</code> so commands on the system command denylist are blocked instead of approved automatically, while every other command still runs without asking.</span></div>
-      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Changed <code>agy -p --dangerously-skip-permissions</code> so headless runs deny terminal commands or file access outside the workspace that your Gemini Enterprise administrator requires to be reviewed, instead of approving them automatically.</span></div>
-      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Changed prompts for reading a file outside the workspace in <code>--remote-agent</code> sessions to offer always allowing or denying that path for the conversation or in remote settings, instead of toggling local non-workspace access.</span></div>
-      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Improved <code>agy -p</code> runs so they no longer make a background model request to generate a conversation title that print mode never shows.</span></div>
-      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Improved Remote Control connections, which now retry a brief network or server error while setting up a new connection instead of dropping it.</span></div>
-      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Improved <code>agy plugin validate</code> so an unknown field under <code>extensions["com.google.antigravity"]</code> in <code>plugin.json</code> is reported as a warning that the field is ignored instead of an error, and the plugin's other extension settings are still checked.</span></div>
-      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Improved protection against malicious plugins: <code>agy plugin</code> import, install, uninstall, enable, and disable now reject plugin names that are not safe file names with <code>invalid plugin name</code>, and refuse to write outside the plugins folder or through symbolic links, so an imported plugin can no longer overwrite other configuration files such as <code>mcp_config.json</code>.</span></div>
-      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Improved protection against untrusted repositories: plugins and skills listed in a workspace's <code>.agents/plugins.json</code> or <code>.agents/skills.json</code> now load only from inside the workspace or its repository root, and entries that point elsewhere through absolute paths, <code>../</code>, or symbolic links are skipped.</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc" data-en="Added skills from the cloud plugins you connected with <code>/plugin</code> to <code>--remote-agent</code> sessions, so they now appear in the <code>/</code> menu and can be typed at the start of a message, <code>/skills</code> lists them grouped by plugin under <code>Remote agent skills</code>, and <code>/skills reload</code> lists them again."><code>/plugin</code>으로 연결한 클라우드 플러그인의 스킬을 <code>--remote-agent</code> 세션에 추가 — 이제 <code>/</code> 메뉴에 표시·메시지 시작에 입력 가능, <code>/skills</code>가 <code>Remote agent skills</code> 아래 플러그인별로 그룹화해 나열, <code>/skills reload</code>로 재나열.</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc" data-en="Changed the default for macOS Option-key shortcuts such as <code>alt+m</code>, which now work out of the box without setting Option to act as Alt in your terminal, where previously pressing them did nothing or typed a character such as <code>µ</code>; set <code>AGY_CLI_MAC_OPTION_AS_ALT=0</code> to go back to the old behavior."><code>alt+m</code> 같은 macOS Option 키 단축키 기본값 변경 — 이제 터미널에서 Option을 Alt로 설정하지 않아도 바로 작동(이전에는 아무것도 안 하거나 <code>µ</code> 같은 문자 입력); 이전 동작으로 돌아가려면 <code>AGY_CLI_MAC_OPTION_AS_ALT=0</code> 설정.</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc" data-en="Changed <code>--dangerously-skip-permissions</code> so commands on the system command denylist are blocked instead of approved automatically, while every other command still runs without asking.">시스템 명령 거부 목록의 명령이 자동 승인 대신 차단되도록 <code>--dangerously-skip-permissions</code> 변경 — 나머지 명령은 여전히 묻지 않고 실행.</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc" data-en="Changed <code>agy -p --dangerously-skip-permissions</code> so headless runs deny terminal commands or file access outside the workspace that your Gemini Enterprise administrator requires to be reviewed, instead of approving them automatically.">Gemini Enterprise 관리자가 검토를 요구하는 워크스페이스 외부 터미널 명령·파일 접근을 헤드리스 실행이 자동 승인 대신 거부하도록 <code>agy -p --dangerously-skip-permissions</code> 변경.</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc" data-en="Changed prompts for reading a file outside the workspace in <code>--remote-agent</code> sessions to offer always allowing or denying that path for the conversation or in remote settings, instead of toggling local non-workspace access."><code>--remote-agent</code> 세션에서 워크스페이스 외부 파일 읽기 프롬프트가 로컬 비워크스페이스 접근 토글 대신 대화 또는 원격 설정에서 해당 경로를 항상 허용·거부하는 옵션을 제공하도록 변경.</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc" data-en="Improved <code>agy -p</code> runs so they no longer make a background model request to generate a conversation title that print mode never shows."><code>agy -p</code> 실행이 인쇄 모드에서 표시되지 않는 대화 제목 생성을 위한 백그라운드 모델 요청을 더 이상 하지 않도록 개선.</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc" data-en="Improved Remote Control connections, which now retry a brief network or server error while setting up a new connection instead of dropping it.">새 연결 설정 중 짧은 네트워크·서버 오류를 연결 끊기 대신 재시도하도록 Remote Control 연결 개선.</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc" data-en="Improved <code>agy plugin validate</code> so an unknown field under <code>extensions[&quot;com.google.antigravity&quot;]</code> in <code>plugin.json</code> is reported as a warning that the field is ignored instead of an error, and the plugin's other extension settings are still checked."><code>plugin.json</code>의 <code>extensions[&quot;com.google.antigravity&quot;]</code> 하위 알 수 없는 필드가 오류 대신 무시된다는 경고로 보고되고 플러그인의 다른 확장 설정은 계속 검사되도록 <code>agy plugin validate</code> 개선.</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc" data-en="Improved protection against malicious plugins: <code>agy plugin</code> import, install, uninstall, enable, and disable now reject plugin names that are not safe file names with <code>invalid plugin name</code>, and refuse to write outside the plugins folder or through symbolic links, so an imported plugin can no longer overwrite other configuration files such as <code>mcp_config.json</code>.">악성 플러그인 보호 강화: <code>agy plugin</code> 가져오기·설치·제거·활성화·비활성화가 안전하지 않은 파일 이름의 플러그인 이름을 <code>invalid plugin name</code>으로 거부하고 플러그인 폴더 외부·심볼릭 링크를 통한 쓰기 거부 — 가져온 플러그인이 <code>mcp_config.json</code> 같은 다른 설정 파일을 덮어쓸 수 없음.</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc" data-en="Improved protection against untrusted repositories: plugins and skills listed in a workspace's <code>.agents/plugins.json</code> or <code>.agents/skills.json</code> now load only from inside the workspace or its repository root, and entries that point elsewhere through absolute paths, <code>../</code>, or symbolic links are skipped.">신뢰할 수 없는 저장소 보호 강화: 워크스페이스의 <code>.agents/plugins.json</code>·<code>.agents/skills.json</code>에 나열된 플러그인·스킬이 이제 워크스페이스 내부 또는 저장소 루트에서만 로드 — 절대 경로·<code>../</code>·심볼릭 링크로 다른 곳을 가리키는 항목은 건너뜀.</span></div>
       <div class="entry row-divider" data-type="fix"><span class="pill fix">Fix</span><span class="e-desc">Fixed subagents stalling for about 60 seconds on file permissions under <code>--dangerously-skip-permissions</code>, so reads and writes outside the workspace now go through without a prompt, and headless <code>-p</code> runs with the flag no longer wait on any remaining interaction, while your explicit deny rules still apply.</span></div>
       <div class="entry row-divider" data-type="fix"><span class="pill fix">Fix</span><span class="e-desc">Fixed signing in to an MCP server that uses OAuth failing with <code>Invalid PKCE code_verifier</code> when the server reconnected during sign-in, such as when <code>/mcp</code> reloaded servers or a new turn started, so the sign-in link you already opened keeps working.</span></div>
       <div class="entry row-divider" data-type="fix"><span class="pill fix">Fix</span><span class="e-desc">Fixed MCP tools that declare their own <code>explanation</code>, <code>toolSummary</code>, <code>toolAction</code>, or <code>waitForPreviousTools</code> parameter receiving calls without that argument, so the value the model sends now reaches the tool.</span></div>
@@ -26095,11 +26095,11 @@ html[data-tab="home"] .ptools,html[data-tab="home"] .ptop,html[data-tab="home"] 
         <span class="ver-badge">v1.5.1</span><span class="ver-date" data-en="Nov 5 Thu">11월 5일 목</span><span class="ver-ago"></span>
         <div class="ver-summary"><span class="pill feature">기능 ×5</span><span class="pill fix">Fix ×7</span></div>
       </div>
-      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Changed <code>agy acp</code> to offer every model available to your account to every ACP client, where previously only a fixed list of editors were offered models other than Gemini.</span></div>
-      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Changed the tabs in <code>/config</code> during <code>--remote-agent</code> sessions from <code>Local</code> and <code>Remote</code> to <code>TUI</code> and <code>Remote Agent</code>, so it is clear that one configures the terminal UI and the other the remote agent; the settings on each tab are unchanged.</span></div>
-      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Improved how quickly the agent moves on after a terminal command exits while a background process it started still holds the command's output open, which now takes at most about 1 second instead of 5.</span></div>
-      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Improved subagent rows above the prompt so a subagent that is blocked waiting on you names the tool it is waiting on, such as <code>Blocked · AskQuestion</code>, instead of <code>Blocked · Processing...</code>.</span></div>
-      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Improved how plugin OAuth credentials are protected in the terminal sandbox: a plugin's real token now replaces its stand-in only in a request's <code>Authorization</code> header, so a command can no longer get a website to echo the real token back by sending the stand-in in another header or in the URL.</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc" data-en="Changed <code>agy acp</code> to offer every model available to your account to every ACP client, where previously only a fixed list of editors were offered models other than Gemini.">이전에는 고정된 편집기 목록에만 Gemini 외 모델을 제공하던 것에서, <code>agy acp</code>가 모든 ACP 클라이언트에 계정의 모든 모델을 제공하도록 변경.</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc" data-en="Changed the tabs in <code>/config</code> during <code>--remote-agent</code> sessions from <code>Local</code> and <code>Remote</code> to <code>TUI</code> and <code>Remote Agent</code>, so it is clear that one configures the terminal UI and the other the remote agent; the settings on each tab are unchanged."><code>--remote-agent</code> 세션에서 <code>/config</code>의 탭 이름을 <code>Local</code>·<code>Remote</code>에서 <code>TUI</code>·<code>Remote Agent</code>로 변경 — 하나는 터미널 UI를, 다른 하나는 원격 에이전트를 설정함을 명확히; 각 탭의 설정은 변경 없음.</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc" data-en="Improved how quickly the agent moves on after a terminal command exits while a background process it started still holds the command's output open, which now takes at most about 1 second instead of 5.">터미널 명령 종료 후 시작한 백그라운드 프로세스가 출력을 계속 열고 있을 때 에이전트가 넘어가는 속도 개선 — 최대 5초에서 약 1초로 단축.</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc" data-en="Improved subagent rows above the prompt so a subagent that is blocked waiting on you names the tool it is waiting on, such as <code>Blocked · AskQuestion</code>, instead of <code>Blocked · Processing...</code>.">프롬프트 위 서브에이전트 행 개선 — 사용자를 기다리며 차단된 서브에이전트가 <code>Blocked · Processing...</code> 대신 <code>Blocked · AskQuestion</code>처럼 대기 중인 도구 이름 표시.</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc" data-en="Improved how plugin OAuth credentials are protected in the terminal sandbox: a plugin's real token now replaces its stand-in only in a request's <code>Authorization</code> header, so a command can no longer get a website to echo the real token back by sending the stand-in in another header or in the URL.">터미널 샌드박스에서 플러그인 OAuth 자격증명 보호 개선 — 플러그인의 실제 토큰이 이제 요청의 <code>Authorization</code> 헤더에서만 대체 토큰을 교체하므로 명령이 다른 헤더나 URL에 대체 토큰을 전송해 웹사이트가 실제 토큰을 돌려보내게 할 수 없음.</span></div>
       <div class="entry row-divider" data-type="fix"><span class="pill fix">Fix</span><span class="e-desc">Fixed several <code>agy acp</code> session bugs: closing, reloading, or resuming a session while a prompt runs now ends that prompt as <code>cancelled</code> instead of leaving it hanging, cancelling a prompt no longer also stops the next prompt sent right after it, <code>session/update</code> notifications no longer arrive after the <code>session/prompt</code> reply for that prompt, and permission requests and question forms now close when they are answered elsewhere or their prompt ends, instead of blocking later prompts or receiving their answers.</span></div>
       <div class="entry row-divider" data-type="fix"><span class="pill fix">Fix</span><span class="e-desc">Fixed file edits on Windows failing with <code>target content not found</code> in files that use CRLF line endings, so edits now match whichever line endings the file uses and the lines they insert keep the file's line endings.</span></div>
       <div class="entry row-divider" data-type="fix"><span class="pill fix">Fix</span><span class="e-desc">Fixed agent-run commands on Windows failing or returning garbled text when their output contains non-ASCII characters, by running Python in UTF-8 mode (<code>PYTHONUTF8=1</code>, unless you have set <code>PYTHONUTF8</code> yourself) and switching PowerShell's output encoding to UTF-8.</span></div>
@@ -26113,16 +26113,16 @@ html[data-tab="home"] .ptools,html[data-tab="home"] .ptop,html[data-tab="home"] 
         <span class="ver-badge">v1.5.0</span><span class="ver-date" data-en="Nov 4 Wed">11월 4일 수</span><span class="ver-ago"></span>
         <div class="ver-summary"><span class="pill feature">기능 ×10</span><span class="pill fix">Fix ×3</span></div>
       </div>
-      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Added <code>acp</code> to <code>agy --help</code>: <code>agy acp</code> runs the CLI as an Agent Client Protocol (ACP) server over stdio, so editors can use it as their agent, with images and embedded file context in prompts, steering a running turn by sending another prompt, <code>default</code>, <code>accept-edits</code>, and <code>plan</code> session modes, <code>session/resume</code> restoring a session without replaying its history, each session keeping its own model and thinking level, and Google sign-in from a terminal with <code>agy acp --login</code> for editors connected over SSH or without a browser.</span></div>
-      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Added <code>--remote-agent</code> to <code>agy --help</code>, which runs the session's conversations on remote agents instead of this machine, where <code>--project</code> names a remote project by ID or name and otherwise conversations open in your default remote project; in these sessions <code>@</code>-mention completion now searches the remote agent's files, artifacts that can't be shown in the terminal get an <code>Open in browser</code> link, the header shows <code>remote workspace</code> instead of your local directory, the <code>/</code> menu no longer offers skills from this machine, and the Remote tab in <code>/config</code> shows the conversation's own permission preset when it has one.</span></div>
-      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Added local projects to <code>/projects</code>, so in a local session you can list your projects with the current one marked, create one from a name and a set of folders given as absolute, <code>~</code>, or workspace-relative paths, rename a project or change its folders, and switch to a project, which adds its folders to the workspace and starts a new conversation.</span></div>
-      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Added sign-in for a partner plugin's MCP servers when you install it from <code>/plugin</code>, with a <code>Connect &lt;plugin&gt;</code> screen for each server that opens its sign-in page (<code>Esc</code> skips), a <code>⚠ needs sign-in</code> marker and a <code>Sign-in:</code> row for the plugin in the Installed tab, and the third-party developer tools notice for partner plugins at the end of the Discover list, in a plugin's details, and after <code>agy plugin install</code> or <code>/plugin install</code>.</span></div>
-      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Added a built-in <code>${HOME}</code> variable to plugin <code>sidecar.json</code> templates, so a sidecar can name paths under the user's home directory in <code>workspaceUris</code> and <code>accessGrants</code>, such as <code>file://${HOME}/worktrees</code>; a sidecar argument named <code>HOME</code> still takes precedence.</span></div>
-      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Changed headless <code>-p</code> runs without <code>--print-timeout</code> to wait for background tasks to finish, where they previously stopped them after a hidden 30-minute limit and exited with success; when <code>--print-timeout</code> cuts a turn short, the run now exits with code <code>3</code>, prints an <code>AGY_ERROR</code> line naming the tasks it terminated, and writes a <code>[agy] print timeout after ...</code> line to stderr.</span></div>
-      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Changed <code>/btw</code> side questions to be able to call tools, such as reading files or searching, showing each call live in the <code>/btw</code> card and a <code>Called N tools</code> summary once the answer is done, while any tool call that would ask for permission is denied automatically; this fixes side questions failing with an empty-response error when the model wanted to use a tool.</span></div>
-      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Changed the <code>no flickering (altscreen)</code> option under <code>Rendering Mode</code> in <code>/config</code> to <code>full screen (altscreen)</code>; the saved setting is unchanged.</span></div>
-      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Improved the error for a stdio MCP server whose command isn't installed, which now says, for example, <code>"uvx" is not installed or not on PATH, install it or set "command" to its full path</code> instead of a raw <code>executable file not found in $PATH</code> error.</span></div>
-      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Improved Auto mode's review of commands that would leave the terminal sandbox so it times out and asks less often on safe commands, such as uploads that don't request a review, stopping a job the agent started, installing or removing packages from a registry, and removing files that can be restored from version control.</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc" data-en="Added <code>acp</code> to <code>agy --help</code>: <code>agy acp</code> runs the CLI as an Agent Client Protocol (ACP) server over stdio, so editors can use it as their agent, with images and embedded file context in prompts, steering a running turn by sending another prompt, <code>default</code>, <code>accept-edits</code>, and <code>plan</code> session modes, <code>session/resume</code> restoring a session without replaying its history, each session keeping its own model and thinking level, and Google sign-in from a terminal with <code>agy acp --login</code> for editors connected over SSH or without a browser."><code>agy --help</code>에 <code>acp</code> 추가: <code>agy acp</code>가 CLI를 stdio 기반 ACP(Agent Client Protocol) 서버로 실행 — 편집기가 에이전트로 사용 가능. 프롬프트에 이미지·파일 컨텍스트 포함, 다른 프롬프트 전송으로 실행 중인 턴 조종, <code>default</code>·<code>accept-edits</code>·<code>plan</code> 세션 모드, 기록 재생 없이 세션 복원하는 <code>session/resume</code>, 각 세션의 고유 모델·사고 수준, SSH 연결 편집기·브라우저 없는 환경을 위한 <code>agy acp --login</code>으로 터미널 Google 로그인.</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc" data-en="Added <code>--remote-agent</code> to <code>agy --help</code>, which runs the session's conversations on remote agents instead of this machine, where <code>--project</code> names a remote project by ID or name and otherwise conversations open in your default remote project; in these sessions <code>@</code>-mention completion now searches the remote agent's files, artifacts that can't be shown in the terminal get an <code>Open in browser</code> link, the header shows <code>remote workspace</code> instead of your local directory, the <code>/</code> menu no longer offers skills from this machine, and the Remote tab in <code>/config</code> shows the conversation's own permission preset when it has one."><code>agy --help</code>에 <code>--remote-agent</code> 추가 — 이 머신 대신 원격 에이전트에서 세션 대화 실행. <code>--project</code>로 ID·이름으로 원격 프로젝트 지정, 그 외에는 기본 원격 프로젝트에서 대화 열림; 이 세션에서 <code>@</code>-멘션 완성이 원격 에이전트 파일 검색, 터미널에 표시 불가 아티팩트에 <code>Open in browser</code> 링크, 헤더에 로컬 디렉터리 대신 <code>remote workspace</code> 표시, <code>/</code> 메뉴에서 이 머신의 스킬 제외, <code>/config</code>의 Remote 탭에 권한 프리셋이 있는 경우 대화 고유 프리셋 표시.</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc" data-en="Added local projects to <code>/projects</code>, so in a local session you can list your projects with the current one marked, create one from a name and a set of folders given as absolute, <code>~</code>, or workspace-relative paths, rename a project or change its folders, and switch to a project, which adds its folders to the workspace and starts a new conversation."><code>/projects</code>에 로컬 프로젝트 추가 — 로컬 세션에서 현재 프로젝트가 표시된 목록 확인, 절대·<code>~</code>·워크스페이스 상대 경로로 이름·폴더 세트로 생성, 이름 변경·폴더 변경, 프로젝트 전환(폴더를 워크스페이스에 추가하고 새 대화 시작).</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc" data-en="Added sign-in for a partner plugin's MCP servers when you install it from <code>/plugin</code>, with a <code>Connect &lt;plugin&gt;</code> screen for each server that opens its sign-in page (<code>Esc</code> skips), a <code>⚠ needs sign-in</code> marker and a <code>Sign-in:</code> row for the plugin in the Installed tab, and the third-party developer tools notice for partner plugins at the end of the Discover list, in a plugin's details, and after <code>agy plugin install</code> or <code>/plugin install</code>."><code>/plugin</code>에서 파트너 플러그인 설치 시 MCP 서버 로그인 추가 — 각 서버의 로그인 페이지를 여는 <code>Connect &lt;plugin&gt;</code> 화면(<code>Esc</code>로 건너뜀), Installed 탭에 <code>⚠ needs sign-in</code> 표시·<code>Sign-in:</code> 행, Discover 목록 끝·플러그인 세부정보·<code>agy plugin install</code>·<code>/plugin install</code> 후 서드파티 개발자 도구 안내.</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc" data-en="Added a built-in <code>${HOME}</code> variable to plugin <code>sidecar.json</code> templates, so a sidecar can name paths under the user's home directory in <code>workspaceUris</code> and <code>accessGrants</code>, such as <code>file://${HOME}/worktrees</code>; a sidecar argument named <code>HOME</code> still takes precedence.">플러그인 <code>sidecar.json</code> 템플릿에 기본 제공 <code>${HOME}</code> 변수 추가 — 사이드카가 <code>workspaceUris</code>·<code>accessGrants</code>에서 <code>file://${HOME}/worktrees</code>처럼 사용자 홈 디렉터리 하위 경로를 지정 가능; <code>HOME</code> 사이드카 인수가 여전히 우선.</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc" data-en="Changed headless <code>-p</code> runs without <code>--print-timeout</code> to wait for background tasks to finish, where they previously stopped them after a hidden 30-minute limit and exited with success; when <code>--print-timeout</code> cuts a turn short, the run now exits with code <code>3</code>, prints an <code>AGY_ERROR</code> line naming the tasks it terminated, and writes a <code>[agy] print timeout after ...</code> line to stderr."><code>--print-timeout</code> 없는 헤드리스 <code>-p</code> 실행이 백그라운드 작업 완료를 기다리도록 변경 — 이전에는 숨겨진 30분 한도 후 중단·성공 종료; <code>--print-timeout</code>이 턴을 단축하면 이제 코드 <code>3</code>으로 종료, 종료한 작업을 명시하는 <code>AGY_ERROR</code> 줄 출력, stderr에 <code>[agy] print timeout after ...</code> 줄 기록.</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc" data-en="Changed <code>/btw</code> side questions to be able to call tools, such as reading files or searching, showing each call live in the <code>/btw</code> card and a <code>Called N tools</code> summary once the answer is done, while any tool call that would ask for permission is denied automatically; this fixes side questions failing with an empty-response error when the model wanted to use a tool."><code>/btw</code> 사이드 질문이 파일 읽기·검색 같은 도구를 호출할 수 있도록 변경 — 각 호출이 <code>/btw</code> 카드에 실시간 표시되고 답변 완료 후 <code>Called N tools</code> 요약, 권한 요청이 필요한 툴 호출은 자동 거부; 모델이 도구를 사용하려 할 때 빈 응답 오류로 사이드 질문이 실패하던 문제 수정.</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc" data-en="Changed the <code>no flickering (altscreen)</code> option under <code>Rendering Mode</code> in <code>/config</code> to <code>full screen (altscreen)</code>; the saved setting is unchanged."><code>/config</code>의 <code>Rendering Mode</code> 아래 <code>no flickering (altscreen)</code> 옵션 이름을 <code>full screen (altscreen)</code>으로 변경; 저장된 설정은 변경 없음.</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc" data-en="Improved the error for a stdio MCP server whose command isn't installed, which now says, for example, <code>&quot;uvx&quot; is not installed or not on PATH, install it or set &quot;command&quot; to its full path</code> instead of a raw <code>executable file not found in $PATH</code> error.">명령이 설치되지 않은 stdio MCP 서버의 오류 개선 — 원시 <code>executable file not found in $PATH</code> 오류 대신 예를 들어 <code>&quot;uvx&quot; is not installed or not on PATH, install it or set &quot;command&quot; to its full path</code>로 표시.</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc" data-en="Improved Auto mode's review of commands that would leave the terminal sandbox so it times out and asks less often on safe commands, such as uploads that don't request a review, stopping a job the agent started, installing or removing packages from a registry, and removing files that can be restored from version control.">터미널 샌드박스를 벗어나는 명령에 대한 Auto 모드 검토 개선 — 검토를 요청하지 않는 업로드·에이전트가 시작한 작업 중단·레지스트리의 패키지 설치·제거·버전 관리에서 복원 가능한 파일 삭제 같은 안전한 명령에서 더 빠르게 타임아웃되고 덜 자주 질문.</span></div>
       <div class="entry row-divider" data-type="fix"><span class="pill fix">Fix</span><span class="e-desc">Fixed <code>/diff</code> drawing an empty <code>↕ ···</code> fold divider at the top of new files and of edits starting at line 1, where nothing was folded away, and fixed undo in the prompt bringing back a message you had already sent, and undo in <code>!</code> shell or <code>:</code> search mode bringing back prompt text that <code>Enter</code> would then run as a command or search.</span></div>
       <div class="entry row-divider" data-type="fix"><span class="pill fix">Fix</span><span class="e-desc">Fixed conversations using a <code>GEMINI_API_KEY</code> re-sending a prompt forever when the API's safety filter blocks it, which now ends the turn with a content-filter message, and the <code>pro</code> and <code>flash</code> subagents on that connection running models two generations older instead of Gemini 4 Argon and Gemini 3.8 Flash.</span></div>
       <div class="entry row-divider" data-type="fix"><span class="pill fix">Fix</span><span class="e-desc">Fixed certain models failing a turn on rate-limit (<code>429</code>) and server (<code>5xx</code>) errors instead of retrying them, now honoring the server's <code>Retry-After</code> header, and fixed plugin auto-upgrades of a plugin installed under a different folder name, such as after a rename, writing to a new folder and retrying on every startup instead of updating the existing folder in place.</span></div>
@@ -26132,7 +26132,7 @@ html[data-tab="home"] .ptools,html[data-tab="home"] .ptop,html[data-tab="home"] 
         <span class="ver-badge">v1.4.12</span><span class="ver-date" data-en="Oct 30 Fri">10월 30일 금</span><span class="ver-ago"></span>
         <div class="ver-summary"><span class="pill feature">기능 ×1</span><span class="pill fix">Fix ×1</span></div>
       </div>
-      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Added <code>"optional": true</code> for API key providers in a plugin's <code>auth.json</code>, for services that work without a key but raise rate limits with one: when you haven't set the key, the plugin's commands now see the variable as unset and make unauthenticated requests at the free rate limit, instead of failing with <code>401</code> errors or asking you to sign in.</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc" data-en="Added <code>&quot;optional&quot;: true</code> for API key providers in a plugin's <code>auth.json</code>, for services that work without a key but raise rate limits with one: when you haven't set the key, the plugin's commands now see the variable as unset and make unauthenticated requests at the free rate limit, instead of failing with <code>401</code> errors or asking you to sign in.">플러그인 <code>auth.json</code>의 API 키 공급자에 <code>&quot;optional&quot;: true</code> 추가 — 키 없이도 작동하지만 키로 속도 제한이 올라가는 서비스용: 키를 설정하지 않은 경우 플러그인 명령이 변수를 미설정으로 보고 <code>401</code> 오류·로그인 요청 대신 무인증 요청을 무료 속도 제한으로 실행.</span></div>
       <div class="entry row-divider" data-type="fix"><span class="pill fix">Fix</span><span class="e-desc">Fixed Markdown tables in long streaming replies leaving misaligned borders and repeated text in your terminal scrollback: a table's rows now stay in the live view until the table is complete, so they reach scrollback with their final column widths.</span></div>
     </div>
     <div class="version-block" id="ag1.4.11" data-date="2026-10-30">
@@ -26140,10 +26140,10 @@ html[data-tab="home"] .ptools,html[data-tab="home"] .ptop,html[data-tab="home"] 
         <span class="ver-badge">v1.4.11</span><span class="ver-date" data-en="Oct 30 Fri">10월 30일 금</span><span class="ver-ago"></span>
         <div class="ver-summary"><span class="pill feature">기능 ×4</span><span class="pill fix">Fix ×1</span></div>
       </div>
-      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Added a billing model choice after you sign in with Google Cloud, so you can pick either a Gemini subscription or Pay As You Go.</span></div>
-      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Added <code>terminationBehavior</code> to <code>PreInvocation</code> hooks: returning <code>"terminate"</code> stops the turn before the model is called, for example to block a prompt that contains sensitive data, and hooks can now inject an <code>errorMessage</code> whose <code>userMessage</code> is shown to you without being sent to the model, which also makes a <code>-p</code> run exit with a non-zero code.</span></div>
-      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Added a <code>finished_reason</code> field to the result of <code>--output-format json</code> and <code>stream-json</code> runs that says why a turn ended early, <code>print_timeout</code> when <code>--print-timeout</code> expired and the response is partial, <code>interrupted</code> when the run was canceled such as with <code>Ctrl+C</code>, or <code>error</code> for any other failure, so scripts can tell a cut-off answer from a complete one; the field is omitted when the turn finishes normally.</span></div>
-      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc">Improved the <code>/plugin</code> Discover tab for long shelves: each shelf now shows its first 6 plugins followed by a <code>⋯ N more — enter to show</code> row, <code>Ctrl+E</code> expands or collapses the shelf under the cursor, and <code>[</code> and <code>]</code> jump to the previous or next shelf.</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc" data-en="Added a billing model choice after you sign in with Google Cloud, so you can pick either a Gemini subscription or Pay As You Go.">Google Cloud 로그인 후 Gemini 구독·종량제 중 청구 모델 선택 추가.</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc" data-en="Added <code>terminationBehavior</code> to <code>PreInvocation</code> hooks: returning <code>&quot;terminate&quot;</code> stops the turn before the model is called, for example to block a prompt that contains sensitive data, and hooks can now inject an <code>errorMessage</code> whose <code>userMessage</code> is shown to you without being sent to the model, which also makes a <code>-p</code> run exit with a non-zero code."><code>PreInvocation</code> 훅에 <code>terminationBehavior</code> 추가: <code>&quot;terminate&quot;</code> 반환 시 모델 호출 전 턴 중단(예: 민감한 데이터 포함 프롬프트 차단), 훅이 이제 모델에 전송 없이 사용자에게 표시되는 <code>userMessage</code>를 가진 <code>errorMessage</code>를 주입 가능 — <code>-p</code> 실행도 비정상 종료 코드로 종료.</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc" data-en="Added a <code>finished_reason</code> field to the result of <code>--output-format json</code> and <code>stream-json</code> runs that says why a turn ended early, <code>print_timeout</code> when <code>--print-timeout</code> expired and the response is partial, <code>interrupted</code> when the run was canceled such as with <code>Ctrl+C</code>, or <code>error</code> for any other failure, so scripts can tell a cut-off answer from a complete one; the field is omitted when the turn finishes normally."><code>--output-format json</code>·<code>stream-json</code> 실행 결과에 <code>finished_reason</code> 필드 추가 — 턴이 일찍 종료된 이유: <code>--print-timeout</code> 만료·부분 응답 시 <code>print_timeout</code>, <code>Ctrl+C</code> 같은 취소 시 <code>interrupted</code>, 기타 실패 시 <code>error</code>; 스크립트가 잘린 답변과 완전한 답변을 구별 가능; 턴이 정상 완료 시 필드 생략.</span></div>
+      <div class="entry row-divider" data-type="feature"><span class="pill feature" data-en="Feature">기능</span><span class="e-desc" data-en="Improved the <code>/plugin</code> Discover tab for long shelves: each shelf now shows its first 6 plugins followed by a <code>⋯ N more — enter to show</code> row, <code>Ctrl+E</code> expands or collapses the shelf under the cursor, and <code>[</code> and <code>]</code> jump to the previous or next shelf.">긴 선반의 <code>/plugin</code> Discover 탭 개선 — 각 선반이 처음 6개 플러그인과 <code>⋯ N more — enter to show</code> 행 표시, <code>Ctrl+E</code>로 커서 아래 선반 펼치기·접기, <code>[</code>·<code>]</code>로 이전·다음 선반 이동.</span></div>
       <div class="entry row-divider" data-type="fix"><span class="pill fix">Fix</span><span class="e-desc">Fixed <code>agy plugin import claude</code> printing <code>No claude extensions found.</code> for plugins installed from a Claude Code marketplace: it now reads Claude Code's list of installed plugins, skipping plugins disabled in Claude Code's settings and plugins installed for a single project only, and imported plugins now keep their remote MCP servers (<code>"type": "http"</code> with <code>url</code> and <code>headers</code>) and servers from <code>.mcp.json</code> files without an <code>mcpServers</code> wrapper, expand <code>${CLAUDE_PLUGIN_ROOT}</code> to the installed plugin's directory, and list servers that can't be converted, such as ones using the legacy SSE transport, with a warning instead of reporting them as installed.</span></div>
     </div>
     <div class="version-block" id="ag1.4.10" data-date="2026-10-29">
