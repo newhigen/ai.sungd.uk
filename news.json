@@ -27,6 +27,54 @@
    "all": []
   },
   {
+   "key": "nvidianews.nvidia.com/news/a-message-to-our-company",
+   "of": null,
+   "title": "Nvidia CEO Jensen Huang's letter to staff about affair",
+   "group": "skip",
+   "line": "Nvidia CEO 직원 편지 — 개인 사건",
+   "short": "Nvidia 편지",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://nvidianews.nvidia.com/news/a-message-to-our-company",
+   "co": "기타",
+   "date": "2026-11-09",
+   "pts": 573,
+   "hn": "50418016",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [],
+   "thread": "",
+   "all": []
+  },
+  {
+   "key": "hunch.net/",
+   "of": null,
+   "title": "The end of Microsoft Research's AI Frontiers group",
+   "group": "buzz",
+   "line": "AI Frontiers 해체 — MS 연구 조직의 끝",
+   "short": "AI Frontiers",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://hunch.net/?p=13764006",
+   "co": "기타",
+   "date": "2026-11-08",
+   "pts": 501,
+   "hn": "50406563",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "Microsoft Research의 AI Frontiers 조직이 끝났다는 전 리더의 글이에요.",
+    "9월에 Microsoft AI로 재편됐고, 그쪽은 연구보다 스케일링 중심이라 맞지 않았다고 해요.",
+    "AI Frontiers는 약 50명 규모였고 Autogen, Fara 같은 에이전트 작업을 했어요."
+   ],
+   "thread": "",
+   "all": []
+  },
+  {
    "key": "caleb.software/posts/claude-to-pi.html",
    "of": null,
    "title": "Goodbye Claude, Hello Pi",
@@ -6320,5 +6368,5 @@
    "all": []
   }
  ],
- "judged_at": 1794171739
+ "judged_at": 1794210674
 }
