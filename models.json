@@ -2,6 +2,7 @@
 "release": {
 "A.X-K2": "2026-08-12",
 "Agnes 2.5 Pro Beta": "2026-08-26",
+"Agnes 2.5 Pro Theta": "2026-11-07",
 "Apertus 70B Instruct": "2025-09-02",
 "Apertus 8B Instruct": "2025-09-02",
 "Apodex 1.1": "2026-08-30",
@@ -316,6 +317,7 @@
 "Molmo2-8B": "2025-12-11",
 "Motif 3": "2026-08-12",
 "Motif-2-12.7B-Reasoning": "2025-12-04",
+"Muse Ember": "2026-11-09",
 "Muse Glimmer": "2026-08-10",
 "Muse Spark": "2026-04-08",
 "Muse Spark 1.1": "2026-07-09",
@@ -569,6 +571,7 @@
 "Mistral Small 3.1": 0,
 "Mistral Small 3.2": 0,
 "Mistral Small 4": 0,
+"Muse Ember": 40.9,
 "Muse Glimmer": 0.5,
 "Muse Spark 1.1": 6.1,
 "Muse Spark 1.2": 7.1,
