@@ -1,6 +1,32 @@
 {
  "items": [
   {
+   "key": "claude.com/resources/articles/sheets-whiteboards-data",
+   "of": null,
+   "title": "Claude Whiteboards, Claude Sheets, and Claude Data",
+   "group": "know",
+   "line": "Claude Whiteboards, Sheets, Data",
+   "short": "Claude Whiteboards",
+   "note": "코딩 도구는 아니고 앱에서 열렸는지 보기",
+   "w": 3,
+   "event": "",
+   "url": "https://claude.com/resources/articles/sheets-whiteboards-data",
+   "co": "Anthropic",
+   "date": "2026-11-11",
+   "pts": 136,
+   "hn": "50443716",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "Anthropic이 Claude Whiteboards와 Claude Sheets를 베타로 내고, Dashboards를 Claude Data로 정식 공개했어요.",
+    "Whiteboards는 팀이 Claude와 보드를 같이 쓰고, Sheets는 Claude가 탭과 수식이 있는 스프레드시트를 만들고 고쳐요.",
+    "모든 유료 플랜에서 웹, 데스크톱, 모바일로 쓰고, Claude Data는 데이터 커넥터가 필요해요."
+   ],
+   "thread": "",
+   "all": []
+  },
+  {
    "key": "blog.google/innovation-and-ai/models-and-research/gemini-models/multimodal-knowledge-agent-benchmark",
    "of": null,
    "title": "Introducing the Multimodal Knowledge Agent benchmark",
@@ -72,6 +98,32 @@
     "본문이 받아지지 않아 자세한 조건은 원문에서 확인해야 해요."
    ],
    "thread": "의사결정 모델",
+   "all": []
+  },
+  {
+   "key": "openai.com/index/introducing-businesses-chatgpt",
+   "of": null,
+   "title": "Introducing Businesses in ChatGPT",
+   "group": "know",
+   "line": "Businesses in ChatGPT — 기업용 Business Agents",
+   "short": "ChatGPT Businesses",
+   "note": "기업용 기능이라 당장 할 일은 없어요",
+   "w": 3,
+   "event": "",
+   "url": "https://openai.com/index/introducing-businesses-chatgpt",
+   "co": "OpenAI",
+   "date": "2026-11-10",
+   "pts": 0,
+   "hn": null,
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "OpenAI가 Businesses in ChatGPT를 베타로 내고 Business Hub와 Business Agents를 선보였어요.",
+    "기업이 자기 정보를 등록하고 ChatGPT 안 노출과 클릭 통계를 보며, 고객과 대화하는 Business Agent를 만들 수 있어요.",
+    "Business Agents는 미국의 이커머스와 온라인 서비스 기업부터 열렸고, 다른 시장은 앞으로 넓힌다고 해요."
+   ],
+   "thread": "",
    "all": []
   },
   {
@@ -6180,5 +6232,5 @@
    "all": []
   }
  ],
- "judged_at": 1794332370
+ "judged_at": 1794352106
 }
