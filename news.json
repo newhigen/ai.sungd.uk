@@ -49,6 +49,28 @@
    "all": []
   },
   {
+   "key": "artificialanalysis.ai/models/claude-fable-5-2",
+   "of": null,
+   "title": "Claude Fable 5.2 scores 65 on Artificial Analysis, highest so far",
+   "group": "skip",
+   "line": "Claude Fable 5.2 — 지능 지수 평가 페이지",
+   "short": "Fable 5.2 평가",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://artificialanalysis.ai/models/claude-fable-5-2",
+   "co": "Anthropic",
+   "date": "2026-11-10",
+   "pts": 344,
+   "hn": "50431144",
+   "gn": "36910",
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [],
+   "thread": "",
+   "all": []
+  },
+  {
    "key": "anthropic.com/claude-fable-and-mythos-5-2",
    "of": null,
    "title": "Claude Fable 5.2 and Mythos 5.2",
@@ -6451,5 +6473,5 @@
    ]
   }
  ],
- "judged_at": 1794275965
+ "judged_at": 1794303472
 }
