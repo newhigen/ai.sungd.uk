@@ -1,6 +1,80 @@
 {
  "items": [
   {
+   "key": "blog.google/innovation-and-ai/models-and-research/gemini-models/multimodal-knowledge-agent-benchmark",
+   "of": null,
+   "title": "Introducing the Multimodal Knowledge Agent benchmark",
+   "group": "skip",
+   "line": "MKA — 멀티모달 에이전트 벤치마크",
+   "short": "MKA",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/multimodal-knowledge-agent-benchmark/",
+   "co": "Google",
+   "date": "2026-11-11",
+   "pts": 0,
+   "hn": null,
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [],
+   "thread": "",
+   "all": []
+  },
+  {
+   "key": "blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available",
+   "of": null,
+   "title": "Gemini 4 Carbon is now available",
+   "group": "know",
+   "line": "Gemini 4 Carbon — 일반 공개",
+   "short": "Carbon 공개",
+   "note": "Ultra 구독 쪽부터라 Pro 는 확인해요",
+   "w": 3,
+   "event": "",
+   "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/",
+   "co": "Google",
+   "date": "2026-11-11",
+   "pts": 192,
+   "hn": "50442303",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "Google이 Gemini 4 Carbon을 개발자와 일반 사용자에게 공개했어요.",
+    "API 가격은 Argon과 같은 입력 100만 토큰당 2달러, 출력 10달러예요.",
+    "Google AI Ultra 구독자에게 Antigravity, Gemini 앱, AI Mode 순으로 제공되고 있어요."
+   ],
+   "thread": "",
+   "all": []
+  },
+  {
+   "key": "strandsagents.com/blog/amazon-saves-millions-replacing-sonnet-with-strands-decider",
+   "of": null,
+   "title": "Amazon saves millions by replacing Sonnet 4.6 with Strands Decider",
+   "group": "know",
+   "line": "Strands Decider — Sonnet 4.6 대체",
+   "short": "Strands Decider",
+   "note": "Sonnet 4.6 를 바꿔 끼운 사례예요",
+   "w": 2,
+   "event": "",
+   "url": "https://strandsagents.com/blog/amazon-saves-millions-replacing-sonnet-with-strands-decider/",
+   "co": "기타",
+   "date": "2026-11-10",
+   "pts": 595,
+   "hn": "50436640",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "Amazon이 Sonnet 4.6 대신 Strands Decider를 쓴다는 글이 올라왔어요.",
+    "제목에 수백만 달러를 아낀다고 적혀 있어요.",
+    "본문이 받아지지 않아 자세한 조건은 원문에서 확인해야 해요."
+   ],
+   "thread": "의사결정 모델",
+   "all": []
+  },
+  {
    "key": "openai.com/index/chatgpt-enterprise-aws-marketplace",
    "of": null,
    "title": "ChatGPT Enterprise now available in AWS Marketplace",
@@ -49,6 +123,32 @@
    "all": []
   },
   {
+   "key": "deepmind.google/blog/introducing-alphaproof-code",
+   "of": null,
+   "title": "AlphaProof Code",
+   "group": "know",
+   "line": "AlphaProof Code — 소프트웨어 형식 검증",
+   "short": "AlphaProof Code",
+   "note": "Carbon 으로 코드 증명을 해요",
+   "w": 2,
+   "event": "",
+   "url": "https://deepmind.google/blog/introducing-alphaproof-code/",
+   "co": "Google",
+   "date": "2026-11-10",
+   "pts": 440,
+   "hn": "50439193",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "Google DeepMind가 복잡한 소프트웨어를 깊이 검증하는 AlphaProof Code를 냈어요.",
+    "Gemini 4 Carbon 글에 따르면 Signal 암호 프로토콜 코드의 보안 속성을 수 주 만에 증명했어요.",
+    "Lean 코드를 수백만 줄 생성해서 증명하고, 보통은 전문가 팀이 수년 걸리는 일이라고 해요."
+   ],
+   "thread": "",
+   "all": []
+  },
+  {
    "key": "artificialanalysis.ai/models/claude-fable-5-2",
    "of": null,
    "title": "Claude Fable 5.2 scores 65 on Artificial Analysis, highest so far",
@@ -64,6 +164,28 @@
    "pts": 344,
    "hn": "50431144",
    "gn": "36910",
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [],
+   "thread": "",
+   "all": []
+  },
+  {
+   "key": "anthropic.com/news/roadshow-launch",
+   "of": null,
+   "title": "Anthropic launches roadshow for proposed initial public offering",
+   "group": "skip",
+   "line": "Anthropic IPO — 로드쇼 시작",
+   "short": "IPO 로드쇼",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://www.anthropic.com/news/roadshow-launch",
+   "co": "Anthropic",
+   "date": "2026-11-10",
+   "pts": 0,
+   "hn": null,
+   "gn": null,
    "demo": null,
    "demo_as": "듣기",
    "s": [],
@@ -6056,422 +6178,7 @@
    "hn": "49897075",
    "gn": null,
    "all": []
-  },
-  {
-   "key": "theatlantic.com/technology/2026/10/openai-safety-team-resignation/688881",
-   "of": null,
-   "title": "나는 OpenAI의 조직 문화가 망가져 퇴사했다",
-   "group": "buzz",
-   "line": "I Quit OpenAI — 안전팀 퇴사자의 글",
-   "short": "OpenAI 퇴사 글",
-   "note": "",
-   "w": 1,
-   "event": "",
-   "url": "https://www.theatlantic.com/technology/2026/10/openai-safety-team-resignation/688881/",
-   "co": "기타",
-   "date": "2026-09-29",
-   "pts": 0,
-   "hn": null,
-   "gn": "34740",
-   "demo": null,
-   "demo_as": "듣기",
-   "s": [
-    "OpenAI 안전 보고서 작성을 이끈 David Robinson이 The Atlantic에 퇴사 글을 썼어요.",
-    "속도 중심의 조직 문화 때문에 안전 방식이 주기적인 실패를 부른다고 주장해요.",
-    "Hugging Face incident와 학습 중 모델이 인터넷 제한을 우회한 사례, Anthropic의 안전장치 오작동을 들어요."
-   ],
-   "thread": "AI 연구소 감시",
-   "all": []
-  },
-  {
-   "key": "ssp.sh/brain/the-problem-is-not-the-ai-code-but-nobody-knows-anything-anymore",
-   "of": null,
-   "title": "문제는 AI 코드가 아니라, 이제 아무도 아무것도 모른다는 것이다",
-   "group": "buzz",
-   "line": "AI 코드가 아니라 아무도 모른다는 문제",
-   "short": "아무도 모른다",
-   "note": "",
-   "w": 1,
-   "event": "",
-   "url": "https://www.ssp.sh/brain/the-problem-is-not-the-ai-code-but-nobody-knows-anything-anymore/",
-   "co": "기타",
-   "date": "2026-09-29",
-   "pts": 0,
-   "hn": null,
-   "gn": "34439",
-   "all": [],
-   "thread": "AI 와 개발자의 일",
-   "s": [
-    "개발 노트 ssp.sh가 \"문제는 AI 코드가 아니라 아무도 아는 게 없어지는 것\"이라는 글을 썼어요.",
-    "Claude Code가 스펙, 코드, 티켓, 보고서를 다 만들고 아무도 안 읽는다는 X 글을 인용했어요.",
-    "유지보수가 여전히 최종 관문이라며, 의도, 취향, 설계가 더 중요해진다고 말해요."
-   ]
-  },
-  {
-   "key": "openai.com/index/devday-2026-recap#4",
-   "of": "openai.com/index/devday-2026-recap",
-   "title": "",
-   "group": "try",
-   "line": "Sign in with ChatGPT — 플랜 한도를 다른 도구에서",
-   "short": "Sign in with ChatGPT",
-   "note": "Plus 도 참여 도구에서 쓸 수 있어요",
-   "w": 1,
-   "event": "",
-   "url": "https://help.openai.com/en/articles/20001542",
-   "co": "OpenAI",
-   "date": "2026-09-29",
-   "pts": 0,
-   "hn": null,
-   "gn": null,
-   "all": []
-  },
-  {
-   "key": "openai.com/index/devday-2026-recap#3",
-   "of": "openai.com/index/devday-2026-recap",
-   "title": "",
-   "group": "try",
-   "line": "Code Review — 앱에서 변경 검토",
-   "short": "Code Review",
-   "note": "ChatGPT 앱에서 diff 물어보기",
-   "w": 1,
-   "event": "",
-   "url": "https://learn.chatgpt.com/docs/code-review?surface=app",
-   "co": "OpenAI",
-   "date": "2026-09-29",
-   "pts": 0,
-   "hn": null,
-   "gn": null,
-   "all": []
-  },
-  {
-   "key": "openai.com/index/devday-2026-recap#2",
-   "of": "openai.com/index/devday-2026-recap",
-   "title": "",
-   "group": "try",
-   "line": "Codex CLI 새 버전 — 음성과 /agents",
-   "short": "Codex CLI",
-   "note": "CLI 에서 /agents 열어 보기",
-   "w": 2,
-   "event": "",
-   "url": "https://learn.chatgpt.com/docs/codex/cli",
-   "co": "OpenAI",
-   "date": "2026-09-29",
-   "pts": 0,
-   "hn": null,
-   "gn": null,
-   "all": []
-  },
-  {
-   "key": "openai.com/index/devday-2026-recap#1",
-   "of": "openai.com/index/devday-2026-recap",
-   "title": "",
-   "group": "try",
-   "line": "Codex 어디서나 — 폰과 클라우드에서 Codex",
-   "short": "Codex 어디서나",
-   "note": "Plus 에도 열렸어요",
-   "w": 2,
-   "event": "",
-   "url": "https://learn.chatgpt.com/docs/cloud",
-   "co": "OpenAI",
-   "date": "2026-09-29",
-   "pts": 0,
-   "hn": null,
-   "gn": null,
-   "all": []
-  },
-  {
-   "key": "openai.com/index/devday-2026-recap",
-   "of": null,
-   "title": "DevDay 2026 Recap",
-   "group": "event",
-   "line": "OpenAI DevDay 2026 — 발표 25개",
-   "short": "DevDay",
-   "note": "",
-   "w": 3,
-   "event": "",
-   "url": "https://openai.com/index/devday-2026-recap",
-   "co": "OpenAI",
-   "date": "2026-09-29",
-   "pts": 0,
-   "hn": null,
-   "gn": "34505",
-   "all": [
-    {
-     "cat": "모델",
-     "name": "GPT-6.1 Sol",
-     "line": "Astra 에 가까운 성능을 5분의 1 가격에",
-     "url": "https://openai.com/index/introducing-gpt-6-1-sol/"
-    },
-    {
-     "cat": "모델",
-     "name": "Ultrafast",
-     "line": "Codex 에서 최대 8배 빠른 토큰 생성 속도 티어",
-     "url": "https://learn.chatgpt.com/docs/agent-configuration/speed"
-    },
-    {
-     "cat": "모델",
-     "name": "Private Intelligence",
-     "line": "기업 데이터를 보호하며 쓰는 프런티어 AI",
-     "url": "https://openai.com/index/devday-2026-recap/"
-    },
-    {
-     "cat": "에이전트",
-     "name": "dots",
-     "line": "늘 켜 두고 일을 맡기는 에이전트",
-     "url": "https://openai.com/index/introducing-dots/"
-    },
-    {
-     "cat": "Codex",
-     "name": "Codex in the cloud",
-     "line": "컴퓨터, 폰, 클라우드 어디서나 Codex 실행",
-     "url": "https://learn.chatgpt.com/docs/cloud"
-    },
-    {
-     "cat": "Codex",
-     "name": "Codex CLI 새 버전",
-     "line": "음성 지시와 /agents 보기가 생긴 CLI",
-     "url": "https://learn.chatgpt.com/docs/codex/cli"
-    },
-    {
-     "cat": "Codex",
-     "name": "Code Review",
-     "line": "데스크톱 앱에서 변경을 요약하고 diff 확인",
-     "url": "https://learn.chatgpt.com/docs/code-review?surface=app"
-    },
-    {
-     "cat": "Codex",
-     "name": "Codex Security Cloud",
-     "line": "저장소를 정기 스캔하고 클라우드에서 수정 준비",
-     "url": "https://learn.chatgpt.com/docs/security/setup"
-    },
-    {
-     "cat": "API",
-     "name": "Decisions API",
-     "line": "정해진 답 중에서 판단을 돌려주는 API",
-     "url": "https://openai.com/index/devday-2026-recap/",
-     "thread": "의사결정 모델"
-    },
-    {
-     "cat": "API",
-     "name": "Agents API 컴퓨터 사용",
-     "line": "Agents API 에 computer use 지원 추가",
-     "url": "https://developers.openai.com/api/docs/guides/agents-api/tools/computer-use"
-    },
-    {
-     "cat": "API",
-     "name": "Bedrock Managed Agents",
-     "line": "AWS 안에서 도는 OpenAI 에이전트",
-     "url": "https://aws.amazon.com/bedrock/managed-agents-openai/"
-    },
-    {
-     "cat": "플러그인",
-     "name": "Plugin extensions",
-     "line": "사이드바와 패널로 ChatGPT 안에 플러그인 배치",
-     "url": "https://developers.openai.com/plugins/build/extensions"
-    },
-    {
-     "cat": "플러그인",
-     "name": "플러그인 제작과 검색 개선",
-     "line": "Plugin Creator 와 새 제출 흐름",
-     "url": "https://developers.openai.com/plugins"
-    },
-    {
-     "cat": "플러그인",
-     "name": "Sites 플러그인",
-     "line": "만든 Sites 에 ChatGPT 플러그인 추가",
-     "url": "http://chatgpt.com/features/sites/"
-    },
-    {
-     "cat": "플러그인",
-     "name": "MCP events",
-     "line": "연결된 앱 이벤트로 자동화 시작",
-     "url": "https://developers.openai.com/plugins/build/mcp-events"
-    },
-    {
-     "cat": "협업",
-     "name": "ChatGPT Space",
-     "line": "팀과 ChatGPT 가 함께 쓰는 공간",
-     "url": "https://chatgpt.com/features/space/"
-    },
-    {
-     "cat": "협업",
-     "name": "Pages",
-     "line": "사람과 에이전트가 함께 쓰는 새 문서",
-     "url": "https://chatgpt.com/features/space/"
-    },
-    {
-     "cat": "협업",
-     "name": "공동 슬라이드",
-     "line": "여럿이 동시에 고치는 슬라이드",
-     "url": "https://chatgpt.com/features/space/"
-    },
-    {
-     "cat": "협업",
-     "name": "팀 만들기와 작업 공유",
-     "line": "반복 업무를 팀 작업으로 위임",
-     "url": "https://learn.chatgpt.com/docs/enterprise/team-tasks"
-    },
-    {
-     "cat": "협업",
-     "name": "@ChatGPT in Slack, Teams",
-     "line": "Slack 과 Teams 에서 ChatGPT 호출",
-     "url": "https://chatgpt.com/features/chatgpt-in-slack-and-teams/"
-    },
-    {
-     "cat": "협업",
-     "name": "Meetings plugin",
-     "line": "회의 노트와 액션 아이템을 Space 에 저장",
-     "url": "https://help.openai.com/articles/20001546"
-    },
-    {
-     "cat": "협업",
-     "name": "공유 프로필",
-     "line": "만든 Sites 와 플러그인을 한곳에 공유",
-     "url": "https://help.openai.com/articles/20001539"
-    },
-    {
-     "cat": "요금제와 생태계",
-     "name": "Sign in with ChatGPT",
-     "line": "ChatGPT 사용량을 파트너 16곳에서 사용",
-     "url": "https://help.openai.com/en/articles/20001542"
-    },
-    {
-     "cat": "요금제와 생태계",
-     "name": "Pro 500",
-     "line": "Plus 의 25배 사용량과 Ultrafast 포함",
-     "url": "https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers"
-    },
-    {
-     "cat": "요금제와 생태계",
-     "name": "OpenAI Marketplace",
-     "line": "기업이 약정금으로 파트너 소프트웨어 구매",
-     "url": "https://openai.com/business/marketplace/"
-    }
-   ]
-  },
-  {
-   "key": "github.com/firelex/jeff",
-   "of": null,
-   "title": "Jeff – Jev-compatible 0.8B decision models, trained at home, ~30 ms",
-   "group": "buzz",
-   "line": "Jeff — 집에서 학습한 Jev 호환 모델",
-   "short": "Jeff",
-   "note": "",
-   "w": 1,
-   "event": "",
-   "url": "https://github.com/firelex/jeff",
-   "co": "기타",
-   "date": "2026-09-29",
-   "pts": 574,
-   "hn": "49883844",
-   "gn": "34459",
-   "all": [],
-   "thread": "의사결정 모델",
-   "s": [
-    "Jeff는 큰 모델 앞에 세워 빠른 판단을 맡기는 0.8B 공개 모델이에요.",
-    "8개 어댑터 평균으로 정확도 86.6%에서 95.3%로, 결정당 8.1초에서 0.25초로 38배 빨라졌어요.",
-    "v1.2와 어댑터 9개를 10월 1일 공개했고, 장기지원판 v1.3은 약 36시간 뒤 나와요."
-   ]
-  },
-  {
-   "key": "github.com/CopilotKit/OpenMuse",
-   "of": null,
-   "title": "OpenMuse - 브라우저와 터미널로 일하는 오픈소스 개인 AI 에이전트",
-   "group": "buzz",
-   "line": "OpenMuse — 오픈소스 개인 에이전트",
-   "short": "OpenMuse",
-   "note": "",
-   "w": 1,
-   "event": "",
-   "url": "https://github.com/CopilotKit/OpenMuse",
-   "co": "기타",
-   "date": "2026-09-29",
-   "pts": 0,
-   "hn": null,
-   "gn": "34790",
-   "demo": null,
-   "demo_as": "듣기",
-   "s": [
-    "CopilotKit이 브라우저, 터미널, 파일을 쓰는 개인 에이전트 앱 OpenMuse를 오픈소스로 냈어요.",
-    "iOS, Android, 웹을 지원하고 MIT 라이선스이며, Gmail과 Calendar 연동도 있어요.",
-    "아직 알파 단계라 직접 호스팅하고 CopilotKit Intelligence 프로젝트 키가 필요해요."
-   ],
-   "thread": "",
-   "all": []
-  },
-  {
-   "key": "calnewport.com/its-time-to-investigate-the-ai-labs",
-   "of": null,
-   "title": "It's Time to Investigate the AI Labs",
-   "group": "buzz",
-   "line": "칼 뉴포트 — AI 연구소를 조사할 때",
-   "short": "AI 연구소 조사",
-   "note": "",
-   "w": 1,
-   "event": "",
-   "url": "https://calnewport.com/its-time-to-investigate-the-ai-labs/",
-   "co": "기타",
-   "date": "2026-09-29",
-   "pts": 626,
-   "hn": "49883471",
-   "gn": "34457",
-   "all": [],
-   "thread": "AI 연구소 감시",
-   "s": [
-    "Cal Newport가 뉴욕타임스 칼럼에서 의회가 AI 랩을 조사해야 한다고 썼어요.",
-    "어떤 실험을 왜 하는지, 사고 뒤 안전 절차가 왜 안 멈췄는지 밝히라고 요구해요.",
-    "OpenAI와 Anthropic의 종말론적 신념이 의사결정에 영향을 줬는지도 조사 대상으로 꼽아요."
-   ]
-  },
-  {
-   "key": "brunch.co.kr/brunchbook/ai-at-work",
-   "of": null,
-   "title": "개발 못 하는 영업 직장인이 옵시디언에 클로드 코드를 붙여 일한 기록",
-   "group": "buzz",
-   "line": "옵시디언에 Claude Code 붙여 일한 기록",
-   "short": "옵시디언 Claude Code",
-   "note": "",
-   "w": 1,
-   "event": "",
-   "url": "https://brunch.co.kr/brunchbook/ai-at-work",
-   "co": "기타",
-   "date": "2026-09-29",
-   "pts": 0,
-   "hn": null,
-   "gn": "34711",
-   "demo": null,
-   "demo_as": "듣기",
-   "s": [
-    "개발을 못 하는 영업 직장인이 AI를 일에 붙인 과정을 브런치북으로 연재해요.",
-    "지시문 한 장, 폴더 나누기, 틀 만들기, 말투 맞추기 같은 주제를 9편에 담았어요.",
-    "10화는 2026년 10월 4일에 발행될 예정이에요."
-   ],
-   "thread": "",
-   "all": []
-  },
-  {
-   "key": "anthropic.com/claude-sonnet-5-5",
-   "of": null,
-   "title": "Sonnet 5.5",
-   "group": "try",
-   "line": "Claude Sonnet 5.5",
-   "short": "Sonnet 5.5",
-   "note": "Claude Code 모델 목록에서 골라 보기",
-   "w": 3,
-   "event": "",
-   "url": "https://www.anthropic.com/claude-sonnet-5-5",
-   "co": "Anthropic",
-   "date": "2026-09-29",
-   "pts": 883,
-   "hn": "49881850",
-   "gn": "34444",
-   "all": [],
-   "s": [
-    "Anthropic이 Claude 5.5 패밀리의 두 번째 모델 Sonnet 5.5를 공개했어요.",
-    "Terminal-Bench 4.0 점수가 Sonnet 5의 10.3%에서 70.6%로 올랐고, 출력은 30% 이상 빨라요.",
-    "가격은 Sonnet 5와 같은 100만 토큰당 입력 2달러, 출력 10달러인데, 작업당 비용은 최대 30% 줄어요."
-   ]
   }
  ],
- "judged_at": 1794303472
+ "judged_at": 1794332370
 }
