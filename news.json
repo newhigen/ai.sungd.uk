@@ -1,6 +1,32 @@
 {
  "items": [
   {
+   "key": "vulncheck.com/blog/anthropic-glasswing-november-update",
+   "of": null,
+   "title": "Tracking Anthropic-discovered vulnerabilities",
+   "group": "buzz",
+   "line": "Glasswing 7개월 — VulnCheck 의 검증",
+   "short": "Glasswing 검증",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://www.vulncheck.com/blog/anthropic-glasswing-november-update",
+   "co": "Anthropic",
+   "date": "2026-11-11",
+   "pts": 366,
+   "hn": "50447074",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "VulnCheck 가 Anthropic 의 Project Glasswing 7개월 결과를 짚은 글이에요.",
+    "Anthropic 발견 CVE 442건 중 악용된 건 2건, ledger 의 37,966건 중 fixed 는 217건이에요.",
+    "curl 은 공개된 34건 중 19건을 취약점 아님으로, 6건을 low 로 판정했어요."
+   ],
+   "thread": "AI 연구소 감시",
+   "all": []
+  },
+  {
    "key": "claude.com/resources/articles/sheets-whiteboards-data",
    "of": null,
    "title": "Claude Whiteboards, Claude Sheets, and Claude Data",
@@ -172,6 +198,32 @@
     "Gemini 앱에서 Connected Apps를 켜 둔 경우가 해당돼요. 기밀 정보는 연결하지 말라고 도움말에 적혀 있어요."
    ],
    "thread": "",
+   "all": []
+  },
+  {
+   "key": "github.com/OmniJev/Flide",
+   "of": null,
+   "title": "Flide - Jev같은 의사결정 모델을 최대 9.5배 빠르게 실행",
+   "group": "know",
+   "line": "Flide — Jev 계열 의사결정 모델 추론 엔진",
+   "short": "Flide",
+   "note": "의사결정 모델 생태계가 커지는 중이에요",
+   "w": 2,
+   "event": "",
+   "url": "https://github.com/OmniJev/Flide",
+   "co": "기타",
+   "date": "2026-11-10",
+   "pts": 0,
+   "hn": null,
+   "gn": "36894",
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "Flide 는 Jev 계열 의사결정 모델을 서빙하는 추론 인프라예요.",
+    "exact state forking 으로 vLLM 과 SGLang 보다 최대 9.5배 빠르다고 해요.",
+    "pip 로 설치하고 /v1/systemone API 를 열며, H200 한 장에서 메일 1만 통을 28초에 처리해요."
+   ],
+   "thread": "의사결정 모델",
    "all": []
   },
   {
@@ -466,6 +518,32 @@
     "Anthropic이 에이전트 1,000개가 Fable 5.2 초기 버전으로 페르마 정리 증명을 재현한 실험을 썼어요.",
     "28.7시간이 걸렸고 출력 토큰은 원래의 3분의 1, 증명 길이는 7분의 1이에요.",
     "에이전트마다 네트워크 없는 샌드박스에서 돌고, 분류기와 오프라인 감시가 모든 동작을 검사해요."
+   ],
+   "thread": "",
+   "all": []
+  },
+  {
+   "key": "simonwillison.net/2026/Nov/9/mysterious-beeps",
+   "of": null,
+   "title": "정체불명의 삐 소리가 나는 위치 찾기",
+   "group": "buzz",
+   "line": "Beep Locator — 삐 소리 위치 찾기",
+   "short": "Beep Locator",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://simonwillison.net/2026/Nov/9/mysterious-beeps/",
+   "co": "기타",
+   "date": "2026-11-08",
+   "pts": 0,
+   "hn": null,
+   "gn": "36936",
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "Simon Willison 이 Claude Code 로 Beep Locator 를 만든 과정을 썼어요.",
+    "여러 기기의 마이크로 소리를 모아 삼각측량해 약 40cm 안으로 위치를 짚었어요.",
+    "WebSocket 으로 listener 에 새 코드를 보내는 hot-swap 으로 Claude 가 스스로 고쳐 가며 일했어요."
    ],
    "thread": "",
    "all": []
@@ -6232,5 +6310,5 @@
    "all": []
   }
  ],
- "judged_at": 1794352106
+ "judged_at": 1794376502
 }
