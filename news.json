@@ -227,6 +227,32 @@
    "all": []
   },
   {
+   "key": "evanxmerz.com/post/ai-usage-generates-a-fragile-codebase",
+   "of": null,
+   "title": "AI usage generates a fragile codebase",
+   "group": "buzz",
+   "line": "AI 사용은 취약한 코드베이스를 만든다",
+   "short": "취약한 코드베이스",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://evanxmerz.com/post/ai-usage-generates-a-fragile-codebase/",
+   "co": "기타",
+   "date": "2026-11-10",
+   "pts": 605,
+   "hn": "50438318",
+   "gn": "36955",
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "Meta 에서 해고된 개발자가 AI 코딩의 문제를 정리한 글이에요.",
+    "테스트가 얕고, 코드가 복잡하고, 사람의 이해가 줄고, 리뷰가 빠른 속도를 못 따라간다고 해요.",
+    "사고가 늘고 복구가 길어지는 것을 코드베이스가 약해졌다는 신호로 들어요."
+   ],
+   "thread": "AI 와 개발자의 일",
+   "all": []
+  },
+  {
    "key": "deepmind.google/blog/introducing-alphaproof-code",
    "of": null,
    "title": "AlphaProof Code",
@@ -6310,5 +6336,5 @@
    "all": []
   }
  ],
- "judged_at": 1794376502
+ "judged_at": 1794405653
 }
