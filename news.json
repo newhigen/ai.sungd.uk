@@ -253,6 +253,32 @@
    "all": []
   },
   {
+   "key": "twitter.com/shaharglazner/status/2119796029256032278",
+   "of": null,
+   "title": "2026년, 엔지니어로 살아간다는 것",
+   "group": "buzz",
+   "line": "2026년, 엔지니어로 살아간다는 것",
+   "short": "엔지니어의 2026",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://twitter.com/shaharglazner/status/2119796029256032278",
+   "co": "기타",
+   "date": "2026-11-10",
+   "pts": 0,
+   "hn": null,
+   "gn": "36945",
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "엔지니어가 에이전트에 일을 넘기는 지금, 사람의 몫이 무엇인지 따져 본 글이에요.",
+    "같은 모델과 하네스를 써도 엔지니어마다 결과물 격차가 크다는 점을 근거로 들어요.",
+    "문제 정의, 난이도 감각, 2년 뒤를 보는 판단, 말로 못 하는 직관을 사람의 몫으로 꼽아요."
+   ],
+   "thread": "AI 와 개발자의 일",
+   "all": []
+  },
+  {
    "key": "strandsagents.com/blog/amazon-saves-millions-replacing-sonnet-with-strands-decider",
    "of": null,
    "title": "Amazon saves millions by replacing Sonnet 4.6 with Strands Decider",
@@ -6342,5 +6368,5 @@
    "all": []
   }
  ],
- "judged_at": 1794451783
+ "judged_at": 1794480788
 }
