@@ -1,6 +1,54 @@
 {
  "items": [
   {
+   "key": "wsj.com/business/nvidia-is-preparing-to-oust-nvidia-ceo-jensen-huang-30f421ad",
+   "of": null,
+   "title": "Nvidia is preparing to oust Jensen Huang",
+   "group": "skip",
+   "line": "Nvidia — 젠슨 황 CEO 해임 준비 보도",
+   "short": "Nvidia CEO",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://www.wsj.com/business/nvidia-is-preparing-to-oust-nvidia-ceo-jensen-huang-30f421ad",
+   "co": "기타",
+   "date": "2026-11-12",
+   "pts": 573,
+   "hn": "50459703",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [],
+   "thread": "",
+   "all": []
+  },
+  {
+   "key": "blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api",
+   "of": null,
+   "title": "Gemini Decisions API",
+   "group": "know",
+   "line": "Gemini Decisions API — 판단과 확률을 돌려주는 API",
+   "short": "Gemini Decisions",
+   "note": "OpenAI Decisions API 와 같은 방향이에요",
+   "w": 3,
+   "event": "",
+   "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/",
+   "co": "Google",
+   "date": "2026-11-12",
+   "pts": 290,
+   "hn": "50456791",
+   "gn": "37011",
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "Google이 Gemini Decision 1 모델 기반 Gemini Decisions API를 냈어요.",
+    "입력 하나에 최대 1,000개 질문을 한 번에 평가하고 확률과 신뢰도를 돌려줘요.",
+    "100만 입력 토큰당 0.10달러, 출력 토큰은 과금하지 않고 AI Studio에 무료 구간이 있어요."
+   ],
+   "thread": "의사결정 모델",
+   "all": []
+  },
+  {
    "key": "vulncheck.com/blog/anthropic-glasswing-november-update",
    "of": null,
    "title": "Tracking Anthropic-discovered vulnerabilities",
@@ -48,6 +96,32 @@
     "개발자가 NASA lidar 데이터를 에이전트 48개에 나눠 보여 주고 마야 유적을 찾았다고 썼어요.",
     "별도 모델이나 분류기 없이 에이전트가 이미지를 보고 가렸고, 약 1,200km² 를 훑었어요.",
     "11월 11일 정정: 이미 2025년 논문에 실린 곳이라 새 발견이 아니라 재발견이었어요."
+   ],
+   "thread": "",
+   "all": []
+  },
+  {
+   "key": "pietromiotti.com/latest/maya-site",
+   "of": null,
+   "title": "My AI agents found an unmapped Maya site?",
+   "group": "buzz",
+   "line": "마야 유적 — AI 에이전트가 라이다로 찾아낸 이야기",
+   "short": "마야 유적",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://pietromiotti.com/latest/maya-site",
+   "co": "기타",
+   "date": "2026-11-11",
+   "pts": 935,
+   "hn": "50452455",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "여행 중이던 개발자가 AI 에이전트 48개로 NASA 라이다 자료 약 1,200km²를 훑었어요.",
+    "에이전트가 라이다를 이미지로 보고 피라미드, 광장을 찾았고 별도 모델은 없었어요.",
+    "보고서를 멕시코 INAH에 냈지만 이미 2025년 논문에 지도화된 유적이었어요."
    ],
    "thread": "",
    "all": []
@@ -622,6 +696,32 @@
     "Anthropic이 에이전트 1,000개가 Fable 5.2 초기 버전으로 페르마 정리 증명을 재현한 실험을 썼어요.",
     "28.7시간이 걸렸고 출력 토큰은 원래의 3분의 1, 증명 길이는 7분의 1이에요.",
     "에이전트마다 네트워크 없는 샌드박스에서 돌고, 분류기와 오프라인 감시가 모든 동작을 검사해요."
+   ],
+   "thread": "",
+   "all": []
+  },
+  {
+   "key": "cbsnews.com/news/united-airlines-bans-ai-agents-booking-flights",
+   "of": null,
+   "title": "United Airlines, AI 에이전트의 여행객 대리 항공편 예약 금지",
+   "group": "buzz",
+   "line": "United Airlines — AI 에이전트 대리 예약 금지",
+   "short": "United 에이전트 금지",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://www.cbsnews.com/news/united-airlines-bans-ai-agents-booking-flights/",
+   "co": "기타",
+   "date": "2026-11-09",
+   "pts": 0,
+   "hn": null,
+   "gn": "37014",
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "United Airlines가 승인받지 않은 제3자 AI 에이전트의 항공편 대리 예약을 금지한다고 밝혔어요.",
+    "계정 정보를 넘기면 의도치 않은 구매가 생길 수 있고 연방 규정에 걸릴 수도 있다고 설명해요.",
+    "자체 앱과 사이트뿐 아니라 여행사, 애그리게이터 경유도 막고 Southwest는 ChatGPT에 운임을 열었어요."
    ],
    "thread": "",
    "all": []
@@ -6242,5 +6342,5 @@
    "all": []
   }
  ],
- "judged_at": 1794431705
+ "judged_at": 1794451783
 }
