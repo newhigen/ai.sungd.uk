@@ -71,6 +71,32 @@
    "all": []
   },
   {
+   "key": "antigravity.google/blog/gemini-4-hydrogen-in-google-antigravity",
+   "of": null,
+   "title": "Gemini 4 Hydrogen and Orchestrator",
+   "group": "try",
+   "line": "Antigravity Orchestrator — 모델 자동 전환",
+   "short": "Orchestrator",
+   "note": "Antigravity 모델 선택에서 Orchestrator (Argon) 골라 보기",
+   "w": 2,
+   "event": "",
+   "url": "https://antigravity.google/blog/gemini-4-hydrogen-in-google-antigravity/",
+   "co": "Google",
+   "date": "2026-11-13",
+   "pts": 400,
+   "hn": "50472260",
+   "gn": "37077",
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "Google이 Antigravity에 Gemini 4 Hydrogen과 Orchestrator 선택지를 넣었어요.",
+    "Orchestrator는 한 작업 중에 Carbon과 Hydrogen을 오가고, Terminal-Bench 4.1에서 quota 24% 적게, 19% 빠르게 끝냈어요.",
+    "Google AI Pro 유료 구독자는 Orchestrator (Argon)을, Ultra는 Carbon 판도 쓸 수 있어요."
+   ],
+   "thread": "",
+   "all": []
+  },
+  {
    "key": "wsj.com/business/nvidia-is-preparing-to-oust-nvidia-ceo-jensen-huang-30f421ad",
    "of": null,
    "title": "Nvidia is preparing to oust Jensen Huang",
@@ -6351,5 +6377,5 @@
    "all": []
   }
  ],
- "judged_at": 1794509275
+ "judged_at": 1794556000
 }
