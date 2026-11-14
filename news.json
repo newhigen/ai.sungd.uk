@@ -1,6 +1,28 @@
 {
  "items": [
   {
+   "key": "techpowerup.com/354814/nvidia-allegedly-engineered-scarcity-by-funding-ai-startups-to-buy-its-gpus",
+   "of": null,
+   "title": "Nvidia allegedly engineered scarcity by funding AI startups to buy its GPUs",
+   "group": "buzz",
+   "line": "Nvidia — AI 스타트업 투자로 GPU 품귀 조장 의혹",
+   "short": "Nvidia GPU 품귀",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://www.techpowerup.com/354814/nvidia-allegedly-engineered-scarcity-by-funding-ai-startups-to-buy-its-gpus",
+   "co": "기타",
+   "date": "2026-11-14",
+   "pts": 566,
+   "hn": "50493251",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [],
+   "thread": "",
+   "all": []
+  },
+  {
    "key": "openai.com/index/introducing-chatgpt-wallet",
    "of": null,
    "title": "Introducing ChatGPT Wallet",
@@ -6368,5 +6390,5 @@
    "all": []
   }
  ],
- "judged_at": 1794586027
+ "judged_at": 1794650770
 }
