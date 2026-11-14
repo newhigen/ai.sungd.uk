@@ -49,6 +49,32 @@
    "all": []
   },
   {
+   "key": "claude.com/resources/articles/claude-meetings",
+   "of": null,
+   "title": "Claude Meetings",
+   "group": "know",
+   "line": "Claude Meetings — 화상 회의에 Claude 참가",
+   "short": "Claude Meetings",
+   "note": "Team, Enterprise 베타라 Max 는 아직이에요",
+   "w": 3,
+   "event": "",
+   "url": "https://claude.com/resources/articles/claude-meetings",
+   "co": "Anthropic",
+   "date": "2026-11-14",
+   "pts": 104,
+   "hn": "50491097",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "Anthropic이 Claude가 화상 통화에 참가자로 들어오는 Claude Meetings 베타를 냈어요.",
+    "회의 중 질문에 답하고, 문서와 화이트보드를 만들고, 노트와 액션 아이템을 적어요.",
+    "Team과 Enterprise 플랜에 순차 공개되고, 지금은 Google Meet만 지원해요."
+   ],
+   "thread": "",
+   "all": []
+  },
+  {
    "key": "wired.com/story/nvidia-employees-petition-for-jensen-huangs-return",
    "of": null,
    "title": "Nvidia employees petition to bring back Jensen Huang",
@@ -604,6 +630,28 @@
    "pts": 0,
    "hn": null,
    "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [],
+   "thread": "",
+   "all": []
+  },
+  {
+   "key": "korea.kr/briefing/actuallyView.do",
+   "of": null,
+   "title": "로폼 운영사 해킹으로 2만여 명 개인정보 유출, ‘모두의 창업’ 참가자 818명 포함",
+   "group": "skip",
+   "line": "로폼 운영사 해킹 — 개인정보 2만여 명 유출",
+   "short": "로폼 해킹",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://www.korea.kr/briefing/actuallyView.do?newsId=148975732",
+   "co": "기타",
+   "date": "2026-11-10",
+   "pts": 0,
+   "hn": null,
+   "gn": "37140",
    "demo": null,
    "demo_as": "듣기",
    "s": [],
@@ -6191,204 +6239,7 @@
    ],
    "thread": "",
    "all": []
-  },
-  {
-   "key": "theatlantic.com/technology/2026/10/openai-safety-team-resignation/688881/",
-   "of": null,
-   "title": "I quit OpenAI because its culture is broken",
-   "group": "buzz",
-   "line": "I quit OpenAI because its culture is broken",
-   "short": "OpenAI 퇴사 글",
-   "note": "",
-   "w": 1,
-   "event": "",
-   "url": "https://www.theatlantic.com/technology/2026/10/openai-safety-team-resignation/688881/?gift=v5U_UzUTothfWXsPxtvNVAh7esWToMRD6XnbXmc5WgA",
-   "co": "OpenAI",
-   "date": "2026-10-03",
-   "pts": 383,
-   "hn": "49944227",
-   "gn": null,
-   "demo": null,
-   "demo_as": "듣기",
-   "s": [
-    "OpenAI 안전 보고서 작성을 이끈 전 직원이 The Atlantic 에 퇴사 글을 썼어요.",
-    "Hugging Face 사고 뒤에도 훈련 중 모델이 인터넷 제한을 우회했다고 짚어요.",
-    "원문은 원자력 발전소 수준의 이중 안전장치와 외부 유인책이 필요하다고 주장해요."
-   ],
-   "thread": "AI 연구소 감시",
-   "all": []
-  },
-  {
-   "key": "openai.com/index/practical-guide-building-gpt-6",
-   "of": null,
-   "title": "A model guide for the GPT-6 family",
-   "group": "try",
-   "line": "GPT-6 모델 가이드 — 모델 고르기와 추론 강도",
-   "short": "GPT-6 가이드",
-   "note": "Codex 에서 모델 고를 때 훑어보기",
-   "w": 1,
-   "event": "",
-   "url": "https://openai.com/index/practical-guide-building-gpt-6",
-   "co": "OpenAI",
-   "date": "2026-10-03",
-   "pts": 0,
-   "hn": null,
-   "gn": null,
-   "all": [],
-   "s": [
-    "GPT-6 모델군을 실무에 쓰는 법을 정리한 OpenAI 가이드예요.",
-    "캐싱과 compaction으로 비용을 줄이고, 추론 강도(Low~Max)로 품질과 속도를 조절하라고 해요.",
-    "Astra는 최고난도 추론, Sol은 코딩, 연구, 컴퓨터 사용, Luna는 대량 반복 작업에 맞춰 고르라고 해요."
-   ]
-  },
-  {
-   "key": "blog.google/innovation-and-ai/technology/ai/google-ai-updates-september-2026",
-   "of": null,
-   "title": "The latest AI news we announced in September 2026",
-   "group": "event",
-   "line": "Google AI 9월 소식 — 발표 17개",
-   "short": "Google 9월",
-   "note": "",
-   "w": 2,
-   "event": "",
-   "url": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-september-2026/",
-   "co": "Google",
-   "date": "2026-10-03",
-   "pts": 0,
-   "hn": null,
-   "gn": null,
-   "all": [
-    {
-     "cat": "모델",
-     "name": "Gemini 4 Argon",
-     "line": "1백만 토큰 출력의 새 최상위 모델",
-     "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/"
-    },
-    {
-     "cat": "모델",
-     "name": "Gemini 3.8 Flash",
-     "line": "3.7 Flash 와 같은 속도로 코딩과 에이전트 강화",
-     "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/"
-    },
-    {
-     "cat": "모델",
-     "name": "Gemini 3.8 Live",
-     "line": "자연스러운 대화용 음성 모델",
-     "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/"
-    },
-    {
-     "cat": "모델",
-     "name": "Gemini 3.8 TTS",
-     "line": "목소리를 직접 만드는 음성 합성 모델",
-     "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-text-to-speech/"
-    },
-    {
-     "cat": "제품",
-     "name": "Connected Apps",
-     "line": "Gemini 에 Linear, Airtable 같은 앱 연결",
-     "url": "https://blog.google/innovation-and-ai/products/gemini-app/new-connected-apps-gemini/"
-    },
-    {
-     "cat": "모델",
-     "name": "Lyria 3.5",
-     "line": "Gemini 앱의 더 풍부한 음악 생성 모델",
-     "url": "https://blog.google/innovation-and-ai/products/gemini-app/better-tracks-lyria-gemini/"
-    },
-    {
-     "cat": "제품",
-     "name": "Gemini Notebook 학습 도구",
-     "line": "플래시카드, 퀴즈, 짧은 영상 요약",
-     "url": "https://blog.google/innovation-and-ai/products/gemini-notebook/new-study-tools-september-2026/"
-    },
-    {
-     "cat": "제품",
-     "name": "CC 그룹판",
-     "line": "가족 일정을 챙기는 그룹 에이전트",
-     "url": "https://blog.google/innovation-and-ai/models-and-research/google-labs/cc-expanding-to-groups/",
-     "thread": "늘 켜 두는 에이전트"
-    },
-    {
-     "cat": "연구",
-     "name": "AI 와 과학",
-     "line": "AI 가 과학과 삶에 준 변화 정리",
-     "url": "https://blog.google/innovation-and-ai/technology/ai/ai-applications-science-people/"
-    },
-    {
-     "cat": "연구",
-     "name": "Project Suncatcher",
-     "line": "우주에서 TPU 를 시험하는 위성",
-     "url": "https://blog.google/innovation-and-ai/models-and-research/google-research/google-project-suncatcher-facts/"
-    },
-    {
-     "cat": "제품",
-     "name": "Googlebook",
-     "line": "Android 기반 노트북 사전 주문",
-     "url": "https://blog.google/products-and-platforms/devices/googlebook/pre-order-googlebook/"
-    },
-    {
-     "cat": "모델",
-     "name": "WeatherNext 3",
-     "line": "더 정확해진 전 세계 날씨 예측 모델",
-     "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/introducing-weathernext-3/"
-    },
-    {
-     "cat": "연구",
-     "name": "AlphaGenome Atlas",
-     "line": "사람 DNA 변이 효과를 예측한 지도",
-     "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/alphagenome-atlas/"
-    },
-    {
-     "cat": "연구",
-     "name": "MAPL-EMIT",
-     "line": "우주에서 메탄 누출을 찾는 모델",
-     "url": "https://blog.google/innovation-and-ai/models-and-research/google-research/mapping-global-methane-emissions-from-space/"
-    },
-    {
-     "cat": "연구",
-     "name": "초파리 뇌 지도",
-     "line": "수컷 초파리 뇌의 첫 완전한 지도",
-     "url": "https://blog.google/innovation-and-ai/technology/research/male-fruit-fly-brain-map/"
-    },
-    {
-     "cat": "연구",
-     "name": "DeepMind Institute",
-     "line": "AGI 시대를 논의하는 연구 플랫폼",
-     "url": "https://institute.deepmind.com/essays/introducing-the-deepmind-institute/"
-    },
-    {
-     "cat": "제품",
-     "name": "Gemini 앱 Windows 판",
-     "line": "Alt + Space 로 여는 Windows 용 Gemini",
-     "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-app-now-on-windows/"
-    }
-   ]
-  },
-  {
-   "key": "aleph-alpha.com/en/blog/kolibri-has-landed-a-sovereign-open-weight-model",
-   "of": null,
-   "title": "Kolibri: A Sovereign Open-Weight Model",
-   "group": "know",
-   "line": "Kolibri — 독일의 오픈 웨이트 모델",
-   "short": "Kolibri",
-   "note": "오픈 웨이트 경쟁에 유럽이 들어왔어요",
-   "w": 3,
-   "event": "",
-   "url": "https://aleph-alpha.com/en/blog/kolibri-has-landed-a-sovereign-open-weight-model/",
-   "co": "기타",
-   "date": "2026-10-03",
-   "pts": 558,
-   "hn": "49942706",
-   "gn": "34716",
-   "demo": null,
-   "demo_as": "듣기",
-   "s": [
-    "Aleph Alpha가 영어와 독일어 모델 Kolibri의 가중치를 공개했어요.",
-    "전체 78B에 활성 3B인 MoE이고, 컨텍스트는 최대 1M 토큰이에요.",
-    "Hugging Face에서 Apache 2.0 라이선스로 받을 수 있고, 추론 강도는 none, low, medium, high 넷이에요."
-   ],
-   "thread": "오픈 웨이트 경쟁",
-   "all": []
   }
  ],
- "judged_at": 1794650770
+ "judged_at": 1794675469
 }
