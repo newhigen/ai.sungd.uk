@@ -23,6 +23,32 @@
    "all": []
   },
   {
+   "key": "slopmanifesto.com",
+   "of": null,
+   "title": "No AI Slop 선언문",
+   "group": "buzz",
+   "line": "No AI Slop 선언문",
+   "short": "No AI Slop",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://www.slopmanifesto.com/",
+   "co": "기타",
+   "date": "2026-11-14",
+   "pts": 0,
+   "hn": null,
+   "gn": "37128",
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "AIE Code Summit 2026 발표자와 참가자들이 No AI Slop 선언문을 썼어요.",
+    "슬롭은 만드는 노력이 읽는 사람이 이해하는 노력보다 적을 때 생긴다고 정의해요.",
+    "같은 실수가 두 번 나오면 시스템과 가드레일을 고치고, 린터가 잡을 건 린터에 맡기자고 해요."
+   ],
+   "thread": "AI 와 개발자의 일",
+   "all": []
+  },
+  {
    "key": "openai.com/index/introducing-chatgpt-wallet",
    "of": null,
    "title": "Introducing ChatGPT Wallet",
@@ -6165,81 +6191,7 @@
    "s": [],
    "thread": "",
    "all": []
-  },
-  {
-   "key": "github.com/Niko1221/Strata",
-   "of": null,
-   "title": "Run Qwen 3.8 Flash Next (125B) on consumer hardware (RTX 4090) at 100T/s",
-   "group": "buzz",
-   "line": "Strata — Qwen3.8 Flash Next 를 게임 PC 에서",
-   "short": "Strata",
-   "note": "",
-   "w": 1,
-   "event": "",
-   "url": "https://github.com/Niko1221/Strata",
-   "co": "기타",
-   "date": "2026-10-04",
-   "pts": 589,
-   "hn": "49953495",
-   "gn": null,
-   "demo": null,
-   "demo_as": "듣기",
-   "s": [
-    "Strata 는 Qwen3.8-Flash-Next 125B 를 일반 게임 PC 에서 돌리는 오픈소스 엔진이에요.",
-    "RTX 5070 (12GB)에서 Q2_0 은 초당 94 토큰으로 답을 써요.",
-    "VRAM 12GB 와 RAM 32GB 이상, 디스크 80GB 가 필요하고 Windows 와 Linux 를 지원해요."
-   ],
-   "thread": "오픈 웨이트 경쟁",
-   "all": []
-  },
-  {
-   "key": "fortune.com/2026/10/01/ai-godfather-yann-lecun-has-zero-concerns-about-human-extinction-says-anthropic-ceo-dario-amodei-is-deuded",
-   "of": null,
-   "title": "LeCun has \"zero concerns\" about AI wiping out humanity, recent \"rogue\" incidents",
-   "group": "skip",
-   "line": "LeCun 인터뷰 — AI 위험 논쟁",
-   "short": "LeCun 인터뷰",
-   "note": "",
-   "w": 1,
-   "event": "",
-   "url": "https://fortune.com/2026/10/01/ai-godfather-yann-lecun-has-zero-concerns-about-human-extinction-says-anthropic-ceo-dario-amodei-is-deuded/",
-   "co": "Anthropic",
-   "date": "2026-10-04",
-   "pts": 358,
-   "hn": "49946228",
-   "gn": null,
-   "demo": null,
-   "demo_as": "듣기",
-   "s": [],
-   "thread": "",
-   "all": []
-  },
-  {
-   "key": "claude.dev/blog/getting-the-most-out-of-opus-5-5",
-   "of": null,
-   "title": "Getting the most out of Opus 5.5 in Claude and Claude Code",
-   "group": "try",
-   "line": "Opus 5.5 활용 가이드 — Claude Code 사용법",
-   "short": "Opus 5.5 가이드",
-   "note": "CLAUDE.md 에 멈출 때 규칙을 넣어 봐요",
-   "w": 2,
-   "event": "",
-   "url": "https://claude.dev/blog/getting-the-most-out-of-opus-5-5/",
-   "co": "Anthropic",
-   "date": "2026-10-04",
-   "pts": 142,
-   "hn": "49946567",
-   "gn": null,
-   "demo": null,
-   "demo_as": "듣기",
-   "s": [
-    "Anthropic이 Claude와 Claude Code에서 Opus 5.5를 잘 쓰는 법을 정리했어요.",
-    "끝낼 기준을 말하고 맡기기, think carefully 문구 지우기, 서브에이전트로 나누기를 권해요.",
-    "멈출 때와 계속 갈 때의 규칙을 CLAUDE.md에 적고, 작업 목록은 TASKS.md 같은 파일에 두라고 해요."
-   ],
-   "thread": "",
-   "all": []
   }
  ],
- "judged_at": 1794675469
+ "judged_at": 1794761834
 }
