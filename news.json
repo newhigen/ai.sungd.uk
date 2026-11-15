@@ -1,6 +1,32 @@
 {
  "items": [
   {
+   "key": "jakub.jankiewicz.org/blog/ai-code-open-source",
+   "of": null,
+   "title": "All AI-generated code should be Open Source",
+   "group": "buzz",
+   "line": "AI 가 쓴 코드는 오픈소스여야 한다",
+   "short": "AI 코드 오픈소스",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://jakub.jankiewicz.org/blog/ai-code-open-source/",
+   "co": "기타",
+   "date": "2026-11-15",
+   "pts": 957,
+   "hn": "50507303",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "개발자 Jakub Jankiewicz가 AI 가 만든 코드는 모두 오픈소스여야 한다고 주장해요.",
+    "모델이 오픈소스 코드와 Stack Overflow 글을 허락 없이 학습해 라이선스 세탁이라고 해요.",
+    "사람이 쓰지 않은 코드는 저작권이 없다며 오픈소스 라이선스나 CC0 로 풀자고 해요."
+   ],
+   "thread": "AI 와 개발자의 일",
+   "all": []
+  },
+  {
    "key": "techpowerup.com/354814/nvidia-allegedly-engineered-scarcity-by-funding-ai-startups-to-buy-its-gpus",
    "of": null,
    "title": "Nvidia allegedly engineered scarcity by funding AI startups to buy its GPUs",
@@ -72,6 +98,32 @@
     "오늘부터 dots에서 미국의 ChatGPT Pro 구독자(18세 이상)에게 순차 공개돼요."
    ],
    "thread": "늘 켜 두는 에이전트",
+   "all": []
+  },
+  {
+   "key": "claude.com/resources/articles/projects-redesigned",
+   "of": null,
+   "title": "Anthropic upgrades Claude Code Projects to run parallel AI workers",
+   "group": "try",
+   "line": "Claude Code 프로젝트 — 병렬 스레드로 일 맡기기",
+   "short": "Claude Code 프로젝트",
+   "note": "Max 베타라 내 계정에 떴는지 봐요",
+   "w": 3,
+   "event": "",
+   "url": "https://claude.com/resources/articles/projects-redesigned",
+   "co": "Anthropic",
+   "date": "2026-11-14",
+   "pts": 100,
+   "hn": "50492141",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "Anthropic이 Claude Code 프로젝트를 목표를 주면 Claude가 병렬 스레드로 일하는 방식으로 바꿨어요.",
+    "스레드마다 클라우드 세션이 따로 브랜치에서 PR 을 열고, 프로젝트 공유 메모리를 써요.",
+    "클라우드 세션을 쓰는 일부 Pro, Max 에 베타로 열리고, 스레드가 많아 사용 한도가 더 빨리 닳아요."
+   ],
+   "thread": "",
    "all": []
   },
   {
@@ -6193,5 +6245,5 @@
    "all": []
   }
  ],
- "judged_at": 1794761834
+ "judged_at": 1794778741
 }
