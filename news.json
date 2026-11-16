@@ -1,6 +1,28 @@
 {
  "items": [
   {
+   "key": "litnews.ai/articles/garciaguirre-samsung-sk-hynix-micron-dram-conspiracy-suit-survives-dismissal",
+   "of": null,
+   "title": "Court denies motion to dismiss DRAM price fixing case",
+   "group": "skip",
+   "line": "DRAM 담합 소송 — 기각 신청 거부",
+   "short": "DRAM 소송",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://litnews.ai/articles/garciaguirre-samsung-sk-hynix-micron-dram-conspiracy-suit-survives-dismissal",
+   "co": "기타",
+   "date": "2026-11-15",
+   "pts": 510,
+   "hn": "50502988",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [],
+   "thread": "",
+   "all": []
+  },
+  {
    "key": "jakub.jankiewicz.org/blog/ai-code-open-source",
    "of": null,
    "title": "All AI-generated code should be Open Source",
@@ -6245,5 +6267,5 @@
    "all": []
   }
  ],
- "judged_at": 1794778741
+ "judged_at": 1794821131
 }
