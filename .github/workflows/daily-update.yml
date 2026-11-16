@@ -1,13 +1,15 @@
 name: Changelog watch (weekly curation, hourly news)
 
-# 패치노트 수집과 큐레이션(새로 나온 것, 용도별)은 주 1회, 월요일 05:20 KST 에 돈다.
+# 패치노트 수집과 큐레이션(새로 나온 것, 용도별)은 주 1회, 월요일 02~05시 KST 에 도는 매시 실행이 맡는다.
 # 수집 스크립트가 추적 중인 최신보다 새로운 버전을 모두 잡아, 한 주 밀린 버전이 한 번에 큐레이션된다.
+# 창 안에서 여러 번 돌아도 첫 실행이 버전을 꽂고 나면 뒤 실행은 새 기능이 없어 Claude 를 부르지 않는다.
 # 모델 현황(토큰 0)과 소식(주인 탭)은 매시 그대로 돈다.
-# (2026-08-13 까지 하루 한 번 05:20 KST, 2026-10-29 까지 매시. 9/23 뒤로 Now 해봄 기록이 0이라 주 1회로 줄였다.)
+# (2026-08-13 까지 하루 한 번 05:20 KST, 2026-10-29 까지 매시, 2026-11-16 까지 월 05:20 KST 따로 예약.
+#  11/16 에 그 예약이 GitHub 지연으로 09:00 KST 에 돌아 번역과 큐레이션 38분이 Pro 5시간 한도를 다 썼다.
+#  늦게 밀린 실행이 낮에 한도를 쓰지 않게, 시각을 실행 안에서 확인한다.)
 on:
   schedule:
-    - cron: "5 * * * *"     # 매시 5분 — 모델 현황, 소식. GitHub cron 은 정시에 몰려 밀리므로 5분 비켜 놓는다
-    - cron: "20 20 * * 0"   # 일 20:20 UTC = 월 05:20 KST — 패치노트 수집과 큐레이션
+    - cron: "5 * * * *"     # 매시 5분 — 모델 현황, 소식. 월 02~05시 KST 실행은 주간 단계까지. GitHub cron 은 정시에 몰려 밀리므로 5분 비켜 놓는다
   workflow_dispatch:          # 수동 실행 버튼 — 주간 단계까지 다 돈다
 
 permissions:
@@ -21,9 +23,18 @@ concurrency:
 jobs:
   update:
     runs-on: ubuntu-latest
-    env:
-      WEEKLY: ${{ github.event.schedule == '20 20 * * 0' || github.event_name == 'workflow_dispatch' }}
     steps:
+      # 주간 단계는 월 02:00~05:59 KST(일 17:00~20:59 UTC)에 실제로 돈 실행만 맡는다.
+      # 예약 시각이 아니라 도는 시각을 본다 — GitHub 은 예약을 몇 시간씩 늦게 돌리기도 한다.
+      - name: Weekly window
+        id: win
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] || { [ "$(date -u +%u)" = 7 ] && [ "$(date -u +%H)" -ge 17 ] && [ "$(date -u +%H)" -le 20 ]; }; then
+            echo "weekly=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "weekly=false" >> "$GITHUB_OUTPUT"
+          fi
+
       - uses: actions/checkout@v4
 
       - uses: actions/setup-python@v5
@@ -33,7 +44,7 @@ jobs:
       # ── 1단계(a): Claude Code 버전 목록 (토큰 0, 순수 스크립트) ──
       - name: Update Claude Code version list
         id: update
-        if: env.WEEKLY == 'true'
+        if: steps.win.outputs.weekly == 'true'
         run: python scripts/update_changelog.py
 
       - name: Commit CC version list
@@ -48,7 +59,7 @@ jobs:
       # ── 1단계(b): Codex 버전 목록 (토큰 0, openai/codex GitHub releases) ──
       - name: Update Codex version list
         id: codex
-        if: env.WEEKLY == 'true'
+        if: steps.win.outputs.weekly == 'true'
         run: python scripts/update_codex.py
 
       - name: Commit Codex version list
@@ -63,7 +74,7 @@ jobs:
       # ── 1단계(c): Antigravity CLI 버전 목록 (토큰 0, google-antigravity/antigravity-cli GitHub releases) ──
       - name: Update Antigravity version list
         id: agy
-        if: env.WEEKLY == 'true'
+        if: steps.win.outputs.weekly == 'true'
         run: python scripts/update_agy.py
 
       - name: Commit Antigravity version list
