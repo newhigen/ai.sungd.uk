@@ -1,6 +1,32 @@
 {
  "items": [
   {
+   "key": "xusheng.dev/posts/windows-coding-agent-telemetry",
+   "of": null,
+   "title": "Windows 11 is collecting data on which coding agents and developer tools you use",
+   "group": "buzz",
+   "line": "Windows 11 의 코딩 에이전트 사용 수집",
+   "short": "Windows 수집",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://xusheng.dev/posts/windows-coding-agent-telemetry/",
+   "co": "기타",
+   "date": "2026-11-17",
+   "pts": 650,
+   "hn": "50524736",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "Windows 11 의 MissionControlAggregator.dll 이 codex.exe, claude.exe 같은 코딩 에이전트 실행을 기록해요.",
+    "실행 여부만 비트로 담아 Segments.SubCohorts 보고로 내보내고, 프롬프트나 소스 코드는 못 찾았대요.",
+    "선택적 진단 데이터가 켜져 있으면 Microsoft 로 올라가고, 글쓴이가 본 미국 설치 기본값은 켜짐이에요."
+   ],
+   "thread": "",
+   "all": []
+  },
+  {
    "key": "openai.com/index/strengthening-online-child-safety",
    "of": null,
    "title": "Strengthening the fight against online child sexual abuse",
@@ -45,6 +71,28 @@
     "Android와 iOS에서 한국어, 영어, 힌디어 등을 고를 수 있어요.",
     "고른 음성은 앱 전체에 적용돼요."
    ],
+   "thread": "",
+   "all": []
+  },
+  {
+   "key": "zchmael.substack.com/p/i-can-build-almost-anything-now-whats",
+   "of": null,
+   "title": "이제 거의 무엇이든 만들 수 있다. 무엇을 만들 가치가 있을까?",
+   "group": "skip",
+   "line": "무엇을 만들 가치가 있을까 — 에세이",
+   "short": "만들 가치",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://zchmael.substack.com/p/i-can-build-almost-anything-now-whats",
+   "co": "기타",
+   "date": "2026-11-16",
+   "pts": 0,
+   "hn": null,
+   "gn": "37237",
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [],
    "thread": "",
    "all": []
   },
@@ -6315,5 +6363,5 @@
    "all": []
   }
  ],
- "judged_at": 1794886823
+ "judged_at": 1794920665
 }
