@@ -1,6 +1,28 @@
 {
  "items": [
   {
+   "key": "openai.com/index/strengthening-online-child-safety",
+   "of": null,
+   "title": "Strengthening the fight against online child sexual abuse",
+   "group": "skip",
+   "line": "아동 안전 강화 — CSAM 분류기와 경고",
+   "short": "아동 안전",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://openai.com/index/strengthening-online-child-safety/",
+   "co": "OpenAI",
+   "date": "2026-11-17",
+   "pts": 108,
+   "hn": "50520804",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [],
+   "thread": "",
+   "all": []
+  },
+  {
    "key": "blog.google/innovation-and-ai/products/gemini-app/regional-voices",
    "of": null,
    "title": "Regional voices are rolling out in the Gemini app.",
@@ -93,6 +115,32 @@
    "demo": null,
    "demo_as": "듣기",
    "s": [],
+   "thread": "",
+   "all": []
+  },
+  {
+   "key": "claude.dev/blog/how-the-claude-code-team-thinks-about-verification",
+   "of": null,
+   "title": "How the Claude Code team thinks about verification",
+   "group": "try",
+   "line": "Claude Code 팀의 검증 방식",
+   "short": "검증 방식",
+   "note": "verify 스킬을 repo 에 만들어 보기",
+   "w": 2,
+   "event": "",
+   "url": "https://claude.dev/blog/how-the-claude-code-team-thinks-about-verification/",
+   "co": "Anthropic",
+   "date": "2026-11-16",
+   "pts": 0,
+   "hn": null,
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "Claude Code 팀이 에이전트 작업을 증거로 검증하는 방법을 정리했어요.",
+    "E2E, 속성, 차등 테스트 세 가지에 투자하라고 하고, 코드의 약 90%를 Claude 가 쓰고 리뷰한다고 해요.",
+    ".claude/skills/ 에 verify 스킬을 두고, 훅이나 /goal 로 테스트 통과를 강제하는 방법도 나와요."
+   ],
    "thread": "",
    "all": []
   },
@@ -6267,5 +6315,5 @@
    "all": []
   }
  ],
- "judged_at": 1794860196
+ "judged_at": 1794886823
 }
