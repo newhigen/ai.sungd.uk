@@ -27,6 +27,28 @@
    "all": []
   },
   {
+   "key": "ft.com/content/dbde7a30-548c-4f9d-a4be-7898a0c24dcf",
+   "of": null,
+   "title": "Nvidia stopped disclosing Singapore sales as revenues hit $104B",
+   "group": "skip",
+   "line": "Nvidia — 싱가포르 매출 공시 중단",
+   "short": "Nvidia 공시",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://www.ft.com/content/dbde7a30-548c-4f9d-a4be-7898a0c24dcf",
+   "co": "기타",
+   "date": "2026-11-18",
+   "pts": 591,
+   "hn": "50534631",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [],
+   "thread": "",
+   "all": []
+  },
+  {
    "key": "zonderlabs.com/slop",
    "of": null,
    "title": "AI 슬롭은 왜 이렇게 읽기 짜증날까?",
@@ -6297,5 +6319,5 @@
    "all": []
   }
  ],
- "judged_at": 1794972977
+ "judged_at": 1795006532
 }
