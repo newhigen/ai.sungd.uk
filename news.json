@@ -23,6 +23,32 @@
    "all": []
   },
   {
+   "key": "microsoft.ai/news/microsoft-ignite-2026",
+   "of": null,
+   "title": "Seven new models at scalable price-performance",
+   "group": "know",
+   "line": "Microsoft MAI — 새 모델 7종",
+   "short": "MAI 7종",
+   "note": "Decision 1.1 이 의사결정 모델 줄기를 이어요",
+   "w": 3,
+   "event": "",
+   "url": "https://microsoft.ai/news/microsoft-ignite-2026/",
+   "co": "기타",
+   "date": "2026-11-19",
+   "pts": 561,
+   "hn": "50548021",
+   "gn": "37419",
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "Microsoft AI가 가격 대비 성능을 앞세운 새 모델 7종을 냈어요.",
+    "MAI Code 2는 GPT-6.1 Sol 코딩 품질의 98%를 약 40% 가격에 낸다고 해요.",
+    "Decision 1.1은 GPT-6.1 Sol보다 50배 빠르고 79배 싸다고 해요."
+   ],
+   "thread": "의사결정 모델",
+   "all": []
+  },
+  {
    "key": "deepmind.google/blog/introducing-gemini-4-neon",
    "of": null,
    "title": "Introducing Gemini 4 Neon",
@@ -389,6 +415,28 @@
    "all": []
   },
   {
+   "key": "cs.cmu.edu/learn",
+   "of": null,
+   "title": "Carnegie Mellon, 컴퓨터 과학 강의를 YouTube에 무료 공개",
+   "group": "skip",
+   "line": "CMU CS Learn — 강의 YouTube 공개",
+   "short": "CMU 강의",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://www.cs.cmu.edu/learn/",
+   "co": "기타",
+   "date": "2026-11-17",
+   "pts": 0,
+   "hn": null,
+   "gn": "37307",
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [],
+   "thread": "",
+   "all": []
+  },
+  {
    "key": "claude.dev/blog/chaos-loop-claude-docs-launch",
    "of": null,
    "title": "Using a \"chaos loop\" to harden the Claude Docs launch: 60 server errors across billions of requests",
@@ -607,6 +655,31 @@
    "all": []
   },
   {
+   "key": "blog.x.com/en/engineering/rebuilding-the-global-town-square-from-scratch",
+   "of": null,
+   "title": "X.com을 처음부터 다시 구축하기 - 서버 3개를 하나로",
+   "group": "buzz",
+   "line": "X.com 처음부터 다시 만들기",
+   "short": "X 재구축",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://blog.x.com/en/engineering/rebuilding-the-global-town-square-from-scratch",
+   "co": "기타",
+   "date": "2026-11-16",
+   "pts": 0,
+   "hn": null,
+   "gn": "37245",
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "X가 기존 웹 애플리케이션을 처음부터 다시 만들었어요.",
+    "엔지니어 5명과 AI 코딩 에이전트로 6개월 안에 끝냈다고 해요."
+   ],
+   "thread": "",
+   "all": []
+  },
+  {
    "key": "litnews.ai/articles/garciaguirre-samsung-sk-hynix-micron-dram-conspiracy-suit-survives-dismissal",
    "of": null,
    "title": "Court denies motion to dismiss DRAM price fixing case",
@@ -726,6 +799,32 @@
     "오늘부터 dots에서 미국의 ChatGPT Pro 구독자(18세 이상)에게 순차 공개돼요."
    ],
    "thread": "늘 켜 두는 에이전트",
+   "all": []
+  },
+  {
+   "key": "complexdiscovery.com/harvard-researchers-find-ai-coding-agents-shifted-the-bottleneck-to-code-review",
+   "of": null,
+   "title": "Harvard 연구진, AI 코딩 에이전트가 병목을 코드 리뷰로 옮겼음을 확인",
+   "group": "buzz",
+   "line": "Harvard 연구 — 코딩 에이전트와 코드 리뷰 병목",
+   "short": "리뷰 병목",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://complexdiscovery.com/harvard-researchers-find-ai-coding-agents-shifted-the-bottleneck-to-code-review/",
+   "co": "기타",
+   "date": "2026-11-14",
+   "pts": 0,
+   "hn": null,
+   "gn": "37405",
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "Harvard 박사과정 두 명이 AI 코딩 에이전트 도입 효과를 분석한 워킹페이퍼예요.",
+    "코드 추가량은 약 30% 늘었지만 완료된 이슈 수는 통계적으로 차이가 없었어요.",
+    "PR 제출부터 병합까지가 7.03일에서 3.45일 늘었고, 동료 심사는 끝나지 않은 논문이에요."
+   ],
+   "thread": "AI 와 개발자의 일",
    "all": []
   },
   {
@@ -6407,5 +6506,5 @@
    "all": []
   }
  ],
- "judged_at": 1795057758
+ "judged_at": 1795092521
 }
