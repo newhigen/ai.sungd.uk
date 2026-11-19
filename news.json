@@ -1,6 +1,50 @@
 {
  "items": [
   {
+   "key": "openai.com/index/advancing-chip-design-with-our-models",
+   "of": null,
+   "title": "Advancing chip design with OpenAI models",
+   "group": "skip",
+   "line": "OpenAI 모델로 칩 설계 — 본문 없음",
+   "short": "칩 설계",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://openai.com/index/advancing-chip-design-with-our-models/",
+   "co": "OpenAI",
+   "date": "2026-11-19",
+   "pts": 167,
+   "hn": "50549493",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [],
+   "thread": "",
+   "all": []
+  },
+  {
+   "key": "deepmind.google/blog/introducing-gemini-4-neon",
+   "of": null,
+   "title": "Introducing Gemini 4 Neon",
+   "group": "skip",
+   "line": "Gemini 4 Neon — DeepMind 쪽 같은 글",
+   "short": "Gemini 4 Neon",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://deepmind.google/blog/introducing-gemini-4-neon/",
+   "co": "Google",
+   "date": "2026-11-19",
+   "pts": 0,
+   "hn": null,
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [],
+   "thread": "",
+   "all": []
+  },
+  {
    "key": "blog.google/innovation-and-ai/products/gemini-app/gemini-lower-memory-devices",
    "of": null,
    "title": "The Gemini app is now available on lower-memory Android devices.",
@@ -45,6 +89,54 @@
     "세션 중 프롬프트로 세계를 바꾸고, 실시간 음성이 장면에 맞춰 나와요.",
     "Google AI Ultra 구독자에게 오늘 열렸고, Pro는 대기 명단에 올릴 수 있어요."
    ],
+   "thread": "",
+   "all": []
+  },
+  {
+   "key": "blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon",
+   "of": null,
+   "title": "Gemini 4 Neon",
+   "group": "try",
+   "line": "Gemini 4 Neon",
+   "short": "Gemini 4 Neon",
+   "note": "Antigravity 와 Gemini 앱 모델 목록 보기",
+   "w": 3,
+   "event": "",
+   "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/",
+   "co": "Google",
+   "date": "2026-11-19",
+   "pts": 516,
+   "hn": "50552424",
+   "gn": "37432",
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "Google 이 코딩과 지식 작업용 모델 Gemini 4 Neon 을 공개했어요.",
+    "Artificial Analysis Coding Agent Index 1위(58.6), Terminal-Bench 4.1 65.2%예요.",
+    "유료 Google AI Pro, Ultra 는 Antigravity 와 Gemini 앱에서 오늘부터 순차 제공돼요."
+   ],
+   "thread": "",
+   "all": []
+  },
+  {
+   "key": "anthropic.com/news/anthropic-prices-initial-public-offering",
+   "of": null,
+   "title": "Anthropic prices initial public offering",
+   "group": "skip",
+   "line": "Anthropic 기업공개 공모가 확정",
+   "short": "Anthropic IPO",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://www.anthropic.com/news/anthropic-prices-initial-public-offering",
+   "co": "Anthropic",
+   "date": "2026-11-19",
+   "pts": 107,
+   "hn": "50553843",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [],
    "thread": "",
    "all": []
   },
@@ -6315,5 +6407,5 @@
    "all": []
   }
  ],
- "judged_at": 1795036732
+ "judged_at": 1795057758
 }
