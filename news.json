@@ -97,6 +97,32 @@
    "all": []
   },
   {
+   "key": "architectlabs.com/blog/frostbite",
+   "of": null,
+   "title": "Frostbite: A new CPU architecture discovered, designed and verified by AI",
+   "group": "buzz",
+   "line": "Frostbite — AI 가 설계한 CPU 구조",
+   "short": "Frostbite",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://architectlabs.com/blog/frostbite",
+   "co": "기타",
+   "date": "2026-11-20",
+   "pts": 541,
+   "hn": "50572503",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "Architect Labs가 AI만으로 설계하고 검증한 새 CPU Frostbite를 공개했어요.",
+    "interaction nets 기반 새 명령어 집합으로, 25개 워크로드에서 와트당 성능 4.59배를 냈어요.",
+    "에이전트 군단이 컴파일러부터 최종 GDS까지 돌렸고, 형식 명세 언어 ASL을 기준으로 삼았어요."
+   ],
+   "thread": "",
+   "all": []
+  },
+  {
    "key": "anthropic.com/research/claude-black-hole-physics",
    "of": null,
    "title": "Claude solves two open problems in the physics of black holes",
@@ -119,6 +145,28 @@
     "연구자가 문제 후보 22개를 받아 에이전트를 나눠 맡기고, 별도 설정 없이 약 6주 백그라운드로 돌렸어요.",
     "결과는 Lean 으로 형식 검증했고, 물리학자가 주요 결과를 확인했어요."
    ],
+   "thread": "",
+   "all": []
+  },
+  {
+   "key": "anthropic.com/news/ipo-close",
+   "of": null,
+   "title": "Anthropic announces closing of initial public offering, including full exercise of underwriters’ option to purchase additional shares, and closing of concurrent private placement ",
+   "group": "skip",
+   "line": "Anthropic — 기업공개 마감",
+   "short": "IPO 마감",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://www.anthropic.com/news/ipo-close",
+   "co": "Anthropic",
+   "date": "2026-11-20",
+   "pts": 0,
+   "hn": null,
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [],
    "thread": "",
    "all": []
   },
@@ -6282,55 +6330,7 @@
    ],
    "thread": "",
    "all": []
-  },
-  {
-   "key": "techcrunch.com/2026/10/08/fired-openai-safety-researchers-dispute-misconduct-claims-warn-of-chilling-effect",
-   "of": null,
-   "title": "OpenAI fires three safety researchers for \"mishandling research information\"",
-   "group": "buzz",
-   "line": "해고된 OpenAI 안전 연구자 3명 — 공개 서한",
-   "short": "OpenAI 해고 서한",
-   "note": "",
-   "w": 1,
-   "event": "",
-   "url": "https://techcrunch.com/2026/10/08/fired-openai-safety-researchers-dispute-misconduct-claims-warn-of-chilling-effect/",
-   "co": "OpenAI",
-   "date": "2026-10-09",
-   "pts": 310,
-   "hn": "50018350",
-   "gn": null,
-   "demo": null,
-   "demo_as": "듣기",
-   "s": [
-    "OpenAI에서 해고된 안전 연구자 3명이 해고 사유를 부인하는 공개 서한을 냈어요.",
-    "OpenAI는 연구 정보를 규정과 다르게 다뤘다고 하고, 세 사람은 보복성 해고라며 위축 효과를 경고해요.",
-    "OpenAI는 서한에 공식 답변을 내지 않았고, 내부 메모로 보복이 아니라고 밝혔어요."
-   ],
-   "thread": "AI 연구소 감시",
-   "all": []
-  },
-  {
-   "key": "cnbc.com/2026/10/08/open-ai-revenue-nvidia-oracle-coreweave.html",
-   "of": null,
-   "title": "OpenAI annualised revenues $20B less than previously signalled",
-   "group": "skip",
-   "line": "OpenAI 연 매출 — 500억 달러로 정정",
-   "short": "OpenAI 매출",
-   "note": "",
-   "w": 1,
-   "event": "",
-   "url": "https://www.cnbc.com/2026/10/08/open-ai-revenue-nvidia-oracle-coreweave.html",
-   "co": "OpenAI",
-   "date": "2026-10-09",
-   "pts": 330,
-   "hn": "50008187",
-   "gn": null,
-   "demo": null,
-   "demo_as": "듣기",
-   "s": [],
-   "thread": "",
-   "all": []
   }
  ],
- "judged_at": 1795173469
+ "judged_at": 1795204676
 }
