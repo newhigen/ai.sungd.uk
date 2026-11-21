@@ -27,6 +27,28 @@
    "all": []
   },
   {
+   "key": "theguardian.com/business/2026/nov/20/global-stock-markets-slump-anthropic-ipo-ai-sell-off",
+   "of": null,
+   "title": "Nasdaq erases all 2026 gains as AI sell-off dampens Anthropic’s second day",
+   "group": "skip",
+   "line": "Nasdaq 하락 — 상장 둘째 날 Anthropic",
+   "short": "Nasdaq 하락",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://www.theguardian.com/business/2026/nov/20/global-stock-markets-slump-anthropic-ipo-ai-sell-off",
+   "co": "Anthropic",
+   "date": "2026-11-20",
+   "pts": 301,
+   "hn": "50574383",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [],
+   "thread": "",
+   "all": []
+  },
+  {
    "key": "signal.org/blog/protecting-your-privacy",
    "of": null,
    "title": "Restricting AI agents in mobile operating systems platforms from capturing data",
@@ -6384,5 +6406,5 @@
    "all": []
   }
  ],
- "judged_at": 1795224047
+ "judged_at": 1795253703
 }
