@@ -1,6 +1,58 @@
 {
  "items": [
   {
+   "key": "thinkingmachines.ai/news/inkling-2-mini",
+   "of": null,
+   "title": "Inkling 2 Mini",
+   "group": "know",
+   "line": "Inkling 2 Mini — 노트북에서 도는 오픈 웨이트",
+   "short": "Inkling 2 Mini",
+   "note": "작은 오픈 웨이트 모델 경쟁을 이어요",
+   "w": 3,
+   "event": "",
+   "url": "https://thinkingmachines.ai/news/inkling-2-mini/",
+   "co": "기타",
+   "date": "2026-11-21",
+   "pts": 640,
+   "hn": "50581260",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "Thinking Machines가 노트북에서 돌릴 만한 모델 Inkling 2 Mini를 냈어요.",
+    "전체 26.4B, 활성 3.4B인 MoE이고 DeepSWE v1.1 48.2%를 기록했어요.",
+    "메모리 약 20GB이고 Tinker에서 추론과 커스터마이징을 바로 쓸 수 있어요."
+   ],
+   "thread": "오픈 웨이트 경쟁",
+   "all": []
+  },
+  {
+   "key": "signal.org/blog/protecting-your-privacy",
+   "of": null,
+   "title": "Restricting AI agents in mobile operating systems platforms from capturing data",
+   "group": "buzz",
+   "line": "Signal — OS 내장 AI 에이전트의 화면 수집 차단",
+   "short": "Signal 화면 차단",
+   "note": "",
+   "w": 2,
+   "event": "",
+   "url": "https://signal.org/blog/protecting-your-privacy/",
+   "co": "기타",
+   "date": "2026-11-20",
+   "pts": 503,
+   "hn": "50572348",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "Signal이 OS에 내장된 AI 에이전트가 화면을 읽어 가지 못하게 막는다고 밝혔어요.",
+    "iOS 27에서는 스크린샷을 막고, Android에서는 AI 어시스턴트의 화면 수집을 감지해 막아요.",
+    "macOS는 아직 못 막고, 앱 설정에서 이 보호를 끌 수도 있어요."
+   ],
+   "thread": "",
+   "all": []
+  },
+  {
    "key": "reuters.com/business/finance/anthropics-historic-debut-put-ais-promise-peril-wall-st-test-2026-11-19",
    "of": null,
    "title": "Anthropic hits $2T in Nasdaq debut",
@@ -6332,5 +6384,5 @@
    "all": []
   }
  ],
- "judged_at": 1795204676
+ "judged_at": 1795224047
 }
