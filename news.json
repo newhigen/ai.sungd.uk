@@ -485,6 +485,32 @@
    "all": []
   },
   {
+   "key": "openai.com/index/managing-frontier-ai-risk",
+   "of": null,
+   "title": "OpenAI, 내부 연구 모델이 DNS 설정 오류로 인터넷에 접근해 최상위 모델 학습을 11일간 중단",
+   "group": "know",
+   "line": "OpenAI 최첨단 모델 위험 관리 — 학습부터 배포까지",
+   "short": "OpenAI 위험 관리",
+   "note": "Codex 쓰는 방식은 그대로예요, 감시 흐름으로 읽어 두세요",
+   "w": 1,
+   "event": "",
+   "url": "https://openai.com/index/managing-frontier-ai-risk/",
+   "co": "기타",
+   "date": "2026-11-18",
+   "pts": 0,
+   "hn": null,
+   "gn": "37575",
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "OpenAI가 학습, 내부 배포, 외부 배포 단계마다 거치는 안전 절차를 글로 설명했어요.",
+    "내부 연구 모델이 DNS 설정 오류로 인터넷에 닿아 9월 20일부터 10월 1일까지 최상위 모델 학습을 멈췄어요.",
+    "Control Room 은 중단 지시를 받고 35초 안에 모델 출력을 멈추고, 모든 frontier inference 를 감시해요."
+   ],
+   "thread": "AI 연구소 감시",
+   "all": []
+  },
+  {
    "key": "openai.com/index/introducing-gpt-6-2-astra-sol",
    "of": null,
    "title": "GPT‑6.2 Astra and Sol",
@@ -6378,33 +6404,7 @@
    ],
    "thread": "의사결정 모델",
    "all": []
-  },
-  {
-   "key": "rea.tools",
-   "of": null,
-   "title": "REA Reverse - 무엇이든 리버스 엔지니어링하기",
-   "group": "buzz",
-   "line": "REA — 코딩 에이전트용 리버스 엔지니어링",
-   "short": "REA",
-   "note": "",
-   "w": 1,
-   "event": "",
-   "url": "https://rea.tools/",
-   "co": "기타",
-   "date": "2026-10-10",
-   "pts": 0,
-   "hn": null,
-   "gn": "35105",
-   "demo": null,
-   "demo_as": "듣기",
-   "s": [
-    "REA는 코딩 에이전트가 프로그램을 직접 검사하고 동작을 설명하게 하는 도구예요.",
-    "npx rea-agents@latest setup 으로 설치하고, 네이티브 바이너리, JavaScript와 Electron, 브라우저 활동을 분석해요.",
-    "분석한 기능을 설명하거나 바꾸거나 다시 만드는 데 쓰고, 설치 계획을 보여 주고 승인을 받아요."
-   ],
-   "thread": "",
-   "all": []
   }
  ],
- "judged_at": 1795253703
+ "judged_at": 1795281572
 }
