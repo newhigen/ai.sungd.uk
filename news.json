@@ -833,6 +833,28 @@
    "all": []
   },
   {
+   "key": "terrytao.wordpress.com/2026/11/20/unforced-euler-singularity-unforced-navier-stokes-singularity-and-the-generalized-riemann-hypothesis",
+   "of": null,
+   "title": "외력이 없는 Euler와 Navier-Stokes 방정식의 특이점과 일반화 리만 가설",
+   "group": "skip",
+   "line": "Euler와 Navier-Stokes 특이점 — 수학 증명 자료",
+   "short": "수학 증명",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://terrytao.wordpress.com/2026/11/20/unforced-euler-singularity-unforced-navier-stokes-singularity-and-the-generalized-riemann-hypothesis/",
+   "co": "기타",
+   "date": "2026-11-16",
+   "pts": 0,
+   "hn": null,
+   "gn": "37546",
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [],
+   "thread": "",
+   "all": []
+  },
+  {
    "key": "qwen.ai/blog",
    "of": null,
    "title": "Qwen4-Max",
@@ -6406,5 +6428,5 @@
    "all": []
   }
  ],
- "judged_at": 1795281572
+ "judged_at": 1795302157
 }
