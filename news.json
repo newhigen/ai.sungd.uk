@@ -1,6 +1,58 @@
 {
  "items": [
   {
+   "key": "openai.com/index/perplexity-and-intelligence",
+   "of": null,
+   "title": "Perplexity and Intelligence",
+   "group": "buzz",
+   "line": "Perplexity and Intelligence — OpenAI 의 perplexity 공개",
+   "short": "Perplexity 글",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://openai.com/index/perplexity-and-intelligence/",
+   "co": "OpenAI",
+   "date": "2026-11-23",
+   "pts": 112,
+   "hn": "50601525",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "OpenAI가 perplexity를 업계 공통 지표로 삼자고 제안하는 글을 냈어요.",
+    "log-perplexity가 GPT-3.5는 약 0.99, GPT-4는 약 0.91이고 지금은 0.8 아래라고 밝혔어요.",
+    "개발사들이 넘지 않을 공통 한계를 정하고 안전 기준을 함께 세우자고 해요."
+   ],
+   "thread": "AI 연구소 감시",
+   "all": []
+  },
+  {
+   "key": "betterdatacenterproject.com/2026/11/16/how-ai-is-powered-a-breakdown-of-byop-and-grid-power",
+   "of": null,
+   "title": "87% of the Anthropic power will come from gas and 11% from coal in 2028",
+   "group": "buzz",
+   "line": "Anthropic 전력 — 2028년 가스 87%, 석탄 11%",
+   "short": "Anthropic 전력",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://betterdatacenterproject.com/2026/11/16/how-ai-is-powered-a-breakdown-of-byop-and-grid-power/",
+   "co": "Anthropic",
+   "date": "2026-11-22",
+   "pts": 576,
+   "hn": "50597612",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "Better Data Center Project가 Anthropic의 데이터센터 전력원을 분석한 글이에요.",
+    "2028년 전력의 약 87%는 가스, 11%는 석탄이고 CO2e는 연 1,700만~3,800만 톤으로 추정해요.",
+    "계약된 컴퓨팅은 15GW이고 그중 5.9~9.6GW만 특정 부지에 묶여 있다고 해요."
+   ],
+   "thread": "",
+   "all": []
+  },
+  {
    "key": "thinkingmachines.ai/news/inkling-2-mini",
    "of": null,
    "title": "Inkling 2 Mini",
@@ -6400,33 +6452,7 @@
    ],
    "thread": "",
    "all": []
-  },
-  {
-   "key": "nishtahir.com/build-your-own-decision-model",
-   "of": null,
-   "title": "Qwen으로 나만의 의사결정 모델 만들기",
-   "group": "know",
-   "line": "Qwen 으로 나만의 의사결정 모델 만들기",
-   "short": "Qwen 의사결정 모델",
-   "note": "Jev 같은 방식을 직접 따라 해 본 글이에요",
-   "w": 1,
-   "event": "",
-   "url": "https://nishtahir.com/build-your-own-decision-model/",
-   "co": "기타",
-   "date": "2026-10-11",
-   "pts": 0,
-   "hn": null,
-   "gn": "35145",
-   "demo": null,
-   "demo_as": "듣기",
-   "s": [
-    "Jev 같은 의사결정 모델을 Qwen3-1.7B 로 직접 만들어 본 글이에요.",
-    "출력을 A~E 선택지 토큰으로 제한해 한 번의 순전파로 답을 골라요.",
-    "CommonsenseQA 정확도 59.4%, 파인튜닝 62.4%이고 온도 조정으로 확신도를 맞춰요."
-   ],
-   "thread": "의사결정 모델",
-   "all": []
   }
  ],
- "judged_at": 1795302157
+ "judged_at": 1795371948
 }
