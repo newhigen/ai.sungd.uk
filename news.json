@@ -79,6 +79,32 @@
    "all": []
   },
   {
+   "key": "manidoraisamy.com/developer-to-architect.html",
+   "of": null,
+   "title": "우리는 개발자들에게 알리지도 않고 아키텍트로 승진시켰다",
+   "group": "buzz",
+   "line": "개발자가 아키텍트로 승진했다 — AI 코딩 글",
+   "short": "개발자의 아키텍트화",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://manidoraisamy.com/developer-to-architect.html",
+   "co": "기타",
+   "date": "2026-11-21",
+   "pts": 0,
+   "hn": null,
+   "gn": "37548",
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "요구사항만 주면 AI가 아키텍처 결정까지 대신 내린다는 개발자 글이에요.",
+    "AI가 이메일 로깅을 try/catch로 겹쳐 짜서 환영 화면이 15초 걸렸다는 사례를 들어요.",
+    "개발자가 데이터 모델과 구조를 정해 AI를 제약하고 검토해야 한다고 주장해요."
+   ],
+   "thread": "AI 와 개발자의 일",
+   "all": []
+  },
+  {
    "key": "theguardian.com/business/2026/nov/20/global-stock-markets-slump-anthropic-ipo-ai-sell-off",
    "of": null,
    "title": "Nasdaq erases all 2026 gains as AI sell-off dampens Anthropic’s second day",
@@ -394,6 +420,32 @@
     "Decision 1.1은 GPT-6.1 Sol보다 50배 빠르고 79배 싸다고 해요."
    ],
    "thread": "의사결정 모델",
+   "all": []
+  },
+  {
+   "key": "europeanbusinessmagazine.com/ai-agents-better-questions-kpmg",
+   "of": null,
+   "title": "AI agents ask better questions than KPMG accountants in audit trial",
+   "group": "buzz",
+   "line": "KPMG 감사 실험 — AI 에이전트 100여 개",
+   "short": "KPMG 감사 실험",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://europeanbusinessmagazine.com/ai-agents-better-questions-kpmg/",
+   "co": "기타",
+   "date": "2026-11-19",
+   "pts": 500,
+   "hn": "50547777",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "KPMG UK가 AI agent 100개 넘게 써서 FTSE 250 기업 회계를 살펴봤어요.",
+    "일부 대목에서 사람 감사팀보다 깊이 파고들고 더 나은 질문을 했다고 해요.",
+    "정식 감사 결과로는 안 쓰였고, 최대 20건의 더 큰 감사로 넓힐 계획이에요."
+   ],
+   "thread": "",
    "all": []
   },
   {
@@ -6454,5 +6506,5 @@
    "all": []
   }
  ],
- "judged_at": 1795371948
+ "judged_at": 1795423968
 }
