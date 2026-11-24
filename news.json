@@ -27,6 +27,32 @@
    "all": []
   },
   {
+   "key": "github.com/anthropics/formal-math/tree/main/vp-vnp",
+   "of": null,
+   "title": "VP ≠ VNP over Every Field",
+   "group": "buzz",
+   "line": "VP ≠ VNP — Anthropic 의 Lean 증명",
+   "short": "VP ≠ VNP",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://github.com/anthropics/formal-math/tree/main/vp-vnp",
+   "co": "Anthropic",
+   "date": "2026-11-24",
+   "pts": 301,
+   "hn": "50620102",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "Anthropic 의 formal-math 저장소에 vp-vnp 폴더가 올라왔어요.",
+    "커밋 제목이 「VP != VNP, paper and Lean proof」이고, paper.pdf 와 Lean 파일이 들어 있어요.",
+    "2026년 11월 23일에 올라왔고, 본문에는 증명 방법 설명이 따로 없어요."
+   ],
+   "thread": "",
+   "all": []
+  },
+  {
    "key": "z.ai/blog/glm-5.4",
    "of": null,
    "title": "GLM-5.4: Toward generalized coding with our first loop transformer",
@@ -94,6 +120,28 @@
    "pts": 1697,
    "hn": "50611588",
    "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [],
+   "thread": "",
+   "all": []
+  },
+  {
+   "key": "human-md.ai",
+   "of": null,
+   "title": "HUMAN.md",
+   "group": "skip",
+   "line": "HUMAN.md — 창작자 선언문",
+   "short": "HUMAN.md",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://www.human-md.ai/",
+   "co": "기타",
+   "date": "2026-11-23",
+   "pts": 0,
+   "hn": null,
+   "gn": "37683",
    "demo": null,
    "demo_as": "듣기",
    "s": [],
@@ -6524,5 +6572,5 @@
    "all": []
   }
  ],
- "judged_at": 1795468285
+ "judged_at": 1795499582
 }
