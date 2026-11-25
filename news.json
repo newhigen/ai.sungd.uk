@@ -1,6 +1,28 @@
 {
  "items": [
   {
+   "key": "openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities",
+   "of": null,
+   "title": "GPT-6 models demonstrate intrinsic protein-design capabilities",
+   "group": "skip",
+   "line": "GPT-6 단백질 설계 — 생물학 연구 결과",
+   "short": "GPT-6 단백질",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities/",
+   "co": "OpenAI",
+   "date": "2026-11-25",
+   "pts": 176,
+   "hn": "50634658",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [],
+   "thread": "",
+   "all": []
+  },
+  {
    "key": "twitter.com/ylecun/status/2124550037912920090",
    "of": null,
    "title": "Dario is hyping the dangers so OSS models are illegal and he stays in control",
@@ -75,6 +97,54 @@
     "커밋 제목이 「VP != VNP, paper and Lean proof」이고, paper.pdf 와 Lean 파일이 들어 있어요.",
     "2026년 11월 23일에 올라왔고, 본문에는 증명 방법 설명이 따로 없어요."
    ],
+   "thread": "",
+   "all": []
+  },
+  {
+   "key": "claude.dev/blog/the-work-after-you-open-a-pr",
+   "of": null,
+   "title": "A practical guide to shipping with Claude Code",
+   "group": "try",
+   "line": "/ship — PR 연 뒤 후속 작업을 Claude Code 에",
+   "short": "/ship",
+   "note": "다음 PR 에서 /ship 먼저 써 봐요",
+   "w": 2,
+   "event": "",
+   "url": "https://claude.dev/blog/the-work-after-you-open-a-pr/",
+   "co": "Anthropic",
+   "date": "2026-11-24",
+   "pts": 0,
+   "hn": null,
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "Claude Code 팀이 PR을 연 뒤의 후속 작업을 에이전트에 맡기는 법을 썼어요.",
+    "/code-review, /ship, /steward 명령으로 리뷰, CI 실패, 충돌, 리뷰 댓글을 처리해요.",
+    "/ship은 git add -A처럼 커밋하고, 감시는 내 머신과 내 사용량으로 최대 7일 돌아요."
+   ],
+   "thread": "",
+   "all": []
+  },
+  {
+   "key": "bloomberg.com/news/articles/2026-11-24/anthropic-breaks-below-83-ipo-price-in-premarket-trading",
+   "of": null,
+   "title": "Anthropic breaks below $83 IPO price",
+   "group": "skip",
+   "line": "Anthropic 주가 — 공모가 83달러 아래로",
+   "short": "Anthropic 주가",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://www.bloomberg.com/news/articles/2026-11-24/anthropic-breaks-below-83-ipo-price-in-premarket-trading",
+   "co": "Anthropic",
+   "date": "2026-11-24",
+   "pts": 353,
+   "hn": "50627836",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [],
    "thread": "",
    "all": []
   },
@@ -324,6 +394,32 @@
     "개발자가 데이터 모델과 구조를 정해 AI를 제약하고 검토해야 한다고 주장해요."
    ],
    "thread": "AI 와 개발자의 일",
+   "all": []
+  },
+  {
+   "key": "claude.com/ko/resources/articles/building-always-on-agents",
+   "of": null,
+   "title": "항상 작동하는 에이전트 구축하기",
+   "group": "know",
+   "line": "항상 작동하는 에이전트 구축하기",
+   "short": "상시 에이전트 설계",
+   "note": "하네스 만들 때 참고할 구조예요",
+   "w": 1,
+   "event": "",
+   "url": "https://claude.com/ko/resources/articles/building-always-on-agents",
+   "co": "기타",
+   "date": "2026-11-21",
+   "pts": 0,
+   "hn": null,
+   "gn": "37550",
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "Anthropic이 항상 작동하는 에이전트의 구성 요소를 정리한 글이에요.",
+    "이벤트 인박스, 타이머, 메모리, 권한, 아웃박스 다섯 가지 primitive로 나눠요.",
+    "실제로는 대부분 잠들어 있다가 이벤트가 오면 한 번씩 run을 도는 구조로 설명해요."
+   ],
+   "thread": "늘 켜 두는 에이전트",
    "all": []
   },
   {
@@ -6472,5 +6568,5 @@
    "all": []
   }
  ],
- "judged_at": 1795541299
+ "judged_at": 1795572799
 }
