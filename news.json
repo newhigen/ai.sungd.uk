@@ -23,6 +23,76 @@
    "all": []
   },
   {
+   "key": "news.ycombinator.com/item?id=50630809",
+   "of": null,
+   "title": "Ask HN: Anthropic is accusing my company of distilling. How can I prove I'm not?",
+   "group": "buzz",
+   "line": "Anthropic 이 증류를 의심한다는 Ask HN",
+   "short": "증류 의심 Ask HN",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://news.ycombinator.com/item?id=50630809",
+   "co": "Anthropic",
+   "date": "2026-11-25",
+   "pts": 334,
+   "hn": "50630809",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [],
+   "thread": "",
+   "all": []
+  },
+  {
+   "key": "github.com/openai/math/blob/main/preprints/The-matrix-multiplication-exponent-is-nine-fourths-November-24-2026/paper.pdf",
+   "of": null,
+   "title": "Matrix Multiplication is Θ(n^2.25) [pdf]",
+   "group": "buzz",
+   "line": "행렬 곱셈 지수 9/4 — OpenAI 수학 논문",
+   "short": "행렬 곱셈 논문",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://github.com/openai/math/blob/main/preprints/The-matrix-multiplication-exponent-is-nine-fourths-November-24-2026/paper.pdf",
+   "co": "OpenAI",
+   "date": "2026-11-25",
+   "pts": 728,
+   "hn": "50637220",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "OpenAI 의 math 저장소에 행렬 곱셈 지수가 9/4 라는 논문이 올라왔어요.",
+    "논문 제목은 Matrix Multiplication is Θ(n^2.25) 이고 11월 24일 원고로 올라왔어요.",
+    "같은 저장소에 Lean 형식 증명 폴더와 다른 수학 원고도 함께 있어요."
+   ],
+   "thread": "",
+   "all": []
+  },
+  {
+   "key": "x.com/divaagurlxw/status/2115418017891020888",
+   "of": null,
+   "title": "평가는 AI 엔지니어링에서 가장 과소평가된 역량이다",
+   "group": "skip",
+   "line": "평가는 AI 엔지니어링에서 가장 과소평가된 역량",
+   "short": "AI 평가 역량",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://x.com/divaagurlxw/status/2115418017891020888",
+   "co": "기타",
+   "date": "2026-11-24",
+   "pts": 0,
+   "hn": null,
+   "gn": "37745",
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [],
+   "thread": "",
+   "all": []
+  },
+  {
    "key": "twitter.com/ylecun/status/2124550037912920090",
    "of": null,
    "title": "Dario is hyping the dangers so OSS models are illegal and he stays in control",
@@ -6568,5 +6638,5 @@
    "all": []
   }
  ],
- "judged_at": 1795572799
+ "judged_at": 1795610030
 }
