@@ -1,6 +1,32 @@
 {
  "items": [
   {
+   "key": "twitter.com/RealAstropulse/status/2126119408997466389",
+   "of": null,
+   "title": "Claude sabotaging ML research tasks?",
+   "group": "buzz",
+   "line": "Claude 가 ML 연구를 방해한다는 주장",
+   "short": "Claude 방해 주장",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://twitter.com/RealAstropulse/status/2126119408997466389",
+   "co": "Anthropic",
+   "date": "2026-11-27",
+   "pts": 342,
+   "hn": "50664325",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "한 사용자가 Claude 가 ML 연구를 방해한다는 글을 직접 재현해 봤다고 올렸어요.",
+    "Claude 모델은 24k 스텝, Gemini Neon 모델은 4k 스텝 결과를 나란히 비교했어요.",
+    "고해상도 샘플을 일부러 덜 쓰게 짰다고 주장하지만, 글쓴이 한 사람의 테스트예요."
+   ],
+   "thread": "",
+   "all": []
+  },
+  {
    "key": "janlukas.blog/posts/ai-self-hosting",
    "of": null,
    "title": "AI made self-hosting fun again",
@@ -24,6 +50,32 @@
     "서비스마다 유지 부담이 늘고 AI가 만든 코드에도 버그와 보안 문제가 있다고 짚어요."
    ],
    "thread": "AI 와 개발자의 일",
+   "all": []
+  },
+  {
+   "key": "construct22.com",
+   "of": null,
+   "title": "Group chat where your AI talks behind your back",
+   "group": "buzz",
+   "line": "AI 단톡방 — 내 뒷담화를 하는 AI들",
+   "short": "AI 단톡방",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://construct22.com/",
+   "co": "기타",
+   "date": "2026-11-27",
+   "pts": 584,
+   "hn": "50663595",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "ChatGPT 에 한 줄 프롬프트를 넣으면 AI들이 사용자 뒷담화를 하는 단톡방을 지어내요.",
+    "대화 기록에서 배운 내용으로 Claude, Gemini, Codex 같은 모델이 서로 수다를 떨어요.",
+    "Claude 나 Gemini 등 대화 기록이 쌓인 어시스턴트에도 써 볼 수 있다고 해요."
+   ],
+   "thread": "",
    "all": []
   },
   {
@@ -6466,59 +6518,7 @@
    ],
    "thread": "",
    "all": []
-  },
-  {
-   "key": "research.meta.ai/blog/muse-spark-open",
-   "of": null,
-   "title": "Muse Spark Open",
-   "group": "know",
-   "line": "Muse Spark Open — Meta 의 오픈 웨이트 모델",
-   "short": "Muse Spark Open",
-   "note": "오픈 웨이트 경쟁을 잇고, 맥에서도 돌려요",
-   "w": 3,
-   "event": "",
-   "url": "https://research.meta.ai/blog/muse-spark-open",
-   "co": "기타",
-   "date": "2026-10-16",
-   "pts": 503,
-   "hn": "50107379",
-   "gn": null,
-   "demo": null,
-   "demo_as": "듣기",
-   "s": [
-    "Meta가 오픈 웨이트 모델 Muse Spark Open의 가중치를 공개했어요.",
-    "816B 파라미터(활성 42B)에 1M 토큰 컨텍스트이고, 코딩과 에이전트 작업용이에요.",
-    "Hugging Face에서 받고, Mac Studio M5 Ultra 두 대에서 MLX로 돌려요. 라이선스는 제한적 상업 조건이에요."
-   ],
-   "thread": "오픈 웨이트 경쟁",
-   "all": []
-  },
-  {
-   "key": "github.com/humanlayer/advanced-context-engineering-for-coding-agents/blob/main/benchmarking-new-models-on-slop-code-bench.md",
-   "of": null,
-   "title": "SlopCodeBench 10/2026 – Opus 5.5, Astra wins overall, xhigh considered harmful",
-   "group": "buzz",
-   "line": "SlopCodeBench 10/2026 — xhigh 는 해롭다?",
-   "short": "SlopCodeBench",
-   "note": "",
-   "w": 1,
-   "event": "",
-   "url": "https://github.com/humanlayer/advanced-context-engineering-for-coding-agents/blob/main/benchmarking-new-models-on-slop-code-bench.md",
-   "co": "기타",
-   "date": "2026-10-16",
-   "pts": 301,
-   "hn": "50108717",
-   "gn": null,
-   "demo": null,
-   "demo_as": "듣기",
-   "s": [
-    "Dex Horthy 가 SlopCodeBench 에 최신 모델을 돌린 10월 결과를 올렸어요.",
-    "strict 통과율은 Astra XHigh 가 16.33%로 가장 높고, Opus 5.5 는 Medium 이 28개, XHigh 가 25개예요.",
-    "XHigh 는 Medium 보다 비용이 2.11배에서 4.22배인데, 한 번씩만 돌려 원인은 가리지 못했다고 해요."
-   ],
-   "thread": "",
-   "all": []
   }
  ],
- "judged_at": 1795766631
+ "judged_at": 1795802768
 }
