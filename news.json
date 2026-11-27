@@ -1,6 +1,32 @@
 {
  "items": [
   {
+   "key": "janlukas.blog/posts/ai-self-hosting",
+   "of": null,
+   "title": "AI made self-hosting fun again",
+   "group": "buzz",
+   "line": "AI 덕분에 셀프 호스팅이 다시 즐거워졌다",
+   "short": "AI 셀프 호스팅",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://janlukas.blog/posts/ai-self-hosting",
+   "co": "기타",
+   "date": "2026-11-27",
+   "pts": 596,
+   "hn": "50660180",
+   "gn": "37928",
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "셀프 호스팅 블로거가 AI 코딩 에이전트 덕에 다시 재미를 붙였다는 글이에요.",
+    "설정을 Git에 두고 Renovate와 Actions로 배포를 자동화하고, 직접 만든 Go 도구도 돌려요.",
+    "서비스마다 유지 부담이 늘고 AI가 만든 코드에도 버그와 보안 문제가 있다고 짚어요."
+   ],
+   "thread": "AI 와 개발자의 일",
+   "all": []
+  },
+  {
    "key": "twitter.com/thsottiaux/status/2125784147889393806",
    "of": null,
    "title": "OpenAI cuts GPT-6.2 usage: Astra hits limits 40% faster, Sol 25% faster",
@@ -71,6 +97,32 @@
    "demo": null,
    "demo_as": "듣기",
    "s": [],
+   "thread": "",
+   "all": []
+  },
+  {
+   "key": "micjm.com/blog/openai-is-in-cost-control-mode",
+   "of": null,
+   "title": "OpenAI may be in cost control mode",
+   "group": "buzz",
+   "line": "GPT-6.2 추론 토큰 감소 — 비용 통제 분석",
+   "short": "GPT-6.2 비용 통제",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://micjm.com/blog/openai-is-in-cost-control-mode/",
+   "co": "OpenAI",
+   "date": "2026-11-26",
+   "pts": 324,
+   "hn": "50652527",
+   "gn": "37922",
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "Agent Duel 데이터로 GPT-6.2 Astra와 Sol을 이전 버전과 비교한 글이에요.",
+    "작업당 출력 토큰과 추론 토큰이 상대 모델보다 눈에 띄게 줄었어요.",
+    "추론 토큰 감소의 p값은 Sol 0.00013, Astra 0.0064이고 비용 절감 튜닝으로 봤어요."
+   ],
    "thread": "",
    "all": []
   },
@@ -6468,5 +6520,5 @@
    "all": []
   }
  ],
- "judged_at": 1795736492
+ "judged_at": 1795766631
 }
