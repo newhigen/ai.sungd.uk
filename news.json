@@ -205,6 +205,32 @@
    "all": []
   },
   {
+   "key": "generativehistory.substack.com/p/gpt-62-astra-solves-a-historical",
+   "of": null,
+   "title": "GPT 6.2 Astra Solves a Historical Mystery",
+   "group": "buzz",
+   "line": "GPT 6.2 Astra — 역사 미스터리 해결",
+   "short": "Astra 역사 미스터리",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://generativehistory.substack.com/p/gpt-62-astra-solves-a-historical",
+   "co": "OpenAI",
+   "date": "2026-11-26",
+   "pts": 319,
+   "hn": "50643158",
+   "gn": null,
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "역사 연구자가 출시 전 GPT-6.2 Astra를 써 보고 쓴 글이에요.",
+    "1808년 익명 스케치북의 작가를 22분 만에 찾았고, 근거가 될 마이크로필름 일기도 짚었어요.",
+    "Ultra effort와 goal mode로 돌렸고, 답변이 수수께끼처럼 낯설어질 때가 있다고 해요."
+   ],
+   "thread": "",
+   "all": []
+  },
+  {
    "key": "choosingvictory.com/p/the-rise-of-the-one-person-institution",
    "of": null,
    "title": "1인 조직이 온다",
@@ -6520,5 +6546,5 @@
    "all": []
   }
  ],
- "judged_at": 1795802768
+ "judged_at": 1795830733
 }
