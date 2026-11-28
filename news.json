@@ -153,6 +153,32 @@
    "all": []
   },
   {
+   "key": "openclaw.ai/blog/shellbench",
+   "of": null,
+   "title": "ShellBench - 실제 에이전트 사용 패턴으로 만든 업무형 에이전트 벤치마크",
+   "group": "buzz",
+   "line": "ShellBench — 업무형 에이전트 벤치마크",
+   "short": "ShellBench",
+   "note": "",
+   "w": 2,
+   "event": "",
+   "url": "https://openclaw.ai/blog/shellbench",
+   "co": "기타",
+   "date": "2026-11-26",
+   "pts": 0,
+   "hn": null,
+   "gn": "37994",
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [
+    "OpenClaw 재단이 Hugging Face, Red Hat, UC Berkeley 등과 에이전트 벤치마크 ShellBench를 냈어요.",
+    "모델 12개를 Claude Code, Codex 등 하네스 5개에서 돌렸고, GPT-6 Astra가 62.5%로 앞섰어요.",
+    "모델 차이가 하네스 차이보다 크고, 하네스 평균은 Claude Code 42.87%, OpenClaw 45.23%였어요."
+   ],
+   "thread": "",
+   "all": []
+  },
+  {
    "key": "micjm.com/blog/openai-is-in-cost-control-mode",
    "of": null,
    "title": "OpenAI may be in cost control mode",
@@ -323,6 +349,28 @@
     "논문 제목은 Matrix Multiplication is Θ(n^2.25) 이고 11월 24일 원고로 올라왔어요.",
     "같은 저장소에 Lean 형식 증명 폴더와 다른 수학 원고도 함께 있어요."
    ],
+   "thread": "",
+   "all": []
+  },
+  {
+   "key": "blog.emailengine.app/the-very-long-road-to-20k-mrr",
+   "of": null,
+   "title": "오픈 소스에서 월 반복 매출 2만 달러까지: EmailEngine의 여정",
+   "group": "skip",
+   "line": "EmailEngine — 월 2만 달러 매출까지의 여정",
+   "short": "EmailEngine",
+   "note": "",
+   "w": 1,
+   "event": "",
+   "url": "https://blog.emailengine.app/the-very-long-road-to-20k-mrr/",
+   "co": "기타",
+   "date": "2026-11-25",
+   "pts": 0,
+   "hn": null,
+   "gn": "37804",
+   "demo": null,
+   "demo_as": "듣기",
+   "s": [],
    "thread": "",
    "all": []
   },
@@ -6546,5 +6594,5 @@
    "all": []
   }
  ],
- "judged_at": 1795830733
+ "judged_at": 1795860585
 }
